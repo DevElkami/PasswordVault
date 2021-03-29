@@ -6,6 +6,8 @@ namespace Mdp
 {
     public partial class MainForm : Form
     {
+        System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+
         public MainForm()
         {
             try
