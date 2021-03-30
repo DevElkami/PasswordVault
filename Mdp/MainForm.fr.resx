@@ -3103,4 +3103,19 @@
         AACABwAAgA8AAMAPAAA=
 </value>
   </data>
+  <data name="AddDone" xml:space="preserve">
+    <value>Ajout effectué</value>
+  </data>
+  <data name="ImportFinished" xml:space="preserve">
+    <value>Import terminé</value>
+  </data>
+  <data name="Keyword" xml:space="preserve">
+    <value>Mots clefs</value>
+  </data>
+  <data name="LinkOrOther" xml:space="preserve">
+    <value>Liens ou autres données</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Le mot de passe</value>
+  </data>
 </root>

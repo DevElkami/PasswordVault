@@ -3157,4 +3157,19 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Password vault</value>
   </data>
+  <data name="AddDone" xml:space="preserve">
+    <value>Completed</value>
+  </data>
+  <data name="ImportFinished" xml:space="preserve">
+    <value>Import finished</value>
+  </data>
+  <data name="Keyword" xml:space="preserve">
+    <value>Keyword</value>
+  </data>
+  <data name="LinkOrOther" xml:space="preserve">
+    <value>Link or other</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
 </root>

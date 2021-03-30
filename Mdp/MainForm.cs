@@ -24,7 +24,7 @@ namespace Mdp
         {
             try
             {
-                String mainPwd = Microsoft.VisualBasic.Interaction.InputBox("Le mot de passe ?", "Mot de passe", "");
+                String mainPwd = Microsoft.VisualBasic.Interaction.InputBox(resources.GetString("Password") + "?", resources.GetString("Password"), "");
                 if (Security.Instance.CheckPassword(mainPwd) == false)
                 {
                     DialogResult = DialogResult.Cancel;
@@ -62,7 +62,7 @@ namespace Mdp
             {
                 CellTemplate = cell,
                 Name = "Value",
-                HeaderText = "Le mot de passe",
+                HeaderText = resources.GetString("Password"),
                 DataPropertyName = "DecryptPwd",
                 ReadOnly = true
             };
@@ -72,7 +72,7 @@ namespace Mdp
             {
                 CellTemplate = cell,
                 Name = "Value",
-                HeaderText = "Liens ou autres données",
+                HeaderText = resources.GetString("LinkOrOther"),
                 DataPropertyName = "Data"
             };
             dataGridViewVault.Columns.Add(colData);
@@ -81,7 +81,7 @@ namespace Mdp
             {
                 CellTemplate = cell,
                 Name = "Value",
-                HeaderText = "Mots clefs",
+                HeaderText = resources.GetString("Keyword"),
                 DataPropertyName = "Keyword"
             };
             dataGridViewVault.Columns.Add(colKeyword);
@@ -124,7 +124,7 @@ namespace Mdp
                 MyVault.Instance.Load();
                 textBoxFilter.Text = "";
                 dataGridViewVault.DataSource = MyVault.Instance.Vault;
-                MessageBox.Show("Import terminé", "Firefox", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(resources.GetString("ImportFinished"), "Firefox", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception except)
             {
@@ -252,7 +252,7 @@ namespace Mdp
                 textBoxMdpData.Text = "";
                 textBoxMdpKeyword.Text = "";
 
-                MessageBox.Show("Ajout effectué", "Ajout", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(resources.GetString("AddDone"), resources.GetString("buttonAdd.Text"), MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception except)
             {
