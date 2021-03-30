@@ -203,8 +203,9 @@
   <data name="&gt;&gt;labelMdpPassword.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;textBoxMdpPassword.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="textBoxMdpPassword.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
   <data name="labelMdpPassword.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 13</value>
@@ -227,9 +228,11 @@
   <data name="&gt;&gt;labelImportFromFirefox.Parent" xml:space="preserve">
     <value>tabPageFirefox</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="textBoxMdpKeyword.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
+  </data>
+  <data name="&gt;&gt;textBoxFilter.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="labelViewFirefox.Location" type="System.Drawing.Point, System.Drawing">
     <value>19, 22</value>
@@ -3246,8 +3249,8 @@
   <data name="tabPageOption.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
   </data>
-  <data name="&gt;&gt;buttonImportFromFirefox.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;myVaultBindingSource.Name" xml:space="preserve">
+    <value>myVaultBindingSource</value>
   </data>
   <data name="&gt;&gt;buttonImportFromFirefox.Parent" xml:space="preserve">
     <value>tabPageFirefox</value>
@@ -3282,6 +3285,9 @@
   <data name="&gt;&gt;dataGridViewVault.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="labelMdpPassword.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
   <data name="tabPageOption.Text" xml:space="preserve">
     <value>Option</value>
   </data>
@@ -3291,11 +3297,8 @@
   <data name="tabPageSearch.Text" xml:space="preserve">
     <value>Recherche</value>
   </data>
-  <data name="labelViewFirefox.Text" xml:space="preserve">
-    <value>Voir les mdp</value>
-  </data>
-  <data name="&gt;&gt;buttonViewFirefox.Name" xml:space="preserve">
-    <value>buttonViewFirefox</value>
+  <data name="textBoxMdpLogin.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
   <data name="labelImportFromFirefox.Size" type="System.Drawing.Size, System.Drawing">
     <value>97, 13</value>
@@ -3305,6 +3308,12 @@
   </data>
   <data name="&gt;&gt;buttonSave.Name" xml:space="preserve">
     <value>buttonSave</value>
+  </data>
+  <data name="&gt;&gt;buttonImportFromFirefox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;tabPageOption.Parent" xml:space="preserve">
+    <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;dataGridViewVault.Name" xml:space="preserve">
     <value>dataGridViewVault</value>
@@ -3330,9 +3339,6 @@
   <data name="buttonAdd.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="labelMdpLogin.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="&gt;&gt;tabPageOption.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
@@ -3347,9 +3353,6 @@
   </data>
   <data name="buttonImportFromFirefox.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
-  </data>
-  <data name="&gt;&gt;textBoxMdpData.Parent" xml:space="preserve">
-    <value>groupBoxMyPassword</value>
   </data>
   <data name="textBoxMdpLogin.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -3381,9 +3384,6 @@
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>
-  <data name="buttonAdd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>743, 12</value>
-  </data>
   <data name="labelMdpLogin.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
@@ -3414,9 +3414,6 @@
   <data name="&gt;&gt;labelImportFromFirefox.Name" xml:space="preserve">
     <value>labelImportFromFirefox</value>
   </data>
-  <data name="labelImportFromFirefox.Text" xml:space="preserve">
-    <value>Importer dans l'outil</value>
-  </data>
   <data name="&gt;&gt;tabPageSearch.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
@@ -3429,11 +3426,14 @@
   <data name="&gt;&gt;labelMdpLogin.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="&gt;&gt;labelImportFromFirefox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="labelViewFirefox.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
   <data name="textBoxMdpPassword.Size" type="System.Drawing.Size, System.Drawing">
     <value>542, 20</value>
-  </data>
-  <data name="&gt;&gt;myVaultBindingSource.Name" xml:space="preserve">
-    <value>myVaultBindingSource</value>
   </data>
   <data name="dataGridViewVault.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 32</value>
@@ -3453,6 +3453,9 @@
   <data name="&gt;&gt;groupBoxMyPassword.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="tabPageOption.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
   <data name="tabPageSearch.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
   </data>
@@ -3471,14 +3474,20 @@
   <data name="buttonViewFirefox.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="labelMdpData.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 80</value>
-  </data>
   <data name="buttonSave.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="textBoxMdpPassword.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="labelMdpData.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 80</value>
+  </data>
+  <data name="dataGridViewVault.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;textBoxMdpPassword.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMdpKeyword.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="labelViewFirefox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3501,14 +3510,8 @@
   <data name="checkedListBoxMdpFireFox.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="&gt;&gt;labelMdpKeyword.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="&gt;&gt;groupBoxMyPassword.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="textBoxMdpData.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
   </data>
   <data name="&gt;&gt;labelMdpKeyword.Parent" xml:space="preserve">
     <value>groupBoxMyPassword</value>
@@ -3531,8 +3534,8 @@
   <data name="labelMdpKeyword.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="&gt;&gt;labelImportFromFirefox.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;buttonViewFirefox.Name" xml:space="preserve">
+    <value>buttonViewFirefox</value>
   </data>
   <data name="&gt;&gt;buttonAdd.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -3597,8 +3600,8 @@
   <data name="buttonSave.Location" type="System.Drawing.Point, System.Drawing">
     <value>807, 3</value>
   </data>
-  <data name="textBoxMdpLogin.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
+  <data name="labelMdpLogin.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="textBoxMdpKeyword.Size" type="System.Drawing.Size, System.Drawing">
     <value>542, 20</value>
@@ -3624,8 +3627,8 @@
   <data name="groupBoxMyPassword.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="tabPageOption.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+  <data name="textBoxMdpData.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>832, 450</value>
@@ -3639,14 +3642,11 @@
   <data name="&gt;&gt;textBoxMdpKeyword.Name" xml:space="preserve">
     <value>textBoxMdpKeyword</value>
   </data>
-  <data name="&gt;&gt;tabPageOption.Parent" xml:space="preserve">
-    <value>tabControlMain</value>
+  <data name="labelViewFirefox.Text" xml:space="preserve">
+    <value>Voir les mdp</value>
   </data>
   <data name="textBoxMdpData.Location" type="System.Drawing.Point, System.Drawing">
     <value>166, 77</value>
-  </data>
-  <data name="&gt;&gt;buttonSave.Parent" xml:space="preserve">
-    <value>tabPageSearch</value>
   </data>
   <data name="groupBoxMyPassword.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 6</value>
@@ -3669,8 +3669,8 @@
   <data name="tabPageFirefox.Size" type="System.Drawing.Size, System.Drawing">
     <value>824, 424</value>
   </data>
-  <data name="labelViewFirefox.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+  <data name="labelImportFromFirefox.Text" xml:space="preserve">
+    <value>Importer dans l'outil</value>
   </data>
   <data name="&gt;&gt;labelMdpData.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -3678,14 +3678,14 @@
   <data name="&gt;&gt;textBoxMdpPassword.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="labelMdpPassword.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="buttonAdd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>743, 12</value>
   </data>
   <data name="&gt;&gt;groupBoxMyPassword.Parent" xml:space="preserve">
     <value>tabPageOption</value>
   </data>
-  <data name="dataGridViewVault.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="&gt;&gt;textBoxMdpData.Parent" xml:space="preserve">
+    <value>groupBoxMyPassword</value>
   </data>
   <data name="buttonSave.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
@@ -3696,8 +3696,8 @@
   <data name="&gt;&gt;buttonImportFromFirefox.Name" xml:space="preserve">
     <value>buttonImportFromFirefox</value>
   </data>
-  <data name="&gt;&gt;textBoxFilter.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;buttonSave.Parent" xml:space="preserve">
+    <value>tabPageSearch</value>
   </data>
   <data name="textBoxMdpKeyword.Location" type="System.Drawing.Point, System.Drawing">
     <value>166, 103</value>
@@ -3727,7 +3727,7 @@
     <value>True</value>
   </metadata>
   <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>en</value>
+    <value>fr</value>
   </metadata>
   <metadata name="contextMenuStripRow.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>192, 17</value>
