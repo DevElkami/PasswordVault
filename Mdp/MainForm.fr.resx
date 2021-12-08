@@ -124,6 +124,9 @@
   <data name="textBoxFilter.Size" type="System.Drawing.Size, System.Drawing">
     <value>780, 20</value>
   </data>
+  <data name="tabPageFirefox.Text" xml:space="preserve">
+    <value>Importer</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAkAAAAAAAEAIAAoQgAAlgAAAICAAAABACAAKAgBAL5CAABgYAAAAQAgAKiUAADmSgEASEgAAAEA
@@ -3108,20 +3111,5 @@
         AAAAAAAAAAAAAPj/AAD4/wAA+PEAAPjhAAD44QAA8OMAAPDDAACAAwAAgAcAAAAHAAAABwAAgAcAAIAH
         AACABwAAgA8AAMAPAAA=
 </value>
-  </data>
-  <data name="AddDone" xml:space="preserve">
-    <value>Ajout effectué</value>
-  </data>
-  <data name="ImportFinished" xml:space="preserve">
-    <value>Import terminé</value>
-  </data>
-  <data name="Keyword" xml:space="preserve">
-    <value>Mots clefs</value>
-  </data>
-  <data name="LinkOrOther" xml:space="preserve">
-    <value>Liens ou autres données</value>
-  </data>
-  <data name="Password" xml:space="preserve">
-    <value>Le mot de passe</value>
   </data>
 </root>

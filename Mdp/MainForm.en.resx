@@ -145,11 +145,71 @@
   <data name="labelViewFirefox.Text" xml:space="preserve">
     <value>See password</value>
   </data>
+  <data name="buttonImportFromFirefox.Text" xml:space="preserve">
+    <value>Import</value>
+  </data>
   <data name="labelImportFromFirefox.Size" type="System.Drawing.Size, System.Drawing">
     <value>82, 13</value>
   </data>
   <data name="labelImportFromFirefox.Text" xml:space="preserve">
     <value>Import into vault</value>
+  </data>
+  <data name="tabPageFirefox.Text" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="labelMsgAddDoneTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>26, 13</value>
+  </data>
+  <data name="labelMsgAddDoneTitle.Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="labelMsgAddDone.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 13</value>
+  </data>
+  <data name="labelMsgAddDone.Text" xml:space="preserve">
+    <value>Add done</value>
+  </data>
+  <data name="labelMsgImport.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 13</value>
+  </data>
+  <data name="labelMsgImport.Text" xml:space="preserve">
+    <value>Import finished</value>
+  </data>
+  <data name="labelGridKeyword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 13</value>
+  </data>
+  <data name="labelGridKeyword.Text" xml:space="preserve">
+    <value>Keyword</value>
+  </data>
+  <data name="labelGridData.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 13</value>
+  </data>
+  <data name="labelGridData.Text" xml:space="preserve">
+    <value>Url / data</value>
+  </data>
+  <data name="labelGridPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 13</value>
+  </data>
+  <data name="labelGridPassword.Text" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="labelGridLogin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="labelGridLogin.Text" xml:space="preserve">
+    <value>User name</value>
+  </data>
+  <data name="labelMsgPasswordTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 13</value>
+  </data>
+  <data name="labelMsgPasswordTitle.Text" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="labelMsgPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 13</value>
+  </data>
+  <data name="labelMsgPassword.Text" xml:space="preserve">
+    <value>The password ?</value>
   </data>
   <data name="labelMdpKeyword.Size" type="System.Drawing.Size, System.Drawing">
     <value>51, 13</value>
@@ -174,6 +234,9 @@
   </data>
   <data name="buttonAdd.Text" xml:space="preserve">
     <value>Add</value>
+  </data>
+  <data name="tabPageOption.Text" xml:space="preserve">
+    <value>Manual import</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -3162,20 +3225,5 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Password vault</value>
-  </data>
-  <data name="AddDone" xml:space="preserve">
-    <value>Completed</value>
-  </data>
-  <data name="ImportFinished" xml:space="preserve">
-    <value>Import finished</value>
-  </data>
-  <data name="Keyword" xml:space="preserve">
-    <value>Keyword</value>
-  </data>
-  <data name="LinkOrOther" xml:space="preserve">
-    <value>Link or other</value>
-  </data>
-  <data name="Password" xml:space="preserve">
-    <value>Password</value>
   </data>
 </root>

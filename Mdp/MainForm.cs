@@ -1,17 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace Mdp
 {
     public partial class MainForm : Form
     {
-        System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+        System.ComponentModel.ComponentResourceManager resources = null;
 
         public MainForm()
         {
             try
             {
+                System.Globalization.CultureInfo culture = null;
+                if (Thread.CurrentThread.CurrentCulture.IetfLanguageTag.Contains("fr"))
+                    culture = new System.Globalization.CultureInfo("");
+                else
+                    culture = new System.Globalization.CultureInfo("en");
+
+                Thread.CurrentThread.CurrentUICulture = culture;
+                Thread.CurrentThread.CurrentUICulture = culture;
+
+                resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+
                 InitializeComponent();
             }
             catch (Exception except)
@@ -24,7 +36,7 @@ namespace Mdp
         {
             try
             {
-                String mainPwd = Microsoft.VisualBasic.Interaction.InputBox(resources.GetString("Password") + "?", resources.GetString("Password"), "");
+                String mainPwd = Microsoft.VisualBasic.Interaction.InputBox(resources.GetString("labelMsgPassword.Text"), resources.GetString("labelMsgPasswordTitle.Text"), "");
                 if (Security.Instance.CheckPassword(mainPwd) == false)
                 {
                     DialogResult = DialogResult.Cancel;
@@ -53,7 +65,7 @@ namespace Mdp
             {
                 CellTemplate = cell,
                 Name = "Value",
-                HeaderText = "Login",
+                HeaderText = resources.GetString("labelGridLogin.Text"),
                 DataPropertyName = "UserName"
             };
             dataGridViewVault.Columns.Add(colUserName);
@@ -62,7 +74,7 @@ namespace Mdp
             {
                 CellTemplate = cell,
                 Name = "Value",
-                HeaderText = resources.GetString("Password"),
+                HeaderText = resources.GetString("labelGridPassword.Text"),
                 DataPropertyName = "DecryptPwd",
                 ReadOnly = true
             };
@@ -72,7 +84,7 @@ namespace Mdp
             {
                 CellTemplate = cell,
                 Name = "Value",
-                HeaderText = resources.GetString("LinkOrOther"),
+                HeaderText = resources.GetString("labelGridData.Text"),
                 DataPropertyName = "Data"
             };
             dataGridViewVault.Columns.Add(colData);
@@ -81,7 +93,7 @@ namespace Mdp
             {
                 CellTemplate = cell,
                 Name = "Value",
-                HeaderText = resources.GetString("Keyword"),
+                HeaderText = resources.GetString("labelGridKeyword.Text"),
                 DataPropertyName = "Keyword"
             };
             dataGridViewVault.Columns.Add(colKeyword);
@@ -95,7 +107,7 @@ namespace Mdp
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void buttonImportFirefox_Click(object sender, EventArgs e)
+        private void buttonShowImportData_Click(object sender, EventArgs e)
         {
             try
             {
@@ -113,18 +125,17 @@ namespace Mdp
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void buttonImportFromFirefox_Click(object sender, EventArgs e)
+        private void buttonImportData_Click(object sender, EventArgs e)
         {
             try
             {
                 dataGridViewVault.DataSource = null;
                 foreach (MyPassword item in checkedListBoxMdpFireFox.Items)
                     MyVault.Instance.Vault.Add(item);
-                MyVault.Instance.Save();
-                MyVault.Instance.Load();
-                textBoxFilter.Text = "";
-                dataGridViewVault.DataSource = MyVault.Instance.Vault;
-                MessageBox.Show(resources.GetString("ImportFinished"), "Firefox", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                RefreshList();
+
+                MessageBox.Show(resources.GetString("labelMsgImport.Text"), resources.GetString("labelMsgImportTitle.Text"), MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception except)
             {
@@ -210,11 +221,8 @@ namespace Mdp
                         }
                     }
                 }
-                MyVault.Instance.Save();
-                MyVault.Instance.Load();
-                dataGridViewVault.DataSource = null;
-                textBoxFilter.Text = "";
-                dataGridViewVault.DataSource = MyVault.Instance.Vault;
+
+                RefreshList();
             }
             catch (Exception except)
             {
@@ -241,23 +249,28 @@ namespace Mdp
 
                 MyVault.Instance.Vault.Add(myPassword);
 
-                MyVault.Instance.Save();
-                MyVault.Instance.Load();
-                dataGridViewVault.DataSource = null;
-                textBoxFilter.Text = "";
-                dataGridViewVault.DataSource = MyVault.Instance.Vault;
+                RefreshList();
 
                 textBoxMdpLogin.Text = "";
                 textBoxMdpPassword.Text = "";
                 textBoxMdpData.Text = "";
                 textBoxMdpKeyword.Text = "";
 
-                MessageBox.Show(resources.GetString("AddDone"), resources.GetString("buttonAdd.Text"), MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(resources.GetString("labelMsgAddDone.Text"), resources.GetString("labelMsgAddDoneTitle.Text"), MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception except)
             {
                 MessageBox.Show(except.ToString());
             }
+        }
+
+        private void RefreshList()
+        {
+            MyVault.Instance.Save();
+            MyVault.Instance.Load();
+            dataGridViewVault.DataSource = null;
+            textBoxFilter.Text = "";
+            dataGridViewVault.DataSource = MyVault.Instance.Vault;
         }
     }
 }

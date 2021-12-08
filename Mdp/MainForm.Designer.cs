@@ -45,6 +45,17 @@
             this.labelImportFromFirefox = new System.Windows.Forms.Label();
             this.tabPageOption = new System.Windows.Forms.TabPage();
             this.groupBoxMyPassword = new System.Windows.Forms.GroupBox();
+            this.groupBoxTranslateMsg = new System.Windows.Forms.GroupBox();
+            this.labelMsgAddDoneTitle = new System.Windows.Forms.Label();
+            this.labelMsgAddDone = new System.Windows.Forms.Label();
+            this.labelMsgImportTitle = new System.Windows.Forms.Label();
+            this.labelMsgImport = new System.Windows.Forms.Label();
+            this.labelGridKeyword = new System.Windows.Forms.Label();
+            this.labelGridData = new System.Windows.Forms.Label();
+            this.labelGridPassword = new System.Windows.Forms.Label();
+            this.labelGridLogin = new System.Windows.Forms.Label();
+            this.labelMsgPasswordTitle = new System.Windows.Forms.Label();
+            this.labelMsgPassword = new System.Windows.Forms.Label();
             this.textBoxMdpKeyword = new System.Windows.Forms.TextBox();
             this.labelMdpKeyword = new System.Windows.Forms.Label();
             this.textBoxMdpData = new System.Windows.Forms.TextBox();
@@ -62,6 +73,7 @@
             this.tabPageFirefox.SuspendLayout();
             this.tabPageOption.SuspendLayout();
             this.groupBoxMyPassword.SuspendLayout();
+            this.groupBoxTranslateMsg.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.myVaultBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -148,7 +160,7 @@
             this.buttonViewFirefox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.buttonViewFirefox.Name = "buttonViewFirefox";
             this.buttonViewFirefox.UseVisualStyleBackColor = false;
-            this.buttonViewFirefox.Click += new System.EventHandler(this.buttonImportFirefox_Click);
+            this.buttonViewFirefox.Click += new System.EventHandler(this.buttonShowImportData_Click);
             // 
             // labelViewFirefox
             // 
@@ -161,7 +173,7 @@
             this.buttonImportFromFirefox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.buttonImportFromFirefox.Name = "buttonImportFromFirefox";
             this.buttonImportFromFirefox.UseVisualStyleBackColor = false;
-            this.buttonImportFromFirefox.Click += new System.EventHandler(this.buttonImportFromFirefox_Click);
+            this.buttonImportFromFirefox.Click += new System.EventHandler(this.buttonImportData_Click);
             // 
             // labelImportFromFirefox
             // 
@@ -179,6 +191,7 @@
             // groupBoxMyPassword
             // 
             resources.ApplyResources(this.groupBoxMyPassword, "groupBoxMyPassword");
+            this.groupBoxMyPassword.Controls.Add(this.groupBoxTranslateMsg);
             this.groupBoxMyPassword.Controls.Add(this.textBoxMdpKeyword);
             this.groupBoxMyPassword.Controls.Add(this.labelMdpKeyword);
             this.groupBoxMyPassword.Controls.Add(this.textBoxMdpData);
@@ -189,6 +202,72 @@
             this.groupBoxMyPassword.Controls.Add(this.labelMdpLogin);
             this.groupBoxMyPassword.Name = "groupBoxMyPassword";
             this.groupBoxMyPassword.TabStop = false;
+            // 
+            // groupBoxTranslateMsg
+            // 
+            resources.ApplyResources(this.groupBoxTranslateMsg, "groupBoxTranslateMsg");
+            this.groupBoxTranslateMsg.Controls.Add(this.labelMsgAddDoneTitle);
+            this.groupBoxTranslateMsg.Controls.Add(this.labelMsgAddDone);
+            this.groupBoxTranslateMsg.Controls.Add(this.labelMsgImportTitle);
+            this.groupBoxTranslateMsg.Controls.Add(this.labelMsgImport);
+            this.groupBoxTranslateMsg.Controls.Add(this.labelGridKeyword);
+            this.groupBoxTranslateMsg.Controls.Add(this.labelGridData);
+            this.groupBoxTranslateMsg.Controls.Add(this.labelGridPassword);
+            this.groupBoxTranslateMsg.Controls.Add(this.labelGridLogin);
+            this.groupBoxTranslateMsg.Controls.Add(this.labelMsgPasswordTitle);
+            this.groupBoxTranslateMsg.Controls.Add(this.labelMsgPassword);
+            this.groupBoxTranslateMsg.Name = "groupBoxTranslateMsg";
+            this.groupBoxTranslateMsg.TabStop = false;
+            // 
+            // labelMsgAddDoneTitle
+            // 
+            resources.ApplyResources(this.labelMsgAddDoneTitle, "labelMsgAddDoneTitle");
+            this.labelMsgAddDoneTitle.Name = "labelMsgAddDoneTitle";
+            // 
+            // labelMsgAddDone
+            // 
+            resources.ApplyResources(this.labelMsgAddDone, "labelMsgAddDone");
+            this.labelMsgAddDone.Name = "labelMsgAddDone";
+            // 
+            // labelMsgImportTitle
+            // 
+            resources.ApplyResources(this.labelMsgImportTitle, "labelMsgImportTitle");
+            this.labelMsgImportTitle.Name = "labelMsgImportTitle";
+            // 
+            // labelMsgImport
+            // 
+            resources.ApplyResources(this.labelMsgImport, "labelMsgImport");
+            this.labelMsgImport.Name = "labelMsgImport";
+            // 
+            // labelGridKeyword
+            // 
+            resources.ApplyResources(this.labelGridKeyword, "labelGridKeyword");
+            this.labelGridKeyword.Name = "labelGridKeyword";
+            // 
+            // labelGridData
+            // 
+            resources.ApplyResources(this.labelGridData, "labelGridData");
+            this.labelGridData.Name = "labelGridData";
+            // 
+            // labelGridPassword
+            // 
+            resources.ApplyResources(this.labelGridPassword, "labelGridPassword");
+            this.labelGridPassword.Name = "labelGridPassword";
+            // 
+            // labelGridLogin
+            // 
+            resources.ApplyResources(this.labelGridLogin, "labelGridLogin");
+            this.labelGridLogin.Name = "labelGridLogin";
+            // 
+            // labelMsgPasswordTitle
+            // 
+            resources.ApplyResources(this.labelMsgPasswordTitle, "labelMsgPasswordTitle");
+            this.labelMsgPasswordTitle.Name = "labelMsgPasswordTitle";
+            // 
+            // labelMsgPassword
+            // 
+            resources.ApplyResources(this.labelMsgPassword, "labelMsgPassword");
+            this.labelMsgPassword.Name = "labelMsgPassword";
             // 
             // textBoxMdpKeyword
             // 
@@ -238,10 +317,6 @@
             this.buttonAdd.UseVisualStyleBackColor = false;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
-            // myVaultBindingSource
-            // 
-            this.myVaultBindingSource.DataSource = typeof(Mdp.MyVault);
-            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
@@ -262,6 +337,8 @@
             this.tabPageOption.ResumeLayout(false);
             this.groupBoxMyPassword.ResumeLayout(false);
             this.groupBoxMyPassword.PerformLayout();
+            this.groupBoxTranslateMsg.ResumeLayout(false);
+            this.groupBoxTranslateMsg.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.myVaultBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -294,6 +371,17 @@
         private System.Windows.Forms.Label labelMdpPassword;
         private System.Windows.Forms.TextBox textBoxMdpLogin;
         private System.Windows.Forms.Label labelMdpLogin;
+        private System.Windows.Forms.GroupBox groupBoxTranslateMsg;
+        private System.Windows.Forms.Label labelMsgPasswordTitle;
+        private System.Windows.Forms.Label labelMsgPassword;
+        private System.Windows.Forms.Label labelGridKeyword;
+        private System.Windows.Forms.Label labelGridData;
+        private System.Windows.Forms.Label labelGridPassword;
+        private System.Windows.Forms.Label labelGridLogin;
+        private System.Windows.Forms.Label labelMsgImportTitle;
+        private System.Windows.Forms.Label labelMsgImport;
+        private System.Windows.Forms.Label labelMsgAddDoneTitle;
+        private System.Windows.Forms.Label labelMsgAddDone;
     }
 }
 
