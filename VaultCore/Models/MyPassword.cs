@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Security;
 
-namespace Mdp
+namespace VaultCore.Models
 {
     /// <summary>
     /// Password data
@@ -11,12 +11,12 @@ namespace Mdp
         /// <summary>
         /// Url, or anything else
         /// </summary>
-        public String Data { get; set; } = String.Empty;
+        public string Data { get; set; } = string.Empty;
 
         /// <summary>
         /// User name
         /// </summary>
-        public String UserName { get; set; } = String.Empty;
+        public string UserName { get; set; } = string.Empty;
 
         /// <summary>
         /// Encrypted password
@@ -26,18 +26,18 @@ namespace Mdp
         /// <summary>
         /// Decrypt password (used by gui binding)
         /// </summary>
-        public String DecryptPwd { get { return Password.ToStr(); } }
+        public string DecryptPwd { get { return Password.ToStr(); } }
 
         /// <summary>
         /// Keyword to help to find data
         /// </summary>
-        public String Keyword { get; set; } = String.Empty;
+        public string Keyword { get; set; } = string.Empty;
 
         /// <summary>
         /// Used by gui binding
         /// </summary>
         /// <returns></returns>
-        public String ToStr()
+        public string ToStr()
         {
             return Data + Environment.NewLine + UserName + Environment.NewLine + Password.ToStr() + Environment.NewLine + Keyword;
         }
@@ -47,9 +47,9 @@ namespace Mdp
         /// </summary>
         /// <param name="data"></param>
         /// <returns></returns>
-        public static MyPassword From(String data)
+        public static MyPassword From(string data)
         {
-            String[] values = data.Split(new String[] { Environment.NewLine }, StringSplitOptions.None);
+            string[] values = data.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
             MyPassword myPassword = new MyPassword()
             {
                 Data = values[0],
@@ -65,12 +65,12 @@ namespace Mdp
         /// Override to string function (used by gui binding)
         /// </summary>
         /// <returns></returns>
-        public override String ToString()
+        public override string ToString()
         {
-            if (String.IsNullOrEmpty(Keyword))
+            if (string.IsNullOrEmpty(Keyword))
                 return "Login: " + UserName + " Mdp: " + Password + " Data: " + Data;
 
-            if (String.IsNullOrEmpty(Data))
+            if (string.IsNullOrEmpty(Data))
                 return "Login: " + UserName + " Mdp: " + Password + " Keyword: " + Keyword;
 
             return "Login: " + UserName + " Mdp: " + Password + " Keyword: " + Keyword + " Data: " + Data;

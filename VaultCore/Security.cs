@@ -4,7 +4,7 @@ using System.Security;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace Mdp
+namespace VaultCore
 {
     /// <summary>
     /// Manage encrypted data
