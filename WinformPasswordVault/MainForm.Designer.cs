@@ -1,4 +1,4 @@
-﻿namespace Mdp
+﻿namespace WinformPasswordVault
 {
     partial class MainForm
     {
@@ -99,7 +99,7 @@
             // 
             resources.ApplyResources(this.buttonSave, "buttonSave");
             this.buttonSave.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.buttonSave.BackgroundImage = global::Mdp.Properties.Resources.save;
+            this.buttonSave.BackgroundImage = global::WinformPasswordVault.Properties.Resources.save;
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.UseVisualStyleBackColor = false;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);

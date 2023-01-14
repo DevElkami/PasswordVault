@@ -5,7 +5,7 @@ using System.Windows.Forms;
 using VaultCore;
 using VaultCore.Models;
 
-namespace Mdp
+namespace WinformPasswordVault
 {
     public partial class MainForm : Form
     {

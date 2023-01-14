@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace Mdp
+namespace WinformPasswordVault
 {
     static class Program
     {
