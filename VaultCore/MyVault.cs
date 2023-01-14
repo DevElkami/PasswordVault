@@ -12,34 +12,7 @@ namespace VaultCore
         /// Why this name ? Just deceive thief password
         /// </summary>
         private const String FILE_NAME = "SimpleDb.sqlite";
-        private String directoryName = nameof(Security);
-
-        #region Singleton
-        static private MyVault? instance = null;
-        static private Object objectlock = new();
-
-        /// <summary>
-        /// Easy access to High level API
-        /// </summary>
-        public static MyVault Instance
-        {
-            get
-            {
-                if (instance == null)
-                {
-                    lock (objectlock)
-                    {
-                        instance ??= new MyVault();
-                    }
-                }
-                return instance;
-            }
-        }
-
-        private MyVault()
-        {
-        }
-        #endregion
+        private String directoryName = nameof(Security);        
 
         #region Properties
         /// <summary>

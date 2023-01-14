@@ -9,7 +9,8 @@ namespace WinformPasswordVault
 {
     public partial class MainForm : Form
     {
-        System.ComponentModel.ComponentResourceManager resources = null;
+        private System.ComponentModel.ComponentResourceManager resources = null;
+        private MyVault myVault = new();
 
         public MainForm()
         {
@@ -38,13 +39,13 @@ namespace WinformPasswordVault
         {
             try
             {
-                if (MyVault.Instance.CheckDirectory(Microsoft.VisualBasic.Interaction.InputBox(resources.GetString("labelMsgPassword.Text"), resources.GetString("labelMsgPasswordTitle.Text"), "")) == false)
+                if (myVault.CheckDirectory(Microsoft.VisualBasic.Interaction.InputBox(resources.GetString("labelMsgPassword.Text"), resources.GetString("labelMsgPasswordTitle.Text"), "")) == false)
                 {
                     DialogResult = DialogResult.Cancel;
                     Close();
                 }
 
-                MyVault.Instance.Load();
+                myVault.Load();
                 BindGrid();
             }
             catch (Exception except)
@@ -99,7 +100,7 @@ namespace WinformPasswordVault
             };
             dataGridViewVault.Columns.Add(colKeyword);
 
-            dataGridViewVault.DataSource = MyVault.Instance.Vault;
+            dataGridViewVault.DataSource = myVault.Vault;
             dataGridViewVault.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
         }
 
@@ -132,7 +133,7 @@ namespace WinformPasswordVault
             {
                 dataGridViewVault.DataSource = null;
                 foreach (MyPassword item in checkedListBoxMdpFireFox.Items)
-                    MyVault.Instance.Vault.Add(item);
+                    myVault.Vault.Add(item);
 
                 RefreshList();
 
@@ -165,11 +166,11 @@ namespace WinformPasswordVault
             try
             {
                 if (textBoxFilter.Text.Length < 3)
-                    dataGridViewVault.DataSource = MyVault.Instance.Vault;
+                    dataGridViewVault.DataSource = myVault.Vault;
                 else
                 {
                     List<MyPassword> filterList = new List<MyPassword>();
-                    foreach (MyPassword myPassword in MyVault.Instance.Vault)
+                    foreach (MyPassword myPassword in myVault.Vault)
                     {
                         if (myPassword.ToStr().Contains(textBoxFilter.Text))
                             filterList.Add(myPassword);
@@ -193,7 +194,7 @@ namespace WinformPasswordVault
         {
             try
             {
-                MyVault.Instance.Save();
+                myVault.Save();
             }
             catch (Exception except)
             {
@@ -213,11 +214,11 @@ namespace WinformPasswordVault
                 foreach (DataGridViewRow row in dataGridViewVault.SelectedRows)
                 {
                     MyPassword selectedPwd = (MyPassword)row.DataBoundItem;
-                    foreach (MyPassword mp in MyVault.Instance.Vault)
+                    foreach (MyPassword mp in myVault.Vault)
                     {
                         if (mp.ToStr() == selectedPwd.ToStr())
                         {
-                            MyVault.Instance.Vault.Remove(mp);
+                            myVault.Vault.Remove(mp);
                             break;
                         }
                     }
@@ -248,7 +249,7 @@ namespace WinformPasswordVault
                     Keyword = textBoxMdpKeyword.Text
                 };
 
-                MyVault.Instance.Vault.Add(myPassword);
+                myVault.Vault.Add(myPassword);
 
                 RefreshList();
 
@@ -267,11 +268,11 @@ namespace WinformPasswordVault
 
         private void RefreshList()
         {
-            MyVault.Instance.Save();
-            MyVault.Instance.Load();
+            myVault.Save();
+            myVault.Load();
             dataGridViewVault.DataSource = null;
             textBoxFilter.Text = "";
-            dataGridViewVault.DataSource = MyVault.Instance.Vault;
+            dataGridViewVault.DataSource = myVault.Vault;
         }
     }
 }
