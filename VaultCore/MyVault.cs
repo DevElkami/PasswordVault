@@ -14,8 +14,8 @@ namespace VaultCore
         private const String FILE_NAME = "SimpleDb.sqlite";
 
         #region Singleton
-        static private MyVault instance = null;
-        static private Object objectlock = new Object();
+        static private MyVault? instance = null;
+        static private Object objectlock = new ();
 
         /// <summary>
         /// Easy access to High level API

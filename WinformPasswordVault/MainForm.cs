@@ -38,8 +38,7 @@ namespace Mdp
         {
             try
             {
-                String mainPwd = Microsoft.VisualBasic.Interaction.InputBox(resources.GetString("labelMsgPassword.Text"), resources.GetString("labelMsgPasswordTitle.Text"), "");
-                if (Security.Instance.CheckPassword(mainPwd) == false)
+                if (Security.Instance.CheckPassword(Microsoft.VisualBasic.Interaction.InputBox(resources.GetString("labelMsgPassword.Text"), resources.GetString("labelMsgPasswordTitle.Text"), "")) == false)
                 {
                     DialogResult = DialogResult.Cancel;
                     Close();
@@ -244,7 +243,7 @@ namespace Mdp
                 MyPassword myPassword = new MyPassword()
                 {
                     UserName = textBoxMdpLogin.Text,
-                    Password = textBoxMdpPassword.Text.ToSecureString(),
+                    Password = textBoxMdpPassword.Text,
                     Data = textBoxMdpData.Text,
                     Keyword = textBoxMdpKeyword.Text
                 };

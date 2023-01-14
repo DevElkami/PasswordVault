@@ -21,7 +21,7 @@ namespace VaultCore
                 {
                     if (string.IsNullOrEmpty(account.sUsername))
                         continue;
-                    lp.Add(new MyPassword { Data = account.sUrl, UserName = account.sUsername, Password = account.sPassword.ToSecureString() });
+                    lp.Add(new MyPassword { Data = account.sUrl, UserName = account.sUsername, Password = account.sPassword });
                 }
             }
 

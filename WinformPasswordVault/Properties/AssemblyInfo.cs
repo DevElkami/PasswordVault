@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // Les informations générales relatives à un assembly dépendent de
 // l'ensemble d'attributs suivant. Changez les valeurs de ces attributs pour modifier les informations
 // associées à un assembly.
-[assembly: AssemblyTitle("Mdp")]
-[assembly: AssemblyDescription("Pour enfin de plus rien oublier")]
+[assembly: AssemblyTitle("Vault")]
+[assembly: AssemblyDescription("Don't forget it !")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("DevElkami")]
-[assembly: AssemblyProduct("Mdp")]
-[assembly: AssemblyCopyright("Copyright © Elkami. 2021")]
+[assembly: AssemblyProduct("Vault")]
+[assembly: AssemblyCopyright("Copyright © Elkami. 2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // Vous pouvez spécifier toutes les valeurs ou indiquer les numéros de build et de révision par défaut
 // en utilisant '*', comme indiqué ci-dessous :
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("2.0.0.0")]
-[assembly: AssemblyFileVersion("2.0.0.0")]
+[assembly: AssemblyVersion("3.0.0.0")]
+[assembly: AssemblyFileVersion("3.0.0.0")]

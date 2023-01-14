@@ -1,6 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Security;
+﻿using System.Security;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -12,12 +10,12 @@ namespace VaultCore
     public class Security
     {
         #region Private data 
-        private SecureString secureMdp = new SecureString();
+        private String secureMdp = nameof(Security);
         #endregion
 
         #region Singleton
-        static private Security instance = null;
-        static private Object objectlock = new Object();
+        static private Security? security = null;
+        static private Object objectlock = new();
 
         /// <summary>
         /// Easy access to security access
@@ -26,40 +24,15 @@ namespace VaultCore
         {
             get
             {
-                if (instance == null)
+                if (security == null)
                 {
                     lock (objectlock)
                     {
-                        if (instance == null)
-                        {
-                            instance = new Security();
-
-                            // MD5 hash of my favorite password
-                            instance.secureMdp.AppendChar('9'); instance.secureMdp.AppendChar('b');
-                            instance.secureMdp.AppendChar('9');
-                            instance.secureMdp.AppendChar('6'); instance.secureMdp.AppendChar('8');
-                            instance.secureMdp.AppendChar('2');
-                            instance.secureMdp.AppendChar('b'); instance.secureMdp.AppendChar('6');
-                            instance.secureMdp.AppendChar('9');
-                            instance.secureMdp.AppendChar('0'); instance.secureMdp.AppendChar('5');
-                            instance.secureMdp.AppendChar('0');
-                            instance.secureMdp.AppendChar('a'); instance.secureMdp.AppendChar('9');
-                            instance.secureMdp.AppendChar('4');
-                            instance.secureMdp.AppendChar('7'); instance.secureMdp.AppendChar('d');
-                            instance.secureMdp.AppendChar('a');
-                            instance.secureMdp.AppendChar('a'); instance.secureMdp.AppendChar('e');
-                            instance.secureMdp.AppendChar('0');
-                            instance.secureMdp.AppendChar('8'); instance.secureMdp.AppendChar('4');
-                            instance.secureMdp.AppendChar('1');
-                            instance.secureMdp.AppendChar('a'); instance.secureMdp.AppendChar('7');
-                            instance.secureMdp.AppendChar('7');
-                            instance.secureMdp.AppendChar('2'); instance.secureMdp.AppendChar('5');
-                            instance.secureMdp.AppendChar('7');
-                            instance.secureMdp.AppendChar('2'); instance.secureMdp.AppendChar('7');
-                        }
+                        if (security == null)
+                            security = new Security();
                     }
                 }
-                return instance;
+                return security;
             }
         }
 
@@ -76,17 +49,40 @@ namespace VaultCore
         /// <returns>True if equal else false</returns>
         public bool CheckPassword(String password)
         {
-            return GetMD5(password) == secureMdp.ToStr();
+            if (!IsInitialized())
+                return false;
+
+            Thread.Sleep(500);
+            secureMdp = password;
+            return Encrypt(GetHash(nameof(VaultCore) + nameof(Security))) == File.ReadAllText($"{nameof(VaultCore)}.key");
         }
 
         /// <summary>
-        /// Encrypt string with Triple DES (Data Encryption Standard)
+        /// Check if vault is initialized
+        /// </summary>
+        /// <returns></returns>
+        public bool IsInitialized()
+        {
+            return File.Exists($"{nameof(VaultCore)}.key");
+        }
+
+        /// <summary>
+        /// Initialize password
+        /// </summary>
+        /// <param name="password"></param>
+        public void Initialize(String password)
+        {
+            File.WriteAllText($"{nameof(VaultCore)}.key", Encrypt(GetHash(nameof(VaultCore) + nameof(Security))));
+        }
+
+        /// <summary>
+        /// Encrypt string with symmetric algorithm
         /// </summary>
         /// <param name="data">String</param>
         /// <returns>Encrypt</returns>
         public String Encrypt(String data)
         {
-            using (TripleDESCryptoServiceProvider cryptoServiceProvider = GetCryptoService())
+            using (Aes cryptoServiceProvider = GetCryptoService())
             {
                 using (ICryptoTransform cTransform = cryptoServiceProvider.CreateEncryptor())
                 {
@@ -106,7 +102,7 @@ namespace VaultCore
         /// <returns>String</returns>
         public String Decrypt(String data)
         {
-            using (TripleDESCryptoServiceProvider cryptoServiceProvider = GetCryptoService())
+            using (Aes cryptoServiceProvider = GetCryptoService())
             {
                 using (ICryptoTransform cTransform = cryptoServiceProvider.CreateDecryptor())
                 {
@@ -122,82 +118,103 @@ namespace VaultCore
 
         #region Private function
         /// <summary>
-        /// Basic MD5 hash
+        /// Get hash of string
         /// </summary>
-        /// <param name="value">String</param>
-        /// <returns>MD5 hash</returns>
-        private String GetMD5(String value)
+        /// <param name="value">String to hash</param>
+        /// <returns>Hash</returns>
+        private String GetHash(String value)
         {
-            using (MD5 md5Hash = MD5.Create())
+            Byte[] EncryptedBytes = Encoding.UTF8.GetBytes(nameof(GetHash));
+            using (SHA512 hashTool = SHA512.Create())
             {
-                return GetMd5Hash(md5Hash, value);
+                EncryptedBytes = hashTool.ComputeHash(Encoding.UTF8.GetBytes(value));
+                hashTool.Clear();
             }
+            return Convert.ToBase64String(EncryptedBytes);
         }
+
+        /*byte[] EncryptStringToBytes_Aes(string plainText)
+        {
+            // Check arguments.
+            if (plainText == null || plainText.Length <= 0)
+                throw new ArgumentNullException("plainText");
+           
+            byte[] encrypted;
+
+            // Create an Aes object
+            // with the specified key and IV.
+            using (Aes aesAlg = GetCryptoService())
+            {               
+                // Create an encryptor to perform the stream transform.
+                ICryptoTransform encryptor = aesAlg.CreateEncryptor(aesAlg.Key, aesAlg.IV);
+
+                // Create the streams used for encryption.
+                using (MemoryStream msEncrypt = new MemoryStream())
+                {
+                    using (CryptoStream csEncrypt = new CryptoStream(msEncrypt, encryptor, CryptoStreamMode.Write))
+                    {
+                        using (StreamWriter swEncrypt = new StreamWriter(csEncrypt))
+                        {
+                            //Write all data to the stream.
+                            swEncrypt.Write(plainText);
+                        }
+                        encrypted = msEncrypt.ToArray();
+                    }
+                }
+            }
+
+            // Return the encrypted bytes from the memory stream.
+            return encrypted;
+        }
+
+        string DecryptStringFromBytes_Aes(byte[] cipherText)
+        {
+            // Check arguments.
+            if (cipherText == null || cipherText.Length <= 0)
+                throw new ArgumentNullException("cipherText");           
+
+            // Declare the string used to hold
+            // the decrypted text.
+            string plaintext = null;
+
+            // Create an Aes object
+            // with the specified key and IV.
+            using (Aes aesAlg = GetCryptoService())
+            {                
+                // Create a decryptor to perform the stream transform.
+                ICryptoTransform decryptor = aesAlg.CreateDecryptor(aesAlg.Key, aesAlg.IV);
+
+                // Create the streams used for decryption.
+                using (MemoryStream msDecrypt = new MemoryStream(cipherText))
+                {
+                    using (CryptoStream csDecrypt = new CryptoStream(msDecrypt, decryptor, CryptoStreamMode.Read))
+                    {
+                        using (StreamReader srDecrypt = new StreamReader(csDecrypt))
+                        {
+
+                            // Read the decrypted bytes from the decrypting stream
+                            // and place them in a string.
+                            plaintext = srDecrypt.ReadToEnd();
+                        }
+                    }
+                }
+            }
+
+            return plaintext;
+        }*/
 
         /// <summary>
-        /// Low level MD5
+        /// Create crypto AES
         /// </summary>
-        /// <param name="md5Hash">Type of algorithm</param>
-        /// <param name="input">String</param>
-        /// <returns>MD5 hash</returns>
-        private String GetMd5Hash(MD5 md5Hash, String input)
+        /// <returns>AES provider</returns>
+        private Aes GetCryptoService()
         {
-            byte[] data = md5Hash.ComputeHash(Encoding.UTF8.GetBytes(input));
+            Aes aes = Aes.Create();
+            aes.Key = UTF8Encoding.UTF8.GetBytes(secureMdp);
+            aes.IV = UTF8Encoding.UTF8.GetBytes(GetHash(nameof(GetCryptoService)).ToString()).Take(aes.BlockSize / 8).ToArray();
 
-            StringBuilder sBuilder = new StringBuilder();
-
-            for (int i = 0; i < data.Length; i++)
-                sBuilder.Append(data[i].ToString("x2"));
-
-            return sBuilder.ToString();
+            return aes;
         }
-
-        /// <summary>
-        /// Create crypto triple DES
-        /// </summary>
-        /// <returns>Triple DES provider</returns>
-        private TripleDESCryptoServiceProvider GetCryptoService()
-        {
-            byte[] keyArray = UTF8Encoding.UTF8.GetBytes(secureMdp.ToStr());
-
-            TripleDESCryptoServiceProvider tdes = new TripleDESCryptoServiceProvider
-            {
-                Key = keyArray.Take(24).ToArray(),
-                Mode = CipherMode.ECB,
-                Padding = PaddingMode.PKCS7
-            };
-
-            return tdes;
-        }
-        #endregion        
-    }
-
-    /// <summary>
-    /// Secure string extender
-    /// </summary>
-    public static class SecurityExt
-    {
-        /// <summary>
-        /// Convert string to secure string
-        /// </summary>
-        /// <param name="str">String</param>
-        /// <returns>Secure string</returns>
-        public static SecureString ToSecureString(this String str)
-        {
-            SecureString secureString = new SecureString();
-            foreach (char c in str)
-                secureString.AppendChar(c);
-            return secureString;
-        }
-
-        /// <summary>
-        /// Convert secure string to string
-        /// </summary>
-        /// <param name="str"></param>
-        /// <returns></returns>
-        public static String ToStr(this SecureString str)
-        {
-            return new System.Net.NetworkCredential(String.Empty, str).Password;
-        }
+        #endregion
     }
 }

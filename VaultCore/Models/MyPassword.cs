@@ -1,7 +1,4 @@
-﻿using System;
-using System.Security;
-
-namespace VaultCore.Models
+﻿namespace VaultCore.Models
 {
     /// <summary>
     /// Password data
@@ -19,14 +16,9 @@ namespace VaultCore.Models
         public string UserName { get; set; } = string.Empty;
 
         /// <summary>
-        /// Encrypted password
+        /// Password
         /// </summary>
-        public SecureString Password { get; set; } = new SecureString();
-
-        /// <summary>
-        /// Decrypt password (used by gui binding)
-        /// </summary>
-        public string DecryptPwd { get { return Password.ToStr(); } }
+        public String Password { get; set; } = nameof(MyPassword);
 
         /// <summary>
         /// Keyword to help to find data
@@ -39,7 +31,7 @@ namespace VaultCore.Models
         /// <returns></returns>
         public string ToStr()
         {
-            return Data + Environment.NewLine + UserName + Environment.NewLine + Password.ToStr() + Environment.NewLine + Keyword;
+            return Data + Environment.NewLine + UserName + Environment.NewLine + Password + Environment.NewLine + Keyword;
         }
 
         /// <summary>
@@ -54,7 +46,7 @@ namespace VaultCore.Models
             {
                 Data = values[0],
                 UserName = values[1],
-                Password = values[2].ToSecureString(),
+                Password = values[2],
                 Keyword = values[3]
             };
 
