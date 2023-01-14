@@ -15,7 +15,7 @@ namespace VaultCore
 
         #region Singleton
         static private MyVault? instance = null;
-        static private Object objectlock = new ();
+        static private Object objectlock = new();
 
         /// <summary>
         /// Easy access to High level API
@@ -61,7 +61,9 @@ namespace VaultCore
             // Pour éviter les doublons
             data = new List<String>(data.GroupBy(x => x.ToString()).Select(x => x.First()));
 
+#pragma warning disable CS8604 // Existence possible d'un argument de référence null.
             File.WriteAllLines(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), FILE_NAME), data);
+#pragma warning restore CS8604 // Existence possible d'un argument de référence null.
         }
 
         /// <summary>
@@ -69,13 +71,19 @@ namespace VaultCore
         /// </summary>
         public void Load()
         {
+#pragma warning disable CS8604 // Existence possible d'un argument de référence null.
             String pathFile = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), FILE_NAME);
+#pragma warning restore CS8604 // Existence possible d'un argument de référence null.
             if (File.Exists(pathFile))
             {
                 Vault.Clear();
 
                 foreach (String data in File.ReadAllLines(pathFile))
-                    Vault.Add(MyPassword.From(Security.Instance.Decrypt(data)));
+                {
+                    MyPassword? myPassword = MyPassword.From(Security.Instance.Decrypt(data));
+                    if (myPassword != null)
+                        Vault.Add(myPassword);
+                }
             }
         }
         #endregion

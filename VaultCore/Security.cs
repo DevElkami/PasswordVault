@@ -82,7 +82,27 @@ namespace VaultCore
         /// <returns>Encrypt</returns>
         public String Encrypt(String data)
         {
-            using (Aes cryptoServiceProvider = GetCryptoService())
+            using (Aes cryptoServiceProvider = GetCryptoService(secureMdp))
+            {
+                using (ICryptoTransform cTransform = cryptoServiceProvider.CreateEncryptor())
+                {
+                    byte[] toEncryptArray = UTF8Encoding.UTF8.GetBytes(data);
+                    byte[] resultArray = cTransform.TransformFinalBlock(toEncryptArray, 0, toEncryptArray.Length);
+                    cryptoServiceProvider.Clear();
+
+                    return Convert.ToBase64String(resultArray, 0, resultArray.Length);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Encrypt string with symmetric algorithm
+        /// </summary>
+        /// <param name="data">String</param>
+        /// <returns>Encrypt</returns>
+        public static String Encrypt(String key, String data)
+        {
+            using (Aes cryptoServiceProvider = GetCryptoService(key))
             {
                 using (ICryptoTransform cTransform = cryptoServiceProvider.CreateEncryptor())
                 {
@@ -102,7 +122,7 @@ namespace VaultCore
         /// <returns>String</returns>
         public String Decrypt(String data)
         {
-            using (Aes cryptoServiceProvider = GetCryptoService())
+            using (Aes cryptoServiceProvider = GetCryptoService(secureMdp))
             {
                 using (ICryptoTransform cTransform = cryptoServiceProvider.CreateDecryptor())
                 {
@@ -114,103 +134,51 @@ namespace VaultCore
                 }
             }
         }
-        #endregion
 
-        #region Private function
+        /// <summary>
+        /// Decrypt string
+        /// </summary>
+        /// <param name="data">Encrypted string</param>
+        /// <returns>String</returns>
+        public static String Decrypt(String key, String data)
+        {
+            using (Aes cryptoServiceProvider = GetCryptoService(key))
+            {
+                using (ICryptoTransform cTransform = cryptoServiceProvider.CreateDecryptor())
+                {
+                    byte[] toEncryptArray = Convert.FromBase64String(data);
+                    byte[] resultArray = cTransform.TransformFinalBlock(toEncryptArray, 0, toEncryptArray.Length);
+                    cryptoServiceProvider.Clear();
+
+                    return UTF8Encoding.UTF8.GetString(resultArray);
+                }
+            }
+        }
+
         /// <summary>
         /// Get hash of string
         /// </summary>
         /// <param name="value">String to hash</param>
         /// <returns>Hash</returns>
-        private String GetHash(String value)
+        public static String GetHash(String value)
         {
-            Byte[] EncryptedBytes = Encoding.UTF8.GetBytes(nameof(GetHash));
+            Byte[] encryptedBytes = Encoding.UTF8.GetBytes(nameof(GetHash));
             using (SHA512 hashTool = SHA512.Create())
             {
-                EncryptedBytes = hashTool.ComputeHash(Encoding.UTF8.GetBytes(value));
+                encryptedBytes = hashTool.ComputeHash(Encoding.UTF8.GetBytes(value));
                 hashTool.Clear();
             }
-            return Convert.ToBase64String(EncryptedBytes);
+            return Convert.ToBase64String(encryptedBytes);
         }
-
-        /*byte[] EncryptStringToBytes_Aes(string plainText)
-        {
-            // Check arguments.
-            if (plainText == null || plainText.Length <= 0)
-                throw new ArgumentNullException("plainText");
-           
-            byte[] encrypted;
-
-            // Create an Aes object
-            // with the specified key and IV.
-            using (Aes aesAlg = GetCryptoService())
-            {               
-                // Create an encryptor to perform the stream transform.
-                ICryptoTransform encryptor = aesAlg.CreateEncryptor(aesAlg.Key, aesAlg.IV);
-
-                // Create the streams used for encryption.
-                using (MemoryStream msEncrypt = new MemoryStream())
-                {
-                    using (CryptoStream csEncrypt = new CryptoStream(msEncrypt, encryptor, CryptoStreamMode.Write))
-                    {
-                        using (StreamWriter swEncrypt = new StreamWriter(csEncrypt))
-                        {
-                            //Write all data to the stream.
-                            swEncrypt.Write(plainText);
-                        }
-                        encrypted = msEncrypt.ToArray();
-                    }
-                }
-            }
-
-            // Return the encrypted bytes from the memory stream.
-            return encrypted;
-        }
-
-        string DecryptStringFromBytes_Aes(byte[] cipherText)
-        {
-            // Check arguments.
-            if (cipherText == null || cipherText.Length <= 0)
-                throw new ArgumentNullException("cipherText");           
-
-            // Declare the string used to hold
-            // the decrypted text.
-            string plaintext = null;
-
-            // Create an Aes object
-            // with the specified key and IV.
-            using (Aes aesAlg = GetCryptoService())
-            {                
-                // Create a decryptor to perform the stream transform.
-                ICryptoTransform decryptor = aesAlg.CreateDecryptor(aesAlg.Key, aesAlg.IV);
-
-                // Create the streams used for decryption.
-                using (MemoryStream msDecrypt = new MemoryStream(cipherText))
-                {
-                    using (CryptoStream csDecrypt = new CryptoStream(msDecrypt, decryptor, CryptoStreamMode.Read))
-                    {
-                        using (StreamReader srDecrypt = new StreamReader(csDecrypt))
-                        {
-
-                            // Read the decrypted bytes from the decrypting stream
-                            // and place them in a string.
-                            plaintext = srDecrypt.ReadToEnd();
-                        }
-                    }
-                }
-            }
-
-            return plaintext;
-        }*/
 
         /// <summary>
         /// Create crypto AES
         /// </summary>
         /// <returns>AES provider</returns>
-        private Aes GetCryptoService()
+        public static Aes GetCryptoService(string key)
         {
             Aes aes = Aes.Create();
-            aes.Key = UTF8Encoding.UTF8.GetBytes(secureMdp);
+            aes.Key = UTF8Encoding.UTF8.GetBytes(key.Take(aes.KeySize / 8).ToArray());
             aes.IV = UTF8Encoding.UTF8.GetBytes(GetHash(nameof(GetCryptoService)).ToString()).Take(aes.BlockSize / 8).ToArray();
 
             return aes;

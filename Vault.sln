@@ -16,6 +16,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VaultImport", "VaultImport\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gui", "Gui", "{F3A2207A-ACB2-4C95-A19A-B069B3FAFEC6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VaultTestProject", "VaultTestProject\VaultTestProject.csproj", "{041A57A2-DEF6-4763-BB58-3C010BBC1ACD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -60,6 +62,14 @@ Global
 		{614A78ED-9F39-4F35-9BBE-4D884829B160}.Release|Any CPU.Build.0 = Release|Any CPU
 		{614A78ED-9F39-4F35-9BBE-4D884829B160}.Release|x64.ActiveCfg = Release|Any CPU
 		{614A78ED-9F39-4F35-9BBE-4D884829B160}.Release|x64.Build.0 = Release|Any CPU
+		{041A57A2-DEF6-4763-BB58-3C010BBC1ACD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{041A57A2-DEF6-4763-BB58-3C010BBC1ACD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{041A57A2-DEF6-4763-BB58-3C010BBC1ACD}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{041A57A2-DEF6-4763-BB58-3C010BBC1ACD}.Debug|x64.Build.0 = Debug|Any CPU
+		{041A57A2-DEF6-4763-BB58-3C010BBC1ACD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{041A57A2-DEF6-4763-BB58-3C010BBC1ACD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{041A57A2-DEF6-4763-BB58-3C010BBC1ACD}.Release|x64.ActiveCfg = Release|Any CPU
+		{041A57A2-DEF6-4763-BB58-3C010BBC1ACD}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

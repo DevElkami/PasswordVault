@@ -1,4 +1,6 @@
-﻿namespace VaultCore.Models
+﻿using System.Text.Json;
+
+namespace VaultCore.Models
 {
     /// <summary>
     /// Password data
@@ -6,66 +8,42 @@
     public class MyPassword
     {
         /// <summary>
-        /// Url, or anything else
+        /// Url or anything else
         /// </summary>
-        public string Data { get; set; } = string.Empty;
+        public String Data { get; set; } = String.Empty;
 
         /// <summary>
-        /// User name
+        /// User name or login
         /// </summary>
-        public string UserName { get; set; } = string.Empty;
+        public String UserName { get; set; } = String.Empty;
 
         /// <summary>
-        /// Password
+        /// Password (emcrypted)
         /// </summary>
-        public String Password { get; set; } = nameof(MyPassword);
+        public String Password { get; set; } = String.Empty;
 
         /// <summary>
         /// Keyword to help to find data
         /// </summary>
-        public string Keyword { get; set; } = string.Empty;
+        public String Keyword { get; set; } = String.Empty;
 
         /// <summary>
-        /// Used by gui binding
+        /// MyPassword to raw data
         /// </summary>
-        /// <returns></returns>
+        /// <returns>JSON string</returns>
         public string ToStr()
         {
-            return Data + Environment.NewLine + UserName + Environment.NewLine + Password + Environment.NewLine + Keyword;
+            return JsonSerializer.Serialize(this);            
         }
 
         /// <summary>
         /// Raw data to MyPassword object
         /// </summary>
-        /// <param name="data"></param>
-        /// <returns></returns>
-        public static MyPassword From(string data)
+        /// <param name="data">JSON data</param>
+        /// <returns>MyPassword</returns>
+        public static MyPassword? From(String data)
         {
-            string[] values = data.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
-            MyPassword myPassword = new MyPassword()
-            {
-                Data = values[0],
-                UserName = values[1],
-                Password = values[2],
-                Keyword = values[3]
-            };
-
-            return myPassword;
-        }
-
-        /// <summary>
-        /// Override to string function (used by gui binding)
-        /// </summary>
-        /// <returns></returns>
-        public override string ToString()
-        {
-            if (string.IsNullOrEmpty(Keyword))
-                return "Login: " + UserName + " Mdp: " + Password + " Data: " + Data;
-
-            if (string.IsNullOrEmpty(Data))
-                return "Login: " + UserName + " Mdp: " + Password + " Keyword: " + Keyword;
-
-            return "Login: " + UserName + " Mdp: " + Password + " Keyword: " + Keyword + " Data: " + Data;
-        }
+            return JsonSerializer.Deserialize<MyPassword>(data);            
+        }        
     }
 }
