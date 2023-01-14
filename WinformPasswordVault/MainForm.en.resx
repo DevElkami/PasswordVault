@@ -1,64 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<root>
-  <!-- 
-    Microsoft ResX Schema 
-    
-    Version 2.0
-    
-    The primary goals of this format is to allow a simple XML format 
-    that is mostly human readable. The generation and parsing of the 
-    various data types are done through the TypeConverter classes 
-    associated with the data types.
-    
-    Example:
-    
-    ... ado.net/XML headers & schema ...
-    <resheader name="resmimetype">text/microsoft-resx</resheader>
-    <resheader name="version">2.0</resheader>
-    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
-    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
-    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
-    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
-    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
-        <value>[base64 mime encoded serialized .NET Framework object]</value>
-    </data>
-    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
-        <comment>This is a comment</comment>
-    </data>
-                
-    There are any number of "resheader" rows that contain simple 
-    name/value pairs.
-    
-    Each data row contains a name, and value. The row also contains a 
-    type or mimetype. Type corresponds to a .NET class that support 
-    text/value conversion through the TypeConverter architecture. 
-    Classes that don't support this are serialized and stored with the 
-    mimetype set.
-    
-    The mimetype is used for serialized objects, and tells the 
-    ResXResourceReader how to depersist the object. This is currently not 
-    extensible. For a given mimetype the value must be set accordingly:
-    
-    Note - application/x-microsoft.net.object.binary.base64 is the format 
-    that the ResXResourceWriter will generate, however the reader can 
-    read any of the formats listed below.
-    
-    mimetype: application/x-microsoft.net.object.binary.base64
-    value   : The object must be serialized with 
-            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
-            : and then encoded with base64 encoding.
-    
-    mimetype: application/x-microsoft.net.object.soap.base64
-    value   : The object must be serialized with 
-            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
-            : and then encoded with base64 encoding.
-
-    mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : The object must be serialized into a byte array 
-            : using a System.ComponentModel.TypeConverter
-            : and then encoded with base64 encoding.
-    -->
+﻿<root>
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
@@ -118,11 +58,84 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="tabPageSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 24</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tabPageSearch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="tabPageSearch.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="tabPageSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1032, 491</value>
+  </data>
+  <data name="tabPageSearch.Text" xml:space="preserve">
+    <value>Find</value>
+  </data>
+  <data name="tabPageFirefox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 24</value>
+  </data>
+  <data name="tabPageFirefox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="tabPageFirefox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1032, 491</value>
+  </data>
+  <data name="tabPageFirefox.Text" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="tabPageOption.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 24</value>
+  </data>
+  <data name="tabPageOption.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="tabPageOption.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="tabPageOption.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1032, 491</value>
+  </data>
+  <data name="tabPageOption.Text" xml:space="preserve">
+    <value>Manual import</value>
+  </data>
+  <data name="tabControlMain.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="tabControlMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1040, 519</value>
+  </data>
   <data name="buttonSave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>795, 3</value>
+    <value>927, 3</value>
+  </data>
+  <data name="buttonSave.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="buttonSave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>27, 27</value>
+  </data>
+  <data name="textBoxFilter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 7</value>
+  </data>
+  <data name="textBoxFilter.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
   </data>
   <data name="textBoxFilter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>776, 20</value>
+    <value>905, 23</value>
+  </data>
+  <data name="contextMenuStripRow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>135, 26</value>
+  </data>
+  <data name="dataGridViewVault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 37</value>
+  </data>
+  <data name="dataGridViewVault.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="dataGridViewVault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1011, 443</value>
   </data>
   <data name="supprimerLélémentToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>134, 22</value>
@@ -130,113 +143,305 @@
   <data name="supprimerLélémentToolStripMenuItem.Text" xml:space="preserve">
     <value>Delete item</value>
   </data>
-  <data name="contextMenuStripRow.Size" type="System.Drawing.Size, System.Drawing">
-    <value>135, 26</value>
+  <data name="checkedListBoxMdpFireFox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 87</value>
   </data>
-  <data name="tabPageSearch.Text" xml:space="preserve">
-    <value>Find</value>
+  <data name="checkedListBoxMdpFireFox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="checkedListBoxMdpFireFox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1027, 364</value>
+  </data>
+  <data name="buttonViewFirefox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>158, 20</value>
+  </data>
+  <data name="buttonViewFirefox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="buttonViewFirefox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 27</value>
   </data>
   <data name="buttonViewFirefox.Text" xml:space="preserve">
     <value>Show</value>
   </data>
+  <data name="labelViewFirefox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 25</value>
+  </data>
+  <data name="labelViewFirefox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
   <data name="labelViewFirefox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 13</value>
+    <value>78, 15</value>
   </data>
   <data name="labelViewFirefox.Text" xml:space="preserve">
     <value>See password</value>
   </data>
+  <data name="buttonImportFromFirefox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>158, 53</value>
+  </data>
+  <data name="buttonImportFromFirefox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="buttonImportFromFirefox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 27</value>
+  </data>
   <data name="buttonImportFromFirefox.Text" xml:space="preserve">
     <value>Import</value>
   </data>
+  <data name="labelImportFromFirefox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 59</value>
+  </data>
+  <data name="labelImportFromFirefox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
   <data name="labelImportFromFirefox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 13</value>
+    <value>96, 15</value>
   </data>
   <data name="labelImportFromFirefox.Text" xml:space="preserve">
     <value>Import into vault</value>
   </data>
-  <data name="tabPageFirefox.Text" xml:space="preserve">
-    <value>Import</value>
+  <data name="groupBoxMyPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 7</value>
   </data>
-  <data name="labelMsgAddDoneTitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 13</value>
+  <data name="groupBoxMyPassword.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
   </data>
-  <data name="labelMsgAddDoneTitle.Text" xml:space="preserve">
-    <value>Add</value>
+  <data name="groupBoxMyPassword.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
   </data>
-  <data name="labelMsgAddDone.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 13</value>
-  </data>
-  <data name="labelMsgAddDone.Text" xml:space="preserve">
-    <value>Add done</value>
-  </data>
-  <data name="labelMsgImport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 13</value>
-  </data>
-  <data name="labelMsgImport.Text" xml:space="preserve">
-    <value>Import finished</value>
-  </data>
-  <data name="labelGridKeyword.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 13</value>
-  </data>
-  <data name="labelGridKeyword.Text" xml:space="preserve">
-    <value>Keyword</value>
-  </data>
-  <data name="labelGridData.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 13</value>
-  </data>
-  <data name="labelGridData.Text" xml:space="preserve">
-    <value>Url / data</value>
-  </data>
-  <data name="labelGridPassword.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 13</value>
-  </data>
-  <data name="labelGridPassword.Text" xml:space="preserve">
-    <value>Password</value>
-  </data>
-  <data name="labelGridLogin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 13</value>
-  </data>
-  <data name="labelGridLogin.Text" xml:space="preserve">
-    <value>User name</value>
-  </data>
-  <data name="labelMsgPasswordTitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 13</value>
-  </data>
-  <data name="labelMsgPasswordTitle.Text" xml:space="preserve">
-    <value>Password</value>
-  </data>
-  <data name="labelMsgPassword.Size" type="System.Drawing.Size, System.Drawing">
-    <value>83, 13</value>
-  </data>
-  <data name="labelMsgPassword.Text" xml:space="preserve">
-    <value>The password ?</value>
-  </data>
-  <data name="labelMdpKeyword.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 13</value>
-  </data>
-  <data name="labelMdpKeyword.Text" xml:space="preserve">
-    <value>Keyword:</value>
-  </data>
-  <data name="labelMdpData.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 13</value>
-  </data>
-  <data name="labelMdpData.Text" xml:space="preserve">
-    <value>Data:</value>
-  </data>
-  <data name="labelMdpPassword.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 13</value>
-  </data>
-  <data name="labelMdpPassword.Text" xml:space="preserve">
-    <value>Password:</value>
+  <data name="groupBoxMyPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>917, 473</value>
   </data>
   <data name="groupBoxMyPassword.Text" xml:space="preserve">
     <value>Add password</value>
   </data>
+  <data name="groupBoxTranslateMsg.Location" type="System.Drawing.Point, System.Drawing">
+    <value>194, 149</value>
+  </data>
+  <data name="groupBoxTranslateMsg.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="groupBoxTranslateMsg.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="groupBoxTranslateMsg.Size" type="System.Drawing.Size, System.Drawing">
+    <value>701, 301</value>
+  </data>
+  <data name="labelMsgAddDoneTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>318, 143</value>
+  </data>
+  <data name="labelMsgAddDoneTitle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="labelMsgAddDoneTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 15</value>
+  </data>
+  <data name="labelMsgAddDoneTitle.Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="labelMsgAddDone.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 143</value>
+  </data>
+  <data name="labelMsgAddDone.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="labelMsgAddDone.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 15</value>
+  </data>
+  <data name="labelMsgAddDone.Text" xml:space="preserve">
+    <value>Add done</value>
+  </data>
+  <data name="labelMsgImportTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>318, 106</value>
+  </data>
+  <data name="labelMsgImportTitle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="labelMsgImportTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 15</value>
+  </data>
+  <data name="labelMsgImport.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 106</value>
+  </data>
+  <data name="labelMsgImport.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="labelMsgImport.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 15</value>
+  </data>
+  <data name="labelMsgImport.Text" xml:space="preserve">
+    <value>Import finished</value>
+  </data>
+  <data name="labelGridKeyword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>486, 69</value>
+  </data>
+  <data name="labelGridKeyword.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="labelGridKeyword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 15</value>
+  </data>
+  <data name="labelGridKeyword.Text" xml:space="preserve">
+    <value>Keyword</value>
+  </data>
+  <data name="labelGridData.Location" type="System.Drawing.Point, System.Drawing">
+    <value>318, 69</value>
+  </data>
+  <data name="labelGridData.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="labelGridData.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 15</value>
+  </data>
+  <data name="labelGridData.Text" xml:space="preserve">
+    <value>Url / data</value>
+  </data>
+  <data name="labelGridPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>189, 69</value>
+  </data>
+  <data name="labelGridPassword.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="labelGridPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 15</value>
+  </data>
+  <data name="labelGridPassword.Text" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="labelGridLogin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 69</value>
+  </data>
+  <data name="labelGridLogin.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="labelGridLogin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 15</value>
+  </data>
+  <data name="labelGridLogin.Text" xml:space="preserve">
+    <value>User name</value>
+  </data>
+  <data name="labelMsgPasswordTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>318, 32</value>
+  </data>
+  <data name="labelMsgPasswordTitle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="labelMsgPasswordTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 15</value>
+  </data>
+  <data name="labelMsgPasswordTitle.Text" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="labelMsgPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 32</value>
+  </data>
+  <data name="labelMsgPassword.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="labelMsgPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 15</value>
+  </data>
+  <data name="labelMsgPassword.Text" xml:space="preserve">
+    <value>The password ?</value>
+  </data>
+  <data name="textBoxMdpKeyword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>194, 119</value>
+  </data>
+  <data name="textBoxMdpKeyword.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="textBoxMdpKeyword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>700, 23</value>
+  </data>
+  <data name="labelMdpKeyword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 122</value>
+  </data>
+  <data name="labelMdpKeyword.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="labelMdpKeyword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 15</value>
+  </data>
+  <data name="labelMdpKeyword.Text" xml:space="preserve">
+    <value>Keyword:</value>
+  </data>
+  <data name="textBoxMdpData.Location" type="System.Drawing.Point, System.Drawing">
+    <value>194, 89</value>
+  </data>
+  <data name="textBoxMdpData.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="textBoxMdpData.Size" type="System.Drawing.Size, System.Drawing">
+    <value>700, 23</value>
+  </data>
+  <data name="labelMdpData.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 92</value>
+  </data>
+  <data name="labelMdpData.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="labelMdpData.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 15</value>
+  </data>
+  <data name="labelMdpData.Text" xml:space="preserve">
+    <value>Data:</value>
+  </data>
+  <data name="textBoxMdpPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>194, 59</value>
+  </data>
+  <data name="textBoxMdpPassword.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="textBoxMdpPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>700, 23</value>
+  </data>
+  <data name="labelMdpPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 62</value>
+  </data>
+  <data name="labelMdpPassword.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="labelMdpPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 15</value>
+  </data>
+  <data name="labelMdpPassword.Text" xml:space="preserve">
+    <value>Password:</value>
+  </data>
+  <data name="textBoxMdpLogin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>194, 29</value>
+  </data>
+  <data name="textBoxMdpLogin.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="textBoxMdpLogin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>700, 23</value>
+  </data>
+  <data name="labelMdpLogin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 32</value>
+  </data>
+  <data name="labelMdpLogin.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="labelMdpLogin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 15</value>
+  </data>
+  <data name="buttonAdd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>936, 14</value>
+  </data>
+  <data name="buttonAdd.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="buttonAdd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 27</value>
+  </data>
   <data name="buttonAdd.Text" xml:space="preserve">
     <value>Add</value>
   </data>
-  <data name="tabPageOption.Text" xml:space="preserve">
-    <value>Manual import</value>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1040, 519</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -3222,6 +3427,9 @@
         AAAAAAAAAAAAAPj/AAD4/wAA+PEAAPjhAAD44QAA8OMAAPDDAACAAwAAgAcAAAAHAAAABwAAgAcAAIAH
         AACABwAAgA8AAMAPAAA=
 </value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Password vault</value>
