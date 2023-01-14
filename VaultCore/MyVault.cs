@@ -1,4 +1,5 @@
 ﻿using System.Reflection;
+using System.Text;
 using VaultCore.Models;
 
 namespace VaultCore
@@ -12,24 +13,38 @@ namespace VaultCore
         /// Why this name ? Just deceive thief password
         /// </summary>
         private const String FILE_NAME = "SimpleDb.sqlite";
-        private String directoryName = nameof(Security);        
+
+        /// <summary>
+        /// Vault key (encrypted)
+        /// </summary>
+        private String vaultKey = nameof(Security);
 
         #region Properties
         /// <summary>
         /// All password
         /// </summary>
         public List<MyPassword> Vault = new();
+
+        private String VaultKey
+        {
+            get { return Encoding.UTF8.GetString(Convert.FromBase64String(vaultKey)); }
+            set { vaultKey = Convert.ToBase64String(Encoding.UTF8.GetBytes(value)); }
+        }
         #endregion
 
-        #region Vault access management        
-        public bool CheckDirectory(String dir)
+        #region Vault access management     
+        /// <summary>
+        /// Check vault key
+        /// </summary>
+        /// <returns></returns>
+        public bool CheckVaultKey(String key)
         {
             if (!IsInitialized())
                 return false;
 
             Thread.Sleep(500);
-            directoryName = dir;
-            return Security.Encrypt(directoryName, Security.GetHash(nameof(VaultCore) + nameof(Security))) == File.ReadAllText($"{nameof(VaultCore)}.key");
+            VaultKey = key;
+            return Security.Encrypt(VaultKey, Security.GetHash(nameof(VaultCore) + nameof(Security))) == File.ReadAllText($"{nameof(VaultCore)}.key");
         }
 
         /// <summary>
@@ -44,10 +59,11 @@ namespace VaultCore
         /// <summary>
         /// Initialize vault file
         /// </summary>
-        /// <param name="directory">Initial directory</param>
-        public void Initialize(String directory)
+        /// <param name="key">New vault key</param>
+        public void Initialize(String key)
         {
-            File.WriteAllText($"{nameof(VaultCore)}.key", Security.Encrypt(directory, Security.GetHash(nameof(VaultCore) + nameof(Security))));
+            VaultKey = key;
+            File.WriteAllText($"{nameof(VaultCore)}.key", Security.Encrypt(VaultKey, Security.GetHash(nameof(VaultCore) + nameof(Security))));
         }
 
         /// <summary>
@@ -67,7 +83,7 @@ namespace VaultCore
         {
             List<String> data = new();
             foreach (MyPassword myPassword in Vault)
-                data.Add(Security.Encrypt(directoryName, myPassword.ToStr()));
+                data.Add(Security.Encrypt(VaultKey, myPassword.ToStr()));
 
             // Pour éviter les doublons
             data = new List<String>(data.GroupBy(x => x.ToString()).Select(x => x.First()));
@@ -91,7 +107,7 @@ namespace VaultCore
 
                 foreach (String data in File.ReadAllLines(pathFile))
                 {
-                    MyPassword? myPassword = MyPassword.From(Security.Decrypt(directoryName, data));
+                    MyPassword? myPassword = MyPassword.From(Security.Decrypt(VaultKey, data));
                     if (myPassword != null)
                         Vault.Add(myPassword);
                 }

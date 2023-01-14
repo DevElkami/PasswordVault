@@ -1,4 +1,5 @@
-﻿using System.Security.Cryptography;
+﻿using System.Diagnostics;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace VaultCore
@@ -17,13 +18,15 @@ namespace VaultCore
         {
             using (Aes cryptoServiceProvider = GetCryptoService(key))
             {
-                using (ICryptoTransform cTransform = cryptoServiceProvider.CreateEncryptor())
+                using (MemoryStream ms = new MemoryStream())
                 {
-                    byte[] toEncryptArray = UTF8Encoding.UTF8.GetBytes(data);
-                    byte[] resultArray = cTransform.TransformFinalBlock(toEncryptArray, 0, toEncryptArray.Length);
-                    cryptoServiceProvider.Clear();
+                    using (CryptoStream cs = new CryptoStream(ms, cryptoServiceProvider.CreateEncryptor(), CryptoStreamMode.Write))
+                    {
+                        byte[] toEncryptArray = UTF8Encoding.UTF8.GetBytes(data);
+                        cs.Write(toEncryptArray, 0, toEncryptArray.Length);
+                    }
 
-                    return Convert.ToBase64String(resultArray, 0, resultArray.Length);
+                    return Convert.ToBase64String(ms.ToArray());
                 }
             }
         }
@@ -37,13 +40,15 @@ namespace VaultCore
         {
             using (Aes cryptoServiceProvider = GetCryptoService(key))
             {
-                using (ICryptoTransform cTransform = cryptoServiceProvider.CreateDecryptor())
+                using (MemoryStream ms = new MemoryStream())
                 {
-                    byte[] toEncryptArray = Convert.FromBase64String(data);
-                    byte[] resultArray = cTransform.TransformFinalBlock(toEncryptArray, 0, toEncryptArray.Length);
-                    cryptoServiceProvider.Clear();
+                    using (CryptoStream cs = new CryptoStream(ms, cryptoServiceProvider.CreateDecryptor(), CryptoStreamMode.Write))
+                    {
+                        byte[] toEncryptArray = Convert.FromBase64String(data);
+                        cs.Write(toEncryptArray, 0, toEncryptArray.Length);
+                    }
 
-                    return UTF8Encoding.UTF8.GetString(resultArray);
+                    return UTF8Encoding.UTF8.GetString(ms.ToArray());
                 }
             }
         }

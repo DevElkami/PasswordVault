@@ -17,15 +17,15 @@ namespace VaultTestProject
             myVault.Erase();
         }
 
-        [TestMethod("Check directory")]
-        public void TestMethodDirectoryChecker()
+        [TestMethod("Check key")]
+        public void TestMethodKeyChecker()
         {
             MyVault myVault = new();
             myVault.Erase();
             Assert.IsFalse(myVault.IsInitialized());
             myVault.Initialize(Assembly.GetExecutingAssembly().Location);
             Assert.IsTrue(myVault.IsInitialized());
-            Assert.IsTrue(myVault.CheckDirectory(Assembly.GetExecutingAssembly().Location));
+            Assert.IsTrue(myVault.CheckVaultKey(Assembly.GetExecutingAssembly().Location));
             myVault.Erase();
         }
 
@@ -37,7 +37,7 @@ namespace VaultTestProject
             Assert.IsFalse(myVault.IsInitialized());
             myVault.Initialize(Assembly.GetExecutingAssembly().Location);
             Assert.IsTrue(myVault.IsInitialized());
-            Assert.IsTrue(myVault.CheckDirectory(Assembly.GetExecutingAssembly().Location));
+            Assert.IsTrue(myVault.CheckVaultKey(Assembly.GetExecutingAssembly().Location));
             myVault.Vault.Add(new VaultCore.Models.MyPassword()
             {
                 Data = "Data",
