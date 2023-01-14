@@ -12,6 +12,7 @@ namespace VaultCore
         /// Why this name ? Just deceive thief password
         /// </summary>
         private const String FILE_NAME = "SimpleDb.sqlite";
+        private String directoryName = nameof(Security);
 
         #region Singleton
         static private MyVault? instance = null;
@@ -28,8 +29,7 @@ namespace VaultCore
                 {
                     lock (objectlock)
                     {
-                        if (instance == null)
-                            instance = new MyVault();
+                        instance ??= new MyVault();
                     }
                 }
                 return instance;
@@ -45,7 +45,45 @@ namespace VaultCore
         /// <summary>
         /// All password
         /// </summary>
-        public List<MyPassword> Vault = new List<MyPassword>();
+        public List<MyPassword> Vault = new();
+        #endregion
+
+        #region Vault access management        
+        public bool CheckDirectory(String dir)
+        {
+            if (!IsInitialized())
+                return false;
+
+            Thread.Sleep(500);
+            directoryName = dir;
+            return Security.Encrypt(directoryName, Security.GetHash(nameof(VaultCore) + nameof(Security))) == File.ReadAllText($"{nameof(VaultCore)}.key");
+        }
+
+        /// <summary>
+        /// Check if vault is initialized
+        /// </summary>
+        /// <returns></returns>
+        public bool IsInitialized()
+        {
+            return File.Exists($"{nameof(VaultCore)}.key");
+        }
+
+        /// <summary>
+        /// Initialize vault file
+        /// </summary>
+        /// <param name="directory">Initial directory</param>
+        public void Initialize(String directory)
+        {
+            File.WriteAllText($"{nameof(VaultCore)}.key", Security.Encrypt(directory, Security.GetHash(nameof(VaultCore) + nameof(Security))));
+        }
+
+        /// <summary>
+        /// Erase vault file
+        /// </summary>        
+        public void Erase()
+        {
+            File.Delete($"{nameof(VaultCore)}.key");
+        }
         #endregion
 
         #region Read / write in encrypt file
@@ -54,9 +92,9 @@ namespace VaultCore
         /// </summary>
         public void Save()
         {
-            List<String> data = new List<String>();
+            List<String> data = new();
             foreach (MyPassword myPassword in Vault)
-                data.Add(Security.Instance.Encrypt(myPassword.ToStr()));
+                data.Add(Security.Encrypt(directoryName, myPassword.ToStr()));
 
             // Pour éviter les doublons
             data = new List<String>(data.GroupBy(x => x.ToString()).Select(x => x.First()));
@@ -80,7 +118,7 @@ namespace VaultCore
 
                 foreach (String data in File.ReadAllLines(pathFile))
                 {
-                    MyPassword? myPassword = MyPassword.From(Security.Instance.Decrypt(data));
+                    MyPassword? myPassword = MyPassword.From(Security.Decrypt(directoryName, data));
                     if (myPassword != null)
                         Vault.Add(myPassword);
                 }

@@ -38,7 +38,7 @@ namespace WinformPasswordVault
         {
             try
             {
-                if (Security.Instance.CheckPassword(Microsoft.VisualBasic.Interaction.InputBox(resources.GetString("labelMsgPassword.Text"), resources.GetString("labelMsgPasswordTitle.Text"), "")) == false)
+                if (MyVault.Instance.CheckDirectory(Microsoft.VisualBasic.Interaction.InputBox(resources.GetString("labelMsgPassword.Text"), resources.GetString("labelMsgPasswordTitle.Text"), "")) == false)
                 {
                     DialogResult = DialogResult.Cancel;
                     Close();
