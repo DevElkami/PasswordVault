@@ -17,19 +17,13 @@ namespace VaultCore
         /// <summary>
         /// Vault key (encrypted)
         /// </summary>
-        private String vaultKey = nameof(Security);
+        private String vaultKey = "mykey";
 
         #region Properties
         /// <summary>
         /// All password
         /// </summary>
         public List<MyPassword> Vault = new();
-
-        private String VaultKey
-        {
-            get { return Encoding.UTF8.GetString(Convert.FromBase64String(vaultKey)); }
-            set { vaultKey = Convert.ToBase64String(Encoding.UTF8.GetBytes(value)); }
-        }
         #endregion
 
         #region Vault access management     
@@ -43,8 +37,8 @@ namespace VaultCore
                 return false;
 
             Thread.Sleep(500);
-            VaultKey = key;
-            return Security.Encrypt(VaultKey, Security.GetHash(nameof(VaultCore) + nameof(Security))) == File.ReadAllText($"{nameof(VaultCore)}.key");
+            vaultKey = Security.GetHash(key);
+            return Security.Encrypt(vaultKey, Security.GetHash(nameof(VaultCore) + nameof(Security))) == File.ReadAllText($"{nameof(VaultCore)}.key");
         }
 
         /// <summary>
@@ -62,8 +56,8 @@ namespace VaultCore
         /// <param name="key">New vault key</param>
         public void Initialize(String key)
         {
-            VaultKey = key;
-            File.WriteAllText($"{nameof(VaultCore)}.key", Security.Encrypt(VaultKey, Security.GetHash(nameof(VaultCore) + nameof(Security))));
+            vaultKey = Security.GetHash(key);
+            File.WriteAllText($"{nameof(VaultCore)}.key", Security.Encrypt(vaultKey, Security.GetHash(nameof(VaultCore) + nameof(Security))));
         }
 
         /// <summary>
@@ -83,7 +77,7 @@ namespace VaultCore
         {
             List<String> data = new();
             foreach (MyPassword myPassword in Vault)
-                data.Add(Security.Encrypt(VaultKey, myPassword.ToStr()));
+                data.Add(Security.Encrypt(vaultKey, myPassword.ToStr()));
 
             // Pour éviter les doublons
             data = new List<String>(data.GroupBy(x => x.ToString()).Select(x => x.First()));
@@ -107,7 +101,7 @@ namespace VaultCore
 
                 foreach (String data in File.ReadAllLines(pathFile))
                 {
-                    MyPassword? myPassword = MyPassword.From(Security.Decrypt(VaultKey, data));
+                    MyPassword? myPassword = MyPassword.From(Security.Decrypt(vaultKey, data));
                     if (myPassword != null)
                         Vault.Add(myPassword);
                 }

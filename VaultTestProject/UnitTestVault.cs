@@ -12,7 +12,7 @@ namespace VaultTestProject
             MyVault myVault = new();
             myVault.Erase();
             Assert.IsFalse(myVault.IsInitialized());
-            myVault.Initialize(Assembly.GetExecutingAssembly().Location);
+            myVault.Initialize("mypassword");
             Assert.IsTrue(myVault.IsInitialized());
             myVault.Erase();
         }
@@ -23,9 +23,9 @@ namespace VaultTestProject
             MyVault myVault = new();
             myVault.Erase();
             Assert.IsFalse(myVault.IsInitialized());
-            myVault.Initialize(Assembly.GetExecutingAssembly().Location);
+            myVault.Initialize("mypassword");
             Assert.IsTrue(myVault.IsInitialized());
-            Assert.IsTrue(myVault.CheckVaultKey(Assembly.GetExecutingAssembly().Location));
+            Assert.IsTrue(myVault.CheckVaultKey("mypassword"));
             myVault.Erase();
         }
 
@@ -35,9 +35,9 @@ namespace VaultTestProject
             MyVault myVault = new();
             myVault.Erase();
             Assert.IsFalse(myVault.IsInitialized());
-            myVault.Initialize(Assembly.GetExecutingAssembly().Location);
+            myVault.Initialize("mypassword");
             Assert.IsTrue(myVault.IsInitialized());
-            Assert.IsTrue(myVault.CheckVaultKey(Assembly.GetExecutingAssembly().Location));
+            Assert.IsTrue(myVault.CheckVaultKey("mypassword"));
             myVault.Vault.Add(new VaultCore.Models.MyPassword()
             {
                 Data = "Data",
