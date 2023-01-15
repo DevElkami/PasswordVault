@@ -41,8 +41,7 @@ namespace WinformPasswordVault
             {
                 if(myVault.IsInitialized() == false)
                 {
-                    InitVaultForm initVaultForm = new();
-                    initVaultForm.Parent = this;
+                    InitVaultForm initVaultForm = new();                    
                     if (initVaultForm.ShowDialog() != DialogResult.OK)
                     {
                         DialogResult = DialogResult.Cancel;

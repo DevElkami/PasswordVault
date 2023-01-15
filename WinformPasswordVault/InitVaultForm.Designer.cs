@@ -34,6 +34,8 @@
             this.textBoxPassword1 = new System.Windows.Forms.TextBox();
             this.textBoxPassword2 = new System.Windows.Forms.TextBox();
             this.buttonInitialize = new System.Windows.Forms.Button();
+            this.labelErrorMsgNotSame = new System.Windows.Forms.Label();
+            this.labelErrorMsgTooShort = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelPassword1
@@ -65,11 +67,23 @@
             this.buttonInitialize.UseVisualStyleBackColor = true;
             this.buttonInitialize.Click += new System.EventHandler(this.buttonInitialize_Click);
             // 
+            // labelErrorMsgNotSame
+            // 
+            resources.ApplyResources(this.labelErrorMsgNotSame, "labelErrorMsgNotSame");
+            this.labelErrorMsgNotSame.Name = "labelErrorMsgNotSame";
+            // 
+            // labelErrorMsgTooShort
+            // 
+            resources.ApplyResources(this.labelErrorMsgTooShort, "labelErrorMsgTooShort");
+            this.labelErrorMsgTooShort.Name = "labelErrorMsgTooShort";
+            // 
             // InitVaultForm
             // 
             this.AcceptButton = this.buttonInitialize;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.labelErrorMsgTooShort);
+            this.Controls.Add(this.labelErrorMsgNotSame);
             this.Controls.Add(this.buttonInitialize);
             this.Controls.Add(this.textBoxPassword2);
             this.Controls.Add(this.textBoxPassword1);
@@ -92,5 +106,7 @@
         private System.Windows.Forms.TextBox textBoxPassword1;
         private System.Windows.Forms.TextBox textBoxPassword2;
         private System.Windows.Forms.Button buttonInitialize;
+        private System.Windows.Forms.Label labelErrorMsgNotSame;
+        private System.Windows.Forms.Label labelErrorMsgTooShort;
     }
 }
