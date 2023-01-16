@@ -39,16 +39,19 @@ namespace WinformPasswordVault
         {
             try
             {
-                if(myVault.IsInitialized() == false)
+                if (myVault.IsInitialized() == false)
                 {
-                    InitVaultForm initVaultForm = new();                    
+                    InitVaultForm initVaultForm = new();
                     if (initVaultForm.ShowDialog() != DialogResult.OK)
                     {
                         DialogResult = DialogResult.Cancel;
                         Close();
                     }
                     else
-                        myVault.Initialize(initVaultForm.UserPassword);
+                    {
+                        if (myVault.Initialize(initVaultForm.UserPassword))
+                            myVault.ImportOldData(initVaultForm.UserPassword);
+                    }
                 }
 
                 if (myVault.CheckVaultKey(Microsoft.VisualBasic.Interaction.InputBox(resources.GetString("labelMsgPassword.Text"), resources.GetString("labelMsgPasswordTitle.Text"), "")) == false)

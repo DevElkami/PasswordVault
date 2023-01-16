@@ -54,18 +54,43 @@ namespace VaultCore
         /// Initialize vault file
         /// </summary>
         /// <param name="key">New vault key</param>
-        public void Initialize(String key)
+        /// <returns>True if FILE_NAME already exist: we have a old file version</returns>
+        public bool Initialize(String key)
         {
             vaultKey = Security.GetHash(key);
             File.WriteAllText($"{nameof(VaultCore)}.key", Security.Encrypt(vaultKey, Security.GetHash(nameof(VaultCore) + nameof(Security))));
+
+            return File.Exists(FILE_NAME);
         }
 
         /// <summary>
         /// Erase vault file
-        /// </summary>        
+        /// </summary>
         public void Erase()
         {
             File.Delete($"{nameof(VaultCore)}.key");
+        }
+
+        /// <summary>
+        /// Import old data (previous version 3.0.0.0)
+        /// </summary>
+        public void ImportOldData(String oldKey)
+        {
+            Vault.Clear();
+
+            Mdp.OldVaultDecryptor oldVaultDecryptor = new();
+            oldVaultDecryptor.Decrypt(oldKey);
+
+            foreach (Mdp.OldPassword oldPassword in oldVaultDecryptor.Vault)
+            {
+                Vault.Add(new MyPassword()
+                {
+                    Data = oldPassword.Data,
+                    Keyword = oldPassword.Keyword,
+                    UserName = oldPassword.UserName,
+                    Password = oldPassword.Password
+                });
+            }
         }
         #endregion
 
