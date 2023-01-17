@@ -1,3 +1,5 @@
+![](https://github.com/DevElkami/PasswordVault/actions/workflows/workflow.yml/badge.svg?branch=master)
+
 # PasswordVault
 Personal password vault with firefox / thunderbird importer. This vault use triple DES encryption.
 
