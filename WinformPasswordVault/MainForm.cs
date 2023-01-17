@@ -92,8 +92,7 @@ namespace WinformPasswordVault
                 CellTemplate = cell,
                 Name = "Value",
                 HeaderText = resources.GetString("labelGridPassword.Text"),
-                DataPropertyName = "DecryptPwd",
-                ReadOnly = true
+                DataPropertyName = "Password"
             };
             dataGridViewVault.Columns.Add(colPassword);
 

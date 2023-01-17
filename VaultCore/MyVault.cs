@@ -91,6 +91,8 @@ namespace VaultCore
                     Password = oldPassword.Password
                 });
             }
+
+            Save();
         }
         #endregion
 
