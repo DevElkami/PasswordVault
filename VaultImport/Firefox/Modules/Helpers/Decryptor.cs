@@ -40,9 +40,15 @@ namespace Firefox.Helpers
         private static IntPtr hNss3;
         private static IntPtr hMozGlue;
 
+#pragma warning disable CS8618 // Un champ non-nullable doit contenir une valeur non-null lors de la fermeture du constructeur. Envisagez de déclarer le champ comme nullable.
         private static Nss3.NssInit fpNssInit;
+#pragma warning restore CS8618 // Un champ non-nullable doit contenir une valeur non-null lors de la fermeture du constructeur. Envisagez de déclarer le champ comme nullable.
+#pragma warning disable CS8618 // Un champ non-nullable doit contenir une valeur non-null lors de la fermeture du constructeur. Envisagez de déclarer le champ comme nullable.
         private static Nss3.Pk11SdrDecrypt fpPk11SdrDecrypt;
+#pragma warning restore CS8618 // Un champ non-nullable doit contenir une valeur non-null lors de la fermeture du constructeur. Envisagez de déclarer le champ comme nullable.
+#pragma warning disable CS8618 // Un champ non-nullable doit contenir une valeur non-null lors de la fermeture du constructeur. Envisagez de déclarer le champ comme nullable.
         private static Nss3.NssShutdown fpNssShutdown;
+#pragma warning restore CS8618 // Un champ non-nullable doit contenir une valeur non-null lors de la fermeture du constructeur. Envisagez de déclarer le champ comme nullable.
 
         public static bool LoadNSS(string sPath)
         {
@@ -109,7 +115,9 @@ namespace Firefox.Helpers
             catch (Exception ex)
             {
                 Console.WriteLine(ex);
+#pragma warning disable CS8603 // Existence possible d'un retour de référence null.
                 return null;
+#pragma warning restore CS8603 // Existence possible d'un retour de référence null.
             }
             finally
             {
@@ -117,7 +125,9 @@ namespace Firefox.Helpers
                     Marshal.FreeHGlobal(lpMemory);
             }
 
+#pragma warning disable CS8603 // Existence possible d'un retour de référence null.
             return null;
+#pragma warning restore CS8603 // Existence possible d'un retour de référence null.
         }
 
         public static string GetUTF8(string sNonUtf8)
