@@ -1,3 +1,5 @@
+![](https://github.com/DevElkami/PasswordVault/actions/workflows/workflow.yml/badge.svg?branch=master)
+
 ![CodeQL](https://github.com/DevElkami/MesConges/actions/workflows/codeql.yml/badge.svg)
 
 # PasswordVault
