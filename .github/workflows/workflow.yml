@@ -24,7 +24,7 @@ jobs:
       run: dotnet restore ./Vault.sln
       
     - name: Build
-      run: dotnet build ./Vault.sln --configuration Release --no-restore
+      run: dotnet build ./Vault.sln --configuration Release
     
     - name: Test
-      run: dotnet test ./Vault.sln --no-restore --verbosity normal
+      run: dotnet test ./Vault.sln --verbosity normal
