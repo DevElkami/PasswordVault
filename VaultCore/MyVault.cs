@@ -11,6 +11,11 @@ namespace VaultCore
     {
         #region Private data
         /// <summary>
+        /// Firefox data import helper
+        /// </summary>
+        private FirefoxImporter firefoxImporter = new();
+
+        /// <summary>
         /// Why this name ? Just deceive thief password
         /// </summary>
         private const String FILE_NAME = "SimpleDb.sqlite";
@@ -74,6 +79,7 @@ namespace VaultCore
         /// <summary>
         /// Import old data (previous version 3.0.0.0)
         /// </summary>
+        /// <param name="oldKey">Old vault key</param>
         public void ImportOldData(String oldKey)
         {
             vault.Clear();
@@ -93,6 +99,14 @@ namespace VaultCore
             }
 
             Save();
+        }
+
+        /// <summary>
+        /// Get datas from Firefox and thunderbird.        
+        /// </summary>
+        public List<MyPassword> GetMyPasswordsFromBrowsers()
+        {
+            return firefoxImporter.Import();
         }
         #endregion
 

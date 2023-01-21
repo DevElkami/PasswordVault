@@ -127,7 +127,7 @@ namespace WinformPasswordVault
         {
             try
             {
-                foreach (MyPassword myPassword in FirefoxImporter.Import())
+                foreach (MyPassword myPassword in myVault.GetMyPasswordsFromBrowsers())
                     checkedListBoxMdpFireFox.Items.Add(myPassword, true);
             }
             catch (Exception except)

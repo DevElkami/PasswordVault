@@ -12,7 +12,7 @@ namespace VaultCore
     /// </summary>
     public class FirefoxImporter
     {
-        public static List<MyPassword> Import()
+        public List<MyPassword> Import()
         {
             List<MyPassword> lp = new List<MyPassword>();
             foreach (string browser in Profile.GetMozillaBrowsers())

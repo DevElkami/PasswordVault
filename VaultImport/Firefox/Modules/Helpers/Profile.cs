@@ -5,14 +5,8 @@
 		public static string Appdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
 		private static string[] GeckoBrowsersList = new string[]
 		{
-			"Mozilla\\Firefox",
-			"Waterfox",
-			"K-Meleon",
-			"Thunderbird",
-			"Comodo\\IceDragon",
-			"8pecxstudios\\Cyberfox",
-			"NETGATE Technologies\\BlackHaw",
-			"Moonchild Productions\\Pale Moon"
+			"Mozilla\\Firefox",			
+			"Thunderbird"			
 		};
 
 		private static string[] Concat(string[] x, string[] y)

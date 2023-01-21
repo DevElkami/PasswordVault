@@ -55,5 +55,12 @@ namespace VaultTestProject
             Assert.IsTrue(myVault[0]?.UserName == "UserName");
             myVault.Erase();
         }
+
+        [TestMethod("Firefox import")]
+        public void TestMethodFirefoxImport()
+        {
+            MyVault myVault = new();
+            myVault.GetMyPasswordsFromBrowsers();
+        }
     }
 }
