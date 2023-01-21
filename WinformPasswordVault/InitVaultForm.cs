@@ -7,22 +7,10 @@ namespace WinformPasswordVault
 {
     public partial class InitVaultForm : Form
     {
-        private System.ComponentModel.ComponentResourceManager resources = null;
-
         public InitVaultForm()
         {
             try
             {
-                System.Globalization.CultureInfo culture = null;
-                if (Thread.CurrentThread.CurrentCulture.IetfLanguageTag.Contains("fr"))
-                    culture = new System.Globalization.CultureInfo("");
-                else
-                    culture = new System.Globalization.CultureInfo("en");
-
-                Thread.CurrentThread.CurrentUICulture = culture;
-                Thread.CurrentThread.CurrentUICulture = culture;
-
-                resources = new System.ComponentModel.ComponentResourceManager(typeof(InitVaultForm));
                 InitializeComponent();
             }
             catch (Exception except)
@@ -53,19 +41,19 @@ namespace WinformPasswordVault
             {
                 if (textBoxPassword1.Text != textBoxPassword2.Text)
                 {
-                    MessageBox.Show(resources.GetString("labelErrorMsgNotSame.Text"), resources.GetString("$this.Text"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(Properties.Resources.ResourceManager.GetString("ErrorMsgPasswordsMustSame"), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
                 if (String.IsNullOrEmpty(textBoxPassword1.Text))
                 {
-                    MessageBox.Show(resources.GetString("labelErrorMsgTooShort.Text"), resources.GetString("$this.Text"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(Properties.Resources.ResourceManager.GetString("ErrorMsgPasswordLengthMinimum"), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
                 if (textBoxPassword1.Text.Length < 6)
                 {
-                    MessageBox.Show(resources.GetString("labelErrorMsgTooShort.Text"), resources.GetString("$this.Text"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(Properties.Resources.ResourceManager.GetString("ErrorMsgPasswordLengthMinimum"), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 

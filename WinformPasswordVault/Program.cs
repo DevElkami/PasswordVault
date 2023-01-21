@@ -6,6 +6,7 @@ using System;
 using System.Diagnostics;
 using System.Globalization;
 using System.IO;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -47,10 +48,15 @@ namespace WinformPasswordVault
 
                 // Quick translate
 #if DEBUG
-                Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
+                CultureInfo culture = new CultureInfo("en");
+                CultureInfo.DefaultThreadCurrentCulture = culture;
+                CultureInfo.DefaultThreadCurrentUICulture = culture;
 #else
-            if (Thread.CurrentThread.CurrentUICulture.IetfLanguageTag != "fr-FR")
-                Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
+                if (Thread.CurrentThread.CurrentUICulture.IetfLanguageTag != "fr-FR")
+                {
+                    CultureInfo.DefaultThreadCurrentCulture = culture;
+                    CultureInfo.DefaultThreadCurrentUICulture = culture;
+                }
 #endif
 
                 // Run app

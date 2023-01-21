@@ -74,15 +74,8 @@
   <data name="labelPassword2.Text" xml:space="preserve">
     <value>Confirm your password</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="textBoxPassword1.MaxLength" type="System.Int32, mscorlib">
-    <value>32</value>
-  </data>
   <data name="textBoxPassword1.Size" type="System.Drawing.Size, System.Drawing">
     <value>210, 23</value>
-  </data>
-  <data name="textBoxPassword2.MaxLength" type="System.Int32, mscorlib">
-    <value>32</value>
   </data>
   <data name="textBoxPassword2.Size" type="System.Drawing.Size, System.Drawing">
     <value>210, 23</value>
@@ -92,24 +85,6 @@
   </data>
   <data name="buttonInitialize.Text" xml:space="preserve">
     <value>Initialize</value>
-  </data>
-  <data name="labelErrorMsgNotSame.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 15</value>
-  </data>
-  <data name="labelErrorMsgNotSame.Text" xml:space="preserve">
-    <value>Passwords must be the same</value>
-  </data>
-  <data name="labelErrorMsgTooShort.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="labelErrorMsgTooShort.Size" type="System.Drawing.Size, System.Drawing">
-    <value>246, 15</value>
-  </data>
-  <data name="labelErrorMsgTooShort.Text" xml:space="preserve">
-    <value>Password length must be at least 6 characters</value>
-  </data>
-  <data name="labelErrorMsgTooShort.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>453, 123</value>

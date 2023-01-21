@@ -10,24 +10,12 @@ namespace WinformPasswordVault
 {
     public partial class MainForm : Form
     {
-        private System.ComponentModel.ComponentResourceManager resources = null;
         private MyVault myVault = new();
 
         public MainForm()
         {
             try
             {
-                System.Globalization.CultureInfo culture = null;
-                if (Thread.CurrentThread.CurrentCulture.IetfLanguageTag.Contains("fr"))
-                    culture = new System.Globalization.CultureInfo("");
-                else
-                    culture = new System.Globalization.CultureInfo("en");
-
-                Thread.CurrentThread.CurrentUICulture = culture;
-                Thread.CurrentThread.CurrentUICulture = culture;
-
-                resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-
                 InitializeComponent();
             }
             catch (Exception except)
@@ -51,12 +39,15 @@ namespace WinformPasswordVault
                     }
                     else
                     {
-                        if (myVault.Initialize(initVaultForm.UserPassword))
-                            myVault.ImportOldData(initVaultForm.UserPassword);
+                        if (MessageBox.Show(Properties.Resources.ResourceManager.GetString("AskMsgImportOldData"), this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            if (myVault.Initialize(initVaultForm.UserPassword))
+                                myVault.ImportOldData(initVaultForm.UserPassword);
+                        }
                     }
                 }
 
-                if (myVault.CheckVaultKey(Microsoft.VisualBasic.Interaction.InputBox(resources.GetString("labelMsgPassword.Text"), resources.GetString("labelMsgPasswordTitle.Text"), "")) == false)
+                if (myVault.CheckVaultKey(Microsoft.VisualBasic.Interaction.InputBox(Properties.Resources.ResourceManager.GetString("AskPassword"), this.Text, "")) == false)
                 {
                     DialogResult = DialogResult.Cancel;
                     Close();
@@ -85,7 +76,7 @@ namespace WinformPasswordVault
             {
                 CellTemplate = cell,
                 Name = "Value",
-                HeaderText = resources.GetString("labelGridLogin.Text"),
+                HeaderText = Properties.Resources.ResourceManager.GetString("Login"),
                 DataPropertyName = "UserName"
             };
             dataGridViewVault.Columns.Add(colUserName);
@@ -94,7 +85,7 @@ namespace WinformPasswordVault
             {
                 CellTemplate = cell,
                 Name = "Value",
-                HeaderText = resources.GetString("labelGridPassword.Text"),
+                HeaderText = Properties.Resources.ResourceManager.GetString("Password"),
                 DataPropertyName = "Password"
             };
             dataGridViewVault.Columns.Add(colPassword);
@@ -103,7 +94,7 @@ namespace WinformPasswordVault
             {
                 CellTemplate = cell,
                 Name = "Value",
-                HeaderText = resources.GetString("labelGridData.Text"),
+                HeaderText = Properties.Resources.ResourceManager.GetString("Data"),
                 DataPropertyName = "Data"
             };
             dataGridViewVault.Columns.Add(colData);
@@ -112,7 +103,7 @@ namespace WinformPasswordVault
             {
                 CellTemplate = cell,
                 Name = "Value",
-                HeaderText = resources.GetString("labelGridKeyword.Text"),
+                HeaderText = Properties.Resources.ResourceManager.GetString("Keyword"),
                 DataPropertyName = "Keyword"
             };
             dataGridViewVault.Columns.Add(colKeyword);
@@ -155,7 +146,7 @@ namespace WinformPasswordVault
 
                 RefreshList();
 
-                MessageBox.Show(resources.GetString("labelMsgImport.Text"), resources.GetString("labelMsgImportTitle.Text"), MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(Properties.Resources.ResourceManager.GetString("ConfirmMsgImport"), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception except)
             {
@@ -281,7 +272,7 @@ namespace WinformPasswordVault
                 textBoxMdpData.Text = "";
                 textBoxMdpKeyword.Text = "";
 
-                MessageBox.Show(resources.GetString("labelMsgAddDone.Text"), resources.GetString("labelMsgAddDoneTitle.Text"), MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(Properties.Resources.ResourceManager.GetString("ConfirmMsgAddDone"), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception except)
             {
