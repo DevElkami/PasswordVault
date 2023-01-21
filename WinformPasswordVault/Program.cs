@@ -30,15 +30,14 @@ namespace WinformPasswordVault
 
                 logfile.Layout = Layout.FromString("${longdate}|${event-properties:item=EventId_Id}|${uppercase:${level}}|${logger}|${message} ${exception:format=tostring}");
                 LoggingConfiguration config = new();
-                config.AddRule(LogLevel.Info, LogLevel.Fatal, logfile);
+                config.AddRule(LogLevel.Info, LogLevel.Fatal, logfile, "*");
+                LogManager.Configuration = config;
             }
             catch (Exception except)
             {
                 Debug.WriteLine(except.ToString());
                 // No log, don't care
             }
-
-            LogManager.GetLogger(nameof(WinformPasswordVault)).Info("Started");
 
             try
             {

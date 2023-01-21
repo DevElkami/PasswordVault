@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NLog;
+using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Windows.Forms;
@@ -31,7 +32,8 @@ namespace WinformPasswordVault
             }
             catch (Exception except)
             {
-                MessageBox.Show(except.ToString());
+                LogManager.GetLogger(nameof(WinformPasswordVault)).Fatal(except.ToString());
+                MessageBox.Show(except.Message);
             }
         }
 
@@ -65,7 +67,8 @@ namespace WinformPasswordVault
             }
             catch (Exception except)
             {
-                MessageBox.Show(except.ToString());
+                LogManager.GetLogger(nameof(WinformPasswordVault)).Fatal(except.ToString());
+                MessageBox.Show(except.Message);
             }
         }
 
@@ -132,7 +135,8 @@ namespace WinformPasswordVault
             }
             catch (Exception except)
             {
-                MessageBox.Show(except.ToString());
+                LogManager.GetLogger(nameof(WinformPasswordVault)).Fatal(except.ToString());
+                MessageBox.Show(except.Message);
             }
         }
 
@@ -155,7 +159,8 @@ namespace WinformPasswordVault
             }
             catch (Exception except)
             {
-                MessageBox.Show(except.ToString());
+                LogManager.GetLogger(nameof(WinformPasswordVault)).Fatal(except.ToString());
+                MessageBox.Show(except.Message);
             }
         }
 
@@ -166,7 +171,8 @@ namespace WinformPasswordVault
             }
             catch (Exception except)
             {
-                MessageBox.Show(except.ToString());
+                LogManager.GetLogger(nameof(WinformPasswordVault)).Fatal(except.ToString());
+                MessageBox.Show(except.Message);
             }
         }
 
@@ -195,7 +201,8 @@ namespace WinformPasswordVault
             }
             catch (Exception except)
             {
-                MessageBox.Show(except.ToString());
+                LogManager.GetLogger(nameof(WinformPasswordVault)).Fatal(except.ToString());
+                MessageBox.Show(except.Message);
             }
         }
 
@@ -212,7 +219,8 @@ namespace WinformPasswordVault
             }
             catch (Exception except)
             {
-                MessageBox.Show(except.ToString());
+                LogManager.GetLogger(nameof(WinformPasswordVault)).Fatal(except.ToString());
+                MessageBox.Show(except.Message);
             }
         }
 
@@ -242,7 +250,8 @@ namespace WinformPasswordVault
             }
             catch (Exception except)
             {
-                MessageBox.Show(except.ToString());
+                LogManager.GetLogger(nameof(WinformPasswordVault)).Fatal(except.ToString());
+                MessageBox.Show(except.Message);
             }
         }
 
@@ -276,7 +285,8 @@ namespace WinformPasswordVault
             }
             catch (Exception except)
             {
-                MessageBox.Show(except.ToString());
+                LogManager.GetLogger(nameof(WinformPasswordVault)).Fatal(except.ToString());
+                MessageBox.Show(except.Message);
             }
         }
 
