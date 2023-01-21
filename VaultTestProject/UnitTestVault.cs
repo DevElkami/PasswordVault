@@ -38,7 +38,7 @@ namespace VaultTestProject
             myVault.Initialize("mypassword");
             Assert.IsTrue(myVault.IsInitialized());
             Assert.IsTrue(myVault.CheckVaultKey("mypassword"));
-            myVault.Vault.Add(new VaultCore.Models.MyPassword()
+            myVault.Add(new VaultCore.Models.MyPassword()
             {
                 Data = "Data",
                 Keyword = "Keyword",
@@ -46,13 +46,13 @@ namespace VaultTestProject
                 UserName = "UserName"
             });
             myVault.Save();
-            myVault.Vault.Clear();
+            myVault.Clear();
             myVault.Load();
-            Assert.IsTrue(myVault.Vault.Count > 0);
-            Assert.IsTrue(myVault.Vault[0].Data == "Data");
-            Assert.IsTrue(myVault.Vault[0].Keyword == "Keyword");
-            Assert.IsTrue(myVault.Vault[0].Password == "Password");
-            Assert.IsTrue(myVault.Vault[0].UserName == "UserName");
+            Assert.IsTrue(myVault.Count > 0);
+            Assert.IsTrue(myVault[0]?.Data == "Data");
+            Assert.IsTrue(myVault[0]?.Keyword == "Keyword");
+            Assert.IsTrue(myVault[0]?.Password == "Password");
+            Assert.IsTrue(myVault[0]?.UserName == "UserName");
             myVault.Erase();
         }
     }

@@ -44,6 +44,11 @@ namespace VaultCore.Models
         public static MyPassword? From(String data)
         {
             return JsonSerializer.Deserialize<MyPassword>(data);            
-        }        
+        }
+
+        public override string ToString()
+        {
+            return ToStr();
+        }
     }
 }
