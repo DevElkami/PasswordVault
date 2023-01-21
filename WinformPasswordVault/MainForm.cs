@@ -114,7 +114,7 @@ namespace WinformPasswordVault
             };
             dataGridViewVault.Columns.Add(colKeyword);
 
-            dataGridViewVault.DataSource = myVault;
+            dataGridViewVault.DataSource = new List<MyPassword>(myVault);
             dataGridViewVault.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
         }
 
@@ -180,7 +180,7 @@ namespace WinformPasswordVault
             try
             {
                 if (textBoxFilter.Text.Length < 3)
-                    dataGridViewVault.DataSource = myVault;
+                    dataGridViewVault.DataSource = new List<MyPassword>(myVault);
                 else
                 {
                     List<MyPassword> filterList = new List<MyPassword>();
@@ -286,7 +286,7 @@ namespace WinformPasswordVault
             myVault.Load();
             dataGridViewVault.DataSource = null;
             textBoxFilter.Text = "";
-            dataGridViewVault.DataSource = myVault;
+            dataGridViewVault.DataSource = new List<MyPassword>(myVault);
         }
     }
 }
