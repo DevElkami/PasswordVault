@@ -1,17 +1,21 @@
 ﻿using NLog;
+using ReaLTaiizor.Forms;
+using ReaLTaiizor.Manager;
 using System;
-using System.Threading;
 using System.Windows.Forms;
 
 namespace WinformPasswordVault
 {
-    public partial class InitVaultForm : Form
+    public partial class InitVaultForm : MaterialForm
     {
         public InitVaultForm()
         {
             try
             {
                 InitializeComponent();
+
+                MaterialSkinManager.Instance.AddFormToManage(this);
+                this.FormStyle = ReaLTaiizor.Enum.Material.FormStyles.ActionBar_None;
             }
             catch (Exception except)
             {

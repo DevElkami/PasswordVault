@@ -1,14 +1,16 @@
 ﻿using NLog;
+using ReaLTaiizor.Forms;
+using ReaLTaiizor.Manager;
 using System;
 using System.Collections.Generic;
-using System.Threading;
+using System.Drawing;
 using System.Windows.Forms;
 using VaultCore;
 using VaultCore.Models;
 
 namespace WinformPasswordVault
 {
-    public partial class MainForm : Form
+    public partial class MainForm : MaterialForm
     {
         private MyVault myVault = new();
 
@@ -17,6 +19,12 @@ namespace WinformPasswordVault
             try
             {
                 InitializeComponent();
+
+                MaterialSkinManager.Instance.AddFormToManage(this);
+                this.FormStyle = ReaLTaiizor.Enum.Material.FormStyles.ActionBar_None;
+
+                poisonGridVault.BackgroundColor = MaterialSkinManager.Instance.BackdropColor;
+                poisonGridVault.Font = new Font("Segoe UI", 14f, FontStyle.Regular, GraphicsUnit.Pixel);
             }
             catch (Exception except)
             {
@@ -68,9 +76,8 @@ namespace WinformPasswordVault
         /// </summary>
         private void BindGrid()
         {
-            dataGridViewVault.AutoGenerateColumns = false;
+            poisonGridVault.AutoGenerateColumns = false;
 
-            //create the column programatically
             DataGridViewCell cell = new DataGridViewTextBoxCell();
             DataGridViewTextBoxColumn colUserName = new DataGridViewTextBoxColumn()
             {
@@ -79,7 +86,7 @@ namespace WinformPasswordVault
                 HeaderText = Properties.Resources.ResourceManager.GetString("Login"),
                 DataPropertyName = "UserName"
             };
-            dataGridViewVault.Columns.Add(colUserName);
+            poisonGridVault.Columns.Add(colUserName);
 
             DataGridViewTextBoxColumn colPassword = new DataGridViewTextBoxColumn()
             {
@@ -88,7 +95,7 @@ namespace WinformPasswordVault
                 HeaderText = Properties.Resources.ResourceManager.GetString("Password"),
                 DataPropertyName = "Password"
             };
-            dataGridViewVault.Columns.Add(colPassword);
+            poisonGridVault.Columns.Add(colPassword);
 
             DataGridViewTextBoxColumn colData = new DataGridViewTextBoxColumn()
             {
@@ -97,7 +104,7 @@ namespace WinformPasswordVault
                 HeaderText = Properties.Resources.ResourceManager.GetString("Data"),
                 DataPropertyName = "Data"
             };
-            dataGridViewVault.Columns.Add(colData);
+            poisonGridVault.Columns.Add(colData);
 
             DataGridViewTextBoxColumn colKeyword = new DataGridViewTextBoxColumn()
             {
@@ -106,10 +113,10 @@ namespace WinformPasswordVault
                 HeaderText = Properties.Resources.ResourceManager.GetString("Keyword"),
                 DataPropertyName = "Keyword"
             };
-            dataGridViewVault.Columns.Add(colKeyword);
+            poisonGridVault.Columns.Add(colKeyword);
 
-            dataGridViewVault.DataSource = new List<MyPassword>(myVault);
-            dataGridViewVault.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            poisonGridVault.DataSource = new List<MyPassword>(myVault);
+            poisonGridVault.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
         }
 
         /// <summary>
@@ -140,7 +147,7 @@ namespace WinformPasswordVault
         {
             try
             {
-                dataGridViewVault.DataSource = null;
+                poisonGridVault.DataSource = null;
                 foreach (MyPassword item in checkedListBoxMdpFireFox.Items)
                     myVault.Add(item);
 
@@ -177,7 +184,7 @@ namespace WinformPasswordVault
             try
             {
                 if (textBoxFilter.Text.Length < 3)
-                    dataGridViewVault.DataSource = new List<MyPassword>(myVault);
+                    poisonGridVault.DataSource = new List<MyPassword>(myVault);
                 else
                 {
                     List<MyPassword> filterList = new List<MyPassword>();
@@ -187,7 +194,7 @@ namespace WinformPasswordVault
                             filterList.Add(myPassword);
                     }
 
-                    dataGridViewVault.DataSource = filterList;
+                    poisonGridVault.DataSource = filterList;
                 }
             }
             catch (Exception except)
@@ -224,7 +231,7 @@ namespace WinformPasswordVault
         {
             try
             {
-                foreach (DataGridViewRow row in dataGridViewVault.SelectedRows)
+                foreach (DataGridViewRow row in poisonGridVault.SelectedRows)
                 {
                     MyPassword selectedPwd = (MyPassword)row.DataBoundItem;
                     foreach (MyPassword mp in myVault)
@@ -285,9 +292,9 @@ namespace WinformPasswordVault
         {
             myVault.Save();
             myVault.Load();
-            dataGridViewVault.DataSource = null;
+            poisonGridVault.DataSource = null;
             textBoxFilter.Text = "";
-            dataGridViewVault.DataSource = new List<MyPassword>(myVault);
+            poisonGridVault.DataSource = new List<MyPassword>(myVault);
         }
     }
 }

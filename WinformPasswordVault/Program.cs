@@ -2,8 +2,12 @@
 using NLog.Config;
 using NLog.Layouts;
 using NLog.Targets;
+using ReaLTaiizor.Colors;
+using ReaLTaiizor.Manager;
+using ReaLTaiizor.Util;
 using System;
 using System.Diagnostics;
+using System.Drawing;
 using System.Globalization;
 using System.IO;
 using System.Text.RegularExpressions;
@@ -58,6 +62,15 @@ namespace WinformPasswordVault
                     CultureInfo.DefaultThreadCurrentUICulture = culture;
                 }
 #endif
+                // Theme                                
+                MaterialSkinManager.Instance.EnforceBackcolorOnAllComponents = true;
+                MaterialSkinManager.Instance.Theme = MaterialSkinManager.Themes.DARK;
+                MaterialSkinManager.Instance.ColorScheme = new MaterialColorScheme(
+                    ColorTranslator.FromHtml("0x37474F"),
+                    MaterialSkinManager.Instance.BackdropColor/*ColorTranslator.FromHtml("0x263238")*/,
+                    ColorTranslator.FromHtml("0x607D8B"),
+                    Color.FromArgb(162, 101, 190),
+                    MaterialTextShade.WHITE);
 
                 // Run app
                 Application.Run(new MainForm());

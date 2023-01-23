@@ -1,4 +1,6 @@
-﻿namespace WinformPasswordVault
+﻿using ReaLTaiizor.Controls;
+
+namespace WinformPasswordVault
 {
     partial class MainForm
     {
@@ -30,13 +32,17 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.tabControlMain = new System.Windows.Forms.TabControl();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.tabControlMain = new ReaLTaiizor.Controls.MaterialTabControl();
             this.tabPageSearch = new System.Windows.Forms.TabPage();
-            this.buttonSave = new System.Windows.Forms.Button();
-            this.textBoxFilter = new System.Windows.Forms.TextBox();
-            this.dataGridViewVault = new System.Windows.Forms.DataGridView();
+            this.materialLabel24 = new ReaLTaiizor.Controls.MaterialLabel();
+            this.poisonGridVault = new ReaLTaiizor.Controls.PoisonDataGridView();
             this.contextMenuStripRow = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.supprimerLélémentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonSave = new System.Windows.Forms.Button();
+            this.textBoxFilter = new System.Windows.Forms.TextBox();
             this.tabPageFirefox = new System.Windows.Forms.TabPage();
             this.checkedListBoxMdpFireFox = new System.Windows.Forms.CheckedListBox();
             this.buttonViewFirefox = new System.Windows.Forms.Button();
@@ -65,10 +71,11 @@
             this.textBoxMdpLogin = new System.Windows.Forms.TextBox();
             this.labelMdpLogin = new System.Windows.Forms.Label();
             this.buttonAdd = new System.Windows.Forms.Button();
+            this.imageListTabCtrl = new System.Windows.Forms.ImageList(this.components);
             this.myVaultBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControlMain.SuspendLayout();
             this.tabPageSearch.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVault)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.poisonGridVault)).BeginInit();
             this.contextMenuStripRow.SuspendLayout();
             this.tabPageFirefox.SuspendLayout();
             this.tabPageOption.SuspendLayout();
@@ -79,21 +86,96 @@
             // 
             // tabControlMain
             // 
-            resources.ApplyResources(this.tabControlMain, "tabControlMain");
             this.tabControlMain.Controls.Add(this.tabPageSearch);
             this.tabControlMain.Controls.Add(this.tabPageFirefox);
             this.tabControlMain.Controls.Add(this.tabPageOption);
+            this.tabControlMain.Depth = 0;
+            resources.ApplyResources(this.tabControlMain, "tabControlMain");
+            this.tabControlMain.ImageList = this.imageListTabCtrl;
+            this.tabControlMain.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            this.tabControlMain.Multiline = true;
             this.tabControlMain.Name = "tabControlMain";
             this.tabControlMain.SelectedIndex = 0;
             // 
             // tabPageSearch
             // 
-            resources.ApplyResources(this.tabPageSearch, "tabPageSearch");
             this.tabPageSearch.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPageSearch.Controls.Add(this.materialLabel24);
+            this.tabPageSearch.Controls.Add(this.poisonGridVault);
             this.tabPageSearch.Controls.Add(this.buttonSave);
             this.tabPageSearch.Controls.Add(this.textBoxFilter);
-            this.tabPageSearch.Controls.Add(this.dataGridViewVault);
+            resources.ApplyResources(this.tabPageSearch, "tabPageSearch");
             this.tabPageSearch.Name = "tabPageSearch";
+            // 
+            // materialLabel24
+            // 
+            resources.ApplyResources(this.materialLabel24, "materialLabel24");
+            this.materialLabel24.BackColor = System.Drawing.Color.White;
+            this.materialLabel24.Depth = 0;
+            this.materialLabel24.FontType = ReaLTaiizor.Manager.MaterialSkinManager.FontType.H3;
+            this.materialLabel24.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            this.materialLabel24.Name = "materialLabel24";
+            // 
+            // poisonGridVault
+            // 
+            this.poisonGridVault.AllowUserToAddRows = false;
+            this.poisonGridVault.AllowUserToDeleteRows = false;
+            this.poisonGridVault.AllowUserToResizeRows = false;
+            resources.ApplyResources(this.poisonGridVault, "poisonGridVault");
+            this.poisonGridVault.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.poisonGridVault.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.poisonGridVault.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.poisonGridVault.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(65)))), ((int)(((byte)(153)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(101)))), ((int)(((byte)(190)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.poisonGridVault.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.poisonGridVault.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.poisonGridVault.ContextMenuStrip = this.contextMenuStripRow;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(101)))), ((int)(((byte)(190)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.poisonGridVault.DefaultCellStyle = dataGridViewCellStyle2;
+            this.poisonGridVault.EnableHeadersVisualStyles = false;
+            this.poisonGridVault.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.poisonGridVault.Name = "poisonGridVault";
+            this.poisonGridVault.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(65)))), ((int)(((byte)(153)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(101)))), ((int)(((byte)(190)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.poisonGridVault.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.poisonGridVault.RowHeadersVisible = false;
+            this.poisonGridVault.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.poisonGridVault.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.poisonGridVault.ShowCellErrors = false;
+            this.poisonGridVault.ShowCellToolTips = false;
+            this.poisonGridVault.ShowEditingIcon = false;
+            this.poisonGridVault.ShowRowErrors = false;
+            // 
+            // contextMenuStripRow
+            // 
+            this.contextMenuStripRow.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.supprimerLélémentToolStripMenuItem});
+            this.contextMenuStripRow.Name = "contextMenuStrip1";
+            resources.ApplyResources(this.contextMenuStripRow, "contextMenuStripRow");
+            // 
+            // supprimerLélémentToolStripMenuItem
+            // 
+            this.supprimerLélémentToolStripMenuItem.Name = "supprimerLélémentToolStripMenuItem";
+            resources.ApplyResources(this.supprimerLélémentToolStripMenuItem, "supprimerLélémentToolStripMenuItem");
+            this.supprimerLélémentToolStripMenuItem.Click += new System.EventHandler(this.deleteRowToolStripMenuItem_Click);
             // 
             // buttonSave
             // 
@@ -110,41 +192,15 @@
             this.textBoxFilter.Name = "textBoxFilter";
             this.textBoxFilter.TextChanged += new System.EventHandler(this.textBoxFilter_TextChanged);
             // 
-            // dataGridViewVault
-            // 
-            resources.ApplyResources(this.dataGridViewVault, "dataGridViewVault");
-            this.dataGridViewVault.AllowUserToAddRows = false;
-            this.dataGridViewVault.AllowUserToDeleteRows = false;
-            this.dataGridViewVault.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewVault.ContextMenuStrip = this.contextMenuStripRow;
-            this.dataGridViewVault.Name = "dataGridViewVault";
-            this.dataGridViewVault.ShowCellErrors = false;
-            this.dataGridViewVault.ShowCellToolTips = false;
-            this.dataGridViewVault.ShowEditingIcon = false;
-            this.dataGridViewVault.ShowRowErrors = false;
-            // 
-            // contextMenuStripRow
-            // 
-            resources.ApplyResources(this.contextMenuStripRow, "contextMenuStripRow");
-            this.contextMenuStripRow.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.supprimerLélémentToolStripMenuItem});
-            this.contextMenuStripRow.Name = "contextMenuStrip1";
-            // 
-            // supprimerLélémentToolStripMenuItem
-            // 
-            resources.ApplyResources(this.supprimerLélémentToolStripMenuItem, "supprimerLélémentToolStripMenuItem");
-            this.supprimerLélémentToolStripMenuItem.Name = "supprimerLélémentToolStripMenuItem";
-            this.supprimerLélémentToolStripMenuItem.Click += new System.EventHandler(this.deleteRowToolStripMenuItem_Click);
-            // 
             // tabPageFirefox
             // 
-            resources.ApplyResources(this.tabPageFirefox, "tabPageFirefox");
             this.tabPageFirefox.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.tabPageFirefox.Controls.Add(this.checkedListBoxMdpFireFox);
             this.tabPageFirefox.Controls.Add(this.buttonViewFirefox);
             this.tabPageFirefox.Controls.Add(this.labelViewFirefox);
             this.tabPageFirefox.Controls.Add(this.buttonImportFromFirefox);
             this.tabPageFirefox.Controls.Add(this.labelImportFromFirefox);
+            resources.ApplyResources(this.tabPageFirefox, "tabPageFirefox");
             this.tabPageFirefox.Name = "tabPageFirefox";
             // 
             // checkedListBoxMdpFireFox
@@ -156,8 +212,8 @@
             // 
             // buttonViewFirefox
             // 
-            resources.ApplyResources(this.buttonViewFirefox, "buttonViewFirefox");
             this.buttonViewFirefox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            resources.ApplyResources(this.buttonViewFirefox, "buttonViewFirefox");
             this.buttonViewFirefox.Name = "buttonViewFirefox";
             this.buttonViewFirefox.UseVisualStyleBackColor = false;
             this.buttonViewFirefox.Click += new System.EventHandler(this.buttonShowImportData_Click);
@@ -169,8 +225,8 @@
             // 
             // buttonImportFromFirefox
             // 
-            resources.ApplyResources(this.buttonImportFromFirefox, "buttonImportFromFirefox");
             this.buttonImportFromFirefox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            resources.ApplyResources(this.buttonImportFromFirefox, "buttonImportFromFirefox");
             this.buttonImportFromFirefox.Name = "buttonImportFromFirefox";
             this.buttonImportFromFirefox.UseVisualStyleBackColor = false;
             this.buttonImportFromFirefox.Click += new System.EventHandler(this.buttonImportData_Click);
@@ -182,10 +238,10 @@
             // 
             // tabPageOption
             // 
-            resources.ApplyResources(this.tabPageOption, "tabPageOption");
             this.tabPageOption.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.tabPageOption.Controls.Add(this.groupBoxMyPassword);
             this.tabPageOption.Controls.Add(this.buttonAdd);
+            resources.ApplyResources(this.tabPageOption, "tabPageOption");
             this.tabPageOption.Name = "tabPageOption";
             // 
             // groupBoxMyPassword
@@ -205,7 +261,6 @@
             // 
             // groupBoxTranslateMsg
             // 
-            resources.ApplyResources(this.groupBoxTranslateMsg, "groupBoxTranslateMsg");
             this.groupBoxTranslateMsg.Controls.Add(this.labelMsgAddDoneTitle);
             this.groupBoxTranslateMsg.Controls.Add(this.labelMsgAddDone);
             this.groupBoxTranslateMsg.Controls.Add(this.labelMsgImportTitle);
@@ -216,6 +271,7 @@
             this.groupBoxTranslateMsg.Controls.Add(this.labelGridLogin);
             this.groupBoxTranslateMsg.Controls.Add(this.labelMsgPasswordTitle);
             this.groupBoxTranslateMsg.Controls.Add(this.labelMsgPassword);
+            resources.ApplyResources(this.groupBoxTranslateMsg, "groupBoxTranslateMsg");
             this.groupBoxTranslateMsg.Name = "groupBoxTranslateMsg";
             this.groupBoxTranslateMsg.TabStop = false;
             // 
@@ -317,12 +373,24 @@
             this.buttonAdd.UseVisualStyleBackColor = false;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
+            // imageListTabCtrl
+            // 
+            this.imageListTabCtrl.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
+            this.imageListTabCtrl.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListTabCtrl.ImageStream")));
+            this.imageListTabCtrl.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListTabCtrl.Images.SetKeyName(0, "round_bookmark_white_24dp.png");
+            this.imageListTabCtrl.Images.SetKeyName(1, "round_build_white_24dp.png");
+            this.imageListTabCtrl.Images.SetKeyName(2, "round_gps_fixed_white_24dp.png");
+            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Controls.Add(this.tabControlMain);
+            this.DrawerAutoShow = true;
+            this.DrawerShowIconsWhenHidden = true;
+            this.DrawerTabControl = this.tabControlMain;
             this.Name = "MainForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
@@ -330,7 +398,7 @@
             this.tabControlMain.ResumeLayout(false);
             this.tabPageSearch.ResumeLayout(false);
             this.tabPageSearch.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVault)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.poisonGridVault)).EndInit();
             this.contextMenuStripRow.ResumeLayout(false);
             this.tabPageFirefox.ResumeLayout(false);
             this.tabPageFirefox.PerformLayout();
@@ -346,7 +414,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControlMain;
+        private MaterialTabControl tabControlMain;
         private System.Windows.Forms.TabPage tabPageSearch;
         private System.Windows.Forms.TabPage tabPageOption;
         private System.Windows.Forms.TabPage tabPageFirefox;
@@ -355,7 +423,6 @@
         private System.Windows.Forms.Button buttonImportFromFirefox;
         private System.Windows.Forms.Label labelImportFromFirefox;
         private System.Windows.Forms.CheckedListBox checkedListBoxMdpFireFox;
-        private System.Windows.Forms.DataGridView dataGridViewVault;
         private System.Windows.Forms.BindingSource myVaultBindingSource;
         private System.Windows.Forms.TextBox textBoxFilter;
         private System.Windows.Forms.Button buttonSave;
@@ -382,6 +449,9 @@
         private System.Windows.Forms.Label labelMsgImport;
         private System.Windows.Forms.Label labelMsgAddDoneTitle;
         private System.Windows.Forms.Label labelMsgAddDone;
+        private System.Windows.Forms.ImageList imageListTabCtrl;
+        private PoisonDataGridView poisonGridVault;
+        private MaterialLabel materialLabel24;
     }
 }
 
