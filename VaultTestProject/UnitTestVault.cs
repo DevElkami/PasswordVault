@@ -45,6 +45,14 @@ namespace VaultTestProject
                 Password = "Password",
                 UserName = "UserName"
             });
+            myVault.Add(new VaultCore.Models.MyPassword()
+            {
+                Data = "Data",
+                Keyword = "Keyword",
+                Password = "Password",
+                UserName = "UserName"
+            });
+            Assert.IsTrue(myVault.Count == 1);
             myVault.Save();
             myVault.Clear();
             myVault.Load();

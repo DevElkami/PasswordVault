@@ -21,7 +21,7 @@ namespace WinformPasswordVault
                 InitializeComponent();
 
                 MaterialSkinManager.Instance.AddFormToManage(this);
-                this.FormStyle = ReaLTaiizor.Enum.Material.FormStyles.ActionBar_None;
+                this.FormStyle = ReaLTaiizor.Enum.Material.FormStyles.ActionBar_40;
 
                 poisonGridVault.BackgroundColor = MaterialSkinManager.Instance.BackdropColor;
                 poisonGridVault.Font = new Font("Segoe UI", 14f, FontStyle.Regular, GraphicsUnit.Pixel);
@@ -115,7 +115,7 @@ namespace WinformPasswordVault
             };
             poisonGridVault.Columns.Add(colKeyword);
 
-            poisonGridVault.DataSource = new List<MyPassword>(myVault);
+            poisonGridVault.DataSource = myVault;
             poisonGridVault.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
         }
 
@@ -147,11 +147,8 @@ namespace WinformPasswordVault
         {
             try
             {
-                poisonGridVault.DataSource = null;
                 foreach (MyPassword item in checkedListBoxMdpFireFox.Items)
                     myVault.Add(item);
-
-                RefreshList();
 
                 MessageBox.Show(Properties.Resources.ResourceManager.GetString("ConfirmMsgImport"), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -184,7 +181,7 @@ namespace WinformPasswordVault
             try
             {
                 if (textBoxFilter.Text.Length < 3)
-                    poisonGridVault.DataSource = new List<MyPassword>(myVault);
+                    poisonGridVault.DataSource = myVault;
                 else
                 {
                     List<MyPassword> filterList = new List<MyPassword>();
@@ -243,8 +240,6 @@ namespace WinformPasswordVault
                         }
                     }
                 }
-
-                RefreshList();
             }
             catch (Exception except)
             {
@@ -272,8 +267,6 @@ namespace WinformPasswordVault
 
                 myVault.Add(myPassword);
 
-                RefreshList();
-
                 textBoxMdpLogin.Text = "";
                 textBoxMdpPassword.Text = "";
                 textBoxMdpData.Text = "";
@@ -286,15 +279,6 @@ namespace WinformPasswordVault
                 LogManager.GetLogger(nameof(WinformPasswordVault)).Fatal(except.ToString());
                 MessageBox.Show(except.Message);
             }
-        }
-
-        private void RefreshList()
-        {
-            myVault.Save();
-            myVault.Load();
-            poisonGridVault.DataSource = null;
-            textBoxFilter.Text = "";
-            poisonGridVault.DataSource = new List<MyPassword>(myVault);
         }
     }
 }

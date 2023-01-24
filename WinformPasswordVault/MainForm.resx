@@ -57,42 +57,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="materialLabel24.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="materialLabel24.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 20.25pt, style=Bold</value>
-  </data>
-  <data name="materialLabel24.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 3</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="materialLabel24.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="materialLabel24.Size" type="System.Drawing.Size, System.Drawing">
-    <value>822, 58</value>
-  </data>
-  <data name="materialLabel24.TabIndex" type="System.Int32, mscorlib">
-    <value>68</value>
-  </data>
-  <data name="materialLabel24.Text" xml:space="preserve">
-    <value>Pour ne plus oublier les mots de passe</value>
-  </data>
-  <data name="&gt;&gt;materialLabel24.Name" xml:space="preserve">
-    <value>materialLabel24</value>
-  </data>
-  <data name="&gt;&gt;materialLabel24.Type" xml:space="preserve">
-    <value>ReaLTaiizor.Controls.MaterialLabel, ReaLTaiizor, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;materialLabel24.Parent" xml:space="preserve">
-    <value>tabPageSearch</value>
-  </data>
-  <data name="&gt;&gt;materialLabel24.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="poisonGridVault.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -100,6 +64,7 @@
   <metadata name="contextMenuStripRow.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>192, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="supprimerLélémentToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 22</value>
   </data>
@@ -121,12 +86,14 @@
   <data name="poisonGridVault.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 93</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="poisonGridVault.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 3, 4, 3</value>
   </data>
   <data name="poisonGridVault.Size" type="System.Drawing.Size, System.Drawing">
     <value>1008, 308</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="poisonGridVault.TabIndex" type="System.Int32, mscorlib">
     <value>67</value>
   </data>
@@ -140,10 +107,10 @@
     <value>tabPageSearch</value>
   </data>
   <data name="&gt;&gt;poisonGridVault.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="buttonSave.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
+    <value>None</value>
   </data>
   <data name="buttonSave.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
@@ -170,10 +137,10 @@
     <value>tabPageSearch</value>
   </data>
   <data name="&gt;&gt;buttonSave.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="textBoxFilter.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left, Right</value>
+    <value>None</value>
   </data>
   <data name="textBoxFilter.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 64</value>
@@ -197,7 +164,7 @@
     <value>tabPageSearch</value>
   </data>
   <data name="&gt;&gt;textBoxFilter.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="tabPageSearch.ImageKey" xml:space="preserve">
     <value>round_bookmark_white_24dp.png</value>
@@ -1107,30 +1074,30 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAEZTeXN0ZW0uV2luZG93cy5Gb3JtcywgQ3VsdHVyZT1uZXV0cmFs
         LCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5BQEAAAAmU3lzdGVtLldpbmRvd3MuRm9ybXMu
         SW1hZ2VMaXN0U3RyZWFtZXIBAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAWAcAAAJNU0Z0AUkBTAIBAQMB
-        AAFQAQABUAEAARgBAAEYAQAE/wEhAQAI/wFCAU0BNgcAATYDAAEoAwABYAMAARgDAAEBAQABIAYAAST/
-        AP8APAADAwEEAyEBMAMIAQo4AANhAdIDYQHS/wAxAAMtAUUDeAHmBP8DpgH1AzoBYTQACP+gAANeAcoD
-        OAFcAwQBBSAAAwQBBQM4AVsDYQHPVAADKwFCA8IB+Qz/A+IB/QMQARUkAAMlATcDWQG2A4kB7Qj/A4kB
-        7QNZAbsDPAFkAwYBCJAACP8DegHoA0cBgAMRARYQAAMSARcDRgF/A3wB6Qj/UAADKwFCA70B+BT/Ax8B
-        LBwAAxQBGwNVAawg/wNxAeMDLQFFjAAQ/wPMAfoDUgGkAyQBNAMlATYDUgGjA8wB+hD/TAADKwFCA70B
-        +BT/A3AB4gMDAQQYAAMfASwDeAHnBP8DhAHsA0QBeQMtAUQDEgEXAxEBFgMtAUUDRAF5A4kB7QT/A9EB
-        /AM1AVWIADj/SAADKwFCA70B+BT/A58B8wMnATkYAAMbASYDiQHtBP8DVQGvAw8BExgAAw8BEwNXAbIE
-        /wO9AfgDHQEphAA4/0QAAysBQgO9AfgU/wOfAfMDJAE1HAADXwHMBP8DUwGlKAADUwGlBP8DXgHNhAA4
-        /0AAAysBQgO9AfgU/wOYAfEDJAE1HAADLgFIBP8DeAHnAwYBCAgAAxMBGQNXAbUDiQHtA4kB7QNXAbID
-        EwEZCAADBgEIA3oB6AT/Ay4BR4AAOP88AAMoATwDvQH4FP8DiQHuAyEBMCAAA1EBngT/A0QBewgAAxEB
-        FgN4AeYQ/wN4AeYDEAEVCAADRAF6BP8DUQGegAA4/yQAAycBOQNLAY0DXwHJA44B8ANuAeEDTgGYA6YB
-        9RT/A4kB7gMeASskAANlAdcE/wMgAS4IAANSAaAY/wNSAaEIAAMgAS0E/wNlAdaAADj/HAAEAQNGAX4s
-        /wODAesDHgErIAADYQHSDP8DCgENCAADdwHlGP8DdwHlCAADCgENDP8DYQHSeAA4/xwAA0cBgiz/A3oB
-        6AMcASckAANlAdQM/wMJAQwIAAODAesY/wODAesIAAMJAQwM/wNjAdV4ADj/GAADKQE+LP8DegHoAxkB
-        IjAAA2QB2AT/Ax8BLAgAA1IBoBj/A1IBoQgAAx4BKwT/A2UB14AAOP8YAANRAZ0s/wNUAak0AANRAZ4E
-        /wNEAXoIAAMQARUDeAHmEP8DeAHnAw0BEQgAA0QBeQT/A1EBnoAAOP8YAANxAeMM/wNXAbIDWQG2GP8D
-        eAHmNAADLgFGBP8DeAHnAwYBCAgAAxIBGANYAbMDhAHsA4QB7ANYAbMDEgEYCAADBwEJA3gB5wT/Ay0B
-        RYAAOP8YAAOJAe4I/wNGAX8IAANIAYMU/wOMAe80AAQBA14BzQT/A1MBpSgAA1MBpQT/A14BzQQBgAA4
-        /xgAA2kB2wT/A0EBcBAAA1MBpRD/A2kB3zgAAx0BKQOsAfYE/wNVAa8DDgESGAADDgESA1UBrwT/A4kB
-        7QMbASaEADj/GAADTQGSAz4BaRQAA1QBphD/A08BmTwAAzQBVAPRAfwE/wOEAewDRAF4Ay0BRAMPARQD
-        DwEUAy0ERAF4A4QB7AT/A3gB5wMeASuIAANxAeQw/wNxAeMYAAMIAQoUAANHAYAQ/wPiAf0DIwEyQAAD
-        LQFEA3EB4yD/A1UBrAMTARqMAAMyAU8DZQHWKP8DZQHWAzIBTywAA0wBjxT/A0QBeUgAAwYBCAM8AWYD
-        WQG7A4QB7Aj/A4QB7ANaAbcDJgE49AADTgGWEP8DzAH6A0EBcFwACP/8AAMOARIDRAF5A1kBtgNbAcAD
-        WAG4A0YBfgMeASpgAANlAdQDYwHV/wD/AA4AAUIBTQE+BwABPgMAASgDAAFgAwABGAMAAQEBAAEBBQAB
+        AAFYAQABWAEAARgBAAEYAQAE/wEhAQAI/wFCAU0BNgcAATYDAAEoAwABYAMAARgDAAEBAQABIAYAAST/
+        AP8APAADAwEEAyEBMAMIAQo4AANgAdIDYAHS/wAxAAMtAUUDcwHmBP8DoAH1AzoBYTQACP+gAANdAcoD
+        OAFcAwQBBSAAAwQBBQM4AVsDYQHPVAADKwFCA7wB+Qz/A98B/QMQARUkAAMlATcDWQG2A4MB7Qj/A4MB
+        7QNZAbsDPAFkAwYBCJAACP8DdgHoA0cBgAMRARYQAAMSARcDRgF/A3cB6Qj/UAADKwFCA7kB+BT/Ax8B
+        LBwAAxQBGwNVAawg/wNuAeMDLQFFjAAQ/wPHAfoDUgGkAyQBNAMlATYDUgGjA8cB+hD/TAADKwFCA7kB
+        +BT/A2wB4gMDAQQYAAMfASwDdQHnBP8DfwHsA0QBeQMtAUQDEgEXAxEBFgMtAUUDRAF5A4MB7QT/A88B
+        /AM1AVWIADj/SAADKwFCA7kB+BT/A5oB8wMnATkYAAMbASYDgwHtBP8DVQGvAw8BExgAAw8BEwNXAbIE
+        /wO5AfgDHQEphAA4/0QAAysBQgO5AfgU/wOaAfMDJAE1HAADXgHMBP8DUwGlKAADUwGlBP8DXgHNhAA4
+        /0AAAysBQgO5AfgU/wOTAfEDJAE1HAADLgFIBP8DdQHnAwYBCAgAAxMBGQNXAbUDgwHtA4MB7QNXAbID
+        EwEZCAADBgEIA3YB6AT/Ay4BR4AAOP88AAMoATwDuQH4FP8DhQHuAyEBMCAAA1EBngT/A0QBewgAAxEB
+        FgNzAeYQ/wNzAeYDEAEVCAADRAF6BP8DUQGegAA4/yQAAycBOQNLAY0DXwHJA4kB8ANrAeEDTgGYA6AB
+        9RT/A4UB7gMeASskAANjAdcE/wMgAS4IAANSAaAY/wNSAaEIAAMgAS0E/wNkAdaAADj/HAAEAQNGAX4s
+        /wN/AesDHgErIAADYAHSDP8DCgENCAADdAHlGP8DdAHlCAADCgENDP8DYAHSeAA4/xwAA0cBgiz/A3YB
+        6AMcASckAANkAdQM/wMJAQwIAAN/AesY/wN/AesIAAMJAQwM/wNjAdV4ADj/GAADKQE+LP8DdgHoAxkB
+        IjAAA2MB2AT/Ax8BLAgAA1IBoBj/A1IBoQgAAx4BKwT/A2MB14AAOP8YAANRAZ0s/wNUAak0AANRAZ4E
+        /wNEAXoIAAMQARUDcwHmEP8DdQHnAw0BEQgAA0QBeQT/A1EBnoAAOP8YAANuAeMM/wNXAbIDWQG2GP8D
+        cwHmNAADLgFGBP8DdQHnAwYBCAgAAxIBGANYAbMDfwHsA38B7ANYAbMDEgEYCAADBwEJA3UB5wT/Ay0B
+        RYAAOP8YAAOFAe4I/wNGAX8IAANIAYMU/wOGAe80AAQBA14BzQT/A1MBpSgAA1MBpQT/A14BzQQBgAA4
+        /xgAA2YB2wT/A0EBcBAAA1MBpRD/A2cB3zgAAx0BKQOnAfYE/wNVAa8DDgESGAADDgESA1UBrwT/A4MB
+        7QMbASaEADj/GAADTQGSAz4BaRQAA1QBphD/A08BmTwAAzQBVAPPAfwE/wN/AewDRAF4Ay0BRAMPARQD
+        DwEUAy0ERAF4A38B7AT/A3UB5wMeASuIAANtAeQw/wNuAeMYAAMIAQoUAANHAYAQ/wPfAf0DIwEyQAAD
+        LQFEA24B4yD/A1UBrAMTARqMAAMyAU8DZAHWKP8DZAHWAzIBTywAA0wBjxT/A0QBeUgAAwYBCAM8AWYD
+        WQG7A38B7Aj/A38B7ANaAbcDJgE49AADTgGWEP8DxwH6A0EBcFwACP/8AAMOARIDRAF5A1kBtgNbAcAD
+        WAG4A0YBfgMeASpgAANkAdQDYwHV/wD/AA4AAUIBTQE+BwABPgMAASgDAAFgAwABGAMAAQEBAAEBBQAB
         IAEBFgAD/wEACf8DAAX/AccB/wHnAf8DAAX/AYMB/wHnAf8DAAH4Af8BHwL/AQEB/wEAAX8DAAH4ATwB
         HwH/Af4BAQH8AQABPwMAAfgBAAEfAf8B/AEBAfgBAAEfAwAB+AEAAR8B/wH4AQMB8AF+AQ8DAAH4AQAB
         HwH/AfABBwHxAf8BjwMAAfgBAAEfAf8B4AEPAeEBgQGHAwAB+AEAAR8B/wHAAR8B4wEAAccDAAH4AQAB

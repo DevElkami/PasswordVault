@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿using System.ComponentModel;
 using System.Reflection;
 using VaultCore.Models;
 
@@ -7,7 +7,7 @@ namespace VaultCore
     /// <summary>
     /// High level API
     /// </summary>
-    public class MyVault : ICollection<MyPassword>
+    public class MyVault : BindingList<MyPassword>
     {
         #region Private data
         /// <summary>
@@ -24,14 +24,38 @@ namespace VaultCore
         /// Vault key (encrypted)
         /// </summary>
         private String vaultKey = "mykey";
-
-        /// <summary>
-        /// All password
-        /// </summary>
-        private List<MyPassword> vault = new();
         #endregion
 
+        public MyVault()
+        {
+            AllowNew = true;
+            AllowRemove = true;
+            AllowEdit = true;
+
+            RaiseListChangedEvents = true;
+        }
+
         #region Vault access management
+        /// <summary>
+        /// Add password in vault if not already exist
+        /// </summary>
+        /// <param name="myPassword"></param>
+        public new void Add(MyPassword myPassword)
+        {
+            if (!Contains(myPassword))
+                base.Add(myPassword);
+        }
+
+        /// <summary>
+        /// Check if a password are already in vault
+        /// </summary>
+        /// <param name="item"></param>
+        /// <returns></returns>
+        public new bool Contains(MyPassword item)
+        {
+            return this.Any(x => x.ToStr() == item.ToStr());
+        }
+
         /// <summary>
         /// Check vault key
         /// </summary>
@@ -82,14 +106,14 @@ namespace VaultCore
         /// <param name="oldKey">Old vault key</param>
         public void ImportOldData(String oldKey)
         {
-            vault.Clear();
+            Clear();
 
             Mdp.OldVaultDecryptor oldVaultDecryptor = new();
             oldVaultDecryptor.Decrypt(oldKey);
 
             foreach (Mdp.OldPassword oldPassword in oldVaultDecryptor.Vault)
             {
-                vault.Add(new MyPassword()
+                Add(new MyPassword()
                 {
                     Data = oldPassword.Data,
                     Keyword = oldPassword.Keyword,
@@ -117,7 +141,7 @@ namespace VaultCore
         public void Save()
         {
             List<String> data = new();
-            foreach (MyPassword myPassword in vault)
+            foreach (MyPassword myPassword in this)
                 data.Add(Security.Encrypt(vaultKey, myPassword.ToStr()));
 
             // Pour éviter les doublons
@@ -138,73 +162,16 @@ namespace VaultCore
 #pragma warning restore CS8604 // Existence possible d'un argument de référence null.
             if (File.Exists(pathFile))
             {
-                vault.Clear();
+                Clear();
 
                 foreach (String data in File.ReadAllLines(pathFile))
                 {
                     MyPassword? myPassword = MyPassword.From(Security.Decrypt(vaultKey, data));
                     if (myPassword != null)
-                        vault.Add(myPassword);
+                        Add(myPassword);
                 }
             }
         }
-        #endregion
-
-        #region ICollection
-        public int Count => ((ICollection<MyPassword>)vault).Count;
-
-        public bool IsReadOnly => ((ICollection<MyPassword>)vault).IsReadOnly;
-
-        public void Add(MyPassword item)
-        {
-            if (!Contains(item))
-                ((ICollection<MyPassword>)vault).Add(item);
-        }
-
-        public void Clear()
-        {
-            ((ICollection<MyPassword>)vault).Clear();
-        }
-
-        public bool Contains(MyPassword item)
-        {
-            return vault.Any(x => x.ToStr() == item.ToStr());
-        }
-
-        public void CopyTo(MyPassword[] array, int arrayIndex)
-        {
-            ((ICollection<MyPassword>)vault).CopyTo(array, arrayIndex);
-        }
-
-        public bool Remove(MyPassword item)
-        {
-            return ((ICollection<MyPassword>)vault).Remove(item);
-        }
-
-        public IEnumerator<MyPassword> GetEnumerator()
-        {
-            return ((IEnumerable<MyPassword>)vault).GetEnumerator();
-        }
-
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return ((IEnumerable)vault).GetEnumerator();
-        }
-
-        public MyPassword? this[int i]
-        {
-            get
-            {
-                if (i < vault.Count)
-                    return vault[i];
-                return null;
-            }
-            set
-            {
-                if ((i < vault.Count) && (value != null))
-                    vault[i] = value;
-            }
-        }
-        #endregion
+        #endregion        
     }
 }

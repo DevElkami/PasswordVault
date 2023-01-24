@@ -37,7 +37,6 @@ namespace WinformPasswordVault
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControlMain = new ReaLTaiizor.Controls.MaterialTabControl();
             this.tabPageSearch = new System.Windows.Forms.TabPage();
-            this.materialLabel24 = new ReaLTaiizor.Controls.MaterialLabel();
             this.poisonGridVault = new ReaLTaiizor.Controls.PoisonDataGridView();
             this.contextMenuStripRow = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.supprimerLélémentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -100,21 +99,11 @@ namespace WinformPasswordVault
             // tabPageSearch
             // 
             this.tabPageSearch.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.tabPageSearch.Controls.Add(this.materialLabel24);
             this.tabPageSearch.Controls.Add(this.poisonGridVault);
             this.tabPageSearch.Controls.Add(this.buttonSave);
             this.tabPageSearch.Controls.Add(this.textBoxFilter);
             resources.ApplyResources(this.tabPageSearch, "tabPageSearch");
             this.tabPageSearch.Name = "tabPageSearch";
-            // 
-            // materialLabel24
-            // 
-            resources.ApplyResources(this.materialLabel24, "materialLabel24");
-            this.materialLabel24.BackColor = System.Drawing.Color.White;
-            this.materialLabel24.Depth = 0;
-            this.materialLabel24.FontType = ReaLTaiizor.Manager.MaterialSkinManager.FontType.H3;
-            this.materialLabel24.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
-            this.materialLabel24.Name = "materialLabel24";
             // 
             // poisonGridVault
             // 
@@ -451,7 +440,6 @@ namespace WinformPasswordVault
         private System.Windows.Forms.Label labelMsgAddDone;
         private System.Windows.Forms.ImageList imageListTabCtrl;
         private PoisonDataGridView poisonGridVault;
-        private MaterialLabel materialLabel24;
     }
 }
 
