@@ -15,6 +15,10 @@ namespace WinformPasswordVault
     {
         private MyVault myVault = new();
 
+        #region Form function
+        /// <summary>
+        /// Main form constructor
+        /// </summary>
         public MainForm()
         {
             try
@@ -75,6 +79,27 @@ namespace WinformPasswordVault
         }
 
         /// <summary>
+        /// Manage form closing
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            try
+            {
+                poisonGridVault.DataSource = null;
+                myVault.ListChanged -= MyVault_ListChanged;
+            }
+            catch (Exception except)
+            {
+                LogManager.GetLogger(nameof(WinformPasswordVault)).Fatal(except.ToString());
+                MessageBox.Show(except.Message);
+            }
+        }
+        #endregion
+
+        #region Grid function
+        /// <summary>
         /// Data binding
         /// </summary>
         private void BindGrid()
@@ -123,6 +148,32 @@ namespace WinformPasswordVault
             materialTextBoxFilter.Visible = true;
             myVault.ListChanged += MyVault_ListChanged;
         }
+
+        /// <summary>
+        /// Delete a password in vault
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void deleteRowToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                foreach (DataGridViewCell cell in poisonGridVault.SelectedCells)
+                {
+
+                    MyPassword selectedPwd = (MyPassword)poisonGridVault.Rows[cell.RowIndex].DataBoundItem;
+                    myVault.Remove(selectedPwd);
+                    materialTextBoxFilter.Text = "";
+                    break;
+                }
+            }
+            catch (Exception except)
+            {
+                LogManager.GetLogger(nameof(WinformPasswordVault)).Fatal(except.ToString());
+                MessageBox.Show(except.Message);
+            }
+        }
+        #endregion
 
         private void MyVault_ListChanged(object sender, System.ComponentModel.ListChangedEventArgs e)
         {
@@ -177,18 +228,6 @@ namespace WinformPasswordVault
             }
         }
 
-        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            try
-            {
-            }
-            catch (Exception except)
-            {
-                LogManager.GetLogger(nameof(WinformPasswordVault)).Fatal(except.ToString());
-                MessageBox.Show(except.Message);
-            }
-        }
-
         /// <summary>
         /// Auto completion (3 letters minimum)
         /// </summary>
@@ -233,35 +272,6 @@ namespace WinformPasswordVault
 
                 MaterialSnackBar SnackBarMessage = new("Fichier enregistré", "OK", true);
                 SnackBarMessage.Show(this);
-            }
-            catch (Exception except)
-            {
-                LogManager.GetLogger(nameof(WinformPasswordVault)).Fatal(except.ToString());
-                MessageBox.Show(except.Message);
-            }
-        }
-
-        /// <summary>
-        /// Delete a password in vault
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void deleteRowToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                foreach (DataGridViewRow row in poisonGridVault.SelectedRows)
-                {
-                    MyPassword selectedPwd = (MyPassword)row.DataBoundItem;
-                    foreach (MyPassword mp in myVault)
-                    {
-                        if (mp.ToStr() == selectedPwd.ToStr())
-                        {
-                            myVault.Remove(mp);
-                            break;
-                        }
-                    }
-                }
             }
             catch (Exception except)
             {
