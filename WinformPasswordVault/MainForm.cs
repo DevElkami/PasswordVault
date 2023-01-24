@@ -117,6 +117,20 @@ namespace WinformPasswordVault
 
             poisonGridVault.DataSource = myVault;
             poisonGridVault.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            myVault.ListChanged += MyVault_ListChanged;
+        }
+
+        private void MyVault_ListChanged(object sender, System.ComponentModel.ListChangedEventArgs e)
+        {
+            try
+            {
+                buttonSave.Visible = true;
+            }
+            catch (Exception except)
+            {
+                LogManager.GetLogger(nameof(WinformPasswordVault)).Fatal(except.ToString());
+                MessageBox.Show(except.Message);
+            }
         }
 
         /// <summary>
@@ -211,6 +225,7 @@ namespace WinformPasswordVault
             try
             {
                 myVault.Save();
+                buttonSave.Visible = false;
             }
             catch (Exception except)
             {

@@ -168,9 +168,9 @@ namespace WinformPasswordVault
             // 
             // buttonSave
             // 
-            resources.ApplyResources(this.buttonSave, "buttonSave");
             this.buttonSave.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.buttonSave.BackgroundImage = global::WinformPasswordVault.Properties.Resources.save;
+            resources.ApplyResources(this.buttonSave, "buttonSave");
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.UseVisualStyleBackColor = false;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
