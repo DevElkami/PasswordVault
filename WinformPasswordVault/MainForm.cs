@@ -1,4 +1,5 @@
 ﻿using NLog;
+using ReaLTaiizor.Controls;
 using ReaLTaiizor.Forms;
 using ReaLTaiizor.Manager;
 using System;
@@ -47,6 +48,8 @@ namespace WinformPasswordVault
                     }
                     else
                     {
+                        MaterialDialog materialDialog = new(this, this.Text, Properties.Resources.ResourceManager.GetString("AskMsgImportOldData"), DialogResult.Yes.ToString(), true, DialogResult.Cancel.ToString());
+                        DialogResult result = materialDialog.ShowDialog(this);
                         if (MessageBox.Show(Properties.Resources.ResourceManager.GetString("AskMsgImportOldData"), this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         {
                             if (myVault.Initialize(initVaultForm.UserPassword))
@@ -117,6 +120,7 @@ namespace WinformPasswordVault
 
             poisonGridVault.DataSource = myVault;
             poisonGridVault.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            materialTextBoxFilter.Visible = true;
             myVault.ListChanged += MyVault_ListChanged;
         }
 
@@ -124,7 +128,7 @@ namespace WinformPasswordVault
         {
             try
             {
-                buttonSave.Visible = true;
+                materialButtonSave.Visible = true;
             }
             catch (Exception except)
             {
@@ -194,14 +198,14 @@ namespace WinformPasswordVault
         {
             try
             {
-                if (textBoxFilter.Text.Length < 3)
+                if (materialTextBoxFilter.Text.Length < 3)
                     poisonGridVault.DataSource = myVault;
                 else
                 {
                     List<MyPassword> filterList = new List<MyPassword>();
                     foreach (MyPassword myPassword in myVault)
                     {
-                        if (myPassword.ToStr().Contains(textBoxFilter.Text))
+                        if (myPassword.ToStr().Contains(materialTextBoxFilter.Text))
                             filterList.Add(myPassword);
                     }
 
@@ -225,7 +229,10 @@ namespace WinformPasswordVault
             try
             {
                 myVault.Save();
-                buttonSave.Visible = false;
+                materialButtonSave.Visible = false;
+
+                MaterialSnackBar SnackBarMessage = new("Fichier enregistré", "OK", true);
+                SnackBarMessage.Show(this);
             }
             catch (Exception except)
             {

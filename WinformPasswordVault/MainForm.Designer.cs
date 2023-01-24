@@ -37,11 +37,10 @@ namespace WinformPasswordVault
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControlMain = new ReaLTaiizor.Controls.MaterialTabControl();
             this.tabPageSearch = new System.Windows.Forms.TabPage();
+            this.materialTextBoxFilter = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             this.poisonGridVault = new ReaLTaiizor.Controls.PoisonDataGridView();
             this.contextMenuStripRow = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.supprimerLélémentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.buttonSave = new System.Windows.Forms.Button();
-            this.textBoxFilter = new System.Windows.Forms.TextBox();
             this.tabPageFirefox = new System.Windows.Forms.TabPage();
             this.checkedListBoxMdpFireFox = new System.Windows.Forms.CheckedListBox();
             this.buttonViewFirefox = new System.Windows.Forms.Button();
@@ -72,6 +71,7 @@ namespace WinformPasswordVault
             this.buttonAdd = new System.Windows.Forms.Button();
             this.imageListTabCtrl = new System.Windows.Forms.ImageList(this.components);
             this.myVaultBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.materialButtonSave = new ReaLTaiizor.Controls.MaterialButton();
             this.tabControlMain.SuspendLayout();
             this.tabPageSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.poisonGridVault)).BeginInit();
@@ -99,11 +99,36 @@ namespace WinformPasswordVault
             // tabPageSearch
             // 
             this.tabPageSearch.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPageSearch.Controls.Add(this.materialTextBoxFilter);
             this.tabPageSearch.Controls.Add(this.poisonGridVault);
-            this.tabPageSearch.Controls.Add(this.buttonSave);
-            this.tabPageSearch.Controls.Add(this.textBoxFilter);
             resources.ApplyResources(this.tabPageSearch, "tabPageSearch");
             this.tabPageSearch.Name = "tabPageSearch";
+            // 
+            // materialTextBoxFilter
+            // 
+            this.materialTextBoxFilter.AnimateReadOnly = false;
+            this.materialTextBoxFilter.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.materialTextBoxFilter.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            resources.ApplyResources(this.materialTextBoxFilter, "materialTextBoxFilter");
+            this.materialTextBoxFilter.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.materialTextBoxFilter.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.materialTextBoxFilter.Depth = 0;
+            this.materialTextBoxFilter.HideSelection = true;
+            this.materialTextBoxFilter.LeadingIcon = null;
+            this.materialTextBoxFilter.MaxLength = 50;
+            this.materialTextBoxFilter.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            this.materialTextBoxFilter.Name = "materialTextBoxFilter";
+            this.materialTextBoxFilter.PasswordChar = '\0';
+            this.materialTextBoxFilter.ReadOnly = false;
+            this.materialTextBoxFilter.SelectedText = "";
+            this.materialTextBoxFilter.SelectionLength = 0;
+            this.materialTextBoxFilter.SelectionStart = 0;
+            this.materialTextBoxFilter.ShortcutsEnabled = true;
+            this.materialTextBoxFilter.TabStop = false;
+            this.materialTextBoxFilter.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.materialTextBoxFilter.TrailingIcon = global::WinformPasswordVault.Properties.Resources.save;
+            this.materialTextBoxFilter.UseSystemPasswordChar = false;
+            this.materialTextBoxFilter.TextChanged += new System.EventHandler(this.textBoxFilter_TextChanged);
             // 
             // poisonGridVault
             // 
@@ -114,10 +139,9 @@ namespace WinformPasswordVault
             this.poisonGridVault.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
             this.poisonGridVault.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.poisonGridVault.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.poisonGridVault.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(65)))), ((int)(((byte)(153)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(101)))), ((int)(((byte)(190)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
@@ -127,7 +151,7 @@ namespace WinformPasswordVault
             this.poisonGridVault.ContextMenuStrip = this.contextMenuStripRow;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(101)))), ((int)(((byte)(190)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
@@ -135,6 +159,7 @@ namespace WinformPasswordVault
             this.poisonGridVault.DefaultCellStyle = dataGridViewCellStyle2;
             this.poisonGridVault.EnableHeadersVisualStyles = false;
             this.poisonGridVault.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.poisonGridVault.MultiSelect = false;
             this.poisonGridVault.Name = "poisonGridVault";
             this.poisonGridVault.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -165,21 +190,6 @@ namespace WinformPasswordVault
             this.supprimerLélémentToolStripMenuItem.Name = "supprimerLélémentToolStripMenuItem";
             resources.ApplyResources(this.supprimerLélémentToolStripMenuItem, "supprimerLélémentToolStripMenuItem");
             this.supprimerLélémentToolStripMenuItem.Click += new System.EventHandler(this.deleteRowToolStripMenuItem_Click);
-            // 
-            // buttonSave
-            // 
-            this.buttonSave.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.buttonSave.BackgroundImage = global::WinformPasswordVault.Properties.Resources.save;
-            resources.ApplyResources(this.buttonSave, "buttonSave");
-            this.buttonSave.Name = "buttonSave";
-            this.buttonSave.UseVisualStyleBackColor = false;
-            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
-            // 
-            // textBoxFilter
-            // 
-            resources.ApplyResources(this.textBoxFilter, "textBoxFilter");
-            this.textBoxFilter.Name = "textBoxFilter";
-            this.textBoxFilter.TextChanged += new System.EventHandler(this.textBoxFilter_TextChanged);
             // 
             // tabPageFirefox
             // 
@@ -371,11 +381,28 @@ namespace WinformPasswordVault
             this.imageListTabCtrl.Images.SetKeyName(1, "round_build_white_24dp.png");
             this.imageListTabCtrl.Images.SetKeyName(2, "round_gps_fixed_white_24dp.png");
             // 
+            // materialButtonSave
+            // 
+            resources.ApplyResources(this.materialButtonSave, "materialButtonSave");
+            this.materialButtonSave.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButtonSave.Depth = 0;
+            this.materialButtonSave.HighEmphasis = true;
+            this.materialButtonSave.Icon = global::WinformPasswordVault.Properties.Resources.save;
+            this.materialButtonSave.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
+            this.materialButtonSave.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            this.materialButtonSave.Name = "materialButtonSave";
+            this.materialButtonSave.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButtonSave.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButtonSave.UseAccentColor = true;
+            this.materialButtonSave.UseVisualStyleBackColor = true;
+            this.materialButtonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Controls.Add(this.materialButtonSave);
             this.Controls.Add(this.tabControlMain);
             this.DrawerAutoShow = true;
             this.DrawerShowIconsWhenHidden = true;
@@ -386,7 +413,6 @@ namespace WinformPasswordVault
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.tabControlMain.ResumeLayout(false);
             this.tabPageSearch.ResumeLayout(false);
-            this.tabPageSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.poisonGridVault)).EndInit();
             this.contextMenuStripRow.ResumeLayout(false);
             this.tabPageFirefox.ResumeLayout(false);
@@ -413,8 +439,6 @@ namespace WinformPasswordVault
         private System.Windows.Forms.Label labelImportFromFirefox;
         private System.Windows.Forms.CheckedListBox checkedListBoxMdpFireFox;
         private System.Windows.Forms.BindingSource myVaultBindingSource;
-        private System.Windows.Forms.TextBox textBoxFilter;
-        private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.ContextMenuStrip contextMenuStripRow;
         private System.Windows.Forms.ToolStripMenuItem supprimerLélémentToolStripMenuItem;
         private System.Windows.Forms.Button buttonAdd;
@@ -440,6 +464,8 @@ namespace WinformPasswordVault
         private System.Windows.Forms.Label labelMsgAddDone;
         private System.Windows.Forms.ImageList imageListTabCtrl;
         private PoisonDataGridView poisonGridVault;
+        private MaterialTextBoxEdit materialTextBoxFilter;
+        private MaterialButton materialButtonSave;
     }
 }
 

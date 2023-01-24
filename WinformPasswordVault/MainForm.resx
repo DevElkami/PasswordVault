@@ -58,13 +58,57 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="materialTextBoxFilter.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="materialTextBoxFilter.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16px</value>
+  </data>
+  <data name="materialTextBoxFilter.Hint" xml:space="preserve">
+    <value>Chercher</value>
+  </data>
+  <data name="materialTextBoxFilter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 6</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="materialTextBoxFilter.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="materialTextBoxFilter.PrefixSuffixText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="materialTextBoxFilter.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="materialTextBoxFilter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>474, 48</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="materialTextBoxFilter.TabIndex" type="System.Int32, mscorlib">
+    <value>68</value>
+  </data>
+  <data name="materialTextBoxFilter.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;materialTextBoxFilter.Name" xml:space="preserve">
+    <value>materialTextBoxFilter</value>
+  </data>
+  <data name="&gt;&gt;materialTextBoxFilter.Type" xml:space="preserve">
+    <value>ReaLTaiizor.Controls.MaterialTextBoxEdit, ReaLTaiizor, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;materialTextBoxFilter.Parent" xml:space="preserve">
+    <value>tabPageSearch</value>
+  </data>
+  <data name="&gt;&gt;materialTextBoxFilter.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="poisonGridVault.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
   <metadata name="contextMenuStripRow.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>192, 17</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="supprimerLélémentToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 22</value>
   </data>
@@ -84,16 +128,14 @@
     <value>Segoe UI, 11px</value>
   </data>
   <data name="poisonGridVault.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 93</value>
+    <value>8, 70</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="poisonGridVault.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 3, 4, 3</value>
   </data>
   <data name="poisonGridVault.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1008, 308</value>
+    <value>1008, 331</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="poisonGridVault.TabIndex" type="System.Int32, mscorlib">
     <value>67</value>
   </data>
@@ -107,61 +149,7 @@
     <value>tabPageSearch</value>
   </data>
   <data name="&gt;&gt;poisonGridVault.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="buttonSave.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
-  </data>
-  <data name="buttonSave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>416, 6</value>
-  </data>
-  <data name="buttonSave.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 3, 4, 3</value>
-  </data>
-  <data name="buttonSave.Size" type="System.Drawing.Size, System.Drawing">
-    <value>27, 27</value>
-  </data>
-  <data name="buttonSave.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="buttonSave.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;buttonSave.Name" xml:space="preserve">
-    <value>buttonSave</value>
-  </data>
-  <data name="&gt;&gt;buttonSave.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonSave.Parent" xml:space="preserve">
-    <value>tabPageSearch</value>
-  </data>
-  <data name="&gt;&gt;buttonSave.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="textBoxFilter.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 6</value>
-  </data>
-  <data name="textBoxFilter.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 3, 4, 3</value>
-  </data>
-  <data name="textBoxFilter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>400, 23</value>
-  </data>
-  <data name="textBoxFilter.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;textBoxFilter.Name" xml:space="preserve">
-    <value>textBoxFilter</value>
-  </data>
-  <data name="&gt;&gt;textBoxFilter.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxFilter.Parent" xml:space="preserve">
-    <value>tabPageSearch</value>
-  </data>
-  <data name="&gt;&gt;textBoxFilter.ZOrder" xml:space="preserve">
-    <value>2</value>
   </data>
   <data name="tabPageSearch.ImageKey" xml:space="preserve">
     <value>round_bookmark_white_24dp.png</value>
@@ -1070,39 +1058,39 @@
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAEZTeXN0ZW0uV2luZG93cy5Gb3JtcywgQ3VsdHVyZT1uZXV0cmFs
         LCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5BQEAAAAmU3lzdGVtLldpbmRvd3MuRm9ybXMu
-        SW1hZ2VMaXN0U3RyZWFtZXIBAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAVgcAAAJNU0Z0AUkBTAIBAQMB
-        AAFoAQABaAEAARgBAAEYAQAE/wEhAQAI/wFCAU0BNgcAATYDAAEoAwABYAMAARgDAAEBAQABIAYAAST/
-        AP8APAADAwEEAyEBMAMIAQo4AANeAdIDXgHS/wAxAAMtAUUDbwHmBP8DmAH1AzoBYTQACP+gAANdAcoD
-        OAFcAwQBBSAAAwQBBQM4AVsDYQHPVAADKwFCA7YB+Qz/A9kB/QMQARUkAAMlATcDWQG2A3sB7Qj/A3sB
-        7QNZAbsDPAFkAwYBCJAACP8DcAHoA0cBgAMRARYQAAMSARcDRgF/A3EB6Qj/UAADKwFCA7AB+BT/Ax8B
-        LBwAAxQBGwNVAawg/wNpAeMDLQFFjAAQ/wO9AfoDUgGkAyQBNAMlATYDUgGjA70B+hD/TAADKwFCA7AB
-        +BT/A2kB4gMDAQQYAAMfASwDbwHnBP8DeQHsA0QBeQMtAUQDEgEXAxEBFgMtAUUDRAF5A3sB7QT/A8sB
-        /AM1AVWIADj/SAADKwFCA7AB+BT/A5IB8wMnATkYAAMbASYDewHtBP8DVQGvAw8BExgAAw8BEwNXAbIE
-        /wOwAfgDHQEphAA4/0QAAysBQgOwAfgU/wOSAfMDJAE1HAADXQHMBP8DUwGlKAADUwGlBP8DXgHNhAA4
-        /0AAAysBQgOwAfgU/wOKAfEDJAE1HAADLgFIBP8DbwHnAwYBCAgAAxMBGQNXAbUDewHtA3sB7QNXAbID
-        EwEZCAADBgEIA3AB6AT/Ay4BR4AAOP88AAMoATwDsAH4FP8DfAHuAyEBMCAAA1EBngT/A0QBewgAAxEB
-        FgNvAeYQ/wNvAeYDEAEVCAADRAF6BP8DUQGegAA4/yQAAycBOQNLAY0DXwHJA4AB8ANoAeEDTgSYAfUU
-        /wN8Ae4DHgErJAADYgHXBP8DIAEuCAADUgGgGP8DUgGhCAADIAEtBP8DYQHWgAA4/xwABAEDRgF+LP8D
-        dwHrAx4BKyAAA14B0gz/AwoBDQgAA24B5Rj/A24B5QgAAwoBDQz/A14B0ngAOP8cAANHAYIs/wNwAegD
-        HAEnJAADYQHUDP8DCQEMCAADdwHrGP8DdwHrCAADCQEMDP8DYwHVeAA4/xgAAykBPiz/A3AB6AMZASIw
-        AANhAdgE/wMfASwIAANSAaAY/wNSAaEIAAMeASsE/wNiAdeAADj/GAADUQGdLP8DVAGpNAADUQGeBP8D
-        RAF6CAADEAEVA28B5hD/A28B5wMNAREIAANEAXkE/wNRAZ6AADj/GAADaQHjDP8DVwGyA1kBthj/A28B
-        5jQAAy4BRgT/A28B5wMGAQgIAAMSARgDWAGzA3kB7AN5AewDWAGzAxIBGAgAAwcBCQNvAecE/wMtAUWA
-        ADj/GAADfAHuCP8DRgF/CAADSAGDFP8DfwHvNAAEAQNeAc0E/wNTAaUoAANTAaUE/wNeAc0EAYAAOP8Y
-        AANkAdsE/wNBAXAQAANTAaUQ/wNjAd84AAMdASkDmwH2BP8DVQGvAw4BEhgAAw4BEgNVAa8E/wN7Ae0D
-        GwEmhAA4/xgAA00BkgM+AWkUAANUAaYQ/wNPAZk8AAM0AVQDywH8BP8DeQHsA0QBeAMtAUQDDwEUAw8B
-        FAMtBEQBeAN5AewE/wNvAecDHgEriAADaQHkMP8DaQHjGAADCAEKFAADRwGAEP8D2QH9AyMBMkAAAy0B
-        RANpAeMg/wNVAawDEwEajAADMgFPA2EB1ij/A2EB1gMyAU8sAANMAY8U/wNEAXlIAAMGAQgDPAFmA1kB
-        uwN5AewI/wN5AewDWgG3AyYBOPQAA04BlhD/A70B+gNBAXBcAAj//AADDgESA0QBeQNZAbYDWwHAA1gB
-        uANGAX4DHgEqYAADYQHUA2MB1f8A/wAOAAFCAU0BPgcAAT4DAAEoAwABYAMAARgDAAEBAQABAQUAASAB
-        ARYAA/8BAAn/AwAF/wHHAf8B5wH/AwAF/wGDAf8B5wH/AwAB+AH/AR8C/wEBAf8BAAF/AwAB+AE8AR8B
-        /wH+AQEB/AEAAT8DAAH4AQABHwH/AfwBAQH4AQABHwMAAfgBAAEfAf8B+AEDAfABfgEPAwAB+AEAAR8B
-        /wHwAQcB8QH/AY8DAAH4AQABHwH/AeABDwHhAYEBhwMAAfgBAAEfAf8BwAEfAeMBAAHHAwAB+AEAAR8B
-        8AEAAT8B4wEAAccDAAH4AQABHwHAAQABfwGDAQABwQMAAfgBAAEfAcABAAH/AYMBAAHBAwAB+AEAAR8B
-        gAEBAf8B4wEAAccDAAH4AQABHwGAAQMB/wHjAQABxwMAAfgBAAEfAYABAwH/AeEBgQGHAwAB+AEAAR8B
-        hgEDAf8B4QH/AYcDAAH4AQABHwGPAQMB/wHwAX4BDwMAAfgBAAEfAZ8BAwH/AfgBAAEfAwAB+AEAAR8B
-        vgEDAf8B/AEAAT8DAAH4AQABHwH8AQcB/wH+AQAB/wMAA/8B+AEPAv8B5wH/AwAD/wHwAR8C/wHnAf8D
-        AAn/AwAL
+        SW1hZ2VMaXN0U3RyZWFtZXIBAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAWAcAAAJNU0Z0AUkBTAIBAQMB
+        AAGoAQABqAEAARgBAAEYAQAE/wEhAQAI/wFCAU0BNgcAATYDAAEoAwABYAMAARgDAAEBAQABIAYAAST/
+        AP8APAADAwEEAyEBMAMIAQo4AANeAdIDXgHS/wAxAAMtAUUDagHmBP8DfwH1AzoBYTQACP+gAANdAcoD
+        OAFcAwQBBSAAAwQBBQM4AVsDYQHPVAADKwFCA5oB+Qz/A8EB/QMQARUkAAMlATcDWQG2A2oB7Qj/A2oB
+        7QNZAbsDPAFkAwYBCJAACP8DaQHoA0cBgAMRARYQAAMSARcDRgF/A2YB6Qj/UAADKwFCA5cB+BT/Ax8B
+        LBwAAxQBGwNVAawg/wNlAeMDLQFFjAAQ/wOlAfoDUgGkAyQBNAMlATYDUgGjA6UB+hD/TAADKwFCA5cB
+        +BT/A2UB4gMDAQQYAAMfASwDZQHnBP8DbAHsA0QBeQMtAUQDEgEXAxEBFgMtAUUDRAF5A2oB7QT/A7sB
+        /AM1AVWIADj/SAADKwFCA5cB+BT/A3kB8wMnATkYAAMbASYDagHtBP8DVQGvAw8BExgAAw8BEwNXAbIE
+        /wOXAfgDHQEphAA4/0QAAysBQgOXAfgU/wN5AfMDJAE1HAADXQHMBP8DUwGlKAADUwGlBP8DXgHNhAA4
+        /0AAAysBQgOXAfgU/wN0AfEDJAE1HAADLgFIBP8DZQHnAwYBCAgAAxMBGQNXAbUDagHtA2oB7QNXAbID
+        EwEZCAADBgEIA2kB6AT/Ay4BR4AAOP88AAMoATwDlwH4FP8DbAHuAyEBMCAAA1EBngT/A0QBewgAAxEB
+        FgNqAeYQ/wNqAeYDEAEVCAADRAF6BP8DUQGegAA4/yQAAycBOQNLAY0DXwHJA2wB8ANiAeEDTgGYA38B
+        9RT/A2wB7gMeASskAANiAdcE/wMgAS4IAANSAaAY/wNSAaEIAAMgAS0E/wNhAdaAADj/HAAEAQNGAX4s
+        /wNsAesDHgErIAADXgHSDP8DCgENCAADZgHlGP8DZgHlCAADCgENDP8DXgHSeAA4/xwAA0cBgiz/A2kB
+        6AMcASckAANhAdQM/wMJAQwIAANsAesY/wNsAesIAAMJAQwM/wNjAdV4ADj/GAADKQE+LP8DaQHoAxkB
+        IjAAA18B2AT/Ax8BLAgAA1IBoBj/A1IBoQgAAx4BKwT/A2IB14AAOP8YAANRAZ0s/wNUAak0AANRAZ4E
+        /wNEAXoIAAMQARUDagHmEP8DZQHnAw0BEQgAA0QBeQT/A1EBnoAAOP8YAANlAeMM/wNXAbIDWQG2GP8D
+        agHmNAADLgFGBP8DZQHnAwYBCAgAAxIBGANYAbMDbAHsA2wB7ANYAbMDEgEYCAADBwEJA2UB5wT/Ay0B
+        RYAAOP8YAANsAe4I/wNGAX8IAANIAYMU/wNtAe80AAQBA14BzQT/A1MBpSgAA1MBpQT/A14BzQQBgAA4
+        /xgAA2QB2wT/A0EBcBAAA1MBpRD/A2MB3zgAAx0BKQN/AfYE/wNVAa8DDgESGAADDgESA1UBrwT/A2oB
+        7QMbASaEADj/GAADTQGSAz4BaRQAA1QBphD/A08BmTwAAzQBVAO7AfwE/wNsAewDRAF4Ay0BRAMPARQD
+        DwEUAy0ERAF4A2wB7AT/A2UB5wMeASuIAANjAeQw/wNlAeMYAAMIAQoUAANHAYAQ/wPBAf0DIwEyQAAD
+        LQFEA2UB4yD/A1UBrAMTARqMAAMyAU8DYQHWKP8DYQHWAzIBTywAA0wBjxT/A0QBeUgAAwYBCAM8AWYD
+        WQG7A2wB7Aj/A2wB7ANaAbcDJgE49AADTgGWEP8DpQH6A0EBcFwACP/8AAMOARIDRAF5A1kBtgNbAcAD
+        WAG4A0YBfgMeASpgAANhAdQDYwHV/wD/AA4AAUIBTQE+BwABPgMAASgDAAFgAwABGAMAAQEBAAEBBQAB
+        IAEBFgAD/wEACf8DAAX/AccB/wHnAf8DAAX/AYMB/wHnAf8DAAH4Af8BHwL/AQEB/wEAAX8DAAH4ATwB
+        HwH/Af4BAQH8AQABPwMAAfgBAAEfAf8B/AEBAfgBAAEfAwAB+AEAAR8B/wH4AQMB8AF+AQ8DAAH4AQAB
+        HwH/AfABBwHxAf8BjwMAAfgBAAEfAf8B4AEPAeEBgQGHAwAB+AEAAR8B/wHAAR8B4wEAAccDAAH4AQAB
+        HwHwAQABPwHjAQABxwMAAfgBAAEfAcABAAF/AYMBAAHBAwAB+AEAAR8BwAEAAf8BgwEAAcEDAAH4AQAB
+        HwGAAQEB/wHjAQABxwMAAfgBAAEfAYABAwH/AeMBAAHHAwAB+AEAAR8BgAEDAf8B4QGBAYcDAAH4AQAB
+        HwGGAQMB/wHhAf8BhwMAAfgBAAEfAY8BAwH/AfABfgEPAwAB+AEAAR8BnwEDAf8B+AEAAR8DAAH4AQAB
+        HwG+AQMB/wH8AQABPwMAAfgBAAEfAfwBBwH/Af4BAAH/AwAD/wH4AQ8C/wHnAf8DAAP/AfABHwL/AecB
+        /wMACf8DAAs=
 </value>
   </data>
   <data name="tabControlMain.Location" type="System.Drawing.Point, System.Drawing">
@@ -1127,11 +1115,47 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tabControlMain.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <metadata name="myVaultBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="materialButtonSave.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="materialButtonSave.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="materialButtonSave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>431, 26</value>
+  </data>
+  <data name="materialButtonSave.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 7, 5, 7</value>
+  </data>
+  <data name="materialButtonSave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 36</value>
+  </data>
+  <data name="materialButtonSave.TabIndex" type="System.Int32, mscorlib">
+    <value>69</value>
+  </data>
+  <data name="materialButtonSave.Text" xml:space="preserve">
+    <value>Sauver</value>
+  </data>
+  <data name="materialButtonSave.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;materialButtonSave.Name" xml:space="preserve">
+    <value>materialButtonSave</value>
+  </data>
+  <data name="&gt;&gt;materialButtonSave.Type" xml:space="preserve">
+    <value>ReaLTaiizor.Controls.MaterialButton, ReaLTaiizor, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;materialButtonSave.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;materialButtonSave.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
