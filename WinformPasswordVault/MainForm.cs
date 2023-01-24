@@ -163,7 +163,10 @@ namespace WinformPasswordVault
 
                     MyPassword selectedPwd = (MyPassword)poisonGridVault.Rows[cell.RowIndex].DataBoundItem;
                     myVault.Remove(selectedPwd);
-                    materialTextBoxFilter.Text = "";
+
+                    // Little hack to force refresh
+                    materialTextBoxFilter.Text += " ";
+                    materialTextBoxFilter.Text.TrimEnd(' ');
                     break;
                 }
             }
