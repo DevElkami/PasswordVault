@@ -57,11 +57,382 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;materialTextBoxFilter.Name" xml:space="preserve">
+    <value>materialTextBoxFilter</value>
+  </data>
+  <data name="&gt;&gt;materialTextBoxFilter.Type" xml:space="preserve">
+    <value>ReaLTaiizor.Controls.MaterialTextBoxEdit, ReaLTaiizor, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;materialTextBoxFilter.Parent" xml:space="preserve">
+    <value>tabPageSearch</value>
+  </data>
+  <data name="&gt;&gt;materialTextBoxFilter.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;poisonGridVault.Name" xml:space="preserve">
+    <value>poisonGridVault</value>
+  </data>
+  <data name="&gt;&gt;poisonGridVault.Type" xml:space="preserve">
+    <value>ReaLTaiizor.Controls.PoisonDataGridView, ReaLTaiizor, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;poisonGridVault.Parent" xml:space="preserve">
+    <value>tabPageSearch</value>
+  </data>
+  <data name="&gt;&gt;poisonGridVault.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tabPageSearch.ImageKey" xml:space="preserve">
+    <value>round_bookmark_white_24dp.png</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="tabPageSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 31</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tabPageSearch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="tabPageSearch.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="tabPageSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1024, 407</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tabPageSearch.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPageSearch.Text" xml:space="preserve">
+    <value>Recherche</value>
+  </data>
+  <data name="&gt;&gt;tabPageSearch.Name" xml:space="preserve">
+    <value>tabPageSearch</value>
+  </data>
+  <data name="&gt;&gt;tabPageSearch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPageSearch.Parent" xml:space="preserve">
+    <value>tabControlMain</value>
+  </data>
+  <data name="&gt;&gt;tabPageSearch.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;checkedListBoxMdpFireFox.Name" xml:space="preserve">
+    <value>checkedListBoxMdpFireFox</value>
+  </data>
+  <data name="&gt;&gt;checkedListBoxMdpFireFox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckedListBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkedListBoxMdpFireFox.Parent" xml:space="preserve">
+    <value>tabPageFirefox</value>
+  </data>
+  <data name="&gt;&gt;checkedListBoxMdpFireFox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;buttonViewFirefox.Name" xml:space="preserve">
+    <value>buttonViewFirefox</value>
+  </data>
+  <data name="&gt;&gt;buttonViewFirefox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonViewFirefox.Parent" xml:space="preserve">
+    <value>tabPageFirefox</value>
+  </data>
+  <data name="&gt;&gt;buttonViewFirefox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;labelViewFirefox.Name" xml:space="preserve">
+    <value>labelViewFirefox</value>
+  </data>
+  <data name="&gt;&gt;labelViewFirefox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelViewFirefox.Parent" xml:space="preserve">
+    <value>tabPageFirefox</value>
+  </data>
+  <data name="&gt;&gt;labelViewFirefox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;buttonImportFromFirefox.Name" xml:space="preserve">
+    <value>buttonImportFromFirefox</value>
+  </data>
+  <data name="&gt;&gt;buttonImportFromFirefox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonImportFromFirefox.Parent" xml:space="preserve">
+    <value>tabPageFirefox</value>
+  </data>
+  <data name="&gt;&gt;buttonImportFromFirefox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;labelImportFromFirefox.Name" xml:space="preserve">
+    <value>labelImportFromFirefox</value>
+  </data>
+  <data name="&gt;&gt;labelImportFromFirefox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelImportFromFirefox.Parent" xml:space="preserve">
+    <value>tabPageFirefox</value>
+  </data>
+  <data name="&gt;&gt;labelImportFromFirefox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="tabPageFirefox.ImageKey" xml:space="preserve">
+    <value>round_build_white_24dp.png</value>
+  </data>
+  <data name="tabPageFirefox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 31</value>
+  </data>
+  <data name="tabPageFirefox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="tabPageFirefox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1024, 407</value>
+  </data>
+  <data name="tabPageFirefox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tabPageFirefox.Text" xml:space="preserve">
+    <value>Import auto</value>
+  </data>
+  <data name="&gt;&gt;tabPageFirefox.Name" xml:space="preserve">
+    <value>tabPageFirefox</value>
+  </data>
+  <data name="&gt;&gt;tabPageFirefox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPageFirefox.Parent" xml:space="preserve">
+    <value>tabControlMain</value>
+  </data>
+  <data name="&gt;&gt;tabPageFirefox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;groupBoxMyPassword.Name" xml:space="preserve">
+    <value>groupBoxMyPassword</value>
+  </data>
+  <data name="&gt;&gt;groupBoxMyPassword.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxMyPassword.Parent" xml:space="preserve">
+    <value>tabPageOption</value>
+  </data>
+  <data name="&gt;&gt;groupBoxMyPassword.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;buttonAdd.Name" xml:space="preserve">
+    <value>buttonAdd</value>
+  </data>
+  <data name="&gt;&gt;buttonAdd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonAdd.Parent" xml:space="preserve">
+    <value>tabPageOption</value>
+  </data>
+  <data name="&gt;&gt;buttonAdd.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tabPageOption.ImageKey" xml:space="preserve">
+    <value>round_gps_fixed_white_24dp.png</value>
+  </data>
+  <data name="tabPageOption.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 31</value>
+  </data>
+  <data name="tabPageOption.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="tabPageOption.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="tabPageOption.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1024, 407</value>
+  </data>
+  <data name="tabPageOption.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tabPageOption.Text" xml:space="preserve">
+    <value>Import manuel</value>
+  </data>
+  <data name="&gt;&gt;tabPageOption.Name" xml:space="preserve">
+    <value>tabPageOption</value>
+  </data>
+  <data name="&gt;&gt;tabPageOption.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPageOption.Parent" xml:space="preserve">
+    <value>tabControlMain</value>
+  </data>
+  <data name="&gt;&gt;tabPageOption.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="materialButtonSave.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="materialButtonSave.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="materialButtonSave.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="materialButtonSave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 10</value>
+  </data>
+  <data name="materialButtonSave.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 7, 5, 7</value>
+  </data>
+  <data name="materialButtonSave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 36</value>
+  </data>
+  <data name="materialButtonSave.TabIndex" type="System.Int32, mscorlib">
+    <value>69</value>
+  </data>
+  <data name="materialButtonSave.Text" xml:space="preserve">
+    <value>Sauver</value>
+  </data>
+  <data name="&gt;&gt;materialButtonSave.Name" xml:space="preserve">
+    <value>materialButtonSave</value>
+  </data>
+  <data name="&gt;&gt;materialButtonSave.Type" xml:space="preserve">
+    <value>ReaLTaiizor.Controls.MaterialButton, ReaLTaiizor, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;materialButtonSave.Parent" xml:space="preserve">
+    <value>tabPageSaveManagement</value>
+  </data>
+  <data name="&gt;&gt;materialButtonSave.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPageSaveManagement.ImageKey" xml:space="preserve">
+    <value>round_build_white_24dp.png</value>
+  </data>
+  <data name="tabPageSaveManagement.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 31</value>
+  </data>
+  <data name="tabPageSaveManagement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPageSaveManagement.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1024, 407</value>
+  </data>
+  <data name="tabPageSaveManagement.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="tabPageSaveManagement.Text" xml:space="preserve">
+    <value>Sauvegarde</value>
+  </data>
+  <data name="&gt;&gt;tabPageSaveManagement.Name" xml:space="preserve">
+    <value>tabPageSaveManagement</value>
+  </data>
+  <data name="&gt;&gt;tabPageSaveManagement.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPageSaveManagement.Parent" xml:space="preserve">
+    <value>tabControlMain</value>
+  </data>
+  <data name="&gt;&gt;tabPageSaveManagement.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tabPageAbout.ImageKey" xml:space="preserve">
+    <value>round_gps_fixed_white_24dp.png</value>
+  </data>
+  <data name="tabPageAbout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 31</value>
+  </data>
+  <data name="tabPageAbout.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPageAbout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1024, 407</value>
+  </data>
+  <data name="tabPageAbout.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="tabPageAbout.Text" xml:space="preserve">
+    <value>A propos</value>
+  </data>
+  <data name="&gt;&gt;tabPageAbout.Name" xml:space="preserve">
+    <value>tabPageAbout</value>
+  </data>
+  <data name="&gt;&gt;tabPageAbout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPageAbout.Parent" xml:space="preserve">
+    <value>tabControlMain</value>
+  </data>
+  <data name="&gt;&gt;tabPageAbout.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="tabControlMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <metadata name="imageListTabCtrl.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>364, 17</value>
+  </metadata>
+  <data name="imageListTabCtrl.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAEZTeXN0ZW0uV2luZG93cy5Gb3JtcywgQ3VsdHVyZT1uZXV0cmFs
+        LCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5BQEAAAAmU3lzdGVtLldpbmRvd3MuRm9ybXMu
+        SW1hZ2VMaXN0U3RyZWFtZXIBAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAWAcAAAJNU0Z0AUkBTAIBAQMB
+        AAHgAQAB4AEAARgBAAEYAQAE/wEhAQAI/wFCAU0BNgcAATYDAAEoAwABYAMAARgDAAEBAQABIAYAAST/
+        AP8APAADAwEEAyEBMAMIAQo4AANeAdIDXgHS/wAxAAMtAUUDagHmBP8DbwH1AzoBYTQACP+gAANdAcoD
+        OAFcAwQBBSAAAwQBBQM4AVsDYQHPVAADKwFCA40B+Qz/A74B/QMQARUkAAMlATcDWQG2A2oB7Qj/A2oB
+        7QNZAbsDPAFkAwYBCJAACP8DaQHoA0cBgAMRARYQAAMSARcDRgF/A2MB6Qj/UAADKwFCA4UB+BT/Ax8B
+        LBwAAxQBGwNVAawg/wNlAeMDLQFFjAAQ/wOWAfoDUgGkAyQBNAMlATYDUgGjA5YB+hD/TAADKwFCA4UB
+        +BT/A2UB4gMDAQQYAAMfASwDZQHnBP8DZQHsA0QBeQMtAUQDEgEXAxEBFgMtAUUDRAF5A2oB7QT/A60B
+        /AM1AVWIADj/SAADKwFCA4UB+BT/A28B8wMnATkYAAMbASYDagHtBP8DVQGvAw8BExgAAw8BEwNXAbIE
+        /wOFAfgDHQEphAA4/0QAAysBQgOFAfgU/wNvAfMDJAE1HAADXQHMBP8DUwGlKAADUwGlBP8DXgHNhAA4
+        /0AAAysBQgOFAfgU/wNwAfEDJAE1HAADLgFIBP8DZQHnAwYBCAgAAxMBGQNXAbUDagHtA2oB7QNXAbID
+        EwEZCAADBgEIA2kB6AT/Ay4BR4AAOP88AAMoATwDhQH4FP8DZQHuAyEBMCAAA1EBngT/A0QBewgAAxEB
+        FgNqAeYQ/wNqAeYDEAEVCAADRAF6BP8DUQGegAA4/yQAAycBOQNLAY0DXwHJA2gB8ANiAeEDTgGYA28B
+        9RT/A2UB7gMeASskAANiAdcE/wMgAS4IAANSAaAY/wNSAaEIAAMgAS0E/wNhAdaAADj/HAAEAQNGAX4s
+        /wNsAesDHgErIAADXgHSDP8DCgENCAADZgHlGP8DZgHlCAADCgENDP8DXgHSeAA4/xwAA0cBgiz/A2kB
+        6AMcASckAANhAdQM/wMJAQwIAANsAesY/wNsAesIAAMJAQwM/wNjAdV4ADj/GAADKQE+LP8DaQHoAxkB
+        IjAAA18B2AT/Ax8BLAgAA1IBoBj/A1IBoQgAAx4BKwT/A2IB14AAOP8YAANRAZ0s/wNUAak0AANRAZ4E
+        /wNEAXoIAAMQARUDagHmEP8DZQHnAw0BEQgAA0QBeQT/A1EBnoAAOP8YAANlAeMM/wNXAbIDWQG2GP8D
+        agHmNAADLgFGBP8DZQHnAwYBCAgAAxIBGANYAbMDZQHsA2UB7ANYAbMDEgEYCAADBwEJA2UB5wT/Ay0B
+        RYAAOP8YAANlAe4I/wNGAX8IAANIAYMU/wNnAe80AAQBA14BzQT/A1MBpSgAA1MBpQT/A14BzQQBgAA4
+        /xgAA2QB2wT/A0EBcBAAA1MBpRD/A2MB3zgAAx0BKQN2AfYE/wNVAa8DDgESGAADDgESA1UBrwT/A2oB
+        7QMbASaEADj/GAADTQGSAz4BaRQAA1QBphD/A08BmTwAAzQBVAOtAfwE/wNlAewDRAF4Ay0BRAMPARQD
+        DwEUAy0ERAF4A2UB7AT/A2UB5wMeASuIAANjAeQw/wNlAeMYAAMIAQoUAANHAYAQ/wO+Af0DIwEyQAAD
+        LQFEA2UB4yD/A1UBrAMTARqMAAMyAU8DYQHWKP8DYQHWAzIBTywAA0wBjxT/A0QBeUgAAwYBCAM8AWYD
+        WQG7A2UB7Aj/A2UB7ANaAbcDJgE49AADTgGWEP8DlgH6A0EBcFwACP/8AAMOARIDRAF5A1kBtgNbAcAD
+        WAG4A0YBfgMeASpgAANhAdQDYwHV/wD/AA4AAUIBTQE+BwABPgMAASgDAAFgAwABGAMAAQEBAAEBBQAB
+        IAEBFgAD/wEACf8DAAX/AccB/wHnAf8DAAX/AYMB/wHnAf8DAAH4Af8BHwL/AQEB/wEAAX8DAAH4ATwB
+        HwH/Af4BAQH8AQABPwMAAfgBAAEfAf8B/AEBAfgBAAEfAwAB+AEAAR8B/wH4AQMB8AF+AQ8DAAH4AQAB
+        HwH/AfABBwHxAf8BjwMAAfgBAAEfAf8B4AEPAeEBgQGHAwAB+AEAAR8B/wHAAR8B4wEAAccDAAH4AQAB
+        HwHwAQABPwHjAQABxwMAAfgBAAEfAcABAAF/AYMBAAHBAwAB+AEAAR8BwAEAAf8BgwEAAcEDAAH4AQAB
+        HwGAAQEB/wHjAQABxwMAAfgBAAEfAYABAwH/AeMBAAHHAwAB+AEAAR8BgAEDAf8B4QGBAYcDAAH4AQAB
+        HwGGAQMB/wHhAf8BhwMAAfgBAAEfAY8BAwH/AfABfgEPAwAB+AEAAR8BnwEDAf8B+AEAAR8DAAH4AQAB
+        HwG+AQMB/wH8AQABPwMAAfgBAAEfAfwBBwH/Af4BAAH/AwAD/wH4AQ8C/wHnAf8DAAP/AfABHwL/AecB
+        /wMACf8DAAs=
+</value>
+  </data>
+  <data name="tabControlMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 74</value>
+  </data>
+  <data name="tabControlMain.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="tabControlMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1032, 442</value>
+  </data>
+  <data name="tabControlMain.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tabControlMain.Name" xml:space="preserve">
+    <value>tabControlMain</value>
+  </data>
+  <data name="&gt;&gt;tabControlMain.Type" xml:space="preserve">
+    <value>ReaLTaiizor.Controls.MaterialTabControl, ReaLTaiizor, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tabControlMain.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tabControlMain.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="materialTextBoxFilter.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="materialTextBoxFilter.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 16px</value>
   </data>
@@ -71,7 +442,6 @@
   <data name="materialTextBoxFilter.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 6</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="materialTextBoxFilter.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 3, 4, 3</value>
   </data>
@@ -84,7 +454,6 @@
   <data name="materialTextBoxFilter.Size" type="System.Drawing.Size, System.Drawing">
     <value>474, 48</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="materialTextBoxFilter.TabIndex" type="System.Int32, mscorlib">
     <value>68</value>
   </data>
@@ -106,23 +475,17 @@
   <data name="poisonGridVault.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <metadata name="contextMenuStripRow.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>192, 17</value>
+  <metadata name="poisonContextMenuStripGrid.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>507, 17</value>
   </metadata>
-  <data name="supprimerLélémentToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 22</value>
-  </data>
-  <data name="supprimerLélémentToolStripMenuItem.Text" xml:space="preserve">
-    <value>Supprimer l'élément</value>
-  </data>
-  <data name="contextMenuStripRow.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="poisonContextMenuStripGrid.Size" type="System.Drawing.Size, System.Drawing">
     <value>182, 26</value>
   </data>
-  <data name="&gt;&gt;contextMenuStripRow.Name" xml:space="preserve">
-    <value>contextMenuStripRow</value>
+  <data name="&gt;&gt;poisonContextMenuStripGrid.Name" xml:space="preserve">
+    <value>poisonContextMenuStripGrid</value>
   </data>
-  <data name="&gt;&gt;contextMenuStripRow.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;poisonContextMenuStripGrid.Type" xml:space="preserve">
+    <value>ReaLTaiizor.Controls.PoisonContextMenuStrip, ReaLTaiizor, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="poisonGridVault.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11px</value>
@@ -151,38 +514,11 @@
   <data name="&gt;&gt;poisonGridVault.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="tabPageSearch.ImageKey" xml:space="preserve">
-    <value>round_bookmark_white_24dp.png</value>
+  <data name="supprimerLélémentToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 22</value>
   </data>
-  <data name="tabPageSearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 31</value>
-  </data>
-  <data name="tabPageSearch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 3, 4, 3</value>
-  </data>
-  <data name="tabPageSearch.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 3, 4, 3</value>
-  </data>
-  <data name="tabPageSearch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1024, 407</value>
-  </data>
-  <data name="tabPageSearch.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="tabPageSearch.Text" xml:space="preserve">
-    <value>Recherche</value>
-  </data>
-  <data name="&gt;&gt;tabPageSearch.Name" xml:space="preserve">
-    <value>tabPageSearch</value>
-  </data>
-  <data name="&gt;&gt;tabPageSearch.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPageSearch.Parent" xml:space="preserve">
-    <value>tabControlMain</value>
-  </data>
-  <data name="&gt;&gt;tabPageSearch.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="supprimerLélémentToolStripMenuItem1.Text" xml:space="preserve">
+    <value>Supprimer l'élément</value>
   </data>
   <data name="checkedListBoxMdpFireFox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -331,38 +667,299 @@
   <data name="&gt;&gt;labelImportFromFirefox.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="tabPageFirefox.ImageKey" xml:space="preserve">
-    <value>round_build_white_24dp.png</value>
-  </data>
-  <data name="tabPageFirefox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 31</value>
-  </data>
-  <data name="tabPageFirefox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 3, 4, 3</value>
-  </data>
-  <data name="tabPageFirefox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1024, 407</value>
-  </data>
-  <data name="tabPageFirefox.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="tabPageFirefox.Text" xml:space="preserve">
-    <value>Import auto</value>
-  </data>
-  <data name="&gt;&gt;tabPageFirefox.Name" xml:space="preserve">
-    <value>tabPageFirefox</value>
-  </data>
-  <data name="&gt;&gt;tabPageFirefox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPageFirefox.Parent" xml:space="preserve">
-    <value>tabControlMain</value>
-  </data>
-  <data name="&gt;&gt;tabPageFirefox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="groupBoxMyPassword.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;groupBoxTranslateMsg.Name" xml:space="preserve">
+    <value>groupBoxTranslateMsg</value>
+  </data>
+  <data name="&gt;&gt;groupBoxTranslateMsg.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxTranslateMsg.Parent" xml:space="preserve">
+    <value>groupBoxMyPassword</value>
+  </data>
+  <data name="&gt;&gt;groupBoxTranslateMsg.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;textBoxMdpKeyword.Name" xml:space="preserve">
+    <value>textBoxMdpKeyword</value>
+  </data>
+  <data name="&gt;&gt;textBoxMdpKeyword.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxMdpKeyword.Parent" xml:space="preserve">
+    <value>groupBoxMyPassword</value>
+  </data>
+  <data name="&gt;&gt;textBoxMdpKeyword.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;labelMdpKeyword.Name" xml:space="preserve">
+    <value>labelMdpKeyword</value>
+  </data>
+  <data name="&gt;&gt;labelMdpKeyword.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMdpKeyword.Parent" xml:space="preserve">
+    <value>groupBoxMyPassword</value>
+  </data>
+  <data name="&gt;&gt;labelMdpKeyword.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;textBoxMdpData.Name" xml:space="preserve">
+    <value>textBoxMdpData</value>
+  </data>
+  <data name="&gt;&gt;textBoxMdpData.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxMdpData.Parent" xml:space="preserve">
+    <value>groupBoxMyPassword</value>
+  </data>
+  <data name="&gt;&gt;textBoxMdpData.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;labelMdpData.Name" xml:space="preserve">
+    <value>labelMdpData</value>
+  </data>
+  <data name="&gt;&gt;labelMdpData.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMdpData.Parent" xml:space="preserve">
+    <value>groupBoxMyPassword</value>
+  </data>
+  <data name="&gt;&gt;labelMdpData.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;textBoxMdpPassword.Name" xml:space="preserve">
+    <value>textBoxMdpPassword</value>
+  </data>
+  <data name="&gt;&gt;textBoxMdpPassword.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxMdpPassword.Parent" xml:space="preserve">
+    <value>groupBoxMyPassword</value>
+  </data>
+  <data name="&gt;&gt;textBoxMdpPassword.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;labelMdpPassword.Name" xml:space="preserve">
+    <value>labelMdpPassword</value>
+  </data>
+  <data name="&gt;&gt;labelMdpPassword.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMdpPassword.Parent" xml:space="preserve">
+    <value>groupBoxMyPassword</value>
+  </data>
+  <data name="&gt;&gt;labelMdpPassword.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;textBoxMdpLogin.Name" xml:space="preserve">
+    <value>textBoxMdpLogin</value>
+  </data>
+  <data name="&gt;&gt;textBoxMdpLogin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxMdpLogin.Parent" xml:space="preserve">
+    <value>groupBoxMyPassword</value>
+  </data>
+  <data name="&gt;&gt;textBoxMdpLogin.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;labelMdpLogin.Name" xml:space="preserve">
+    <value>labelMdpLogin</value>
+  </data>
+  <data name="&gt;&gt;labelMdpLogin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMdpLogin.Parent" xml:space="preserve">
+    <value>groupBoxMyPassword</value>
+  </data>
+  <data name="&gt;&gt;labelMdpLogin.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="groupBoxMyPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 7</value>
+  </data>
+  <data name="groupBoxMyPassword.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="groupBoxMyPassword.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="groupBoxMyPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>909, 396</value>
+  </data>
+  <data name="groupBoxMyPassword.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="groupBoxMyPassword.Text" xml:space="preserve">
+    <value>Ajout d'un mdp</value>
+  </data>
+  <data name="&gt;&gt;groupBoxMyPassword.Name" xml:space="preserve">
+    <value>groupBoxMyPassword</value>
+  </data>
+  <data name="&gt;&gt;groupBoxMyPassword.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxMyPassword.Parent" xml:space="preserve">
+    <value>tabPageOption</value>
+  </data>
+  <data name="&gt;&gt;groupBoxMyPassword.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;labelMsgAddDoneTitle.Name" xml:space="preserve">
+    <value>labelMsgAddDoneTitle</value>
+  </data>
+  <data name="&gt;&gt;labelMsgAddDoneTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMsgAddDoneTitle.Parent" xml:space="preserve">
+    <value>groupBoxTranslateMsg</value>
+  </data>
+  <data name="&gt;&gt;labelMsgAddDoneTitle.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;labelMsgAddDone.Name" xml:space="preserve">
+    <value>labelMsgAddDone</value>
+  </data>
+  <data name="&gt;&gt;labelMsgAddDone.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMsgAddDone.Parent" xml:space="preserve">
+    <value>groupBoxTranslateMsg</value>
+  </data>
+  <data name="&gt;&gt;labelMsgAddDone.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;labelMsgImportTitle.Name" xml:space="preserve">
+    <value>labelMsgImportTitle</value>
+  </data>
+  <data name="&gt;&gt;labelMsgImportTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMsgImportTitle.Parent" xml:space="preserve">
+    <value>groupBoxTranslateMsg</value>
+  </data>
+  <data name="&gt;&gt;labelMsgImportTitle.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;labelMsgImport.Name" xml:space="preserve">
+    <value>labelMsgImport</value>
+  </data>
+  <data name="&gt;&gt;labelMsgImport.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMsgImport.Parent" xml:space="preserve">
+    <value>groupBoxTranslateMsg</value>
+  </data>
+  <data name="&gt;&gt;labelMsgImport.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;labelGridKeyword.Name" xml:space="preserve">
+    <value>labelGridKeyword</value>
+  </data>
+  <data name="&gt;&gt;labelGridKeyword.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelGridKeyword.Parent" xml:space="preserve">
+    <value>groupBoxTranslateMsg</value>
+  </data>
+  <data name="&gt;&gt;labelGridKeyword.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;labelGridData.Name" xml:space="preserve">
+    <value>labelGridData</value>
+  </data>
+  <data name="&gt;&gt;labelGridData.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelGridData.Parent" xml:space="preserve">
+    <value>groupBoxTranslateMsg</value>
+  </data>
+  <data name="&gt;&gt;labelGridData.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;labelGridPassword.Name" xml:space="preserve">
+    <value>labelGridPassword</value>
+  </data>
+  <data name="&gt;&gt;labelGridPassword.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelGridPassword.Parent" xml:space="preserve">
+    <value>groupBoxTranslateMsg</value>
+  </data>
+  <data name="&gt;&gt;labelGridPassword.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;labelGridLogin.Name" xml:space="preserve">
+    <value>labelGridLogin</value>
+  </data>
+  <data name="&gt;&gt;labelGridLogin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelGridLogin.Parent" xml:space="preserve">
+    <value>groupBoxTranslateMsg</value>
+  </data>
+  <data name="&gt;&gt;labelGridLogin.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;labelMsgPasswordTitle.Name" xml:space="preserve">
+    <value>labelMsgPasswordTitle</value>
+  </data>
+  <data name="&gt;&gt;labelMsgPasswordTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMsgPasswordTitle.Parent" xml:space="preserve">
+    <value>groupBoxTranslateMsg</value>
+  </data>
+  <data name="&gt;&gt;labelMsgPasswordTitle.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;labelMsgPassword.Name" xml:space="preserve">
+    <value>labelMsgPassword</value>
+  </data>
+  <data name="&gt;&gt;labelMsgPassword.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMsgPassword.Parent" xml:space="preserve">
+    <value>groupBoxTranslateMsg</value>
+  </data>
+  <data name="&gt;&gt;labelMsgPassword.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="groupBoxTranslateMsg.Location" type="System.Drawing.Point, System.Drawing">
+    <value>194, 149</value>
+  </data>
+  <data name="groupBoxTranslateMsg.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="groupBoxTranslateMsg.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="groupBoxTranslateMsg.Size" type="System.Drawing.Size, System.Drawing">
+    <value>701, 301</value>
+  </data>
+  <data name="groupBoxTranslateMsg.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="groupBoxTranslateMsg.Text" xml:space="preserve">
+    <value>Translate message</value>
+  </data>
+  <data name="groupBoxTranslateMsg.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;groupBoxTranslateMsg.Name" xml:space="preserve">
+    <value>groupBoxTranslateMsg</value>
+  </data>
+  <data name="&gt;&gt;groupBoxTranslateMsg.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxTranslateMsg.Parent" xml:space="preserve">
+    <value>groupBoxMyPassword</value>
+  </data>
+  <data name="&gt;&gt;groupBoxTranslateMsg.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="labelMsgAddDoneTitle.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -691,39 +1288,6 @@
   <data name="&gt;&gt;labelMsgPassword.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="groupBoxTranslateMsg.Location" type="System.Drawing.Point, System.Drawing">
-    <value>194, 149</value>
-  </data>
-  <data name="groupBoxTranslateMsg.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 3, 4, 3</value>
-  </data>
-  <data name="groupBoxTranslateMsg.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 3, 4, 3</value>
-  </data>
-  <data name="groupBoxTranslateMsg.Size" type="System.Drawing.Size, System.Drawing">
-    <value>701, 301</value>
-  </data>
-  <data name="groupBoxTranslateMsg.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="groupBoxTranslateMsg.Text" xml:space="preserve">
-    <value>Translate message</value>
-  </data>
-  <data name="groupBoxTranslateMsg.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;groupBoxTranslateMsg.Name" xml:space="preserve">
-    <value>groupBoxTranslateMsg</value>
-  </data>
-  <data name="&gt;&gt;groupBoxTranslateMsg.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBoxTranslateMsg.Parent" xml:space="preserve">
-    <value>groupBoxMyPassword</value>
-  </data>
-  <data name="&gt;&gt;groupBoxTranslateMsg.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="textBoxMdpKeyword.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
@@ -952,36 +1516,6 @@
   <data name="&gt;&gt;labelMdpLogin.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="groupBoxMyPassword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 7</value>
-  </data>
-  <data name="groupBoxMyPassword.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 3, 4, 3</value>
-  </data>
-  <data name="groupBoxMyPassword.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 3, 4, 3</value>
-  </data>
-  <data name="groupBoxMyPassword.Size" type="System.Drawing.Size, System.Drawing">
-    <value>909, 396</value>
-  </data>
-  <data name="groupBoxMyPassword.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="groupBoxMyPassword.Text" xml:space="preserve">
-    <value>Ajout d'un mdp</value>
-  </data>
-  <data name="&gt;&gt;groupBoxMyPassword.Name" xml:space="preserve">
-    <value>groupBoxMyPassword</value>
-  </data>
-  <data name="&gt;&gt;groupBoxMyPassword.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBoxMyPassword.Parent" xml:space="preserve">
-    <value>tabPageOption</value>
-  </data>
-  <data name="&gt;&gt;groupBoxMyPassword.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="buttonAdd.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
@@ -1015,147 +1549,9 @@
   <data name="&gt;&gt;buttonAdd.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="tabPageOption.ImageKey" xml:space="preserve">
-    <value>round_gps_fixed_white_24dp.png</value>
-  </data>
-  <data name="tabPageOption.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 31</value>
-  </data>
-  <data name="tabPageOption.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 3, 4, 3</value>
-  </data>
-  <data name="tabPageOption.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 3, 4, 3</value>
-  </data>
-  <data name="tabPageOption.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1024, 407</value>
-  </data>
-  <data name="tabPageOption.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="tabPageOption.Text" xml:space="preserve">
-    <value>Import manuel</value>
-  </data>
-  <data name="&gt;&gt;tabPageOption.Name" xml:space="preserve">
-    <value>tabPageOption</value>
-  </data>
-  <data name="&gt;&gt;tabPageOption.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPageOption.Parent" xml:space="preserve">
-    <value>tabControlMain</value>
-  </data>
-  <data name="&gt;&gt;tabPageOption.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="tabControlMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <metadata name="imageListTabCtrl.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>364, 17</value>
-  </metadata>
-  <data name="imageListTabCtrl.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAEZTeXN0ZW0uV2luZG93cy5Gb3JtcywgQ3VsdHVyZT1uZXV0cmFs
-        LCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5BQEAAAAmU3lzdGVtLldpbmRvd3MuRm9ybXMu
-        SW1hZ2VMaXN0U3RyZWFtZXIBAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAWAcAAAJNU0Z0AUkBTAIBAQMB
-        AAG4AQABuAEAARgBAAEYAQAE/wEhAQAI/wFCAU0BNgcAATYDAAEoAwABYAMAARgDAAEBAQABIAYAAST/
-        AP8APAADAwEEAyEBMAMIAQo4AANeAdIDXgHS/wAxAAMtAUUDagHmBP8DeQH1AzoBYTQACP+gAANdAcoD
-        OAFcAwQBBSAAAwQBBQM4AVsDYQHPVAADKwFCA5IB+Qz/A74B/QMQARUkAAMlATcDWQG2A2oB7Qj/A2oB
-        7QNZAbsDPAFkAwYBCJAACP8DaQHoA0cBgAMRARYQAAMSARcDRgF/A2QB6Qj/UAADKwFCA5MB+BT/Ax8B
-        LBwAAxQBGwNVAawg/wNlAeMDLQFFjAAQ/wOhAfoDUgGkAyQBNAMlATYDUgGjA6EB+hD/TAADKwFCA5MB
-        +BT/A2UB4gMDAQQYAAMfASwDZQHnBP8DagHsA0QBeQMtAUQDEgEXAxEBFgMtAUUDRAF5A2oB7QT/A7cB
-        /AM1AVWIADj/SAADKwFCA5MB+BT/A3MB8wMnATkYAAMbASYDagHtBP8DVQGvAw8BExgAAw8BEwNXAbIE
-        /wOTAfgDHQEphAA4/0QAAysBQgOTAfgU/wNzAfMDJAE1HAADXQHMBP8DUwGlKAADUwGlBP8DXgHNhAA4
-        /0AAAysBQgOTAfgU/wNyAfEDJAE1HAADLgFIBP8DZQHnAwYBCAgAAxMBGQNXAbUDagHtA2oB7QNXAbID
-        EwEZCAADBgEIA2kB6AT/Ay4BR4AAOP88AAMoATwDkwH4FP8DagHuAyEBMCAAA1EBngT/A0QBewgAAxEB
-        FgNqAeYQ/wNqAeYDEAEVCAADRAF6BP8DUQGegAA4/yQAAycBOQNLAY0DXwHJA2oB8ANiAeEDTgGYA3kB
-        9RT/A2oB7gMeASskAANiAdcE/wMgAS4IAANSAaAY/wNSAaEIAAMgAS0E/wNhAdaAADj/HAAEAQNGAX4s
-        /wNsAesDHgErIAADXgHSDP8DCgENCAADZgHlGP8DZgHlCAADCgENDP8DXgHSeAA4/xwAA0cBgiz/A2kB
-        6AMcASckAANhAdQM/wMJAQwIAANsAesY/wNsAesIAAMJAQwM/wNjAdV4ADj/GAADKQE+LP8DaQHoAxkB
-        IjAAA18B2AT/Ax8BLAgAA1IBoBj/A1IBoQgAAx4BKwT/A2IB14AAOP8YAANRAZ0s/wNUAak0AANRAZ4E
-        /wNEAXoIAAMQARUDagHmEP8DZQHnAw0BEQgAA0QBeQT/A1EBnoAAOP8YAANlAeMM/wNXAbIDWQG2GP8D
-        agHmNAADLgFGBP8DZQHnAwYBCAgAAxIBGANYAbMDagHsA2oB7ANYAbMDEgEYCAADBwEJA2UB5wT/Ay0B
-        RYAAOP8YAANqAe4I/wNGAX8IAANIAYMU/wNpAe80AAQBA14BzQT/A1MBpSgAA1MBpQT/A14BzQQBgAA4
-        /xgAA2QB2wT/A0EBcBAAA1MBpRD/A2MB3zgAAx0BKQN7AfYE/wNVAa8DDgESGAADDgESA1UBrwT/A2oB
-        7QMbASaEADj/GAADTQGSAz4BaRQAA1QBphD/A08BmTwAAzQBVAO3AfwE/wNqAewDRAF4Ay0BRAMPARQD
-        DwEUAy0ERAF4A2oB7AT/A2UB5wMeASuIAANjAeQw/wNlAeMYAAMIAQoUAANHAYAQ/wO+Af0DIwEyQAAD
-        LQFEA2UB4yD/A1UBrAMTARqMAAMyAU8DYQHWKP8DYQHWAzIBTywAA0wBjxT/A0QBeUgAAwYBCAM8AWYD
-        WQG7A2oB7Aj/A2oB7ANaAbcDJgE49AADTgGWEP8DoQH6A0EBcFwACP/8AAMOARIDRAF5A1kBtgNbAcAD
-        WAG4A0YBfgMeASpgAANhAdQDYwHV/wD/AA4AAUIBTQE+BwABPgMAASgDAAFgAwABGAMAAQEBAAEBBQAB
-        IAEBFgAD/wEACf8DAAX/AccB/wHnAf8DAAX/AYMB/wHnAf8DAAH4Af8BHwL/AQEB/wEAAX8DAAH4ATwB
-        HwH/Af4BAQH8AQABPwMAAfgBAAEfAf8B/AEBAfgBAAEfAwAB+AEAAR8B/wH4AQMB8AF+AQ8DAAH4AQAB
-        HwH/AfABBwHxAf8BjwMAAfgBAAEfAf8B4AEPAeEBgQGHAwAB+AEAAR8B/wHAAR8B4wEAAccDAAH4AQAB
-        HwHwAQABPwHjAQABxwMAAfgBAAEfAcABAAF/AYMBAAHBAwAB+AEAAR8BwAEAAf8BgwEAAcEDAAH4AQAB
-        HwGAAQEB/wHjAQABxwMAAfgBAAEfAYABAwH/AeMBAAHHAwAB+AEAAR8BgAEDAf8B4QGBAYcDAAH4AQAB
-        HwGGAQMB/wHhAf8BhwMAAfgBAAEfAY8BAwH/AfABfgEPAwAB+AEAAR8BnwEDAf8B+AEAAR8DAAH4AQAB
-        HwG+AQMB/wH8AQABPwMAAfgBAAEfAfwBBwH/Af4BAAH/AwAD/wH4AQ8C/wHnAf8DAAP/AfABHwL/AecB
-        /wMACf8DAAs=
-</value>
-  </data>
-  <data name="tabControlMain.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 74</value>
-  </data>
-  <data name="tabControlMain.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 3, 4, 3</value>
-  </data>
-  <data name="tabControlMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1032, 442</value>
-  </data>
-  <data name="tabControlMain.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;tabControlMain.Name" xml:space="preserve">
-    <value>tabControlMain</value>
-  </data>
-  <data name="&gt;&gt;tabControlMain.Type" xml:space="preserve">
-    <value>ReaLTaiizor.Controls.MaterialTabControl, ReaLTaiizor, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;tabControlMain.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;tabControlMain.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <metadata name="myVaultBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="materialButtonSave.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="materialButtonSave.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
-    <value>GrowAndShrink</value>
-  </data>
-  <data name="materialButtonSave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>431, 26</value>
-  </data>
-  <data name="materialButtonSave.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 7, 5, 7</value>
-  </data>
-  <data name="materialButtonSave.Size" type="System.Drawing.Size, System.Drawing">
-    <value>196, 36</value>
-  </data>
-  <data name="materialButtonSave.TabIndex" type="System.Int32, mscorlib">
-    <value>69</value>
-  </data>
-  <data name="materialButtonSave.Text" xml:space="preserve">
-    <value>Sauver</value>
-  </data>
-  <data name="materialButtonSave.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;materialButtonSave.Name" xml:space="preserve">
-    <value>materialButtonSave</value>
-  </data>
-  <data name="&gt;&gt;materialButtonSave.Type" xml:space="preserve">
-    <value>ReaLTaiizor.Controls.MaterialButton, ReaLTaiizor, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;materialButtonSave.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;materialButtonSave.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -4162,10 +4558,10 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Pour ne plus oublier les mots de passe</value>
   </data>
-  <data name="&gt;&gt;supprimerLélémentToolStripMenuItem.Name" xml:space="preserve">
-    <value>supprimerLélémentToolStripMenuItem</value>
+  <data name="&gt;&gt;supprimerLélémentToolStripMenuItem1.Name" xml:space="preserve">
+    <value>supprimerLélémentToolStripMenuItem1</value>
   </data>
-  <data name="&gt;&gt;supprimerLélémentToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;supprimerLélémentToolStripMenuItem1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;imageListTabCtrl.Name" xml:space="preserve">

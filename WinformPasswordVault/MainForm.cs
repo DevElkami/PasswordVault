@@ -5,6 +5,7 @@ using ReaLTaiizor.Manager;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using VaultCore;
 using VaultCore.Models;
@@ -30,6 +31,10 @@ namespace WinformPasswordVault
 
                 poisonGridVault.BackgroundColor = MaterialSkinManager.Instance.BackdropColor;
                 poisonGridVault.Font = new Font("Segoe UI", 14f, FontStyle.Regular, GraphicsUnit.Pixel);
+
+                poisonContextMenuStripGrid.BackColor = MaterialSkinManager.Instance.BackdropColor;
+                poisonContextMenuStripGrid.Font = new Font("Segoe UI", 14f, FontStyle.Regular, GraphicsUnit.Pixel);
+                poisonContextMenuStripGrid.ForeColor = Color.White;
             }
             catch (Exception except)
             {
@@ -70,6 +75,8 @@ namespace WinformPasswordVault
 
                 myVault.Load();
                 BindGrid();
+
+                RegisterHotKey(Handle, HOTKEY_ID_SAVE, HOTKEY_MODIFIER_CTRL, Keys.S.GetHashCode());
             }
             catch (Exception except)
             {
@@ -87,6 +94,7 @@ namespace WinformPasswordVault
         {
             try
             {
+                UnregisterHotKey(Handle, HOTKEY_ID_SAVE);
                 poisonGridVault.DataSource = null;
                 myVault.ListChanged -= MyVault_ListChanged;
             }
@@ -95,6 +103,31 @@ namespace WinformPasswordVault
                 LogManager.GetLogger(nameof(WinformPasswordVault)).Fatal(except.ToString());
                 MessageBox.Show(except.Message);
             }
+        }
+        #endregion
+
+        #region Hotkey
+        [DllImport("user32.dll")]
+        public static extern bool RegisterHotKey(IntPtr hWnd, int id, int fsModifiers, int vlc);
+
+        [DllImport("user32.dll")]
+        public static extern bool UnregisterHotKey(IntPtr hWnd, int id);
+
+        const int HOTKEY_ID_SAVE = 1;
+
+        const int HOTKEY_MODIFIER_CTRL = 2;
+
+        protected override void WndProc(ref Message m)
+        {
+            if (m.Msg == 0x0312)
+            {
+                switch (m.WParam.ToInt32())
+                {
+                    case HOTKEY_ID_SAVE: buttonSave_Click(materialButtonSave, null); break;
+                }
+            }
+
+            base.WndProc(ref m);
         }
         #endregion
 
@@ -167,6 +200,9 @@ namespace WinformPasswordVault
                     // Little hack to force refresh
                     materialTextBoxFilter.Text += " ";
                     materialTextBoxFilter.Text.TrimEnd(' ');
+
+                    MaterialSnackBar SnackBarMessage = new("Row supprimée", "OK", true);
+                    SnackBarMessage.Show(this);
                     break;
                 }
             }
@@ -182,7 +218,8 @@ namespace WinformPasswordVault
         {
             try
             {
-                materialButtonSave.Visible = true;
+                this.Text = this.Text.TrimEnd('*') + '*';
+                materialButtonSave.Enabled = true;
             }
             catch (Exception except)
             {
@@ -222,7 +259,8 @@ namespace WinformPasswordVault
                 foreach (MyPassword item in checkedListBoxMdpFireFox.Items)
                     myVault.Add(item);
 
-                MessageBox.Show(Properties.Resources.ResourceManager.GetString("ConfirmMsgImport"), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MaterialSnackBar SnackBarMessage = new(Properties.Resources.ResourceManager.GetString("ConfirmMsgImport"), "OK", true);
+                SnackBarMessage.Show(this);
             }
             catch (Exception except)
             {
@@ -270,11 +308,15 @@ namespace WinformPasswordVault
         {
             try
             {
-                myVault.Save();
-                materialButtonSave.Visible = false;
+                if (materialButtonSave.Enabled)
+                {
+                    this.Text = this.Text.TrimEnd('*');
+                    myVault.Save();
+                    materialButtonSave.Enabled = false;
 
-                MaterialSnackBar SnackBarMessage = new("Fichier enregistré", "OK", true);
-                SnackBarMessage.Show(this);
+                    MaterialSnackBar SnackBarMessage = new("Fichier enregistré", "OK", true);
+                    SnackBarMessage.Show(this);
+                }
             }
             catch (Exception except)
             {
@@ -307,7 +349,8 @@ namespace WinformPasswordVault
                 textBoxMdpData.Text = "";
                 textBoxMdpKeyword.Text = "";
 
-                MessageBox.Show(Properties.Resources.ResourceManager.GetString("ConfirmMsgAddDone"), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MaterialSnackBar SnackBarMessage = new(Properties.Resources.ResourceManager.GetString("ConfirmMsgAddDone"), "OK", true);
+                SnackBarMessage.Show(this);
             }
             catch (Exception except)
             {
