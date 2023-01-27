@@ -14,16 +14,18 @@ namespace WinformPasswordVault
 {
     public partial class MainForm : MaterialForm
     {
-        private MyVault myVault = new();
+        private readonly MyVault myVault = new();
 
         #region Form function
         /// <summary>
         /// Main form constructor
         /// </summary>
-        public MainForm()
+        public MainForm(ref MyVault vault)
         {
             try
             {
+                myVault = vault;
+
                 InitializeComponent();
 
                 MaterialSkinManager.Instance.AddFormToManage(this);
@@ -35,6 +37,8 @@ namespace WinformPasswordVault
                 poisonContextMenuStripGrid.BackColor = MaterialSkinManager.Instance.BackdropColor;
                 poisonContextMenuStripGrid.Font = new Font("Segoe UI", 14f, FontStyle.Regular, GraphicsUnit.Pixel);
                 poisonContextMenuStripGrid.ForeColor = Color.White;
+
+                myVault = vault;
             }
             catch (Exception except)
             {
@@ -47,32 +51,6 @@ namespace WinformPasswordVault
         {
             try
             {
-                if (myVault.IsInitialized() == false)
-                {
-                    InitVaultForm initVaultForm = new();
-                    if (initVaultForm.ShowDialog() != DialogResult.OK)
-                    {
-                        DialogResult = DialogResult.Cancel;
-                        Close();
-                    }
-                    else
-                    {
-                        MaterialDialog materialDialog = new(this, this.Text, Properties.Resources.ResourceManager.GetString("AskMsgImportOldData"), DialogResult.Yes.ToString(), true, DialogResult.Cancel.ToString());
-                        DialogResult result = materialDialog.ShowDialog(this);
-                        if (MessageBox.Show(Properties.Resources.ResourceManager.GetString("AskMsgImportOldData"), this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                        {
-                            if (myVault.Initialize(initVaultForm.UserPassword))
-                                myVault.ImportOldData(initVaultForm.UserPassword);
-                        }
-                    }
-                }
-
-                if (myVault.CheckVaultKey(Microsoft.VisualBasic.Interaction.InputBox(Properties.Resources.ResourceManager.GetString("AskPassword"), this.Text, "")) == false)
-                {
-                    DialogResult = DialogResult.Cancel;
-                    Close();
-                }
-
                 myVault.Load();
                 BindGrid();
 
@@ -94,9 +72,19 @@ namespace WinformPasswordVault
         {
             try
             {
+                if (this.Text.Contains("*"))
+                {
+                    MaterialDialog materialDialog = new(this, this.Text, "Voulez-vous quitter sans sauvegarder ?", DialogResult.Yes.ToString(), true, DialogResult.Cancel.ToString());
+                    if (materialDialog.ShowDialog(this) == DialogResult.OK)
+                    {
+                        e.Cancel = true;
+                        return;
+                    }
+                }
                 UnregisterHotKey(Handle, HOTKEY_ID_SAVE);
                 poisonGridVault.DataSource = null;
                 myVault.ListChanged -= MyVault_ListChanged;
+                myVault.Clear();
             }
             catch (Exception except)
             {
@@ -119,15 +107,22 @@ namespace WinformPasswordVault
 
         protected override void WndProc(ref Message m)
         {
-            if (m.Msg == 0x0312)
+            try
             {
-                switch (m.WParam.ToInt32())
+                if (m.Msg == 0x0312)
                 {
-                    case HOTKEY_ID_SAVE: buttonSave_Click(materialButtonSave, null); break;
+                    switch (m.WParam.ToInt32())
+                    {
+                        case HOTKEY_ID_SAVE: buttonSave_Click(materialButtonSave, null); break;
+                    }
                 }
-            }
 
-            base.WndProc(ref m);
+                base.WndProc(ref m);
+            }
+            catch (Exception except)
+            {
+                LogManager.GetLogger(nameof(WinformPasswordVault)).Fatal(except.ToString());
+            }
         }
         #endregion
 
@@ -195,14 +190,19 @@ namespace WinformPasswordVault
                 {
 
                     MyPassword selectedPwd = (MyPassword)poisonGridVault.Rows[cell.RowIndex].DataBoundItem;
-                    myVault.Remove(selectedPwd);
 
-                    // Little hack to force refresh
-                    materialTextBoxFilter.Text += " ";
-                    materialTextBoxFilter.Text.TrimEnd(' ');
+                    MaterialDialog materialDialog = new(this, this.Text, "Voulez-vous supprimer ce mot de passe ?" + Environment.NewLine + selectedPwd.ToString(), DialogResult.Yes.ToString(), true, DialogResult.Cancel.ToString());
+                    if (materialDialog.ShowDialog(this) == DialogResult.OK)
+                    {
+                        myVault.Remove(selectedPwd);
 
-                    MaterialSnackBar SnackBarMessage = new("Row supprimée", "OK", true);
-                    SnackBarMessage.Show(this);
+                        // Little hack to force refresh
+                        materialTextBoxFilter.Text += " ";
+                        materialTextBoxFilter.Text.TrimEnd(' ');
+
+                        MaterialSnackBar SnackBarMessage = new("Row supprimée", "OK", true);
+                        SnackBarMessage.Show(this);
+                    }
                     break;
                 }
             }

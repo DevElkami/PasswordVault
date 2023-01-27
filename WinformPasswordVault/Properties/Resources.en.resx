@@ -117,38 +117,44 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AskMsgImportOldData" xml:space="preserve">
-    <value>Do you want import your old passwords ?</value>
-  </data>
-  <data name="AskPassword" xml:space="preserve">
-    <value>What is the password ?</value>
-  </data>
-  <data name="ConfirmMsgAddDone" xml:space="preserve">
-    <value>The add done</value>
-  </data>
   <data name="ConfirmMsgImport" xml:space="preserve">
     <value>Import finished</value>
   </data>
   <data name="Data" xml:space="preserve">
     <value>Datas:</value>
   </data>
-  <data name="ErrorMsgPasswordLengthMinimum" xml:space="preserve">
-    <value>Password length must be at least 6 characters</value>
-  </data>
-  <data name="ErrorMsgPasswordsMustSame" xml:space="preserve">
-    <value>Passwords must be the same</value>
-  </data>
-  <data name="Keyword" xml:space="preserve">
-    <value>Keywords:</value>
-  </data>
-  <data name="Login" xml:space="preserve">
-    <value>Login:</value>
-  </data>
   <data name="Password" xml:space="preserve">
     <value>Passwords:</value>
+  </data>
+  <data name="ErrorMsgPasswordLengthMinimum" xml:space="preserve">
+    <value>Password length must be at least 6 characters</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="save" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Rsx\save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Keyword" xml:space="preserve">
+    <value>Keywords:</value>
+  </data>
+  <data name="AskPassword" xml:space="preserve">
+    <value>What is the password ?</value>
+  </data>
+  <data name="AskMsgImportOldData" xml:space="preserve">
+    <value>Do you want import your old passwords ?</value>
+  </data>
+  <data name="ErrorMsgPasswordsMustSame" xml:space="preserve">
+    <value>Passwords must be the same</value>
+  </data>
+  <data name="ConfirmMsgAddDone" xml:space="preserve">
+    <value>The add done</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Login:</value>
+  </data>
+  <data name="vault" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Rsx\vault.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="baseline_fingerprint_black_24dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Rsx\baseline_fingerprint_black_24dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

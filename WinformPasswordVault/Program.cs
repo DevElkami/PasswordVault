@@ -3,6 +3,7 @@ using NLog.Config;
 using NLog.Layouts;
 using NLog.Targets;
 using ReaLTaiizor.Colors;
+using ReaLTaiizor.Controls;
 using ReaLTaiizor.Manager;
 using ReaLTaiizor.Util;
 using System;
@@ -13,6 +14,7 @@ using System.IO;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows.Forms;
+using VaultCore;
 
 namespace WinformPasswordVault
 {
@@ -73,7 +75,31 @@ namespace WinformPasswordVault
                     MaterialTextShade.WHITE);
 
                 // Run app
-                Application.Run(new MainForm());
+                MyVault myVault = new();
+
+                if (myVault.IsInitialized() == false)
+                {
+                    InitVaultForm initVaultForm = new();
+                    if (initVaultForm.ShowDialog() != DialogResult.OK)
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        MaterialDialog materialDialog = new(null, "this.Text", Properties.Resources.ResourceManager.GetString("AskMsgImportOldData"), DialogResult.Yes.ToString(), true, DialogResult.Cancel.ToString());
+                        if (materialDialog.ShowDialog() == DialogResult.OK)
+                        {
+                            if (myVault.Initialize(initVaultForm.UserPassword))
+                                myVault.ImportOldData(initVaultForm.UserPassword);
+                        }
+                    }
+                }
+
+                FormAskPassword formAskPassword = new(ref myVault);
+                if (formAskPassword.ShowDialog() == DialogResult.OK)
+                {
+                    Application.Run(new MainForm(ref myVault));
+                }                
             }
             catch (Exception except)
             {
