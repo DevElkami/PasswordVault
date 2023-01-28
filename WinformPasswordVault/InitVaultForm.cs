@@ -1,4 +1,5 @@
 ﻿using NLog;
+using ReaLTaiizor.Controls;
 using ReaLTaiizor.Forms;
 using ReaLTaiizor.Manager;
 using System;
@@ -14,8 +15,7 @@ namespace WinformPasswordVault
             {
                 InitializeComponent();
 
-                MaterialSkinManager.Instance.AddFormToManage(this);
-                this.FormStyle = ReaLTaiizor.Enum.Material.FormStyles.ActionBar_None;
+                MaterialSkinManager.Instance.AddFormToManage(this);                
             }
             catch (Exception except)
             {
@@ -43,25 +43,28 @@ namespace WinformPasswordVault
         {
             try
             {
-                if (textBoxPassword1.Text != textBoxPassword2.Text)
+                if (materialTextBoxUserPassword1.Text != materialTextBoxUserPassword2.Text)
                 {
-                    MessageBox.Show(Properties.Resources.ResourceManager.GetString("ErrorMsgPasswordsMustSame"), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MaterialSnackBar SnackBarMessage = new(Properties.Resources.ResourceManager.GetString("ErrorMsgPasswordsMustSame"), "OK", true);
+                    SnackBarMessage.Show(this);
                     return;
                 }
 
-                if (String.IsNullOrEmpty(textBoxPassword1.Text))
+                if (String.IsNullOrEmpty(materialTextBoxUserPassword1.Text))
                 {
-                    MessageBox.Show(Properties.Resources.ResourceManager.GetString("ErrorMsgPasswordLengthMinimum"), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MaterialSnackBar SnackBarMessage = new(Properties.Resources.ResourceManager.GetString("ErrorMsgPasswordLengthMinimum"), "OK", true);
+                    SnackBarMessage.Show(this);
                     return;
                 }
 
-                if (textBoxPassword1.Text.Length < 6)
+                if (materialTextBoxUserPassword1.Text.Length < 6)
                 {
-                    MessageBox.Show(Properties.Resources.ResourceManager.GetString("ErrorMsgPasswordLengthMinimum"), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MaterialSnackBar SnackBarMessage = new(Properties.Resources.ResourceManager.GetString("ErrorMsgPasswordLengthMinimum"), "OK", true);
+                    SnackBarMessage.Show(this);
                     return;
                 }
 
-                UserPassword = textBoxPassword1.Text;
+                UserPassword = materialTextBoxUserPassword1.Text;
                 DialogResult = DialogResult.OK;
             }
             catch (Exception except)
