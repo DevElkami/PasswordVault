@@ -12,7 +12,9 @@ namespace Firefox.Helpers
         private SqliteMasterEntry[] _masterTableEntries;
         private TableEntry[] _tableEntries;
 
+#pragma warning disable CS8618 // Un champ non-nullable doit contenir une valeur non-null lors de la fermeture du constructeur. Envisagez de déclarer le champ comme nullable.
         public SQLite(string fileName)
+#pragma warning restore CS8618 // Un champ non-nullable doit contenir une valeur non-null lors de la fermeture du constructeur. Envisagez de déclarer le champ comme nullable.
         {
             _fileBytes = File.ReadAllBytes(fileName);
             _pageSize = ConvertToULong(16, 2);
@@ -25,8 +27,14 @@ namespace Firefox.Helpers
             try
             {
                 if (rowNum >= _tableEntries.Length)
+#pragma warning disable CS8600 // Conversion de littéral ayant une valeur null ou d'une éventuelle valeur null en type non-nullable.
+#pragma warning disable CS8603 // Existence possible d'un retour de référence null.
                     return (string)null;
+#pragma warning restore CS8603 // Existence possible d'un retour de référence null.
+#pragma warning restore CS8600 // Conversion de littéral ayant une valeur null ou d'une éventuelle valeur null en type non-nullable.
+#pragma warning disable CS8603 // Existence possible d'un retour de référence null.
                 return field >= _tableEntries[rowNum].Content.Length ? null : _tableEntries[rowNum].Content[field];
+#pragma warning restore CS8603 // Existence possible d'un retour de référence null.
             }
             catch
             {
@@ -67,7 +75,9 @@ namespace Firefox.Helpers
                         int endIdx3 = Gvl((int)num4);
                         int endIdx4 = endIdx3;
                         long num5 = Cvl((int)num4, endIdx3);
+#pragma warning disable CS8600 // Conversion de littéral ayant une valeur null ou d'une éventuelle valeur null en type non-nullable.
                         RecordHeaderField[] array = null;
+#pragma warning restore CS8600 // Conversion de littéral ayant une valeur null ou d'une éventuelle valeur null en type non-nullable.
                         long num6 = (long)num4 - endIdx3 + 1L;
                         int index2 = 0;
                         while (num6 < num5)
@@ -343,20 +353,6 @@ namespace Firefox.Helpers
             public string ItemName;
             public long RootNum;
             public string SqlStatement;
-        }
-
-        public static SQLite ReadTable(string database, string table)
-        {
-            if (!File.Exists(database))
-                return null;
-            string NewPath = Path.GetTempFileName() + ".tmpdb";
-            File.Copy(database, NewPath);
-            SQLite SQLiteConnection = new SQLite(NewPath);
-            SQLiteConnection.ReadTable(table);
-            File.Delete(NewPath);
-            if (SQLiteConnection.GetRowCount() == 65536)
-                return null;
-            return SQLiteConnection;
-        }
+        }       
     }
 }

@@ -1,5 +1,5 @@
-﻿using System.Reflection;
-using System.Text;
+﻿using System.ComponentModel;
+using System.Reflection;
 using VaultCore.Models;
 
 namespace VaultCore
@@ -7,8 +7,14 @@ namespace VaultCore
     /// <summary>
     /// High level API
     /// </summary>
-    public class MyVault
+    public class MyVault : BindingList<MyPassword>
     {
+        #region Private data
+        /// <summary>
+        /// Firefox data import helper
+        /// </summary>
+        private FirefoxImporter firefoxImporter = new();
+
         /// <summary>
         /// Why this name ? Just deceive thief password
         /// </summary>
@@ -18,15 +24,38 @@ namespace VaultCore
         /// Vault key (encrypted)
         /// </summary>
         private String vaultKey = "mykey";
-
-        #region Properties
-        /// <summary>
-        /// All password
-        /// </summary>
-        public List<MyPassword> Vault = new();
         #endregion
 
-        #region Vault access management     
+        public MyVault()
+        {
+            AllowNew = true;
+            AllowRemove = true;
+            AllowEdit = true;
+
+            RaiseListChangedEvents = true;
+        }
+
+        #region Vault access management
+        /// <summary>
+        /// Add password in vault if not already exist
+        /// </summary>
+        /// <param name="myPassword"></param>
+        public new void Add(MyPassword myPassword)
+        {
+            if (!Contains(myPassword))
+                base.Add(myPassword);
+        }
+
+        /// <summary>
+        /// Check if a password are already in vault
+        /// </summary>
+        /// <param name="item"></param>
+        /// <returns></returns>
+        public new bool Contains(MyPassword item)
+        {
+            return this.Any(x => x.ToStr() == item.ToStr());
+        }
+
         /// <summary>
         /// Check vault key
         /// </summary>
@@ -74,16 +103,17 @@ namespace VaultCore
         /// <summary>
         /// Import old data (previous version 3.0.0.0)
         /// </summary>
+        /// <param name="oldKey">Old vault key</param>
         public void ImportOldData(String oldKey)
         {
-            Vault.Clear();
+            Clear();
 
             Mdp.OldVaultDecryptor oldVaultDecryptor = new();
             oldVaultDecryptor.Decrypt(oldKey);
 
             foreach (Mdp.OldPassword oldPassword in oldVaultDecryptor.Vault)
             {
-                Vault.Add(new MyPassword()
+                Add(new MyPassword()
                 {
                     Data = oldPassword.Data,
                     Keyword = oldPassword.Keyword,
@@ -94,6 +124,14 @@ namespace VaultCore
 
             Save();
         }
+
+        /// <summary>
+        /// Get datas from Firefox and thunderbird.        
+        /// </summary>
+        public List<MyPassword> GetMyPasswordsFromBrowsers()
+        {
+            return firefoxImporter.Import();
+        }
         #endregion
 
         #region Read / write in encrypt file
@@ -103,7 +141,7 @@ namespace VaultCore
         public void Save()
         {
             List<String> data = new();
-            foreach (MyPassword myPassword in Vault)
+            foreach (MyPassword myPassword in this)
                 data.Add(Security.Encrypt(vaultKey, myPassword.ToStr()));
 
             // Pour éviter les doublons
@@ -124,16 +162,16 @@ namespace VaultCore
 #pragma warning restore CS8604 // Existence possible d'un argument de référence null.
             if (File.Exists(pathFile))
             {
-                Vault.Clear();
+                Clear();
 
                 foreach (String data in File.ReadAllLines(pathFile))
                 {
                     MyPassword? myPassword = MyPassword.From(Security.Decrypt(vaultKey, data));
                     if (myPassword != null)
-                        Vault.Add(myPassword);
+                        Add(myPassword);
                 }
             }
         }
-        #endregion
+        #endregion        
     }
 }

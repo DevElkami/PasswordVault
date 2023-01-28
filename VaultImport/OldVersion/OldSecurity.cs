@@ -26,6 +26,8 @@ namespace Mdp
         /// <returns>String</returns>
         public String Decrypt(String data)
         {
+#pragma warning disable IDE0063 // Utiliser une instruction 'using' simple
+#pragma warning disable SYSLIB0021 // Le type ou le membre est obsolète
             using (TripleDESCryptoServiceProvider cryptoServiceProvider = GetCryptoService())
             {
                 using (ICryptoTransform cTransform = cryptoServiceProvider.CreateDecryptor())
@@ -37,6 +39,8 @@ namespace Mdp
                     return UTF8Encoding.UTF8.GetString(resultArray);
                 }
             }
+#pragma warning restore SYSLIB0021 // Le type ou le membre est obsolète
+#pragma warning restore IDE0063 // Utiliser une instruction 'using' simple
         }
         #endregion
 
@@ -76,16 +80,20 @@ namespace Mdp
         /// Create crypto triple DES
         /// </summary>
         /// <returns>Triple DES provider</returns>
+#pragma warning disable SYSLIB0021 // Le type ou le membre est obsolète
         private TripleDESCryptoServiceProvider GetCryptoService()
+#pragma warning restore SYSLIB0021 // Le type ou le membre est obsolète
         {
             byte[] keyArray = UTF8Encoding.UTF8.GetBytes(secureMdp);
 
+#pragma warning disable SYSLIB0021 // Le type ou le membre est obsolète
             TripleDESCryptoServiceProvider tdes = new TripleDESCryptoServiceProvider
             {
                 Key = keyArray.Take(24).ToArray(),
                 Mode = CipherMode.ECB,
                 Padding = PaddingMode.PKCS7
             };
+#pragma warning restore SYSLIB0021 // Le type ou le membre est obsolète
 
             return tdes;
         }

@@ -5,14 +5,8 @@
 		public static string Appdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
 		private static string[] GeckoBrowsersList = new string[]
 		{
-			"Mozilla\\Firefox",
-			"Waterfox",
-			"K-Meleon",
-			"Thunderbird",
-			"Comodo\\IceDragon",
-			"8pecxstudios\\Cyberfox",
-			"NETGATE Technologies\\BlackHaw",
-			"Moonchild Productions\\Pale Moon"
+			"Mozilla\\Firefox",			
+			"Thunderbird"			
 		};
 
 		private static string[] Concat(string[] x, string[] y)
@@ -28,12 +22,16 @@
 		// Get program files path
 		private static string[] ProgramFilesChildren()
 		{
-			string[] children = Directory.GetDirectories(Environment.GetEnvironmentVariable("ProgramFiles"));
+#pragma warning disable CS8604 // Existence possible d'un argument de référence null.
+            string[] children = Directory.GetDirectories(Environment.GetEnvironmentVariable("ProgramFiles"));
+#pragma warning restore CS8604 // Existence possible d'un argument de référence null.
 
-			if (8 == IntPtr.Size || (!String.IsNullOrEmpty(Environment.GetEnvironmentVariable("PROCESSOR_ARCHITEW6432"))))
+            if (8 == IntPtr.Size || (!String.IsNullOrEmpty(Environment.GetEnvironmentVariable("PROCESSOR_ARCHITEW6432"))))
 			{
-				children = Concat(children, Directory.GetDirectories(Environment.GetEnvironmentVariable("ProgramFiles(x86)")));
-			}
+#pragma warning disable CS8604 // Existence possible d'un argument de référence null.
+                children = Concat(children, Directory.GetDirectories(Environment.GetEnvironmentVariable("ProgramFiles(x86)")));
+#pragma warning restore CS8604 // Existence possible d'un argument de référence null.
+            }
 
 			return children;
 		}
@@ -52,8 +50,10 @@
 							return sDir;
 			}
 			catch (Exception ex) { Console.WriteLine("Failed to find profile\n" + ex); }
-			return null;
-		}
+#pragma warning disable CS8603 // Existence possible d'un retour de référence null.
+            return null;
+#pragma warning restore CS8603 // Existence possible d'un retour de référence null.
+        }
 
 		// Get directory with nss3.dll
 		public static string GetMozillaPath()
@@ -64,8 +64,10 @@
 					File.Exists(sDir + "\\mozglue.dll"))
 					return sDir;
 			}
-			return null;
-		}
+#pragma warning disable CS8603 // Existence possible d'un retour de référence null.
+            return null;
+#pragma warning restore CS8603 // Existence possible d'un retour de référence null.
+        }
 
 		// Get gecko based browsers path
 		public static string[] GetMozillaBrowsers()
