@@ -46,21 +46,15 @@ namespace WinformPasswordVault
             this.materialButtonImportBrowserData = new ReaLTaiizor.Controls.MaterialButton();
             this.materialButtonShowBrowserDatas = new ReaLTaiizor.Controls.MaterialButton();
             this.tabPageManualImport = new System.Windows.Forms.TabPage();
-            this.groupBoxMyPassword = new System.Windows.Forms.GroupBox();
-            this.textBoxMdpKeyword = new System.Windows.Forms.TextBox();
-            this.labelMdpKeyword = new System.Windows.Forms.Label();
-            this.textBoxMdpData = new System.Windows.Forms.TextBox();
-            this.labelMdpData = new System.Windows.Forms.Label();
-            this.textBoxMdpPassword = new System.Windows.Forms.TextBox();
-            this.labelMdpPassword = new System.Windows.Forms.Label();
-            this.textBoxMdpLogin = new System.Windows.Forms.TextBox();
-            this.labelMdpLogin = new System.Windows.Forms.Label();
-            this.buttonAdd = new System.Windows.Forms.Button();
-            this.tabPageSaveManagement = new System.Windows.Forms.TabPage();
-            this.materialButtonSave = new ReaLTaiizor.Controls.MaterialButton();
+            this.materialTextBoxEditKeyword = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
+            this.materialTextBoxEditPassword = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
+            this.materialTextBoxEditUrl = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
+            this.materialTextBoxEditLogin = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
+            this.materialButtonPasswordAdd = new ReaLTaiizor.Controls.MaterialButton();
             this.tabPageAbout = new System.Windows.Forms.TabPage();
             this.webViewGitHubProfile = new Microsoft.Web.WebView2.WinForms.WebView2();
             this.imageListTabCtrl = new System.Windows.Forms.ImageList(this.components);
+            this.materialButtonSave = new ReaLTaiizor.Controls.MaterialButton();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.myVaultBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControlMain.SuspendLayout();
@@ -69,8 +63,6 @@ namespace WinformPasswordVault
             this.poisonContextMenuStripGrid.SuspendLayout();
             this.tabPageBrowserInport.SuspendLayout();
             this.tabPageManualImport.SuspendLayout();
-            this.groupBoxMyPassword.SuspendLayout();
-            this.tabPageSaveManagement.SuspendLayout();
             this.tabPageAbout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.webViewGitHubProfile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
@@ -83,7 +75,6 @@ namespace WinformPasswordVault
             this.tabControlMain.Controls.Add(this.tabPageSearch);
             this.tabControlMain.Controls.Add(this.tabPageBrowserInport);
             this.tabControlMain.Controls.Add(this.tabPageManualImport);
-            this.tabControlMain.Controls.Add(this.tabPageSaveManagement);
             this.tabControlMain.Controls.Add(this.tabPageAbout);
             this.tabControlMain.Depth = 0;
             this.tabControlMain.ImageList = this.imageListTabCtrl;
@@ -94,7 +85,7 @@ namespace WinformPasswordVault
             // 
             // tabPageSearch
             // 
-            this.tabPageSearch.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPageSearch.BackColor = System.Drawing.SystemColors.Control;
             this.tabPageSearch.Controls.Add(this.materialTextBoxFilter);
             this.tabPageSearch.Controls.Add(this.poisonGridVault);
             resources.ApplyResources(this.tabPageSearch, "tabPageSearch");
@@ -241,96 +232,130 @@ namespace WinformPasswordVault
             // 
             // tabPageManualImport
             // 
-            this.tabPageManualImport.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.tabPageManualImport.Controls.Add(this.groupBoxMyPassword);
-            this.tabPageManualImport.Controls.Add(this.buttonAdd);
+            this.tabPageManualImport.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPageManualImport.Controls.Add(this.materialTextBoxEditKeyword);
+            this.tabPageManualImport.Controls.Add(this.materialTextBoxEditPassword);
+            this.tabPageManualImport.Controls.Add(this.materialTextBoxEditUrl);
+            this.tabPageManualImport.Controls.Add(this.materialTextBoxEditLogin);
+            this.tabPageManualImport.Controls.Add(this.materialButtonPasswordAdd);
             resources.ApplyResources(this.tabPageManualImport, "tabPageManualImport");
             this.tabPageManualImport.Name = "tabPageManualImport";
             // 
-            // groupBoxMyPassword
+            // materialTextBoxEditKeyword
             // 
-            resources.ApplyResources(this.groupBoxMyPassword, "groupBoxMyPassword");
-            this.groupBoxMyPassword.Controls.Add(this.textBoxMdpKeyword);
-            this.groupBoxMyPassword.Controls.Add(this.labelMdpKeyword);
-            this.groupBoxMyPassword.Controls.Add(this.textBoxMdpData);
-            this.groupBoxMyPassword.Controls.Add(this.labelMdpData);
-            this.groupBoxMyPassword.Controls.Add(this.textBoxMdpPassword);
-            this.groupBoxMyPassword.Controls.Add(this.labelMdpPassword);
-            this.groupBoxMyPassword.Controls.Add(this.textBoxMdpLogin);
-            this.groupBoxMyPassword.Controls.Add(this.labelMdpLogin);
-            this.groupBoxMyPassword.Name = "groupBoxMyPassword";
-            this.groupBoxMyPassword.TabStop = false;
+            this.materialTextBoxEditKeyword.AnimateReadOnly = false;
+            this.materialTextBoxEditKeyword.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.materialTextBoxEditKeyword.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            resources.ApplyResources(this.materialTextBoxEditKeyword, "materialTextBoxEditKeyword");
+            this.materialTextBoxEditKeyword.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.materialTextBoxEditKeyword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.materialTextBoxEditKeyword.Depth = 0;
+            this.materialTextBoxEditKeyword.HideSelection = true;
+            this.materialTextBoxEditKeyword.LeadingIcon = null;
+            this.materialTextBoxEditKeyword.MaxLength = 50;
+            this.materialTextBoxEditKeyword.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            this.materialTextBoxEditKeyword.Name = "materialTextBoxEditKeyword";
+            this.materialTextBoxEditKeyword.PasswordChar = '\0';
+            this.materialTextBoxEditKeyword.ReadOnly = false;
+            this.materialTextBoxEditKeyword.SelectedText = "";
+            this.materialTextBoxEditKeyword.SelectionLength = 0;
+            this.materialTextBoxEditKeyword.SelectionStart = 0;
+            this.materialTextBoxEditKeyword.ShortcutsEnabled = true;
+            this.materialTextBoxEditKeyword.TabStop = false;
+            this.materialTextBoxEditKeyword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.materialTextBoxEditKeyword.TrailingIcon = ((System.Drawing.Image)(resources.GetObject("materialTextBoxEditKeyword.TrailingIcon")));
+            this.materialTextBoxEditKeyword.UseSystemPasswordChar = false;
             // 
-            // textBoxMdpKeyword
+            // materialTextBoxEditPassword
             // 
-            resources.ApplyResources(this.textBoxMdpKeyword, "textBoxMdpKeyword");
-            this.textBoxMdpKeyword.Name = "textBoxMdpKeyword";
+            this.materialTextBoxEditPassword.AnimateReadOnly = false;
+            this.materialTextBoxEditPassword.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.materialTextBoxEditPassword.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            resources.ApplyResources(this.materialTextBoxEditPassword, "materialTextBoxEditPassword");
+            this.materialTextBoxEditPassword.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.materialTextBoxEditPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.materialTextBoxEditPassword.Depth = 0;
+            this.materialTextBoxEditPassword.HideSelection = true;
+            this.materialTextBoxEditPassword.LeadingIcon = null;
+            this.materialTextBoxEditPassword.MaxLength = 50;
+            this.materialTextBoxEditPassword.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            this.materialTextBoxEditPassword.Name = "materialTextBoxEditPassword";
+            this.materialTextBoxEditPassword.PasswordChar = '\0';
+            this.materialTextBoxEditPassword.ReadOnly = false;
+            this.materialTextBoxEditPassword.SelectedText = "";
+            this.materialTextBoxEditPassword.SelectionLength = 0;
+            this.materialTextBoxEditPassword.SelectionStart = 0;
+            this.materialTextBoxEditPassword.ShortcutsEnabled = true;
+            this.materialTextBoxEditPassword.TabStop = false;
+            this.materialTextBoxEditPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.materialTextBoxEditPassword.TrailingIcon = ((System.Drawing.Image)(resources.GetObject("materialTextBoxEditPassword.TrailingIcon")));
+            this.materialTextBoxEditPassword.UseSystemPasswordChar = false;
             // 
-            // labelMdpKeyword
+            // materialTextBoxEditUrl
             // 
-            resources.ApplyResources(this.labelMdpKeyword, "labelMdpKeyword");
-            this.labelMdpKeyword.Name = "labelMdpKeyword";
+            this.materialTextBoxEditUrl.AnimateReadOnly = false;
+            this.materialTextBoxEditUrl.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.materialTextBoxEditUrl.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            resources.ApplyResources(this.materialTextBoxEditUrl, "materialTextBoxEditUrl");
+            this.materialTextBoxEditUrl.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.materialTextBoxEditUrl.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.materialTextBoxEditUrl.Depth = 0;
+            this.materialTextBoxEditUrl.HideSelection = true;
+            this.materialTextBoxEditUrl.LeadingIcon = null;
+            this.materialTextBoxEditUrl.MaxLength = 50;
+            this.materialTextBoxEditUrl.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            this.materialTextBoxEditUrl.Name = "materialTextBoxEditUrl";
+            this.materialTextBoxEditUrl.PasswordChar = '\0';
+            this.materialTextBoxEditUrl.ReadOnly = false;
+            this.materialTextBoxEditUrl.SelectedText = "";
+            this.materialTextBoxEditUrl.SelectionLength = 0;
+            this.materialTextBoxEditUrl.SelectionStart = 0;
+            this.materialTextBoxEditUrl.ShortcutsEnabled = true;
+            this.materialTextBoxEditUrl.TabStop = false;
+            this.materialTextBoxEditUrl.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.materialTextBoxEditUrl.TrailingIcon = ((System.Drawing.Image)(resources.GetObject("materialTextBoxEditUrl.TrailingIcon")));
+            this.materialTextBoxEditUrl.UseSystemPasswordChar = false;
             // 
-            // textBoxMdpData
+            // materialTextBoxEditLogin
             // 
-            resources.ApplyResources(this.textBoxMdpData, "textBoxMdpData");
-            this.textBoxMdpData.Name = "textBoxMdpData";
+            this.materialTextBoxEditLogin.AnimateReadOnly = false;
+            this.materialTextBoxEditLogin.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.materialTextBoxEditLogin.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            resources.ApplyResources(this.materialTextBoxEditLogin, "materialTextBoxEditLogin");
+            this.materialTextBoxEditLogin.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.materialTextBoxEditLogin.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.materialTextBoxEditLogin.Depth = 0;
+            this.materialTextBoxEditLogin.HideSelection = true;
+            this.materialTextBoxEditLogin.LeadingIcon = null;
+            this.materialTextBoxEditLogin.MaxLength = 50;
+            this.materialTextBoxEditLogin.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            this.materialTextBoxEditLogin.Name = "materialTextBoxEditLogin";
+            this.materialTextBoxEditLogin.PasswordChar = '\0';
+            this.materialTextBoxEditLogin.ReadOnly = false;
+            this.materialTextBoxEditLogin.SelectedText = "";
+            this.materialTextBoxEditLogin.SelectionLength = 0;
+            this.materialTextBoxEditLogin.SelectionStart = 0;
+            this.materialTextBoxEditLogin.ShortcutsEnabled = true;
+            this.materialTextBoxEditLogin.TabStop = false;
+            this.materialTextBoxEditLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.materialTextBoxEditLogin.TrailingIcon = ((System.Drawing.Image)(resources.GetObject("materialTextBoxEditLogin.TrailingIcon")));
+            this.materialTextBoxEditLogin.UseSystemPasswordChar = false;
             // 
-            // labelMdpData
+            // materialButtonPasswordAdd
             // 
-            resources.ApplyResources(this.labelMdpData, "labelMdpData");
-            this.labelMdpData.Name = "labelMdpData";
-            // 
-            // textBoxMdpPassword
-            // 
-            resources.ApplyResources(this.textBoxMdpPassword, "textBoxMdpPassword");
-            this.textBoxMdpPassword.Name = "textBoxMdpPassword";
-            // 
-            // labelMdpPassword
-            // 
-            resources.ApplyResources(this.labelMdpPassword, "labelMdpPassword");
-            this.labelMdpPassword.Name = "labelMdpPassword";
-            // 
-            // textBoxMdpLogin
-            // 
-            resources.ApplyResources(this.textBoxMdpLogin, "textBoxMdpLogin");
-            this.textBoxMdpLogin.Name = "textBoxMdpLogin";
-            // 
-            // labelMdpLogin
-            // 
-            resources.ApplyResources(this.labelMdpLogin, "labelMdpLogin");
-            this.labelMdpLogin.Name = "labelMdpLogin";
-            // 
-            // buttonAdd
-            // 
-            resources.ApplyResources(this.buttonAdd, "buttonAdd");
-            this.buttonAdd.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.UseVisualStyleBackColor = false;
-            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
-            // 
-            // tabPageSaveManagement
-            // 
-            this.tabPageSaveManagement.Controls.Add(this.materialButtonSave);
-            resources.ApplyResources(this.tabPageSaveManagement, "tabPageSaveManagement");
-            this.tabPageSaveManagement.Name = "tabPageSaveManagement";
-            this.tabPageSaveManagement.UseVisualStyleBackColor = true;
-            // 
-            // materialButtonSave
-            // 
-            resources.ApplyResources(this.materialButtonSave, "materialButtonSave");
-            this.materialButtonSave.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButtonSave.Depth = 0;
-            this.materialButtonSave.HighEmphasis = true;
-            this.materialButtonSave.Icon = ((System.Drawing.Image)(resources.GetObject("materialButtonSave.Icon")));
-            this.materialButtonSave.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            this.materialButtonSave.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
-            this.materialButtonSave.Name = "materialButtonSave";
-            this.materialButtonSave.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButtonSave.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButtonSave.UseAccentColor = true;
-            this.materialButtonSave.UseVisualStyleBackColor = true;
-            this.materialButtonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            resources.ApplyResources(this.materialButtonPasswordAdd, "materialButtonPasswordAdd");
+            this.materialButtonPasswordAdd.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButtonPasswordAdd.Depth = 0;
+            this.materialButtonPasswordAdd.HighEmphasis = true;
+            this.materialButtonPasswordAdd.Icon = ((System.Drawing.Image)(resources.GetObject("materialButtonPasswordAdd.Icon")));
+            this.materialButtonPasswordAdd.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
+            this.materialButtonPasswordAdd.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            this.materialButtonPasswordAdd.Name = "materialButtonPasswordAdd";
+            this.materialButtonPasswordAdd.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButtonPasswordAdd.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButtonPasswordAdd.UseAccentColor = true;
+            this.materialButtonPasswordAdd.UseVisualStyleBackColor = true;
+            this.materialButtonPasswordAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // tabPageAbout
             // 
@@ -361,6 +386,22 @@ namespace WinformPasswordVault
             this.imageListTabCtrl.Images.SetKeyName(4, "round_add_black_24dp.png");
             this.imageListTabCtrl.Images.SetKeyName(5, "import.png");
             // 
+            // materialButtonSave
+            // 
+            resources.ApplyResources(this.materialButtonSave, "materialButtonSave");
+            this.materialButtonSave.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButtonSave.Depth = 0;
+            this.materialButtonSave.HighEmphasis = true;
+            this.materialButtonSave.Icon = ((System.Drawing.Image)(resources.GetObject("materialButtonSave.Icon")));
+            this.materialButtonSave.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
+            this.materialButtonSave.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            this.materialButtonSave.Name = "materialButtonSave";
+            this.materialButtonSave.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButtonSave.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButtonSave.UseAccentColor = true;
+            this.materialButtonSave.UseVisualStyleBackColor = true;
+            this.materialButtonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            // 
             // pictureBoxLogo
             // 
             resources.ApplyResources(this.pictureBoxLogo, "pictureBoxLogo");
@@ -372,6 +413,7 @@ namespace WinformPasswordVault
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
+            this.Controls.Add(this.materialButtonSave);
             this.Controls.Add(this.pictureBoxLogo);
             this.Controls.Add(this.tabControlMain);
             this.DrawerAutoShow = true;
@@ -387,9 +429,6 @@ namespace WinformPasswordVault
             this.poisonContextMenuStripGrid.ResumeLayout(false);
             this.tabPageBrowserInport.ResumeLayout(false);
             this.tabPageManualImport.ResumeLayout(false);
-            this.groupBoxMyPassword.ResumeLayout(false);
-            this.groupBoxMyPassword.PerformLayout();
-            this.tabPageSaveManagement.ResumeLayout(false);
             this.tabPageAbout.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.webViewGitHubProfile)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
@@ -405,29 +444,23 @@ namespace WinformPasswordVault
         private System.Windows.Forms.TabPage tabPageManualImport;
         private System.Windows.Forms.TabPage tabPageBrowserInport;
         private System.Windows.Forms.BindingSource myVaultBindingSource;
-        private System.Windows.Forms.Button buttonAdd;
-        private System.Windows.Forms.GroupBox groupBoxMyPassword;
-        private System.Windows.Forms.TextBox textBoxMdpKeyword;
-        private System.Windows.Forms.Label labelMdpKeyword;
-        private System.Windows.Forms.TextBox textBoxMdpData;
-        private System.Windows.Forms.Label labelMdpData;
-        private System.Windows.Forms.TextBox textBoxMdpPassword;
-        private System.Windows.Forms.Label labelMdpPassword;
-        private System.Windows.Forms.TextBox textBoxMdpLogin;
-        private System.Windows.Forms.Label labelMdpLogin;
         private System.Windows.Forms.ImageList imageListTabCtrl;
         private PoisonDataGridView poisonGridVault;
         private MaterialTextBoxEdit materialTextBoxFilter;
         private MaterialButton materialButtonSave;
         private PoisonContextMenuStrip poisonContextMenuStripGrid;
         private System.Windows.Forms.ToolStripMenuItem supprimerLélémentToolStripMenuItem1;
-        private System.Windows.Forms.TabPage tabPageSaveManagement;
         private System.Windows.Forms.TabPage tabPageAbout;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
         private Microsoft.Web.WebView2.WinForms.WebView2 webViewGitHubProfile;
         private MaterialButton materialButtonImportBrowserData;
         private MaterialButton materialButtonShowBrowserDatas;
         private MaterialCheckListBox materialCheckListBoxBrowserData;
+        private MaterialTextBoxEdit materialTextBoxEditUrl;
+        private MaterialTextBoxEdit materialTextBoxEditLogin;
+        private MaterialButton materialButtonPasswordAdd;
+        private MaterialTextBoxEdit materialTextBoxEditKeyword;
+        private MaterialTextBoxEdit materialTextBoxEditPassword;
     }
 }
 

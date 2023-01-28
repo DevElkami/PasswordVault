@@ -220,7 +220,7 @@ namespace WinformPasswordVault
             try
             {
                 this.Text = this.Text.TrimEnd('*') + '*';
-                materialButtonSave.Enabled = true;
+                materialButtonSave.Visible = true;
             }
             catch (Exception except)
             {
@@ -319,11 +319,11 @@ namespace WinformPasswordVault
         {
             try
             {
-                if (materialButtonSave.Enabled)
+                if (materialButtonSave.Visible)
                 {
                     this.Text = this.Text.TrimEnd('*');
                     myVault.Save();
-                    materialButtonSave.Enabled = false;
+                    materialButtonSave.Visible = false;
 
                     MaterialSnackBar SnackBarMessage = new("Fichier enregistré", "OK", true);
                     SnackBarMessage.Show(this);
@@ -347,18 +347,18 @@ namespace WinformPasswordVault
             {
                 MyPassword myPassword = new MyPassword()
                 {
-                    UserName = textBoxMdpLogin.Text,
-                    Password = textBoxMdpPassword.Text,
-                    Data = textBoxMdpData.Text,
-                    Keyword = textBoxMdpKeyword.Text
+                    UserName = materialTextBoxEditLogin.Text,
+                    Password = materialTextBoxEditPassword.Text,
+                    Data = materialTextBoxEditUrl.Text,
+                    Keyword = materialTextBoxEditKeyword.Text
                 };
 
                 myVault.Add(myPassword);
 
-                textBoxMdpLogin.Text = "";
-                textBoxMdpPassword.Text = "";
-                textBoxMdpData.Text = "";
-                textBoxMdpKeyword.Text = "";
+                materialTextBoxEditLogin.Text = "";
+                materialTextBoxEditPassword.Text = "";
+                materialTextBoxEditUrl.Text = "";
+                materialTextBoxEditKeyword.Text = "";
 
                 MaterialSnackBar SnackBarMessage = new(Properties.Resources.ResourceManager.GetString("ConfirmMsgAddDone"), "OK", true);
                 SnackBarMessage.Show(this);
