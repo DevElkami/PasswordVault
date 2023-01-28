@@ -3,6 +3,7 @@ using ReaLTaiizor.Controls;
 using ReaLTaiizor.Forms;
 using ReaLTaiizor.Manager;
 using System;
+using System.Threading;
 using System.Windows.Forms;
 using VaultCore;
 
@@ -19,7 +20,7 @@ namespace WinformPasswordVault
                 myVault = vault;
                 InitializeComponent();
 
-                MaterialSkinManager.Instance.AddFormToManage(this);                
+                MaterialSkinManager.Instance.AddFormToManage(this);
             }
             catch (Exception except)
             {
@@ -71,10 +72,10 @@ namespace WinformPasswordVault
                 if (myVault.Initialize(materialTextBoxUserPassword1.Text))
                 {
                     MaterialDialog materialDialog = new(this, this.Text, Properties.Resources.ResourceManager.GetString("AskMsgImportOldData"), DialogResult.Yes.ToString(), true, DialogResult.Cancel.ToString(), true);
-                    if (materialDialog.ShowDialog(this) == DialogResult.OK)                    
-                        myVault.ImportOldData(materialTextBoxUserPassword1.Text);                    
+                    if (materialDialog.ShowDialog(this) == DialogResult.OK)
+                        myVault.ImportOldData(materialTextBoxUserPassword1.Text);
                 }
-                
+
                 DialogResult = DialogResult.OK;
             }
             catch (Exception except)

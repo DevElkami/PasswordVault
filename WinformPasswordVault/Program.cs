@@ -76,7 +76,7 @@ namespace WinformPasswordVault
 
                 // Run app
                 MyVault myVault = new();
-                if (myVault.IsInitialized() == false)
+                //if (myVault.IsInitialized() == false)
                 {
                     InitVaultForm initVaultForm = new(ref myVault);
                     if (initVaultForm.ShowDialog() != DialogResult.OK)
