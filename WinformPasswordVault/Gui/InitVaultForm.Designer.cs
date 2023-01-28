@@ -44,7 +44,7 @@
             // 
             this.pictureBoxLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
-            this.pictureBoxLogo.Location = new System.Drawing.Point(6, 375);
+            this.pictureBoxLogo.Location = new System.Drawing.Point(6, 379);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
             this.pictureBoxLogo.Size = new System.Drawing.Size(96, 96);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -62,17 +62,18 @@
             this.materialButtonInit.HighEmphasis = true;
             this.materialButtonInit.Icon = null;
             this.materialButtonInit.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            this.materialButtonInit.Location = new System.Drawing.Point(252, 379);
+            this.materialButtonInit.Location = new System.Drawing.Point(284, 382);
             this.materialButtonInit.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.materialButtonInit.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             this.materialButtonInit.Name = "materialButtonInit";
             this.materialButtonInit.NoAccentTextColor = System.Drawing.Color.Empty;
             this.materialButtonInit.Size = new System.Drawing.Size(196, 36);
-            this.materialButtonInit.TabIndex = 3;
+            this.materialButtonInit.TabIndex = 2;
             this.materialButtonInit.Text = "Initialize";
             this.materialButtonInit.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             this.materialButtonInit.UseAccentColor = true;
             this.materialButtonInit.UseVisualStyleBackColor = true;
+            this.materialButtonInit.Click += this.buttonInitialize_Click;
             // 
             // materialTextBoxUserPassword1
             // 
@@ -102,8 +103,8 @@
             this.materialTextBoxUserPassword1.SelectionLength = 0;
             this.materialTextBoxUserPassword1.SelectionStart = 0;
             this.materialTextBoxUserPassword1.ShortcutsEnabled = true;
-            this.materialTextBoxUserPassword1.Size = new System.Drawing.Size(418, 48);
-            this.materialTextBoxUserPassword1.TabIndex = 4;
+            this.materialTextBoxUserPassword1.Size = new System.Drawing.Size(450, 48);
+            this.materialTextBoxUserPassword1.TabIndex = 0;
             this.materialTextBoxUserPassword1.TabStop = false;
             this.materialTextBoxUserPassword1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.materialTextBoxUserPassword1.TrailingIcon = null;
@@ -137,7 +138,7 @@
             this.materialTextBoxUserPassword2.SelectionLength = 0;
             this.materialTextBoxUserPassword2.SelectionStart = 0;
             this.materialTextBoxUserPassword2.ShortcutsEnabled = true;
-            this.materialTextBoxUserPassword2.Size = new System.Drawing.Size(418, 48);
+            this.materialTextBoxUserPassword2.Size = new System.Drawing.Size(450, 48);
             this.materialTextBoxUserPassword2.TabIndex = 1;
             this.materialTextBoxUserPassword2.TabStop = false;
             this.materialTextBoxUserPassword2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -158,7 +159,7 @@
             this.materialCardInformation.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             this.materialCardInformation.Name = "materialCardInformation";
             this.materialCardInformation.Padding = new System.Windows.Forms.Padding(16);
-            this.materialCardInformation.Size = new System.Drawing.Size(441, 155);
+            this.materialCardInformation.Size = new System.Drawing.Size(473, 155);
             this.materialCardInformation.TabIndex = 0;
             // 
             // materialLabel4
@@ -188,16 +189,17 @@
             this.materialLabel38.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.materialLabel38.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             this.materialLabel38.Name = "materialLabel38";
-            this.materialLabel38.Size = new System.Drawing.Size(416, 80);
+            this.materialLabel38.Size = new System.Drawing.Size(448, 80);
             this.materialLabel38.TabIndex = 2;
-            this.materialLabel38.Text = "Help prevent a security threat by getting a strong password...and remember: it\'s " +
-    "impossible to recover once you choose it.";
+            this.materialLabel38.Text = "Help prevent a security threat by getting a very strong password.\r\n\r\nRemember: it" +
+    "\'s impossible to recover once you choose it.";
+            this.materialLabel38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // InitVaultForm
             // 
             this.AcceptButton = this.materialButtonInit;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(480, 477);
+            this.ClientSize = new System.Drawing.Size(512, 481);
             this.Controls.Add(this.materialCardInformation);
             this.Controls.Add(this.materialTextBoxUserPassword2);
             this.Controls.Add(this.pictureBoxLogo);
@@ -219,8 +221,7 @@
             this.materialCardInformation.PerformLayout();
             this.ResumeLayout(false);
 
-        }
-
+        }       
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBoxLogo;

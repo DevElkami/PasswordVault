@@ -4,15 +4,19 @@ using ReaLTaiizor.Forms;
 using ReaLTaiizor.Manager;
 using System;
 using System.Windows.Forms;
+using VaultCore;
 
 namespace WinformPasswordVault
 {
     public partial class InitVaultForm : MaterialForm
     {
-        public InitVaultForm()
+        private readonly MyVault myVault = new();
+
+        public InitVaultForm(ref MyVault vault)
         {
             try
             {
+                myVault = vault;
                 InitializeComponent();
 
                 MaterialSkinManager.Instance.AddFormToManage(this);                
@@ -23,8 +27,6 @@ namespace WinformPasswordVault
                 MessageBox.Show(except.Message);
             }
         }
-
-        public String UserPassword { get; private set; }
 
         private void InitVaultForm_Load(object sender, EventArgs e)
         {
@@ -43,6 +45,8 @@ namespace WinformPasswordVault
         {
             try
             {
+                DialogResult = DialogResult.None;
+
                 if (materialTextBoxUserPassword1.Text != materialTextBoxUserPassword2.Text)
                 {
                     MaterialSnackBar SnackBarMessage = new(Properties.Resources.ResourceManager.GetString("ErrorMsgPasswordsMustSame"), "OK", true);
@@ -64,7 +68,13 @@ namespace WinformPasswordVault
                     return;
                 }
 
-                UserPassword = materialTextBoxUserPassword1.Text;
+                if (myVault.Initialize(materialTextBoxUserPassword1.Text))
+                {
+                    MaterialDialog materialDialog = new(this, this.Text, Properties.Resources.ResourceManager.GetString("AskMsgImportOldData"), DialogResult.Yes.ToString(), true, DialogResult.Cancel.ToString(), true);
+                    if (materialDialog.ShowDialog(this) == DialogResult.OK)                    
+                        myVault.ImportOldData(materialTextBoxUserPassword1.Text);                    
+                }
+                
                 DialogResult = DialogResult.OK;
             }
             catch (Exception except)

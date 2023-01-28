@@ -25,7 +25,6 @@ namespace WinformPasswordVault
             try
             {
                 myVault = vault;
-
                 InitializeComponent();
 
                 MaterialSkinManager.Instance.AddFormToManage(this);
@@ -37,8 +36,6 @@ namespace WinformPasswordVault
                 poisonContextMenuStripGrid.BackColor = MaterialSkinManager.Instance.BackdropColor;
                 poisonContextMenuStripGrid.Font = new Font("Segoe UI", 14f, FontStyle.Regular, GraphicsUnit.Pixel);
                 poisonContextMenuStripGrid.ForeColor = Color.White;
-
-                myVault = vault;
             }
             catch (Exception except)
             {
