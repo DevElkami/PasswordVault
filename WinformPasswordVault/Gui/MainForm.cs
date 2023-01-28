@@ -71,11 +71,15 @@ namespace WinformPasswordVault
             {
                 if (this.Text.Contains("*"))
                 {
-                    MaterialDialog materialDialog = new(this, this.Text, "Voulez-vous quitter sans sauvegarder ?", DialogResult.Yes.ToString(), true, DialogResult.Cancel.ToString());
-                    if (materialDialog.ShowDialog(this) == DialogResult.OK)
+                    MaterialDialog materialDialog = new(this, this.Text, "Voulez-vous quitter sans sauvegarder ?", DialogResult.Yes.ToString(), true, DialogResult.Cancel.ToString(), true);
+                    if (materialDialog.ShowDialog(this) != DialogResult.OK)
                     {
                         e.Cancel = true;
                         return;
+                    }
+                    else
+                    {
+                        this.Text = this.Text.TrimEnd('*');
                     }
                 }
                 UnregisterHotKey(Handle, HOTKEY_ID_SAVE);
@@ -188,7 +192,7 @@ namespace WinformPasswordVault
 
                     MyPassword selectedPwd = (MyPassword)poisonGridVault.Rows[cell.RowIndex].DataBoundItem;
 
-                    MaterialDialog materialDialog = new(this, this.Text, "Voulez-vous supprimer ce mot de passe ?" + Environment.NewLine + selectedPwd.ToString(), DialogResult.Yes.ToString(), true, DialogResult.Cancel.ToString());
+                    MaterialDialog materialDialog = new(this, this.Text, "Voulez-vous supprimer ce mot de passe ?" + Environment.NewLine + selectedPwd.ToString(), DialogResult.Yes.ToString(), true, DialogResult.Cancel.ToString(), true);
                     if (materialDialog.ShowDialog(this) == DialogResult.OK)
                     {
                         myVault.Remove(selectedPwd);
@@ -235,7 +239,14 @@ namespace WinformPasswordVault
             try
             {
                 foreach (MyPassword myPassword in myVault.GetMyPasswordsFromBrowsers())
-                    checkedListBoxMdpFireFox.Items.Add(myPassword, true);
+                {
+                    MaterialCheckBox materialCheckBox = new MaterialCheckBox();
+                    materialCheckBox.DataContext = myPassword;
+                    materialCheckBox.Text = myPassword.ToStr();
+                    materialCheckBox.UseAccentColor = true;
+                    materialCheckBox.Checked = true;
+                    materialCheckListBoxBrowserData.Items.Add(materialCheckBox);
+                }
             }
             catch (Exception except)
             {
@@ -253,8 +264,11 @@ namespace WinformPasswordVault
         {
             try
             {
-                foreach (MyPassword item in checkedListBoxMdpFireFox.Items)
-                    myVault.Add(item);
+                foreach (MaterialCheckBox materialCheckBox in materialCheckListBoxBrowserData.Items)
+                {
+                    if (materialCheckBox.Checked)
+                        myVault.Add(materialCheckBox.DataContext as MyPassword);
+                }
 
                 MaterialSnackBar SnackBarMessage = new(Properties.Resources.ResourceManager.GetString("ConfirmMsgImport"), "OK", true);
                 SnackBarMessage.Show(this);

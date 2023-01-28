@@ -37,30 +37,16 @@ namespace WinformPasswordVault
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControlMain = new ReaLTaiizor.Controls.MaterialTabControl();
             this.tabPageSearch = new System.Windows.Forms.TabPage();
-            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.materialTextBoxFilter = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             this.poisonGridVault = new ReaLTaiizor.Controls.PoisonDataGridView();
             this.poisonContextMenuStripGrid = new ReaLTaiizor.Controls.PoisonContextMenuStrip(this.components);
             this.supprimerLélémentToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.tabPageFirefox = new System.Windows.Forms.TabPage();
-            this.checkedListBoxMdpFireFox = new System.Windows.Forms.CheckedListBox();
-            this.buttonViewFirefox = new System.Windows.Forms.Button();
-            this.labelViewFirefox = new System.Windows.Forms.Label();
-            this.buttonImportFromFirefox = new System.Windows.Forms.Button();
-            this.labelImportFromFirefox = new System.Windows.Forms.Label();
-            this.tabPageOption = new System.Windows.Forms.TabPage();
+            this.tabPageBrowserInport = new System.Windows.Forms.TabPage();
+            this.materialCheckListBoxBrowserData = new ReaLTaiizor.Controls.MaterialCheckListBox();
+            this.materialButtonImportBrowserData = new ReaLTaiizor.Controls.MaterialButton();
+            this.materialButtonShowBrowserDatas = new ReaLTaiizor.Controls.MaterialButton();
+            this.tabPageManualImport = new System.Windows.Forms.TabPage();
             this.groupBoxMyPassword = new System.Windows.Forms.GroupBox();
-            this.groupBoxTranslateMsg = new System.Windows.Forms.GroupBox();
-            this.labelMsgAddDoneTitle = new System.Windows.Forms.Label();
-            this.labelMsgAddDone = new System.Windows.Forms.Label();
-            this.labelMsgImportTitle = new System.Windows.Forms.Label();
-            this.labelMsgImport = new System.Windows.Forms.Label();
-            this.labelGridKeyword = new System.Windows.Forms.Label();
-            this.labelGridData = new System.Windows.Forms.Label();
-            this.labelGridPassword = new System.Windows.Forms.Label();
-            this.labelGridLogin = new System.Windows.Forms.Label();
-            this.labelMsgPasswordTitle = new System.Windows.Forms.Label();
-            this.labelMsgPassword = new System.Windows.Forms.Label();
             this.textBoxMdpKeyword = new System.Windows.Forms.TextBox();
             this.labelMdpKeyword = new System.Windows.Forms.Label();
             this.textBoxMdpData = new System.Windows.Forms.TextBox();
@@ -73,36 +59,33 @@ namespace WinformPasswordVault
             this.tabPageSaveManagement = new System.Windows.Forms.TabPage();
             this.materialButtonSave = new ReaLTaiizor.Controls.MaterialButton();
             this.tabPageAbout = new System.Windows.Forms.TabPage();
+            this.webViewGitHubProfile = new Microsoft.Web.WebView2.WinForms.WebView2();
             this.imageListTabCtrl = new System.Windows.Forms.ImageList(this.components);
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.myVaultBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tabControlMain.SuspendLayout();
             this.tabPageSearch.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.poisonGridVault)).BeginInit();
             this.poisonContextMenuStripGrid.SuspendLayout();
-            this.tabPageFirefox.SuspendLayout();
-            this.tabPageOption.SuspendLayout();
+            this.tabPageBrowserInport.SuspendLayout();
+            this.tabPageManualImport.SuspendLayout();
             this.groupBoxMyPassword.SuspendLayout();
-            this.groupBoxTranslateMsg.SuspendLayout();
             this.tabPageSaveManagement.SuspendLayout();
+            this.tabPageAbout.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.webViewGitHubProfile)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myVaultBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControlMain
             // 
+            resources.ApplyResources(this.tabControlMain, "tabControlMain");
             this.tabControlMain.Controls.Add(this.tabPageSearch);
-            this.tabControlMain.Controls.Add(this.tabPageFirefox);
-            this.tabControlMain.Controls.Add(this.tabPageOption);
+            this.tabControlMain.Controls.Add(this.tabPageBrowserInport);
+            this.tabControlMain.Controls.Add(this.tabPageManualImport);
             this.tabControlMain.Controls.Add(this.tabPageSaveManagement);
             this.tabControlMain.Controls.Add(this.tabPageAbout);
             this.tabControlMain.Depth = 0;
-            resources.ApplyResources(this.tabControlMain, "tabControlMain");
             this.tabControlMain.ImageList = this.imageListTabCtrl;
             this.tabControlMain.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             this.tabControlMain.Multiline = true;
@@ -112,17 +95,10 @@ namespace WinformPasswordVault
             // tabPageSearch
             // 
             this.tabPageSearch.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.tabPageSearch.Controls.Add(this.pictureBoxLogo);
             this.tabPageSearch.Controls.Add(this.materialTextBoxFilter);
             this.tabPageSearch.Controls.Add(this.poisonGridVault);
             resources.ApplyResources(this.tabPageSearch, "tabPageSearch");
             this.tabPageSearch.Name = "tabPageSearch";
-            // 
-            // pictureBoxLogo
-            // 
-            resources.ApplyResources(this.pictureBoxLogo, "pictureBoxLogo");
-            this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.TabStop = false;
             // 
             // materialTextBoxFilter
             // 
@@ -146,7 +122,7 @@ namespace WinformPasswordVault
             this.materialTextBoxFilter.ShortcutsEnabled = true;
             this.materialTextBoxFilter.TabStop = false;
             this.materialTextBoxFilter.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.materialTextBoxFilter.TrailingIcon = global::WinformPasswordVault.Properties.Resources.save;
+            this.materialTextBoxFilter.TrailingIcon = ((System.Drawing.Image)(resources.GetObject("materialTextBoxFilter.TrailingIcon")));
             this.materialTextBoxFilter.UseSystemPasswordChar = false;
             this.materialTextBoxFilter.TextChanged += new System.EventHandler(this.textBoxFilter_TextChanged);
             // 
@@ -208,69 +184,72 @@ namespace WinformPasswordVault
             // 
             // supprimerLélémentToolStripMenuItem1
             // 
-            this.supprimerLélémentToolStripMenuItem1.Image = global::WinformPasswordVault.Properties.Resources.save;
             this.supprimerLélémentToolStripMenuItem1.Name = "supprimerLélémentToolStripMenuItem1";
             resources.ApplyResources(this.supprimerLélémentToolStripMenuItem1, "supprimerLélémentToolStripMenuItem1");
             this.supprimerLélémentToolStripMenuItem1.Click += new System.EventHandler(this.deleteRowToolStripMenuItem_Click);
             // 
-            // tabPageFirefox
+            // tabPageBrowserInport
             // 
-            this.tabPageFirefox.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.tabPageFirefox.Controls.Add(this.pictureBox1);
-            this.tabPageFirefox.Controls.Add(this.checkedListBoxMdpFireFox);
-            this.tabPageFirefox.Controls.Add(this.buttonViewFirefox);
-            this.tabPageFirefox.Controls.Add(this.labelViewFirefox);
-            this.tabPageFirefox.Controls.Add(this.buttonImportFromFirefox);
-            this.tabPageFirefox.Controls.Add(this.labelImportFromFirefox);
-            resources.ApplyResources(this.tabPageFirefox, "tabPageFirefox");
-            this.tabPageFirefox.Name = "tabPageFirefox";
+            this.tabPageBrowserInport.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPageBrowserInport.Controls.Add(this.materialCheckListBoxBrowserData);
+            this.tabPageBrowserInport.Controls.Add(this.materialButtonImportBrowserData);
+            this.tabPageBrowserInport.Controls.Add(this.materialButtonShowBrowserDatas);
+            resources.ApplyResources(this.tabPageBrowserInport, "tabPageBrowserInport");
+            this.tabPageBrowserInport.Name = "tabPageBrowserInport";
             // 
-            // checkedListBoxMdpFireFox
+            // materialCheckListBoxBrowserData
             // 
-            resources.ApplyResources(this.checkedListBoxMdpFireFox, "checkedListBoxMdpFireFox");
-            this.checkedListBoxMdpFireFox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.checkedListBoxMdpFireFox.FormattingEnabled = true;
-            this.checkedListBoxMdpFireFox.Name = "checkedListBoxMdpFireFox";
+            resources.ApplyResources(this.materialCheckListBoxBrowserData, "materialCheckListBoxBrowserData");
+            this.materialCheckListBoxBrowserData.BackColor = System.Drawing.SystemColors.Control;
+            this.materialCheckListBoxBrowserData.Depth = 0;
+            this.materialCheckListBoxBrowserData.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            this.materialCheckListBoxBrowserData.Name = "materialCheckListBoxBrowserData";
+            this.materialCheckListBoxBrowserData.Striped = false;
+            this.materialCheckListBoxBrowserData.StripeDarkColor = System.Drawing.Color.Empty;
             // 
-            // buttonViewFirefox
+            // materialButtonImportBrowserData
             // 
-            this.buttonViewFirefox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            resources.ApplyResources(this.buttonViewFirefox, "buttonViewFirefox");
-            this.buttonViewFirefox.Name = "buttonViewFirefox";
-            this.buttonViewFirefox.UseVisualStyleBackColor = false;
-            this.buttonViewFirefox.Click += new System.EventHandler(this.buttonShowImportData_Click);
+            resources.ApplyResources(this.materialButtonImportBrowserData, "materialButtonImportBrowserData");
+            this.materialButtonImportBrowserData.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButtonImportBrowserData.Depth = 0;
+            this.materialButtonImportBrowserData.HighEmphasis = true;
+            this.materialButtonImportBrowserData.Icon = ((System.Drawing.Image)(resources.GetObject("materialButtonImportBrowserData.Icon")));
+            this.materialButtonImportBrowserData.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
+            this.materialButtonImportBrowserData.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            this.materialButtonImportBrowserData.Name = "materialButtonImportBrowserData";
+            this.materialButtonImportBrowserData.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButtonImportBrowserData.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButtonImportBrowserData.UseAccentColor = true;
+            this.materialButtonImportBrowserData.UseVisualStyleBackColor = true;
+            this.materialButtonImportBrowserData.Click += new System.EventHandler(this.buttonImportData_Click);
             // 
-            // labelViewFirefox
+            // materialButtonShowBrowserDatas
             // 
-            resources.ApplyResources(this.labelViewFirefox, "labelViewFirefox");
-            this.labelViewFirefox.Name = "labelViewFirefox";
+            resources.ApplyResources(this.materialButtonShowBrowserDatas, "materialButtonShowBrowserDatas");
+            this.materialButtonShowBrowserDatas.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButtonShowBrowserDatas.Depth = 0;
+            this.materialButtonShowBrowserDatas.HighEmphasis = true;
+            this.materialButtonShowBrowserDatas.Icon = ((System.Drawing.Image)(resources.GetObject("materialButtonShowBrowserDatas.Icon")));
+            this.materialButtonShowBrowserDatas.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
+            this.materialButtonShowBrowserDatas.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            this.materialButtonShowBrowserDatas.Name = "materialButtonShowBrowserDatas";
+            this.materialButtonShowBrowserDatas.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButtonShowBrowserDatas.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButtonShowBrowserDatas.UseAccentColor = false;
+            this.materialButtonShowBrowserDatas.UseVisualStyleBackColor = true;
+            this.materialButtonShowBrowserDatas.Click += new System.EventHandler(this.buttonShowImportData_Click);
             // 
-            // buttonImportFromFirefox
+            // tabPageManualImport
             // 
-            this.buttonImportFromFirefox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            resources.ApplyResources(this.buttonImportFromFirefox, "buttonImportFromFirefox");
-            this.buttonImportFromFirefox.Name = "buttonImportFromFirefox";
-            this.buttonImportFromFirefox.UseVisualStyleBackColor = false;
-            this.buttonImportFromFirefox.Click += new System.EventHandler(this.buttonImportData_Click);
-            // 
-            // labelImportFromFirefox
-            // 
-            resources.ApplyResources(this.labelImportFromFirefox, "labelImportFromFirefox");
-            this.labelImportFromFirefox.Name = "labelImportFromFirefox";
-            // 
-            // tabPageOption
-            // 
-            this.tabPageOption.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.tabPageOption.Controls.Add(this.pictureBox2);
-            this.tabPageOption.Controls.Add(this.groupBoxMyPassword);
-            this.tabPageOption.Controls.Add(this.buttonAdd);
-            resources.ApplyResources(this.tabPageOption, "tabPageOption");
-            this.tabPageOption.Name = "tabPageOption";
+            this.tabPageManualImport.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPageManualImport.Controls.Add(this.groupBoxMyPassword);
+            this.tabPageManualImport.Controls.Add(this.buttonAdd);
+            resources.ApplyResources(this.tabPageManualImport, "tabPageManualImport");
+            this.tabPageManualImport.Name = "tabPageManualImport";
             // 
             // groupBoxMyPassword
             // 
             resources.ApplyResources(this.groupBoxMyPassword, "groupBoxMyPassword");
-            this.groupBoxMyPassword.Controls.Add(this.groupBoxTranslateMsg);
             this.groupBoxMyPassword.Controls.Add(this.textBoxMdpKeyword);
             this.groupBoxMyPassword.Controls.Add(this.labelMdpKeyword);
             this.groupBoxMyPassword.Controls.Add(this.textBoxMdpData);
@@ -281,72 +260,6 @@ namespace WinformPasswordVault
             this.groupBoxMyPassword.Controls.Add(this.labelMdpLogin);
             this.groupBoxMyPassword.Name = "groupBoxMyPassword";
             this.groupBoxMyPassword.TabStop = false;
-            // 
-            // groupBoxTranslateMsg
-            // 
-            this.groupBoxTranslateMsg.Controls.Add(this.labelMsgAddDoneTitle);
-            this.groupBoxTranslateMsg.Controls.Add(this.labelMsgAddDone);
-            this.groupBoxTranslateMsg.Controls.Add(this.labelMsgImportTitle);
-            this.groupBoxTranslateMsg.Controls.Add(this.labelMsgImport);
-            this.groupBoxTranslateMsg.Controls.Add(this.labelGridKeyword);
-            this.groupBoxTranslateMsg.Controls.Add(this.labelGridData);
-            this.groupBoxTranslateMsg.Controls.Add(this.labelGridPassword);
-            this.groupBoxTranslateMsg.Controls.Add(this.labelGridLogin);
-            this.groupBoxTranslateMsg.Controls.Add(this.labelMsgPasswordTitle);
-            this.groupBoxTranslateMsg.Controls.Add(this.labelMsgPassword);
-            resources.ApplyResources(this.groupBoxTranslateMsg, "groupBoxTranslateMsg");
-            this.groupBoxTranslateMsg.Name = "groupBoxTranslateMsg";
-            this.groupBoxTranslateMsg.TabStop = false;
-            // 
-            // labelMsgAddDoneTitle
-            // 
-            resources.ApplyResources(this.labelMsgAddDoneTitle, "labelMsgAddDoneTitle");
-            this.labelMsgAddDoneTitle.Name = "labelMsgAddDoneTitle";
-            // 
-            // labelMsgAddDone
-            // 
-            resources.ApplyResources(this.labelMsgAddDone, "labelMsgAddDone");
-            this.labelMsgAddDone.Name = "labelMsgAddDone";
-            // 
-            // labelMsgImportTitle
-            // 
-            resources.ApplyResources(this.labelMsgImportTitle, "labelMsgImportTitle");
-            this.labelMsgImportTitle.Name = "labelMsgImportTitle";
-            // 
-            // labelMsgImport
-            // 
-            resources.ApplyResources(this.labelMsgImport, "labelMsgImport");
-            this.labelMsgImport.Name = "labelMsgImport";
-            // 
-            // labelGridKeyword
-            // 
-            resources.ApplyResources(this.labelGridKeyword, "labelGridKeyword");
-            this.labelGridKeyword.Name = "labelGridKeyword";
-            // 
-            // labelGridData
-            // 
-            resources.ApplyResources(this.labelGridData, "labelGridData");
-            this.labelGridData.Name = "labelGridData";
-            // 
-            // labelGridPassword
-            // 
-            resources.ApplyResources(this.labelGridPassword, "labelGridPassword");
-            this.labelGridPassword.Name = "labelGridPassword";
-            // 
-            // labelGridLogin
-            // 
-            resources.ApplyResources(this.labelGridLogin, "labelGridLogin");
-            this.labelGridLogin.Name = "labelGridLogin";
-            // 
-            // labelMsgPasswordTitle
-            // 
-            resources.ApplyResources(this.labelMsgPasswordTitle, "labelMsgPasswordTitle");
-            this.labelMsgPasswordTitle.Name = "labelMsgPasswordTitle";
-            // 
-            // labelMsgPassword
-            // 
-            resources.ApplyResources(this.labelMsgPassword, "labelMsgPassword");
-            this.labelMsgPassword.Name = "labelMsgPassword";
             // 
             // textBoxMdpKeyword
             // 
@@ -398,7 +311,6 @@ namespace WinformPasswordVault
             // 
             // tabPageSaveManagement
             // 
-            this.tabPageSaveManagement.Controls.Add(this.pictureBox3);
             this.tabPageSaveManagement.Controls.Add(this.materialButtonSave);
             resources.ApplyResources(this.tabPageSaveManagement, "tabPageSaveManagement");
             this.tabPageSaveManagement.Name = "tabPageSaveManagement";
@@ -410,7 +322,7 @@ namespace WinformPasswordVault
             this.materialButtonSave.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.materialButtonSave.Depth = 0;
             this.materialButtonSave.HighEmphasis = true;
-            this.materialButtonSave.Icon = global::WinformPasswordVault.Properties.Resources.save;
+            this.materialButtonSave.Icon = ((System.Drawing.Image)(resources.GetObject("materialButtonSave.Icon")));
             this.materialButtonSave.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
             this.materialButtonSave.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             this.materialButtonSave.Name = "materialButtonSave";
@@ -422,42 +334,45 @@ namespace WinformPasswordVault
             // 
             // tabPageAbout
             // 
+            this.tabPageAbout.Controls.Add(this.webViewGitHubProfile);
             resources.ApplyResources(this.tabPageAbout, "tabPageAbout");
             this.tabPageAbout.Name = "tabPageAbout";
             this.tabPageAbout.UseVisualStyleBackColor = true;
+            // 
+            // webViewGitHubProfile
+            // 
+            this.webViewGitHubProfile.AllowExternalDrop = false;
+            this.webViewGitHubProfile.CreationProperties = null;
+            this.webViewGitHubProfile.DefaultBackgroundColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.webViewGitHubProfile, "webViewGitHubProfile");
+            this.webViewGitHubProfile.Name = "webViewGitHubProfile";
+            this.webViewGitHubProfile.Source = new System.Uri("https://github.com/DevElkami", System.UriKind.Absolute);
+            this.webViewGitHubProfile.ZoomFactor = 1D;
             // 
             // imageListTabCtrl
             // 
             this.imageListTabCtrl.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
             this.imageListTabCtrl.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListTabCtrl.ImageStream")));
             this.imageListTabCtrl.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageListTabCtrl.Images.SetKeyName(0, "round_bookmark_white_24dp.png");
-            this.imageListTabCtrl.Images.SetKeyName(1, "round_build_white_24dp.png");
-            this.imageListTabCtrl.Images.SetKeyName(2, "round_gps_fixed_white_24dp.png");
+            this.imageListTabCtrl.Images.SetKeyName(0, "search-mini.png");
+            this.imageListTabCtrl.Images.SetKeyName(1, "GitHub-Mark.png");
+            this.imageListTabCtrl.Images.SetKeyName(2, "baseline_fingerprint_black_24dp.png");
+            this.imageListTabCtrl.Images.SetKeyName(3, "diskette-mini.png");
+            this.imageListTabCtrl.Images.SetKeyName(4, "round_add_black_24dp.png");
+            this.imageListTabCtrl.Images.SetKeyName(5, "import.png");
             // 
-            // pictureBox1
+            // pictureBoxLogo
             // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            resources.ApplyResources(this.pictureBox3, "pictureBox3");
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.TabStop = false;
+            resources.ApplyResources(this.pictureBoxLogo, "pictureBoxLogo");
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.TabStop = false;
             // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.SystemColors.Window;
+            this.Controls.Add(this.pictureBoxLogo);
             this.Controls.Add(this.tabControlMain);
             this.DrawerAutoShow = true;
             this.DrawerShowIconsWhenHidden = true;
@@ -468,21 +383,17 @@ namespace WinformPasswordVault
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.tabControlMain.ResumeLayout(false);
             this.tabPageSearch.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.poisonGridVault)).EndInit();
             this.poisonContextMenuStripGrid.ResumeLayout(false);
-            this.tabPageFirefox.ResumeLayout(false);
-            this.tabPageFirefox.PerformLayout();
-            this.tabPageOption.ResumeLayout(false);
+            this.tabPageBrowserInport.ResumeLayout(false);
+            this.tabPageManualImport.ResumeLayout(false);
             this.groupBoxMyPassword.ResumeLayout(false);
             this.groupBoxMyPassword.PerformLayout();
-            this.groupBoxTranslateMsg.ResumeLayout(false);
-            this.groupBoxTranslateMsg.PerformLayout();
             this.tabPageSaveManagement.ResumeLayout(false);
+            this.tabPageAbout.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.webViewGitHubProfile)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.myVaultBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -491,13 +402,8 @@ namespace WinformPasswordVault
 
         private MaterialTabControl tabControlMain;
         private System.Windows.Forms.TabPage tabPageSearch;
-        private System.Windows.Forms.TabPage tabPageOption;
-        private System.Windows.Forms.TabPage tabPageFirefox;
-        private System.Windows.Forms.Button buttonViewFirefox;
-        private System.Windows.Forms.Label labelViewFirefox;
-        private System.Windows.Forms.Button buttonImportFromFirefox;
-        private System.Windows.Forms.Label labelImportFromFirefox;
-        private System.Windows.Forms.CheckedListBox checkedListBoxMdpFireFox;
+        private System.Windows.Forms.TabPage tabPageManualImport;
+        private System.Windows.Forms.TabPage tabPageBrowserInport;
         private System.Windows.Forms.BindingSource myVaultBindingSource;
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.GroupBox groupBoxMyPassword;
@@ -509,17 +415,6 @@ namespace WinformPasswordVault
         private System.Windows.Forms.Label labelMdpPassword;
         private System.Windows.Forms.TextBox textBoxMdpLogin;
         private System.Windows.Forms.Label labelMdpLogin;
-        private System.Windows.Forms.GroupBox groupBoxTranslateMsg;
-        private System.Windows.Forms.Label labelMsgPasswordTitle;
-        private System.Windows.Forms.Label labelMsgPassword;
-        private System.Windows.Forms.Label labelGridKeyword;
-        private System.Windows.Forms.Label labelGridData;
-        private System.Windows.Forms.Label labelGridPassword;
-        private System.Windows.Forms.Label labelGridLogin;
-        private System.Windows.Forms.Label labelMsgImportTitle;
-        private System.Windows.Forms.Label labelMsgImport;
-        private System.Windows.Forms.Label labelMsgAddDoneTitle;
-        private System.Windows.Forms.Label labelMsgAddDone;
         private System.Windows.Forms.ImageList imageListTabCtrl;
         private PoisonDataGridView poisonGridVault;
         private MaterialTextBoxEdit materialTextBoxFilter;
@@ -529,9 +424,10 @@ namespace WinformPasswordVault
         private System.Windows.Forms.TabPage tabPageSaveManagement;
         private System.Windows.Forms.TabPage tabPageAbout;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private Microsoft.Web.WebView2.WinForms.WebView2 webViewGitHubProfile;
+        private MaterialButton materialButtonImportBrowserData;
+        private MaterialButton materialButtonShowBrowserDatas;
+        private MaterialCheckListBox materialCheckListBoxBrowserData;
     }
 }
 
