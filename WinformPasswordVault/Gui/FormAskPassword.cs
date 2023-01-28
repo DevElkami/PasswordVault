@@ -53,7 +53,7 @@ namespace WinformPasswordVault
                 }
                 else
                 {
-                    MaterialSnackBar SnackBarMessage = new($"Clef incorrecte reste {--nbTry} essai", "OK", true);
+                    MaterialSnackBar SnackBarMessage = new(Properties.Resources.ResourceManager.GetString("ErrorMsgCountTry") + (--nbTry).ToString(), "OK", true);
                     SnackBarMessage.Show(this);
 
                     DialogResult = (nbTry > 0) ? DialogResult.None : DialogResult.Abort;

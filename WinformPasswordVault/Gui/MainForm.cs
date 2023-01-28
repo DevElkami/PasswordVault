@@ -201,7 +201,7 @@ namespace WinformPasswordVault
                         materialTextBoxFilter.Text += " ";
                         materialTextBoxFilter.Text.TrimEnd(' ');
 
-                        MaterialSnackBar SnackBarMessage = new("Row supprimée", "OK", true);
+                        MaterialSnackBar SnackBarMessage = new(Properties.Resources.ResourceManager.GetString("MsgRowDeleted"), "OK", true);
                         SnackBarMessage.Show(this);
                     }
                     break;
@@ -230,7 +230,7 @@ namespace WinformPasswordVault
         }
 
         /// <summary>
-        /// Import from firefox
+        /// Import from browser
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -256,7 +256,7 @@ namespace WinformPasswordVault
         }
 
         /// <summary>
-        /// Import selected firefox password in my vault
+        /// Import selected password in my vault
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -325,7 +325,7 @@ namespace WinformPasswordVault
                     myVault.Save();
                     materialButtonSave.Visible = false;
 
-                    MaterialSnackBar SnackBarMessage = new("Fichier enregistré", "OK", true);
+                    MaterialSnackBar SnackBarMessage = new(Properties.Resources.ResourceManager.GetString("MsgFileSave"), "OK", true);
                     SnackBarMessage.Show(this);
                 }
             }

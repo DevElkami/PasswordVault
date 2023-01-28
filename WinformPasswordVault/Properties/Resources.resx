@@ -136,6 +136,9 @@
   <data name="Data" xml:space="preserve">
     <value>Données:</value>
   </data>
+  <data name="ErrorMsgCountTry" xml:space="preserve">
+    <value>Clef incorrecte, essai restant: </value>
+  </data>
   <data name="ErrorMsgPasswordLengthMinimum" xml:space="preserve">
     <value>Le mot de passe doit être de 6 caractères minimum</value>
   </data>
@@ -147,6 +150,12 @@
   </data>
   <data name="Login" xml:space="preserve">
     <value>Login:</value>
+  </data>
+  <data name="MsgFileSave" xml:space="preserve">
+    <value>Fichier sauvé</value>
+  </data>
+  <data name="MsgRowDeleted" xml:space="preserve">
+    <value>Mot de passe supprimé</value>
   </data>
   <data name="Password" xml:space="preserve">
     <value>Mot de passe:</value>
