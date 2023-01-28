@@ -85,18 +85,18 @@ namespace WinformPasswordVault
             // 
             // tabPageSearch
             // 
-            resources.ApplyResources(this.tabPageSearch, "tabPageSearch");
             this.tabPageSearch.BackColor = System.Drawing.SystemColors.Control;
             this.tabPageSearch.Controls.Add(this.materialTextBoxFilter);
             this.tabPageSearch.Controls.Add(this.poisonGridVault);
+            resources.ApplyResources(this.tabPageSearch, "tabPageSearch");
             this.tabPageSearch.Name = "tabPageSearch";
             // 
             // materialTextBoxFilter
             // 
-            resources.ApplyResources(this.materialTextBoxFilter, "materialTextBoxFilter");
             this.materialTextBoxFilter.AnimateReadOnly = false;
             this.materialTextBoxFilter.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.materialTextBoxFilter.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            resources.ApplyResources(this.materialTextBoxFilter, "materialTextBoxFilter");
             this.materialTextBoxFilter.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.materialTextBoxFilter.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.materialTextBoxFilter.Depth = 0;
@@ -119,10 +119,10 @@ namespace WinformPasswordVault
             // 
             // poisonGridVault
             // 
-            resources.ApplyResources(this.poisonGridVault, "poisonGridVault");
             this.poisonGridVault.AllowUserToAddRows = false;
             this.poisonGridVault.AllowUserToDeleteRows = false;
             this.poisonGridVault.AllowUserToResizeRows = false;
+            resources.ApplyResources(this.poisonGridVault, "poisonGridVault");
             this.poisonGridVault.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
             this.poisonGridVault.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.poisonGridVault.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -168,24 +168,24 @@ namespace WinformPasswordVault
             // 
             // poisonContextMenuStripGrid
             // 
-            resources.ApplyResources(this.poisonContextMenuStripGrid, "poisonContextMenuStripGrid");
             this.poisonContextMenuStripGrid.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.supprimerLélémentToolStripMenuItem1});
             this.poisonContextMenuStripGrid.Name = "poisonContextMenuStripGrid";
+            resources.ApplyResources(this.poisonContextMenuStripGrid, "poisonContextMenuStripGrid");
             // 
             // supprimerLélémentToolStripMenuItem1
             // 
-            resources.ApplyResources(this.supprimerLélémentToolStripMenuItem1, "supprimerLélémentToolStripMenuItem1");
             this.supprimerLélémentToolStripMenuItem1.Name = "supprimerLélémentToolStripMenuItem1";
+            resources.ApplyResources(this.supprimerLélémentToolStripMenuItem1, "supprimerLélémentToolStripMenuItem1");
             this.supprimerLélémentToolStripMenuItem1.Click += new System.EventHandler(this.deleteRowToolStripMenuItem_Click);
             // 
             // tabPageBrowserInport
             // 
-            resources.ApplyResources(this.tabPageBrowserInport, "tabPageBrowserInport");
             this.tabPageBrowserInport.BackColor = System.Drawing.SystemColors.Control;
             this.tabPageBrowserInport.Controls.Add(this.materialCheckListBoxBrowserData);
             this.tabPageBrowserInport.Controls.Add(this.materialButtonImportBrowserData);
             this.tabPageBrowserInport.Controls.Add(this.materialButtonShowBrowserDatas);
+            resources.ApplyResources(this.tabPageBrowserInport, "tabPageBrowserInport");
             this.tabPageBrowserInport.Name = "tabPageBrowserInport";
             // 
             // materialCheckListBoxBrowserData
@@ -232,21 +232,21 @@ namespace WinformPasswordVault
             // 
             // tabPageManualImport
             // 
-            resources.ApplyResources(this.tabPageManualImport, "tabPageManualImport");
             this.tabPageManualImport.BackColor = System.Drawing.SystemColors.Control;
             this.tabPageManualImport.Controls.Add(this.materialTextBoxEditKeyword);
             this.tabPageManualImport.Controls.Add(this.materialTextBoxEditPassword);
             this.tabPageManualImport.Controls.Add(this.materialTextBoxEditUrl);
             this.tabPageManualImport.Controls.Add(this.materialTextBoxEditLogin);
             this.tabPageManualImport.Controls.Add(this.materialButtonPasswordAdd);
+            resources.ApplyResources(this.tabPageManualImport, "tabPageManualImport");
             this.tabPageManualImport.Name = "tabPageManualImport";
             // 
             // materialTextBoxEditKeyword
             // 
-            resources.ApplyResources(this.materialTextBoxEditKeyword, "materialTextBoxEditKeyword");
             this.materialTextBoxEditKeyword.AnimateReadOnly = false;
             this.materialTextBoxEditKeyword.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.materialTextBoxEditKeyword.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            resources.ApplyResources(this.materialTextBoxEditKeyword, "materialTextBoxEditKeyword");
             this.materialTextBoxEditKeyword.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.materialTextBoxEditKeyword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.materialTextBoxEditKeyword.Depth = 0;
@@ -268,10 +268,10 @@ namespace WinformPasswordVault
             // 
             // materialTextBoxEditPassword
             // 
-            resources.ApplyResources(this.materialTextBoxEditPassword, "materialTextBoxEditPassword");
             this.materialTextBoxEditPassword.AnimateReadOnly = false;
             this.materialTextBoxEditPassword.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.materialTextBoxEditPassword.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            resources.ApplyResources(this.materialTextBoxEditPassword, "materialTextBoxEditPassword");
             this.materialTextBoxEditPassword.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.materialTextBoxEditPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.materialTextBoxEditPassword.Depth = 0;
@@ -293,10 +293,10 @@ namespace WinformPasswordVault
             // 
             // materialTextBoxEditUrl
             // 
-            resources.ApplyResources(this.materialTextBoxEditUrl, "materialTextBoxEditUrl");
             this.materialTextBoxEditUrl.AnimateReadOnly = false;
             this.materialTextBoxEditUrl.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.materialTextBoxEditUrl.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            resources.ApplyResources(this.materialTextBoxEditUrl, "materialTextBoxEditUrl");
             this.materialTextBoxEditUrl.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.materialTextBoxEditUrl.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.materialTextBoxEditUrl.Depth = 0;
@@ -318,10 +318,10 @@ namespace WinformPasswordVault
             // 
             // materialTextBoxEditLogin
             // 
-            resources.ApplyResources(this.materialTextBoxEditLogin, "materialTextBoxEditLogin");
             this.materialTextBoxEditLogin.AnimateReadOnly = false;
             this.materialTextBoxEditLogin.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.materialTextBoxEditLogin.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            resources.ApplyResources(this.materialTextBoxEditLogin, "materialTextBoxEditLogin");
             this.materialTextBoxEditLogin.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.materialTextBoxEditLogin.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.materialTextBoxEditLogin.Depth = 0;
@@ -359,17 +359,17 @@ namespace WinformPasswordVault
             // 
             // tabPageAbout
             // 
-            resources.ApplyResources(this.tabPageAbout, "tabPageAbout");
             this.tabPageAbout.Controls.Add(this.webViewGitHubProfile);
+            resources.ApplyResources(this.tabPageAbout, "tabPageAbout");
             this.tabPageAbout.Name = "tabPageAbout";
             this.tabPageAbout.UseVisualStyleBackColor = true;
             // 
             // webViewGitHubProfile
             // 
-            resources.ApplyResources(this.webViewGitHubProfile, "webViewGitHubProfile");
             this.webViewGitHubProfile.AllowExternalDrop = false;
             this.webViewGitHubProfile.CreationProperties = null;
             this.webViewGitHubProfile.DefaultBackgroundColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.webViewGitHubProfile, "webViewGitHubProfile");
             this.webViewGitHubProfile.Name = "webViewGitHubProfile";
             this.webViewGitHubProfile.Source = new System.Uri("https://github.com/DevElkami", System.UriKind.Absolute);
             this.webViewGitHubProfile.ZoomFactor = 1D;
