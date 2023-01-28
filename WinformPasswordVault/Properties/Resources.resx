@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AskMsgDeletePassword" xml:space="preserve">
+    <value>Voulez-vous supprimer ce mot de passe ?</value>
+  </data>
+  <data name="AskMsgExitWithoutSave" xml:space="preserve">
+    <value>Voulez-vous quitter sans sauvegarder ?</value>
+  </data>
   <data name="AskMsgImportOldData" xml:space="preserve">
     <value>Voulez-vous importer vos anciens mot de passe ?</value>
   </data>
@@ -127,6 +133,12 @@
   <data name="baseline_fingerprint_black_24dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Rsx\baseline_fingerprint_black_24dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ButtonNo" xml:space="preserve">
+    <value>Non</value>
+  </data>
+  <data name="ButtonYes" xml:space="preserve">
+    <value>Oui</value>
+  </data>
   <data name="ConfirmMsgAddDone" xml:space="preserve">
     <value>Ajout effectué</value>
   </data>
@@ -134,7 +146,7 @@
     <value>Import terminé</value>
   </data>
   <data name="Data" xml:space="preserve">
-    <value>Données:</value>
+    <value>Données</value>
   </data>
   <data name="ErrorMsgCountTry" xml:space="preserve">
     <value>Clef incorrecte, essai restant: </value>
@@ -146,10 +158,10 @@
     <value>Vous devez saisir le même mot de passe</value>
   </data>
   <data name="Keyword" xml:space="preserve">
-    <value>Mots clefs:</value>
+    <value>Mots clefs</value>
   </data>
   <data name="Login" xml:space="preserve">
-    <value>Login:</value>
+    <value>Login</value>
   </data>
   <data name="MsgFileSave" xml:space="preserve">
     <value>Fichier sauvé</value>
@@ -158,7 +170,7 @@
     <value>Mot de passe supprimé</value>
   </data>
   <data name="Password" xml:space="preserve">
-    <value>Mot de passe:</value>
+    <value>Mot de passe</value>
   </data>
   <data name="vault" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Rsx\vault.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

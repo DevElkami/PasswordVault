@@ -70,8 +70,8 @@ namespace WinformPasswordVault
             try
             {
                 if (this.Text.Contains("*"))
-                {
-                    MaterialDialog materialDialog = new(this, this.Text, "Voulez-vous quitter sans sauvegarder ?", DialogResult.Yes.ToString(), true, DialogResult.Cancel.ToString(), true);
+                {                    
+                    MaterialDialog materialDialog = new(this, this.Text, Properties.Resources.ResourceManager.GetString("AskMsgExitWithoutSave"), Properties.Resources.ResourceManager.GetString("ButtonYes"), true, Properties.Resources.ResourceManager.GetString("ButtonNo"), true);
                     if (materialDialog.ShowDialog(this) != DialogResult.OK)
                     {
                         e.Cancel = true;
@@ -191,8 +191,8 @@ namespace WinformPasswordVault
                 {
 
                     MyPassword selectedPwd = (MyPassword)poisonGridVault.Rows[cell.RowIndex].DataBoundItem;
-
-                    MaterialDialog materialDialog = new(this, this.Text, "Voulez-vous supprimer ce mot de passe ?" + Environment.NewLine + selectedPwd.ToString(), DialogResult.Yes.ToString(), true, DialogResult.Cancel.ToString(), true);
+                    
+                    MaterialDialog materialDialog = new(this, this.Text, Properties.Resources.ResourceManager.GetString("AskMsgDeletePassword") + Environment.NewLine + selectedPwd.ToString(), Properties.Resources.ResourceManager.GetString("ButtonYes"), true, Properties.Resources.ResourceManager.GetString("ButtonNo"), true);
                     if (materialDialog.ShowDialog(this) == DialogResult.OK)
                     {
                         myVault.Remove(selectedPwd);

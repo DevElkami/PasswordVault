@@ -71,7 +71,7 @@ namespace WinformPasswordVault
 
                 if (myVault.Initialize(materialTextBoxUserPassword1.Text))
                 {
-                    MaterialDialog materialDialog = new(this, this.Text, Properties.Resources.ResourceManager.GetString("AskMsgImportOldData"), DialogResult.Yes.ToString(), true, DialogResult.Cancel.ToString(), true);
+                    MaterialDialog materialDialog = new(this, this.Text, Properties.Resources.ResourceManager.GetString("AskMsgImportOldData"), Properties.Resources.ResourceManager.GetString("ButtonYes"), true, Properties.Resources.ResourceManager.GetString("ButtonNo"), true);
                     if (materialDialog.ShowDialog(this) == DialogResult.OK)
                         myVault.ImportOldData(materialTextBoxUserPassword1.Text);
                 }
