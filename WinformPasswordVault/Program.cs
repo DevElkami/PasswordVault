@@ -3,7 +3,6 @@ using NLog.Config;
 using NLog.Layouts;
 using NLog.Targets;
 using ReaLTaiizor.Colors;
-using ReaLTaiizor.Controls;
 using ReaLTaiizor.Manager;
 using ReaLTaiizor.Util;
 using System;
@@ -11,8 +10,6 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
-using System.Text.RegularExpressions;
-using System.Threading;
 using System.Windows.Forms;
 using VaultCore;
 
@@ -76,7 +73,7 @@ namespace WinformPasswordVault
 
                 // Run app
                 MyVault myVault = new();
-                //if (myVault.IsInitialized() == false)
+                if (myVault.IsInitialized() == false)
                 {
                     InitVaultForm initVaultForm = new(ref myVault);
                     if (initVaultForm.ShowDialog() != DialogResult.OK)
