@@ -1,0 +1,30 @@
+name: Push workflow (Build and test)
+
+on:
+  push:
+    branches: [ "master" ]  
+    
+env:
+  DOTNET_VERSION: '7.0.x' # The .NET SDK version to use
+
+jobs:
+
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: ${{ env.DOTNET_VERSION }}
+
+    - name: Install dependencies
+      run: dotnet restore ./Vault.sln
+      
+    - name: Build
+      run: dotnet build ./Vault.sln --configuration Release
+    
+    - name: Test
+      run: dotnet test ./Vault.sln --verbosity normal
