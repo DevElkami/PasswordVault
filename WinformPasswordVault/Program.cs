@@ -51,8 +51,8 @@ namespace WinformPasswordVault
                 Application.SetCompatibleTextRenderingDefault(false);
 
                 // Quick translate
-#if DEBUG
                 CultureInfo culture = new CultureInfo("en");
+#if DEBUG                
                 CultureInfo.DefaultThreadCurrentCulture = culture;
                 CultureInfo.DefaultThreadCurrentUICulture = culture;
 #else
