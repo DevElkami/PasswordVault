@@ -1,5 +1,5 @@
 [![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/DevElkami/PasswordVault/blob/master/README.md)
-[![fr](https://img.shields.io/badge/lang-fr-green.svg)](https://github.com/DevElkami/PasswordVault/blob/master/README.fr-fr.md)
+[![fr](https://img.shields.io/badge/lang-fr-blue.svg)](https://github.com/DevElkami/PasswordVault/blob/master/README.fr-fr.md)
 
 ![](https://github.com/DevElkami/PasswordVault/actions/workflows/workflow.yml/badge.svg?branch=master)
 ![CodeQL](https://github.com/DevElkami/MesConges/actions/workflows/codeql.yml/badge.svg)
