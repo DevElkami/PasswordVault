@@ -60,31 +60,7 @@
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="tabControlMain.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="&gt;&gt;materialTextBoxFilter.Name" xml:space="preserve">
-    <value>materialTextBoxFilter</value>
-  </data>
-  <data name="&gt;&gt;materialTextBoxFilter.Type" xml:space="preserve">
-    <value>ReaLTaiizor.Controls.MaterialTextBoxEdit, ReaLTaiizor, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;materialTextBoxFilter.Parent" xml:space="preserve">
-    <value>tabPageSearch</value>
-  </data>
-  <data name="&gt;&gt;materialTextBoxFilter.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;poisonGridVault.Name" xml:space="preserve">
-    <value>poisonGridVault</value>
-  </data>
-  <data name="&gt;&gt;poisonGridVault.Type" xml:space="preserve">
-    <value>ReaLTaiizor.Controls.PoisonDataGridView, ReaLTaiizor, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;poisonGridVault.Parent" xml:space="preserve">
-    <value>tabPageSearch</value>
-  </data>
-  <data name="&gt;&gt;poisonGridVault.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
+  </data> 
   <data name="tabPageSearch.ImageKey" xml:space="preserve">
     <value>search-mini.png</value>
   </data>
@@ -108,55 +84,7 @@
   </data>
   <data name="tabPageSearch.Text" xml:space="preserve">
     <value>Recherche</value>
-  </data>
-  <data name="&gt;&gt;tabPageSearch.Name" xml:space="preserve">
-    <value>tabPageSearch</value>
-  </data>
-  <data name="&gt;&gt;tabPageSearch.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPageSearch.Parent" xml:space="preserve">
-    <value>tabControlMain</value>
-  </data>
-  <data name="&gt;&gt;tabPageSearch.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;materialCheckListBoxBrowserData.Name" xml:space="preserve">
-    <value>materialCheckListBoxBrowserData</value>
-  </data>
-  <data name="&gt;&gt;materialCheckListBoxBrowserData.Type" xml:space="preserve">
-    <value>ReaLTaiizor.Controls.MaterialCheckListBox, ReaLTaiizor, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;materialCheckListBoxBrowserData.Parent" xml:space="preserve">
-    <value>tabPageBrowserInport</value>
-  </data>
-  <data name="&gt;&gt;materialCheckListBoxBrowserData.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;materialButtonImportBrowserData.Name" xml:space="preserve">
-    <value>materialButtonImportBrowserData</value>
-  </data>
-  <data name="&gt;&gt;materialButtonImportBrowserData.Type" xml:space="preserve">
-    <value>ReaLTaiizor.Controls.MaterialButton, ReaLTaiizor, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;materialButtonImportBrowserData.Parent" xml:space="preserve">
-    <value>tabPageBrowserInport</value>
-  </data>
-  <data name="&gt;&gt;materialButtonImportBrowserData.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;materialButtonShowBrowserDatas.Name" xml:space="preserve">
-    <value>materialButtonShowBrowserDatas</value>
-  </data>
-  <data name="&gt;&gt;materialButtonShowBrowserDatas.Type" xml:space="preserve">
-    <value>ReaLTaiizor.Controls.MaterialButton, ReaLTaiizor, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;materialButtonShowBrowserDatas.Parent" xml:space="preserve">
-    <value>tabPageBrowserInport</value>
-  </data>
-  <data name="&gt;&gt;materialButtonShowBrowserDatas.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
+  </data>  
   <data name="tabPageBrowserInport.ImageKey" xml:space="preserve">
     <value>import.png</value>
   </data>
@@ -174,79 +102,7 @@
   </data>
   <data name="tabPageBrowserInport.Text" xml:space="preserve">
     <value>Import auto</value>
-  </data>
-  <data name="&gt;&gt;tabPageBrowserInport.Name" xml:space="preserve">
-    <value>tabPageBrowserInport</value>
-  </data>
-  <data name="&gt;&gt;tabPageBrowserInport.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPageBrowserInport.Parent" xml:space="preserve">
-    <value>tabControlMain</value>
-  </data>
-  <data name="&gt;&gt;tabPageBrowserInport.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;materialTextBoxEditKeyword.Name" xml:space="preserve">
-    <value>materialTextBoxEditKeyword</value>
-  </data>
-  <data name="&gt;&gt;materialTextBoxEditKeyword.Type" xml:space="preserve">
-    <value>ReaLTaiizor.Controls.MaterialTextBoxEdit, ReaLTaiizor, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;materialTextBoxEditKeyword.Parent" xml:space="preserve">
-    <value>tabPageManualImport</value>
-  </data>
-  <data name="&gt;&gt;materialTextBoxEditKeyword.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;materialTextBoxEditPassword.Name" xml:space="preserve">
-    <value>materialTextBoxEditPassword</value>
-  </data>
-  <data name="&gt;&gt;materialTextBoxEditPassword.Type" xml:space="preserve">
-    <value>ReaLTaiizor.Controls.MaterialTextBoxEdit, ReaLTaiizor, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;materialTextBoxEditPassword.Parent" xml:space="preserve">
-    <value>tabPageManualImport</value>
-  </data>
-  <data name="&gt;&gt;materialTextBoxEditPassword.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;materialTextBoxEditUrl.Name" xml:space="preserve">
-    <value>materialTextBoxEditUrl</value>
-  </data>
-  <data name="&gt;&gt;materialTextBoxEditUrl.Type" xml:space="preserve">
-    <value>ReaLTaiizor.Controls.MaterialTextBoxEdit, ReaLTaiizor, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;materialTextBoxEditUrl.Parent" xml:space="preserve">
-    <value>tabPageManualImport</value>
-  </data>
-  <data name="&gt;&gt;materialTextBoxEditUrl.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;materialTextBoxEditLogin.Name" xml:space="preserve">
-    <value>materialTextBoxEditLogin</value>
-  </data>
-  <data name="&gt;&gt;materialTextBoxEditLogin.Type" xml:space="preserve">
-    <value>ReaLTaiizor.Controls.MaterialTextBoxEdit, ReaLTaiizor, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;materialTextBoxEditLogin.Parent" xml:space="preserve">
-    <value>tabPageManualImport</value>
-  </data>
-  <data name="&gt;&gt;materialTextBoxEditLogin.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;materialButtonPasswordAdd.Name" xml:space="preserve">
-    <value>materialButtonPasswordAdd</value>
-  </data>
-  <data name="&gt;&gt;materialButtonPasswordAdd.Type" xml:space="preserve">
-    <value>ReaLTaiizor.Controls.MaterialButton, ReaLTaiizor, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;materialButtonPasswordAdd.Parent" xml:space="preserve">
-    <value>tabPageManualImport</value>
-  </data>
-  <data name="&gt;&gt;materialButtonPasswordAdd.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
+  </data>  
   <data name="tabPageManualImport.ImageKey" xml:space="preserve">
     <value>round_add_black_24dp.png</value>
   </data>
@@ -502,19 +358,7 @@
   </data>
   <data name="materialTextBoxFilter.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
-  </data>
-  <data name="&gt;&gt;materialTextBoxFilter.Name" xml:space="preserve">
-    <value>materialTextBoxFilter</value>
-  </data>
-  <data name="&gt;&gt;materialTextBoxFilter.Type" xml:space="preserve">
-    <value>ReaLTaiizor.Controls.MaterialTextBoxEdit, ReaLTaiizor, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;materialTextBoxFilter.Parent" xml:space="preserve">
-    <value>tabPageSearch</value>
-  </data>
-  <data name="&gt;&gt;materialTextBoxFilter.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
+  </data>  
   <data name="poisonGridVault.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
@@ -523,13 +367,7 @@
   </metadata>
   <data name="poisonContextMenuStripGrid.Size" type="System.Drawing.Size, System.Drawing">
     <value>215, 26</value>
-  </data>
-  <data name="&gt;&gt;poisonContextMenuStripGrid.Name" xml:space="preserve">
-    <value>poisonContextMenuStripGrid</value>
-  </data>
-  <data name="&gt;&gt;poisonContextMenuStripGrid.Type" xml:space="preserve">
-    <value>ReaLTaiizor.Controls.PoisonContextMenuStrip, ReaLTaiizor, Culture=neutral, PublicKeyToken=null</value>
-  </data>
+  </data> 
   <data name="poisonGridVault.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11px</value>
   </data>
@@ -547,16 +385,7 @@
   </data>
   <data name="&gt;&gt;poisonGridVault.Name" xml:space="preserve">
     <value>poisonGridVault</value>
-  </data>
-  <data name="&gt;&gt;poisonGridVault.Type" xml:space="preserve">
-    <value>ReaLTaiizor.Controls.PoisonDataGridView, ReaLTaiizor, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;poisonGridVault.Parent" xml:space="preserve">
-    <value>tabPageSearch</value>
-  </data>
-  <data name="&gt;&gt;poisonGridVault.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
+  </data>  
   <data name="supprimerLélémentToolStripMenuItem1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAN
@@ -592,19 +421,7 @@
   </data>
   <data name="materialCheckListBoxBrowserData.TabIndex" type="System.Int32, mscorlib">
     <value>72</value>
-  </data>
-  <data name="&gt;&gt;materialCheckListBoxBrowserData.Name" xml:space="preserve">
-    <value>materialCheckListBoxBrowserData</value>
-  </data>
-  <data name="&gt;&gt;materialCheckListBoxBrowserData.Type" xml:space="preserve">
-    <value>ReaLTaiizor.Controls.MaterialCheckListBox, ReaLTaiizor, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;materialCheckListBoxBrowserData.Parent" xml:space="preserve">
-    <value>tabPageBrowserInport</value>
-  </data>
-  <data name="&gt;&gt;materialCheckListBoxBrowserData.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
+  </data>  
   <data name="materialButtonImportBrowserData.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -638,19 +455,7 @@
   </data>
   <data name="materialButtonImportBrowserData.Text" xml:space="preserve">
     <value>Importer</value>
-  </data>
-  <data name="&gt;&gt;materialButtonImportBrowserData.Name" xml:space="preserve">
-    <value>materialButtonImportBrowserData</value>
-  </data>
-  <data name="&gt;&gt;materialButtonImportBrowserData.Type" xml:space="preserve">
-    <value>ReaLTaiizor.Controls.MaterialButton, ReaLTaiizor, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;materialButtonImportBrowserData.Parent" xml:space="preserve">
-    <value>tabPageBrowserInport</value>
-  </data>
-  <data name="&gt;&gt;materialButtonImportBrowserData.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
+  </data>  
   <data name="materialButtonShowBrowserDatas.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -687,19 +492,7 @@
   </data>
   <data name="materialButtonShowBrowserDatas.Text" xml:space="preserve">
     <value>Voir les données</value>
-  </data>
-  <data name="&gt;&gt;materialButtonShowBrowserDatas.Name" xml:space="preserve">
-    <value>materialButtonShowBrowserDatas</value>
-  </data>
-  <data name="&gt;&gt;materialButtonShowBrowserDatas.Type" xml:space="preserve">
-    <value>ReaLTaiizor.Controls.MaterialButton, ReaLTaiizor, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;materialButtonShowBrowserDatas.Parent" xml:space="preserve">
-    <value>tabPageBrowserInport</value>
-  </data>
-  <data name="&gt;&gt;materialButtonShowBrowserDatas.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
+  </data>  
   <data name="materialTextBoxEditKeyword.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -735,19 +528,7 @@
         slMGbh+Ye/Sbu9Ira14vum2Uo/JQZrw8dU/KQVlx+qp1lL1y5rRIlDIBgICxk0DDCSEAAAAASUVORK5C
         YII=
 </value>
-  </data>
-  <data name="&gt;&gt;materialTextBoxEditKeyword.Name" xml:space="preserve">
-    <value>materialTextBoxEditKeyword</value>
-  </data>
-  <data name="&gt;&gt;materialTextBoxEditKeyword.Type" xml:space="preserve">
-    <value>ReaLTaiizor.Controls.MaterialTextBoxEdit, ReaLTaiizor, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;materialTextBoxEditKeyword.Parent" xml:space="preserve">
-    <value>tabPageManualImport</value>
-  </data>
-  <data name="&gt;&gt;materialTextBoxEditKeyword.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
+  </data> 
   <data name="materialTextBoxEditPassword.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -789,19 +570,7 @@
         OApzBefgdUdeh4NYj7xivW+KmuGcOg0exU7TPHhcu9nuwe8s4bjqUscb9cBO6uGGs9KcIo/sLvjO8LRd
         h9Sxo1vwreaUrIJ7YCfiDfffcTPdQNzhdPg+GIALPagTBH8ByHp2LoRKHgEAAAAASUVORK5CYII=
 </value>
-  </data>
-  <data name="&gt;&gt;materialTextBoxEditPassword.Name" xml:space="preserve">
-    <value>materialTextBoxEditPassword</value>
-  </data>
-  <data name="&gt;&gt;materialTextBoxEditPassword.Type" xml:space="preserve">
-    <value>ReaLTaiizor.Controls.MaterialTextBoxEdit, ReaLTaiizor, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;materialTextBoxEditPassword.Parent" xml:space="preserve">
-    <value>tabPageManualImport</value>
-  </data>
-  <data name="&gt;&gt;materialTextBoxEditPassword.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
+  </data> 
   <data name="materialTextBoxEditUrl.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -836,19 +605,7 @@
         rrs9eJAXFEzSE0Z6sJnxxt2m06CBbtBZwHOf55O8QNOi6rSwhswoLwXy9YJN1dfy3wU1vz8RtN4hM9oF
         hz9hBT+zl+7xpTBa75DRyX74IAguI6U3pSdA4GrMrSQAAAAASUVORK5CYII=
 </value>
-  </data>
-  <data name="&gt;&gt;materialTextBoxEditUrl.Name" xml:space="preserve">
-    <value>materialTextBoxEditUrl</value>
-  </data>
-  <data name="&gt;&gt;materialTextBoxEditUrl.Type" xml:space="preserve">
-    <value>ReaLTaiizor.Controls.MaterialTextBoxEdit, ReaLTaiizor, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;materialTextBoxEditUrl.Parent" xml:space="preserve">
-    <value>tabPageManualImport</value>
-  </data>
-  <data name="&gt;&gt;materialTextBoxEditUrl.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
+  </data> 
   <data name="materialTextBoxEditLogin.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -888,19 +645,7 @@
         uvMHO3F+Jq1ikvAqtTJk3Xsnn4In2+q0kiFLZtFacBO8rJYzHyUZsmTK7t4GT3QjZiVZMmV3X/qOqzgr
         yZIpu2zHh/P/PZ9Wsq6C7O46+DpnrWR213fPUn2P1Uk8fwAAAABJRU5ErkJggg==
 </value>
-  </data>
-  <data name="&gt;&gt;materialTextBoxEditLogin.Name" xml:space="preserve">
-    <value>materialTextBoxEditLogin</value>
-  </data>
-  <data name="&gt;&gt;materialTextBoxEditLogin.Type" xml:space="preserve">
-    <value>ReaLTaiizor.Controls.MaterialTextBoxEdit, ReaLTaiizor, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;materialTextBoxEditLogin.Parent" xml:space="preserve">
-    <value>tabPageManualImport</value>
-  </data>
-  <data name="&gt;&gt;materialTextBoxEditLogin.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
+  </data> 
   <data name="materialButtonPasswordAdd.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -931,19 +676,7 @@
   </data>
   <data name="materialButtonPasswordAdd.Text" xml:space="preserve">
     <value>Ajouter</value>
-  </data>
-  <data name="&gt;&gt;materialButtonPasswordAdd.Name" xml:space="preserve">
-    <value>materialButtonPasswordAdd</value>
-  </data>
-  <data name="&gt;&gt;materialButtonPasswordAdd.Type" xml:space="preserve">
-    <value>ReaLTaiizor.Controls.MaterialButton, ReaLTaiizor, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;materialButtonPasswordAdd.Parent" xml:space="preserve">
-    <value>tabPageManualImport</value>
-  </data>
-  <data name="&gt;&gt;materialButtonPasswordAdd.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
+  </data> 
   <data name="webViewGitHubProfile.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -955,19 +688,7 @@
   </data>
   <data name="webViewGitHubProfile.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="&gt;&gt;webViewGitHubProfile.Name" xml:space="preserve">
-    <value>webViewGitHubProfile</value>
-  </data>
-  <data name="&gt;&gt;webViewGitHubProfile.Type" xml:space="preserve">
-    <value>Microsoft.Web.WebView2.WinForms.WebView2, Microsoft.Web.WebView2.WinForms, Culture=neutral, PublicKeyToken=2a8ab48044d2601e</value>
-  </data>
-  <data name="&gt;&gt;webViewGitHubProfile.Parent" xml:space="preserve">
-    <value>tabPageAbout</value>
-  </data>
-  <data name="&gt;&gt;webViewGitHubProfile.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
+  </data>  
   <data name="materialButtonSave.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
@@ -1005,19 +726,7 @@
   </data>
   <data name="materialButtonSave.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
-  </data>
-  <data name="&gt;&gt;materialButtonSave.Name" xml:space="preserve">
-    <value>materialButtonSave</value>
-  </data>
-  <data name="&gt;&gt;materialButtonSave.Type" xml:space="preserve">
-    <value>ReaLTaiizor.Controls.MaterialButton, ReaLTaiizor, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;materialButtonSave.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;materialButtonSave.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
+  </data>  
   <data name="pictureBoxLogo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
   </data>
@@ -2428,19 +2137,7 @@
   </data>
   <data name="pictureBoxLogo.TabIndex" type="System.Int32, mscorlib">
     <value>69</value>
-  </data>
-  <data name="&gt;&gt;pictureBoxLogo.Name" xml:space="preserve">
-    <value>pictureBoxLogo</value>
-  </data>
-  <data name="&gt;&gt;pictureBoxLogo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBoxLogo.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pictureBoxLogo.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
+  </data>  
   <metadata name="myVaultBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -2728,29 +2425,5 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Pour ne plus oublier les mots de passe</value>
-  </data>
-  <data name="&gt;&gt;supprimerLélémentToolStripMenuItem1.Name" xml:space="preserve">
-    <value>supprimerLélémentToolStripMenuItem1</value>
-  </data>
-  <data name="&gt;&gt;supprimerLélémentToolStripMenuItem1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;imageListTabCtrl.Name" xml:space="preserve">
-    <value>imageListTabCtrl</value>
-  </data>
-  <data name="&gt;&gt;imageListTabCtrl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;myVaultBindingSource.Name" xml:space="preserve">
-    <value>myVaultBindingSource</value>
-  </data>
-  <data name="&gt;&gt;myVaultBindingSource.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>MainForm</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>ReaLTaiizor.Forms.MaterialForm, ReaLTaiizor, Culture=neutral, PublicKeyToken=null</value>
-  </data>
+  </data> 
 </root>
