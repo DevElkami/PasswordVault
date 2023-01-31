@@ -34,3 +34,5 @@ Coffre-fort de mots de passe avec import possible depuis votre navigateur (Firef
 > [NLog](https://github.com/NLog)
 
 > [ReaLTaiizor](https://github.com/Taiizor/ReaLTaiizor)
+
+> [FireFox-Thief](https://github.com/LimerBoy/FireFox-Thief)

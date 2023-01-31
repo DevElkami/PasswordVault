@@ -9,21 +9,35 @@ namespace VaultCore
     /// </summary>
     public class MyVault : BindingList<MyPassword>
     {
-        #region Private data
-        /// <summary>
-        /// Firefox data import helper
-        /// </summary>
-        private FirefoxImporter firefoxImporter = new();
-
-        /// <summary>
-        /// Why this name ? Just deceive thief password
-        /// </summary>
-        private const String FILE_NAME = "SimpleDb.sqlite";
-
+        #region Private data        
         /// <summary>
         /// Vault key (encrypted)
         /// </summary>
         private String vaultKey = "mykey";
+        #endregion
+
+        #region Path management
+        private String GetVaultPathKey()
+        {
+#pragma warning disable CS8604 // Existence possible d'un argument de référence null.
+#if !DEBUG
+            return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), $"{nameof(VaultCore)}.key");
+#else
+            return Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), $"{nameof(VaultCore)}.key");
+#endif
+#pragma warning restore CS8604 // Existence possible d'un argument de référence null.
+        }
+
+        private String GetVaultPathData()
+        {
+#pragma warning disable CS8604 // Existence possible d'un argument de référence null.
+#if !DEBUG
+            return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "SimpleDb.sqlite");
+#else
+            return Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "SimpleDb.sqlite");
+#endif
+#pragma warning restore CS8604 // Existence possible d'un argument de référence null.            
+        }
         #endregion
 
         public MyVault()
@@ -67,7 +81,7 @@ namespace VaultCore
 
             Thread.Sleep(500);
             vaultKey = Security.GetHash(key);
-            return Security.Encrypt(vaultKey, Security.GetHash(nameof(VaultCore) + nameof(Security))) == File.ReadAllText($"{nameof(VaultCore)}.key");
+            return Security.Encrypt(vaultKey, Security.GetHash(nameof(VaultCore) + nameof(Security))) == File.ReadAllText(GetVaultPathKey());
         }
 
         /// <summary>
@@ -76,7 +90,7 @@ namespace VaultCore
         /// <returns></returns>
         public bool IsInitialized()
         {
-            return File.Exists($"{nameof(VaultCore)}.key");
+            return File.Exists(GetVaultPathKey());
         }
 
         /// <summary>
@@ -87,9 +101,9 @@ namespace VaultCore
         public bool Initialize(String key)
         {
             vaultKey = Security.GetHash(key);
-            File.WriteAllText($"{nameof(VaultCore)}.key", Security.Encrypt(vaultKey, Security.GetHash(nameof(VaultCore) + nameof(Security))));
+            File.WriteAllText(GetVaultPathKey(), Security.Encrypt(vaultKey, Security.GetHash(nameof(VaultCore) + nameof(Security))));
 
-            return File.Exists(FILE_NAME);
+            return File.Exists(GetVaultPathData());
         }
 
         /// <summary>
@@ -97,32 +111,7 @@ namespace VaultCore
         /// </summary>
         public void Erase()
         {
-            File.Delete($"{nameof(VaultCore)}.key");
-        }
-
-        /// <summary>
-        /// Import old data (previous version 3.0.0.0)
-        /// </summary>
-        /// <param name="oldKey">Old vault key</param>
-        public void ImportOldData(String oldKey)
-        {
-            Clear();
-
-            Mdp.OldVaultDecryptor oldVaultDecryptor = new();
-            oldVaultDecryptor.Decrypt(oldKey);
-
-            foreach (Mdp.OldPassword oldPassword in oldVaultDecryptor.Vault)
-            {
-                Add(new MyPassword()
-                {
-                    Data = oldPassword.Data,
-                    Keyword = oldPassword.Keyword,
-                    UserName = oldPassword.UserName,
-                    Password = oldPassword.Password
-                });
-            }
-
-            Save();
+            File.Delete(GetVaultPathKey());
         }
 
         /// <summary>
@@ -130,7 +119,7 @@ namespace VaultCore
         /// </summary>
         public List<MyPassword> GetMyPasswordsFromBrowsers()
         {
-            return firefoxImporter.Import();
+            return new FirefoxImporter().Import();
         }
         #endregion
 
@@ -146,10 +135,7 @@ namespace VaultCore
 
             // Pour éviter les doublons
             data = new List<String>(data.GroupBy(x => x.ToString()).Select(x => x.First()));
-
-#pragma warning disable CS8604 // Existence possible d'un argument de référence null.
-            File.WriteAllLines(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), FILE_NAME), data);
-#pragma warning restore CS8604 // Existence possible d'un argument de référence null.
+            File.WriteAllLines(GetVaultPathData(), data);
         }
 
         /// <summary>
@@ -157,14 +143,11 @@ namespace VaultCore
         /// </summary>
         public void Load()
         {
-#pragma warning disable CS8604 // Existence possible d'un argument de référence null.
-            String pathFile = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), FILE_NAME);
-#pragma warning restore CS8604 // Existence possible d'un argument de référence null.
-            if (File.Exists(pathFile))
+            if (File.Exists(GetVaultPathData()))
             {
                 Clear();
 
-                foreach (String data in File.ReadAllLines(pathFile))
+                foreach (String data in File.ReadAllLines(GetVaultPathData()))
                 {
                     MyPassword? myPassword = MyPassword.From(Security.Decrypt(vaultKey, data));
                     if (myPassword != null)
@@ -172,6 +155,6 @@ namespace VaultCore
                 }
             }
         }
-        #endregion        
+        #endregion
     }
 }
