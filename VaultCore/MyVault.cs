@@ -101,31 +101,6 @@ namespace VaultCore
         }
 
         /// <summary>
-        /// Import old data (previous version 3.0.0.0)
-        /// </summary>
-        /// <param name="oldKey">Old vault key</param>
-        public void ImportOldData(String oldKey)
-        {
-            Clear();
-
-            Mdp.OldVaultDecryptor oldVaultDecryptor = new();
-            oldVaultDecryptor.Decrypt(oldKey);
-
-            foreach (Mdp.OldPassword oldPassword in oldVaultDecryptor.Vault)
-            {
-                Add(new MyPassword()
-                {
-                    Data = oldPassword.Data,
-                    Keyword = oldPassword.Keyword,
-                    UserName = oldPassword.UserName,
-                    Password = oldPassword.Password
-                });
-            }
-
-            Save();
-        }
-
-        /// <summary>
         /// Get datas from Firefox and thunderbird.        
         /// </summary>
         public List<MyPassword> GetMyPasswordsFromBrowsers()

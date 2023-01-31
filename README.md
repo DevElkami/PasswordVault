@@ -32,3 +32,5 @@ Personal password vault with browser and thunderbird importer. This vault use Ad
 > [NLog](https://github.com/NLog)
 
 > [ReaLTaiizor](https://github.com/Taiizor/ReaLTaiizor)
+
+> [FireFox-Thief](https://github.com/LimerBoy/FireFox-Thief)
