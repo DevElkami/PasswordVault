@@ -60,15 +60,130 @@
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="tabControlMain.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
-  </data> 
+  </data>
+  <data name="materialTextBoxFilter.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="materialTextBoxFilter.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16px</value>
+  </data>
+  <data name="materialTextBoxFilter.Hint" xml:space="preserve">
+    <value>Chercher</value>
+  </data>
+  <data name="materialTextBoxFilter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 6</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="materialTextBoxFilter.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="materialTextBoxFilter.PrefixSuffixText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="materialTextBoxFilter.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="materialTextBoxFilter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>474, 48</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="materialTextBoxFilter.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="materialTextBoxFilter.TrailingIcon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAKlJREFUSEvt
+        y7ENwkAUg+FrWAEWQayRAWAXsksyDQ0dC0ABK9BcfNEvBAUyps4nuXnPLou/1Fo75aL8qnU75p7Kt3mW
+        uTL3GMSYe/RjzD36MeYe/Rhzj36MuUc/xtyjH2Pu0Y8x9+jHmHv0Y8w9+jHmHv0Yc49+jLlH/91TGZWt
+        slMGbh+Ye/Sbu9Ira14vum2Uo/JQZrw8dU/KQVlx+qp1lL1y5rRIlDIBgICxk0DDCSEAAAAASUVORK5C
+        YII=
+</value>
+  </data>
+  <data name="materialTextBoxFilter.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;materialTextBoxFilter.Name" xml:space="preserve">
+    <value>materialTextBoxFilter</value>
+  </data>
+  <data name="&gt;&gt;materialTextBoxFilter.Type" xml:space="preserve">
+    <value>ReaLTaiizor.Controls.MaterialTextBoxEdit, ReaLTaiizor, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;materialTextBoxFilter.Parent" xml:space="preserve">
+    <value>tabPageSearch</value>
+  </data>
+  <data name="&gt;&gt;materialTextBoxFilter.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="poisonGridVault.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <metadata name="poisonContextMenuStripGrid.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>320, 20</value>
+  </metadata>
+  <data name="supprimerLélémentToolStripMenuItem1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAN
+        0wAADdMBvdUcagAAABh0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMS42/U4J6AAAAftJREFUSEullb1L
+        HFEUR19CggEVSWMlSAQb02ij/gEipkhtY2FsNGBhbAJ2aZImTUCwSWNjYSeCkNImKWKjhQGxMELqGAux
+        icnv3DtvmXnu211mDxy8d+7H211nZ0MbpuSZ/JeR2qSszVHhSsZY74hH8rkcL/lbbibXylKjp3yNHeyq
+        MCh/yGYfQx3Zxc4GG/JazsjpLmUHu9jZYE3eylW52KXsYBc7G/TKA9ns7daRXeys0CcpvpKPa8osO9jV
+        lBu57qHBrchdEXlRGKFGT4RZdmT5KT94aPyS7zw09gsj1OiJMMuOLN/lZw+NU/nJQyM9gBo9EWbZkYV/
+        zp6Hxle57aGRHkCNngiz7MjCwDcPjfTA9IB0IbPlF3SPj/LcQ2NHHnpopAdQoyfCLDuyvJV/PDS25LGH
+        RnoANXoifIPZkWVJ3skey/yuuPDQSA+gFu+6J5JZdmR5KfmiDFnmr+bKQyM9gFp8xcwwy44sPKxomrAs
+        hGX5Vz60rHoA16jRA8wwy44sI5KmWctCmJfkTy2rHsA1avQAM+TsyNIvaVqwLIQ5Sf7MsuoBXKNGDzBD
+        nn0OwQPJo/aNZf4LxdCoZSHsFgLXqNEDzLR8DkUu5XsPjeHiLwwURso1ZphtyxfJT95rWf6BbyW9zDDb
+        ljF5Irmn+Qg6kV5mmC0Rwn81D7/QycujxgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="supprimerLélémentToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>214, 22</value>
+  </data>
+  <data name="supprimerLélémentToolStripMenuItem1.Text" xml:space="preserve">
+    <value>Supprimer le mot de passe</value>
+  </data>
+  <data name="poisonContextMenuStripGrid.Size" type="System.Drawing.Size, System.Drawing">
+    <value>215, 26</value>
+  </data>
+  <data name="&gt;&gt;poisonContextMenuStripGrid.Name" xml:space="preserve">
+    <value>poisonContextMenuStripGrid</value>
+  </data>
+  <data name="&gt;&gt;poisonContextMenuStripGrid.Type" xml:space="preserve">
+    <value>ReaLTaiizor.Controls.PoisonContextMenuStrip, ReaLTaiizor, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="poisonGridVault.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11px</value>
+  </data>
+  <data name="poisonGridVault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 70</value>
+  </data>
+  <data name="poisonGridVault.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="poisonGridVault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>860, 331</value>
+  </data>
+  <data name="poisonGridVault.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;poisonGridVault.Name" xml:space="preserve">
+    <value>poisonGridVault</value>
+  </data>
+  <data name="&gt;&gt;poisonGridVault.Type" xml:space="preserve">
+    <value>ReaLTaiizor.Controls.PoisonDataGridView, ReaLTaiizor, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;poisonGridVault.Parent" xml:space="preserve">
+    <value>tabPageSearch</value>
+  </data>
+  <data name="&gt;&gt;poisonGridVault.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="tabPageSearch.ImageKey" xml:space="preserve">
     <value>search-mini.png</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="tabPageSearch.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 31</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="tabPageSearch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 3, 4, 3</value>
   </data>
@@ -78,13 +193,146 @@
   <data name="tabPageSearch.Size" type="System.Drawing.Size, System.Drawing">
     <value>876, 407</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="tabPageSearch.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="tabPageSearch.Text" xml:space="preserve">
     <value>Recherche</value>
-  </data>  
+  </data>
+  <data name="&gt;&gt;tabPageSearch.Name" xml:space="preserve">
+    <value>tabPageSearch</value>
+  </data>
+  <data name="&gt;&gt;tabPageSearch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPageSearch.Parent" xml:space="preserve">
+    <value>tabControlMain</value>
+  </data>
+  <data name="&gt;&gt;tabPageSearch.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="materialCheckListBoxBrowserData.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="materialCheckListBoxBrowserData.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="materialCheckListBoxBrowserData.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 68</value>
+  </data>
+  <data name="materialCheckListBoxBrowserData.Size" type="System.Drawing.Size, System.Drawing">
+    <value>833, 318</value>
+  </data>
+  <data name="materialCheckListBoxBrowserData.TabIndex" type="System.Int32, mscorlib">
+    <value>72</value>
+  </data>
+  <data name="&gt;&gt;materialCheckListBoxBrowserData.Name" xml:space="preserve">
+    <value>materialCheckListBoxBrowserData</value>
+  </data>
+  <data name="&gt;&gt;materialCheckListBoxBrowserData.Type" xml:space="preserve">
+    <value>ReaLTaiizor.Controls.MaterialCheckListBox, ReaLTaiizor, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;materialCheckListBoxBrowserData.Parent" xml:space="preserve">
+    <value>tabPageBrowserInport</value>
+  </data>
+  <data name="&gt;&gt;materialCheckListBoxBrowserData.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="materialButtonImportBrowserData.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="materialButtonImportBrowserData.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="materialButtonImportBrowserData.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAABh0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMS42/U4J6AAAAMdJREFUSEvtkrEO
+        AUEURZ+PUEhEpfQtWkHpFzSi9Wn+gE7nIxQU3Dv7XozJbmZGZiSSPcmJWdk9FyGZzNRqnNVqXNRq9ANR
+        /mdgACfN8YOugbG+JrOCT7h1V2/aBngP7124q0RGkKFwJBywON/jM1nwa4cj/oAfz/6JjHDEBorEDX/k
+        oWbFd/DQHDvxR1LjbLItJ3jlIcIQ7lWeY7DJdvJALv1AlN8NHOENbuC6kGyxybbM4R3af7yUbLLtmMIl
+        bPs038gWmiIv7f1w+zsMT8gAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="materialButtonImportBrowserData.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="materialButtonImportBrowserData.Location" type="System.Drawing.Point, System.Drawing">
+    <value>243, 7</value>
+  </data>
+  <data name="materialButtonImportBrowserData.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 7, 5, 7</value>
+  </data>
+  <data name="materialButtonImportBrowserData.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 36</value>
+  </data>
+  <data name="materialButtonImportBrowserData.TabIndex" type="System.Int32, mscorlib">
+    <value>71</value>
+  </data>
+  <data name="materialButtonImportBrowserData.Text" xml:space="preserve">
+    <value>Importer</value>
+  </data>
+  <data name="&gt;&gt;materialButtonImportBrowserData.Name" xml:space="preserve">
+    <value>materialButtonImportBrowserData</value>
+  </data>
+  <data name="&gt;&gt;materialButtonImportBrowserData.Type" xml:space="preserve">
+    <value>ReaLTaiizor.Controls.MaterialButton, ReaLTaiizor, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;materialButtonImportBrowserData.Parent" xml:space="preserve">
+    <value>tabPageBrowserInport</value>
+  </data>
+  <data name="&gt;&gt;materialButtonImportBrowserData.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="materialButtonShowBrowserDatas.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="materialButtonShowBrowserDatas.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="materialButtonShowBrowserDatas.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAABh0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMS42/U4J6AAAAXJJREFUSEvtlL0u
+        BkEUhreQ+EvQ0ChIqLkAFR21zhUQGkTlIrgSDYlQUSFxGwoqJGj8PM+XPTI72f3yESSS702eZPfMnLOz
+        75yZoqt/oUGYh1XYLfHZmGPf1gIcwAu8N+CYc5zbsabhFCxwC3uwCOPQU+KzsX1wjnPNMbetluER7mET
+        +iA0BzslPof6YQvMMdcatVqDV7iACQOlRuAYUmvEmGOhSbgCa1irohV4g0NwRakspNcbMFTiszHHUg3A
+        EVjLmi3NwjOcQa+BRFrhatdbb1X5EcdSu5S2noM1rV1cww2M+pJJvy3iqnMNg2POyTUG1rT25wcM5vqR
+        D4RF/lbaNSos0o5cTRZps3Y/wYwBFZvsBrXbZFctTZtsro1S2eRQtKmtZsuFOm1TW/sSats05CF5KNmG
+        9G+0Qr8ltcU5HkoPmnmNBy00BSfgKu/A62AJ6q4Kr5G4Kswxt2PFZWcDpNakOPblyy7Xr13XXf2FiuID
+        L5R10pWjk3cAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="materialButtonShowBrowserDatas.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="materialButtonShowBrowserDatas.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 7</value>
+  </data>
+  <data name="materialButtonShowBrowserDatas.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 7, 5, 7</value>
+  </data>
+  <data name="materialButtonShowBrowserDatas.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 36</value>
+  </data>
+  <data name="materialButtonShowBrowserDatas.TabIndex" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="materialButtonShowBrowserDatas.Text" xml:space="preserve">
+    <value>Voir les données</value>
+  </data>
+  <data name="&gt;&gt;materialButtonShowBrowserDatas.Name" xml:space="preserve">
+    <value>materialButtonShowBrowserDatas</value>
+  </data>
+  <data name="&gt;&gt;materialButtonShowBrowserDatas.Type" xml:space="preserve">
+    <value>ReaLTaiizor.Controls.MaterialButton, ReaLTaiizor, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;materialButtonShowBrowserDatas.Parent" xml:space="preserve">
+    <value>tabPageBrowserInport</value>
+  </data>
+  <data name="&gt;&gt;materialButtonShowBrowserDatas.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="tabPageBrowserInport.ImageKey" xml:space="preserve">
     <value>import.png</value>
   </data>
@@ -102,7 +350,263 @@
   </data>
   <data name="tabPageBrowserInport.Text" xml:space="preserve">
     <value>Import auto</value>
-  </data>  
+  </data>
+  <data name="&gt;&gt;tabPageBrowserInport.Name" xml:space="preserve">
+    <value>tabPageBrowserInport</value>
+  </data>
+  <data name="&gt;&gt;tabPageBrowserInport.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPageBrowserInport.Parent" xml:space="preserve">
+    <value>tabControlMain</value>
+  </data>
+  <data name="&gt;&gt;tabPageBrowserInport.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="materialTextBoxEditKeyword.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="materialTextBoxEditKeyword.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16px</value>
+  </data>
+  <data name="materialTextBoxEditKeyword.Hint" xml:space="preserve">
+    <value>Entrer des mots clefs</value>
+  </data>
+  <data name="materialTextBoxEditKeyword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>25, 226</value>
+  </data>
+  <data name="materialTextBoxEditKeyword.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="materialTextBoxEditKeyword.PrefixSuffixText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="materialTextBoxEditKeyword.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="materialTextBoxEditKeyword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>474, 48</value>
+  </data>
+  <data name="materialTextBoxEditKeyword.TabIndex" type="System.Int32, mscorlib">
+    <value>76</value>
+  </data>
+  <data name="materialTextBoxEditKeyword.TrailingIcon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAKlJREFUSEvt
+        y7ENwkAUg+FrWAEWQayRAWAXsksyDQ0dC0ABK9BcfNEvBAUyps4nuXnPLou/1Fo75aL8qnU75p7Kt3mW
+        uTL3GMSYe/RjzD36MeYe/Rhzj36MuUc/xtyjH2Pu0Y8x9+jHmHv0Y8w9+jHmHv0Yc49+jLlH/91TGZWt
+        slMGbh+Ye/Sbu9Ira14vum2Uo/JQZrw8dU/KQVlx+qp1lL1y5rRIlDIBgICxk0DDCSEAAAAASUVORK5C
+        YII=
+</value>
+  </data>
+  <data name="&gt;&gt;materialTextBoxEditKeyword.Name" xml:space="preserve">
+    <value>materialTextBoxEditKeyword</value>
+  </data>
+  <data name="&gt;&gt;materialTextBoxEditKeyword.Type" xml:space="preserve">
+    <value>ReaLTaiizor.Controls.MaterialTextBoxEdit, ReaLTaiizor, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;materialTextBoxEditKeyword.Parent" xml:space="preserve">
+    <value>tabPageManualImport</value>
+  </data>
+  <data name="&gt;&gt;materialTextBoxEditKeyword.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="materialTextBoxEditPassword.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="materialTextBoxEditPassword.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16px</value>
+  </data>
+  <data name="materialTextBoxEditPassword.Hint" xml:space="preserve">
+    <value>Entrer un mot de passe</value>
+  </data>
+  <data name="materialTextBoxEditPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>25, 158</value>
+  </data>
+  <data name="materialTextBoxEditPassword.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="materialTextBoxEditPassword.PrefixSuffixText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="materialTextBoxEditPassword.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="materialTextBoxEditPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>474, 48</value>
+  </data>
+  <data name="materialTextBoxEditPassword.TabIndex" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="materialTextBoxEditPassword.TrailingIcon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAkdJREFUSEvd
+        1V9oTnEcx/EzRhgzhjGjZGiWyC4ohGIXrsiFCzVLsSV/mj/FlURk4oKEIsm0i5USidJsF/Nn7pT8HWtZ
+        /jUKN0rxfp/znHLznOc5udunXu33nGfP7/zO7/f9/U4w6LMaV/ESv/Enw/ZzXMQypM5UPMF3nMBizEAR
+        xmMl9uAy+vEQ/ibvTMAOFGMoVmAj9sKObS+H343ANkxBqkzCYXzAI7TCpzmZaXfjPQ5hIlKlFq/RhMle
+        yGQuqjEs/BQE5diHF3Da8orTcAdl4ado/q/jLRy1i/sLDuAMSuGN7sIBJWYLOuEIHflNnEYl/s0YNMAb
+        foXrMRwutn1kTQtc2KV4ivkwFdiOa+jAWUyD8bpPtBDjYBEkZiRewfk2u9CH/ViLzWjDFzSjEAfggo9C
+        zlgVVo/ZjXaUoABVmAnj3LsBj4SfguA24nZi3sGycw0cpeXqgsdl+RnP4M3cL/6PlbUA/jYxVsObqBlW
+        04WoGS5eI3wKp+Q87sMcQ/zE3ixxTzgKOzMeA1sxGj+9QFyDJbDKvObfDfBMMhaGT5M1s/E4aobl6XFh
+        Jz+8QNxULqyxnNfA48L1sKqsprHIGs+VT1EznKJTUTPoxRzMggs7BIvwEU7RJXyDBZIzD+AC1sCOnffj
+        OApzBefgdUdeh4NYj7xivW+KmuGcOg0exU7TPHhcu9nuwe8s4bjqUscb9cBO6uGGs9KcIo/sLvjO8LRd
+        h9Sxo1vwreaUrIJ7YCfiDfffcTPdQNzhdPg+GIALPagTBH8ByHp2LoRKHgEAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="&gt;&gt;materialTextBoxEditPassword.Name" xml:space="preserve">
+    <value>materialTextBoxEditPassword</value>
+  </data>
+  <data name="&gt;&gt;materialTextBoxEditPassword.Type" xml:space="preserve">
+    <value>ReaLTaiizor.Controls.MaterialTextBoxEdit, ReaLTaiizor, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;materialTextBoxEditPassword.Parent" xml:space="preserve">
+    <value>tabPageManualImport</value>
+  </data>
+  <data name="&gt;&gt;materialTextBoxEditPassword.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="materialTextBoxEditUrl.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="materialTextBoxEditUrl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16px</value>
+  </data>
+  <data name="materialTextBoxEditUrl.Hint" xml:space="preserve">
+    <value>Entrer une url</value>
+  </data>
+  <data name="materialTextBoxEditUrl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>25, 92</value>
+  </data>
+  <data name="materialTextBoxEditUrl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="materialTextBoxEditUrl.PrefixSuffixText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="materialTextBoxEditUrl.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="materialTextBoxEditUrl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>474, 48</value>
+  </data>
+  <data name="materialTextBoxEditUrl.TabIndex" type="System.Int32, mscorlib">
+    <value>74</value>
+  </data>
+  <data name="materialTextBoxEditUrl.TrailingIcon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAJdJREFUSEvt
+        kU0KgzAQRnMNz1XU0xTc9VoewYWXkRbSefEbiWmh0IWreTD4/SSMaAqC4CJyzovNKD3iq9x52dw0aMfP
+        rrs9eJAXFEzSE0Z6sJnxxt2m06CBbtBZwHOf55O8QNOi6rSwhswoLwXy9YJN1dfy3wU1vz8RtN4hM9oF
+        hz9hBT+zl+7xpTBa75DRyX74IAguI6U3pSdA4GrMrSQAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="&gt;&gt;materialTextBoxEditUrl.Name" xml:space="preserve">
+    <value>materialTextBoxEditUrl</value>
+  </data>
+  <data name="&gt;&gt;materialTextBoxEditUrl.Type" xml:space="preserve">
+    <value>ReaLTaiizor.Controls.MaterialTextBoxEdit, ReaLTaiizor, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;materialTextBoxEditUrl.Parent" xml:space="preserve">
+    <value>tabPageManualImport</value>
+  </data>
+  <data name="&gt;&gt;materialTextBoxEditUrl.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="materialTextBoxEditLogin.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="materialTextBoxEditLogin.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16px</value>
+  </data>
+  <data name="materialTextBoxEditLogin.Hint" xml:space="preserve">
+    <value>Entrer un login</value>
+  </data>
+  <data name="materialTextBoxEditLogin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>25, 26</value>
+  </data>
+  <data name="materialTextBoxEditLogin.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="materialTextBoxEditLogin.PrefixSuffixText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="materialTextBoxEditLogin.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="materialTextBoxEditLogin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>474, 48</value>
+  </data>
+  <data name="materialTextBoxEditLogin.TabIndex" type="System.Int32, mscorlib">
+    <value>73</value>
+  </data>
+  <data name="materialTextBoxEditLogin.TrailingIcon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAN
+        0AAADdABEGw9BwAAABh0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMS42/U4J6AAAAYxJREFUSEut1L1O
+        FkEYxfGF0JBYUlCRQKWlWNPSKy33QEWjFTGUdtwD0cQrsLHiArwFjYSGQExEQJDzm+wkEmDfeT9O8k/m
+        4zxnZ2Znt2vQctgP38KfHm1j5qbSVjgP/8JtOOnRNnYWeCbS63AT/oYPYSVUaRszx8M7lpbCaVD8xsAT
+        MsfDq6ZZ74IjOCi9YfHwqmnWUVD0vPSG9SLwqmmWF/k7zJXesHgugppmHQfXcb70hsVzGdQ062uw7fXS
+        G9arwKumWTtB0WHpDYuHV02znoXvYVRhXQivmrG0EbxoAZ/7/mKPtjFzPPoTaTvU38JjmOMZW6vhY/CV
+        1jA35UePdh3n4VXTJCv6FRT/DHvhZVgIVdpumDkeXjUjd7MbmP3E3gfnPUo8vGocmYxH5el1JZsGxpSa
+        uvMHO3F+Jq1ikvAqtTJk3Xsnn4In2+q0kiFLZtFacBO8rJYzHyUZsmTK7t4GT3QjZiVZMmV3X/qOqzgr
+        yZIpu2zHh/P/PZ9Wsq6C7O46+DpnrWR213fPUn2P1Uk8fwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="&gt;&gt;materialTextBoxEditLogin.Name" xml:space="preserve">
+    <value>materialTextBoxEditLogin</value>
+  </data>
+  <data name="&gt;&gt;materialTextBoxEditLogin.Type" xml:space="preserve">
+    <value>ReaLTaiizor.Controls.MaterialTextBoxEdit, ReaLTaiizor, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;materialTextBoxEditLogin.Parent" xml:space="preserve">
+    <value>tabPageManualImport</value>
+  </data>
+  <data name="&gt;&gt;materialTextBoxEditLogin.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="materialButtonPasswordAdd.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="materialButtonPasswordAdd.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="materialButtonPasswordAdd.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAEFJREFUSEtj
+        GAWjAB0cgWKagf9QTDMwagFBQDULQCkFZhixmKTURXMLcAGYYTQDoxYQBDS3AJRSqJJaRsGwAQwMAOzY
+        MfX5K8a8AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="materialButtonPasswordAdd.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="materialButtonPasswordAdd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>303, 294</value>
+  </data>
+  <data name="materialButtonPasswordAdd.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 7, 5, 7</value>
+  </data>
+  <data name="materialButtonPasswordAdd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 36</value>
+  </data>
+  <data name="materialButtonPasswordAdd.TabIndex" type="System.Int32, mscorlib">
+    <value>72</value>
+  </data>
+  <data name="materialButtonPasswordAdd.Text" xml:space="preserve">
+    <value>Ajouter</value>
+  </data>
+  <data name="&gt;&gt;materialButtonPasswordAdd.Name" xml:space="preserve">
+    <value>materialButtonPasswordAdd</value>
+  </data>
+  <data name="&gt;&gt;materialButtonPasswordAdd.Type" xml:space="preserve">
+    <value>ReaLTaiizor.Controls.MaterialButton, ReaLTaiizor, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;materialButtonPasswordAdd.Parent" xml:space="preserve">
+    <value>tabPageManualImport</value>
+  </data>
+  <data name="&gt;&gt;materialButtonPasswordAdd.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="tabPageManualImport.ImageKey" xml:space="preserve">
     <value>round_add_black_24dp.png</value>
   </data>
@@ -135,6 +639,18 @@
   </data>
   <data name="&gt;&gt;tabPageManualImport.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="webViewGitHubProfile.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="webViewGitHubProfile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="webViewGitHubProfile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>870, 401</value>
+  </data>
+  <data name="webViewGitHubProfile.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;webViewGitHubProfile.Name" xml:space="preserve">
     <value>webViewGitHubProfile</value>
@@ -186,25 +702,25 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAEZTeXN0ZW0uV2luZG93cy5Gb3JtcywgQ3VsdHVyZT1uZXV0cmFs
         LCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5BQEAAAAmU3lzdGVtLldpbmRvd3MuRm9ybXMu
         SW1hZ2VMaXN0U3RyZWFtZXIBAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAKBkAAAJNU0Z0AUkBTAIBAQYB
-        AAHIAQEByAEBARgBAAEYAQAE/wEhAQAI/wFCAU0BNgcAATYDAAEoAwABYAMAATADAAEBAQABIAYAAUh2
+        AAHUAQEB1AEBARgBAAEYAQAE/wEhAQAI/wFCAU0BNgcAATYDAAEoAwABYAMAATADAAEBAQABIAYAAUh2
         AAMaASQDNgFZAzgBWwM4AVsDOAFbAzgBWwM4AVsDOAFbAzgBWwM4AVsDOAFbAzgBWwM4AVsDOAFbAzgB
-        WwM4AVsDOAFbAzgBWwM4AVsDOAFbAzYBWQMaAST/ACUAAzIBTwMhAfoDAAH/AwAB/wMAAf8DAAH/AwAB
+        WwM4AVsDOAFbAzgBWwM4AVsDOAFbAzYBWQMaAST/ACUAAzIBTwMiAfoDAAH/AwAB/wMAAf8DAAH/AwAB
         /wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB
-        /wMhAfoDMgFP/wAhAANaAcQDNQH2AzsBYwM4AVsDOAFbAzgBWwM4AVsDOAFbAzgBWwM4AVsDOAFbAzgB
-        WwM4AVsDOAFbAzgBWwM4AVsDOAFbAzgBWwM4AVsDOAFbAzgBWwM7AWMDNQH2A1oBxP8AIQADWwHTA14B
+        /wMiAfoDMgFP/wAhAANaAcQDNwH2AzsBYwM4AVsDOAFbAzgBWwM4AVsDOAFbAzgBWwM4AVsDOAFbAzgB
+        WwM4AVsDOAFbAzgBWwM4AVsDOAFbAzgBWwM4AVsDOAFbAzgBWwM7AWMDNwH2A1oBxP8AIQADWwHTA14B
         4lAAA14B4gNbAdP/ACEAA1sB0wNeAeJQAANeAeIDWwHT7AADWgHEA1oBxCwAA1sB0wNeAeJQAANeAeID
         WwHT7wAB/wMAAf8sAANbAdMDXgHiUAADXgHiA1sB0+8AAf8DAAH/LAADWwHTA14B4lAAA14B4gNbAdPv
         AAH/AwAB/ywAA1sB0wNeAeIgAAMPARQDRAF7A0QBewMQARUgAANeAeIDWwHT7wAB/wMAAf8sAANEAXkD
-        SAGEHAADFQEcA18B2wMAAf8DAAH/A18B2wMVARwcAANIAYQDRAF57wAB/wMAAf9MAAMVARwDXwHbAwAB
-        /wMhAfsDIQH7AwAB/wNfAdsDFQEc9AADWgHEAwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8D
-        AAH/AwAB/wMAAf8DAAH/A1oBxDAAAxUBHANfAdsDAAH/A0IBdANfAdsDXwHbA0IBdAMAAf8DXwHbAxUB
+        SAGEHAADFQEcA2AB2wMAAf8DAAH/A2AB2wMVARwcAANIAYQDRAF57wAB/wMAAf9MAAMVARwDYAHbAwAB
+        /wMhAfsDIQH7AwAB/wNgAdsDFQEc9AADWgHEAwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8D
+        AAH/AwAB/wMAAf8DAAH/A1oBxDAAAxUBHANgAdsDAAH/A0IBdANgAdsDYAHbA0IBdAMAAf8DYAHbAxUB
         HPAAA1oBxAMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wNaAcQs
-        AAMVARwDXwHbAwAB/wNCAXQEAANfAdsDXwHbBAADQgF0AwAB/wNfAdsDFQEc/wAIAAH/AwAB/0AAAxMB
-        GgNfAdsDAAH/A0IBdAgAA18B2wNfAdsIAANCAXQDAAH/A18B2wMTARn/AAQAAf8DAAH/QAADNwFaAwAB
-        /wNCAXQMAANfAdsDXwHbDAADQgF0AwAB/wM2AVf/AAQAAf8DAAH/QAAEAQMWAR4QAANfAdsDXwHbEAAD
-        FQEc/wAIAAH/AwAB/1gAA18B2wNfAdv/ABwAAf8DAAH/WAADXwHbA18B2/8AGQADWgHEA1oBxFgAA18B
-        2wNfAdv/AHkAA18B2wNfAdv/AHkAA18B2wNfAdv/AHkAA18B2wNfAdv/AHkAA10B1ANdAdT/AHkAAx8B
-        LAMfASz/AD0AAwMBBANRAaQDUAHyAy8BScgAAx8BLAMqAUADKgFAAyoBQAMqAUADKgFAAyoBQAMqAUAD
+        AAMVARwDYAHbAwAB/wNCAXQEAANgAdsDYAHbBAADQgF0AwAB/wNgAdsDFQEc/wAIAAH/AwAB/0AAAxMB
+        GgNgAdsDAAH/A0IBdAgAA2AB2wNgAdsIAANCAXQDAAH/A2AB2wMTARn/AAQAAf8DAAH/QAADNwFaAwAB
+        /wNCAXQMAANgAdsDYAHbDAADQgF0AwAB/wM2AVf/AAQAAf8DAAH/QAAEAQMWAR4QAANgAdsDYAHbEAAD
+        FQEc/wAIAAH/AwAB/1gAA2AB2wNgAdv/ABwAAf8DAAH/WAADYAHbA2AB2/8AGQADWgHEA1oBxFgAA2AB
+        2wNgAdv/AHkAA2AB2wNgAdv/AHkAA2AB2wNgAdv/AHkAA2AB2wNgAdv/AHkAA10B1ANdAdT/AHkAAx8B
+        LAMfASz/AD0AAwMBBANRAaQDUwHyAy8BScgAAx8BLAMqAUADKgFAAyoBQAMqAUADKgFAAyoBQAMqAUAD
         KgFAAyoBQAMqAUADKgFAAyoBQAMqAUADKgFAAyoBQAMqAUADKgFAAyoBQAMfASxUAAMCAQMDUgGlAwAB
         /wMAAf8DSQGGxAADUAGfAwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8D
         AAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DUAGfTAAEAQNQAZ0DAAH/AwAB/wNbAdAD
@@ -214,70 +730,70 @@
         BgEHOAAEAgNVAbQDUgGjBAEDLQFEA18B1QM/AW4DGQEjJAADKgFAAwAB/wMqAUAEAANGAYADAAH/MwAB
         /wNGAYAEAAMqAUADAAH/AyoBQBwAAwkBCwMpAT0DNwFaAzgBXQMtAUUDDwEUEAADSgGKAwAB/wMAAf8D
         XQHcAxMBGiAAAy0BRQNeAeICFQEXAf8DWAG6EAADWwHFAhUBFwH/A1sB3gMqAT80AAM5AV8DXgHdAwwB
-        EAM6AWADXgHiAxMBGgQCAzgEWwHFA1cB8gNcAcgDMwFRFAADKgFAAwAB/wMqAUAEAANGAYADAAH/MwAB
-        /wNGAYAEAAMqAUADAAH/AyoBQBQAAyQBNANVAawDOgH4AwAB/wMAAf8DAAH/AwAB/wMgAf0DWQHBAzMB
+        EAM6AWADXgHiAxMBGgQCAzgEWwHFA1kB8gNcAcgDMwFRFAADKgFAAwAB/wMqAUAEAANGAYADAAH/MwAB
+        /wNGAYAEAAMqAUADAAH/AyoBQBQAAyQBNANVAawDOwH4AwAB/wMAAf8DAAH/AwAB/wMiAf0DWQHBAzMB
         UAQBA0YBgQMAAf8DAAH/A2IB4QMXAR8gAAM6AWIDKwH8A1QBqwM6AWADMAFKEAADWwHFAhUBFwH/AhUB
-        FwH/AywB+gM2AVkkAANEAXgDOQFfBAADXgHSAzABSgMUARsDUQHzAyABLQMOARIDWQHAA1cBvAMwAUoD
+        FwH/Ay0B+gM2AVkkAANEAXgDOQFfBAADXgHSAzABSgMUARsDUgHzAyABLQMOARIDWQHAA1cBvAMwAUoD
         DAQQARUDEgEYFAADKgFAAwAB/wMqAUAEAANGAYADAAH/MwAB/wNGAYAEAAMqAUADAAH/AyoBQAwAAwUB
-        BgNNAZIDIAH9AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/A1sB0wMAAf8DAAH/A18B
-        5QMaASQgAAMtAUQDKwH8A1gBtwMoATsDUgGoA0ABbxAAA10BzAIVARcB/wIVARcB/wIVARcB/wMsAfoD
+        BgNNAZIDIgH9AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/A1sB0wMAAf8DAAH/A18B
+        5QMaASQgAAMtAUQDKwH8A1gBtwMoATsDUgGoA0ABbxAAA10BzAIVARcB/wIVARcB/wIVARcB/wMtAfoD
         KAE7IAADWQHGAx0BKQMjATMDYAHgBAEDSgGJA0kBhgQAA1EBoQNOAZcEAQMPARMDOQFeA0YBfwM0AVMU
         AAMqAUADAAH/AyoBQAQAA0YBgAMAAf8zAAH/A0YBgAQAAyoBQAMAAf8DKgFACAADBgEIA1gBugMAAf8D
-        AAH/AyQB+gNTAaYDNgFXAyEBLwMeASsDMAFMA00BkgNVAfEDAAH/AwAB/wMAAf8DWgHqAx4BKiAAAwYB
-        CANgAeADWwHkAzUBVgNhAeYCFQEXAf8DWgHyAw8BFAgAAxQBGwJAAUEB+AIVARcB/wIVARcB/wIVARcB
+        AAH/AyUB+gNTAaYDNgFXAyEBLwMeASsDMAFMA00BkgNWAfEDAAH/AwAB/wMAAf8DXAHqAx4BKiAAAwYB
+        CANgAeADWwHkAzUBVgNhAeYCFQEXAf8DWgHyAw8BFAgAAxQBGwJBAUIB+AIVARcB/wIVARcB/wIVARcB
         /wIVARcB/wNcAdkDAwEEGAADBgEIA1oB6QQAA0IBdANMAY4EAANgAeADHAEnAxsBJQNcAdkEAgMlATcD
         YAHoA0kBhwNQAZ0DWQHvA0YBgRAAAyoBQAMAAf8DKgFABAADRgF9AwAB/wMGAQgoAAMGAQgDAAH/A0YB
         fQQAAyoBQAMAAf8DKgFACAADUQGhAwAB/wMAAf8DWwHNAx0BKBgAAw8BFANUAasDAAH/AwAB/wNbAdAD
         BgEIIAADOwFkAhUBFwH/A1wBywNhAeYDWwHeAzYBWAMJAQwQAAMMAQ8DOQFeA2AB4wIVARcB/wIVARcB
-        /wIVARcB/wM2AVkYAAMbASYDXQHJBAADTQGSAz8BbQMEAQUDUQHzBAADQgF1A0oBigQAA1kBwQMwAUoD
-        AgEDAw8BEwMVAR0DOAH5AwwBDwwAAyoBQAMAAf8DKgFABAADKQE+Aw4B/gNcAdYDWgG/A1oBvwNaAb8D
-        WgG/A1oBvwNaAb8DWgG/A1oBvwNaAb8DWgG/A1wB1gMOAf4DKQE9BAADKgFAAwAB/wMqAUAEAAMwAUoD
+        /wIVARcB/wM2AVkYAAMbASYDXQHJBAADTQGSAz8BbQMEAQUDUgHzBAADQgF1A0oBigQAA1kBwQMwAUoD
+        AgEDAw8BEwMVAR0DOwH5AwwBDwwAAyoBQAMAAf8DKgFABAADKQE+Aw8B/gNcAdYDWgG/A1oBvwNaAb8D
+        WgG/A1oBvwNaAb8DWgG/A1oBvwNaAb8DWgG/A1wB1gMPAf4DKQE9BAADKgFAAwAB/wMqAUAEAAMwAUoD
         AAH/AwAB/wNaAccDCQELIAAEAQNPAZsDAAH/AwAB/wNGAX8gAANZAbsCFQEXAf8CFQEXAf8DYAHoAxMB
-        GSAAAxYBHgNbAe4CFQEXAf8CFQEXAf8DVgGwGAADIQEwA1oBxwQAA1ABnwM8AWYDCQEMA08B9AQAAzMB
-        UAMoATsDBAEFA08B9AMEAQUDNgFXA1ABnAQAA14B0gMeASsMAAMqAUADAAH/AyoBQAgAAzUBVgNYAbcD
+        GSAAAxYBHgNcAe4CFQEXAf8CFQEXAf8DVgGwGAADIQEwA1oBxwQAA1ABnwM8AWYDCQEMA1EB9AQAAzMB
+        UAMoATsDBAEFA1EB9AMEAQUDNgFXA1ABnAQAA14B0gMeASsMAAMqAUADAAH/AyoBQAgAAzUBVgNYAbcD
         WgG/A1oBvwNaAb8DWgG/A1oBvwNaAb8DWgG/A1oBvwNaAb8DWgG/A1gBtwM1AVYIAAMqAUADAAH/AyoB
-        QAQAA1sBygMAAf8DUAHyAxUBHCgAAwUBBgNbAdMDAAH/A1UB8QMLAQ4cAAJZAVoB8QIVARcB/wIVARcB
+        QAQAA1sBygMAAf8DUwHyAxUBHCgAAwUBBgNbAdMDAAH/A1YB8QMLAQ4cAAJaAVsB8QIVARcB/wIVARcB
         /wNGAYAoAANKAYsCFQEXAf8CFQEXAf8DYQHmGAADEwEaA10B3AQAA0IBdANPAZkEAANaAccDPQFoBAED
         AwEEA04BmANaAb8EAANJAYcDRwGDBAADYQHrAxABFQwAAyoBQAMAAf8DKgFASAADKgFAAwAB/wMqAUAD
         HgEqAwAB/wMAAf8DSQGIMAADMwFSAwAB/wMAAf8DOQFeGAADCAEKAhUBFwH/AhUBFwH/AhUBFwH/Ay8B
-        SSgAAzQBVAIVARcB/wIVARcB/wIpASsB/hwAA10B3wMQARUDEgEYA2EB6wMRARYDEgEXA1sBygNbAeQD
+        SSgAAzQBVAIVARcB/wIVARcB/wIqASwB/hwAA10B3wMQARUDEgEYA2EB6wMRARYDEgEXA1sBygNbAeQD
         XQHqA18B1QMdASkDDwEUA2EB6wMeASsDIQEwA10B3xAAAyoBQAMAAf8DKgFASAADKgFAAwAB/wMqAUAD
-        PQFoAwAB/wMAAf8DIQEvMAADBQEGA0cB9AMAAf8DUAGcGAADBgEHAhYBGAH/AhUBFwH/AhUBFwH/AykB
+        PQFoAwAB/wMAAf8DIQEvMAADBQEGA0oB9AMAAf8DUAGcGAADBgEHAhYBGAH/AhUBFwH/AhUBFwH/AykB
         PigAAzABSgIVARcB/wIVARcB/wMhAfscAANGAYEDRwGDBAADQQFyA1kBvgMMARAEAQMdASkDGQEjBAAD
         DwETA1wB2QNIAYQEAANWAbYDSAGEEAADKgFAAwAB/wMqAUBIAAMqAUADAAH/AyoBQANKAYsDAAH/AyEB
         +wMDAQQ0AANbAcoDAAH/A1oBvxwAA2AB4wIVARcB/wIVARcB/wNBAXIoAANGAX0CFQEXAf8CFQEXAf8D
         WwHYHAADBwEJA18B2gMeASoEAANAAW8DXgHiA0QBeAMzAVADOgFiA1QBqwNhAesDSgGKAwMBBANEAXkD
-        WwHkAwgBChAAAyoBQAMAAf8DKgFASAADKgFAAwAB/wMqAUADTQGTAwAB/wNHAfQ4AANaAb8DAAH/A1wB
+        WwHkAwgBChAAAyoBQAMAAf8DKgFASAADKgFAAwAB/wMqAUADTQGTAwAB/wNKAfQ4AANaAb8DAAH/A1wB
         yBwAA1IBowIVARcB/wIVARcB/wNhAeYDCQEMIAADDgESA2EB6wIVARcB/wIVARcB/wNPAZkYAANRAaQD
-        CwEOAygBPANeAdIDIQEvBAADFQEcAz8BbANSAaUDWQHAA04BlQMVAR0EAAM/AWwDOAH5AyMBMgMNARED
-        QQFzDAADKgFAAwAB/wMqAUBIAAMqAUADAAH/AyoBQANGAYEDAAH/AxAB/gMLAQ40AANeAdcDAAH/A1YB
+        CwEOAygBPANeAdIDIQEvBAADFQEcAz8BbANSAaUDWQHAA04BlQMVAR0EAAM/AWwDOwH5AyMBMgMNARED
+        QQFzDAADKgFAAwAB/wMqAUBIAAMqAUADAAH/AyoBQANGAYEDAAH/AxEB/gMLAQ40AANeAdcDAAH/A1YB
         thwAAywBQwIVARcB/wIVARcB/wMrAfwDAgEDIAADCQEMAhUBFwH/AhUBFwH/AhUBFwH/AyYBOBgAAzsB
-        ZQNZAcEDBAEFAxIBGANWAbMDTQGSAxoBJAwAAwoBDQM9AWcDWwHKA1oB7gMqAT8DBQEGA1oBxwM7AWUM
+        ZQNZAcEDBAEFAxIBGANWAbMDTQGSAxoBJAwAAwoBDQM9AWcDWwHKA1sB7gMqAT8DBQEGA1oBxwM7AWUM
         AAMqAUADAAH/AyoBQBQAAxkBIwMqAUADKgFAAyoBQAMqAUADKgFAAyoBQAMaASQUAAMqAUADAAH/AyoB
-        QAM0AVQDAAH/AwAB/wMwAUwwAAMTARkDEAH+AwAB/wNKAYkgAANYAboCFQEXAf8CJwEpAf4DDwEUAyEB
+        QAM0AVQDAAH/AwAB/wMwAUwwAAMTARkDEQH+AwAB/wNKAYkgAANYAboCFQEXAf8CKAEqAf4DDwEUAyEB
         LwNVAawDVQGuA0wBkANMAZADVgGwA1IBqAMeASoDFwEfAhUBFwH/AhUBFwH/A1UBryAAA0IBdANYAbgD
-        EgEXBAADJgE4A1UBrgNbAd4DWwHKA14B1wM4AfkDYAHbA00BkwMPBBMBGgNXAbkDQAFxEAADKgFAAwAB
-        /wMqAUAQAAMsAUMDHAH8AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AxwB/AMsAUMQAAMqAUADAAH/AyoB
-        QAMNAREDOgH4AwAB/wNVAbQwAANGAX8DAAH/AwAB/wMqAT8gAAMUARsDYQHmAhUBFwH/A1oB8gIVARcB
-        /wIVARcB/wIVARcB/wIVARcB/wIVARcB/wIVARcB/wIVARcB/wIVARcB/wNZAfECFQEXAf8DYAHgAxEB
+        EgEXBAADJgE4A1UBrgNbAd4DWwHKA14B1wM7AfkDYAHbA00BkwMPBBMBGgNXAbkDQAFxEAADKgFAAwAB
+        /wMqAUAQAAMsAUMDHgH8AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/Ax4B/AMsAUMQAAMqAUADAAH/AyoB
+        QAMNAREDOwH4AwAB/wNVAbQwAANGAX8DAAH/AwAB/wMqAT8gAAMUARsDYQHmAhUBFwH/A1oB8gIVARcB
+        /wIVARcB/wIVARcB/wIVARcB/wIVARcB/wIVARcB/wIVARcB/wIVARcB/wNaAfECFQEXAf8DYAHgAxEB
         FiQAAy0BRgNgAdsDQAFxAxIBGAgAAx4BKgMeASsDBAEFBAADEwEaA0IBdQNbAdgDKwFBFAADKgFAAwAB
         /wMqAUAQAANGAX8DAAH/AyoBQAMqAUADKgFAAyoBQAMqAUADKgFAAwAB/wNGAX8QAAMwAUwDAAH/AyoB
-        QAQAA1EBngMAAf8DAAH/AzMBUSgAAxwBJwNHAfQDAAH/A14B0gQBJAADHgEqA2AB4AIVARcB/wIVARcB
+        QAQAA1EBngMAAf8DAAH/AzMBUSgAAxwBJwNKAfQDAAH/A14B0gQBJAADHgEqA2AB4AIVARcB/wIVARcB
         /wIVARcB/wIVARcB/wIVARcB/wIVARcB/wIVARcB/wIVARcB/wIVARcB/wIVARcB/wNgAdsDGwElLAAD
         EQEWA0cBgwNcAecDXAHIA1MBpwNKAYsDSwGNA1MBpwNbAcoDWwHkA0YBgQMQARUYAAMqAUADAAH/AyoB
-        QBAAA0YBgAMAAf8bAAH/A0YBgAwAAxwBJwNcAeYDXAHnAxMBGQQAAxUBHQNQAfIDAAH/A04B8wMqAT8g
-        AAMYASEDXQHcAwAB/wMQAf4DLQFFLAADDgESA08BmwMhAfsCFQEXAf8CFQEXAf8CFQEXAf8CFQEXAf8C
-        FQEXAf8CFQEXAf8DLAH6A04BlQMMAQ8sAAMPARQDPwFtAwsBDgMCAQMDKgFAAzgBWwNCAXQDQQFzAzgB
+        QBAAA0YBgAMAAf8bAAH/A0YBgAwAAxwBJwNeAeYDXAHnAxMBGQQAAxUBHQNTAfIDAAH/A08B8wMqAT8g
+        AAMYASEDXQHcAwAB/wMRAf4DLQFFLAADDgESA08BmwMhAfsCFQEXAf8CFQEXAf8CFQEXAf8CFQEXAf8C
+        FQEXAf8CFQEXAf8DLQH6A04BlQMMAQ8sAAMPARQDPwFtAwsBDgMCAQMDKgFAAzgBWwNCAXQDQQFzAzgB
         WwMqAT8DAgEDAwYBCAM+AWoDEwEZFAADKgFAAwAB/wMqAUAQAANGAYADAAH/GwAB/wNGAYAIAAMdASgD
-        XAHmA1wB5wMdASkMAAM1AVUDIAH9AwAB/wMkAfoDSAGEAw0BERAAAwUBBgM8AWYDWgHtAwAB/wMAAf8D
-        SQGIOAADFgEeA0EBcgNUAasDWQHGA1sBxQNTAakDQAFvAxMBGjQAAxQBGwNcAcsDVwHyA0oBiwMmATgD
+        XgHmA1wB5wMdASkMAAM1AVUDIgH9AwAB/wMlAfoDSAGEAw0BERAAAwUBBgM8AWYDXAHtAwAB/wMAAf8D
+        SQGIOAADFgEeA0EBcgNUAasDWQHGA1sBxQNTAakDQAFvAxMBGjQAAxQBGwNcAcsDWQHyA0oBiwMmATgD
         GAEhAwkBCwMOARIDKwRBAXMDUAGfA18B5QNaAccDFAEbFAADKgFAAwAB/wMqAUAQAANGAYADAAH/GwAB
-        /wNGAYAEAAMdASgDXAHmA1wB5wMdASkUAAM6AWEDJAH6AwAB/wMAAf8DPAH2A1gBuANMAZADSwGMA1UB
-        rQNaAe0DAAH/AwAB/wMAAf8DTAGQBAGUAAMtAUUDUgGjA1wB2QMmAfwDAAH/AwAB/wMmAfwDXgHXA1AB
+        /wNGAYAEAAMdASgDXgHmA1wB5wMdASkUAAM6AWEDJQH6AwAB/wMAAf8DPwH2A1gBuANMAZADSwGMA1UB
+        rQNcAe0DAAH/AwAB/wMAAf8DTAGQBAGUAAMtAUUDUgGjA1wB2QMoAfwDAAH/AwAB/wMoAfwDXgHXA1AB
         nAMpAT0cAAMfASwDAAH/A0wBjgMqAUADKgFAAyoBQAMqAUADUAGfAwAB/wMqAUADKgFAAyoBQAMqAUAD
-        KgFAAyoBQAMAAf8DUAGfAzABTANcAeYDXAHnAx0BKRwAAyUBNwNdAc8DAAH/AwAB/wMAAf8DAAH/AwAB
+        KgFAAyoBQAMAAf8DUAGfAzABTANeAeYDXAHnAx0BKRwAAyUBNwNdAc8DAAH/AwAB/wMAAf8DAAH/AwAB
         /wMAAf8DAAH/AwAB/wNfAeUDNQFW5AADUgGgAwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8D
-        AAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wNcAecDHQEpJAAEAgMwAUsDUgGjA2AB2wMvAfkD
+        AAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wNcAecDHQEpJAAEAgMwAUsDUgGjA2AB2wMyAfkD
         IQH7A1sB5ANVAbEDOgFgAwYBCOwAAx8BLAMqAUADKgFAAyoBQAMqAUADKgFAAyoBQAMqAUADKgFAAyoB
         QAMqAUADKgFAAyoBQAMqAUADKgFAAyoBQAMTARkUAAFCAU0BPgcAAT4DAAEoAwABYAMAATADAAEBAQAB
         AQUAAUABAhYAA/8BAAP/AYABAAEBBgAD/wkAA/8JAAP/AT8B/wH8BgAD/wE/Af8B/AYAAf8B5wH/AT8B
@@ -320,375 +836,6 @@
   <data name="&gt;&gt;tabControlMain.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="materialTextBoxFilter.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="materialTextBoxFilter.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16px</value>
-  </data>
-  <data name="materialTextBoxFilter.Hint" xml:space="preserve">
-    <value>Chercher</value>
-  </data>
-  <data name="materialTextBoxFilter.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 6</value>
-  </data>
-  <data name="materialTextBoxFilter.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 3, 4, 3</value>
-  </data>
-  <data name="materialTextBoxFilter.PrefixSuffixText" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="materialTextBoxFilter.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
-  </data>
-  <data name="materialTextBoxFilter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>474, 48</value>
-  </data>
-  <data name="materialTextBoxFilter.TabIndex" type="System.Int32, mscorlib">
-    <value>68</value>
-  </data>
-  <data name="materialTextBoxFilter.TrailingIcon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAKlJREFUSEvt
-        y7ENwkAUg+FrWAEWQayRAWAXsksyDQ0dC0ABK9BcfNEvBAUyps4nuXnPLou/1Fo75aL8qnU75p7Kt3mW
-        uTL3GMSYe/RjzD36MeYe/Rhzj36MuUc/xtyjH2Pu0Y8x9+jHmHv0Y8w9+jHmHv0Yc49+jLlH/91TGZWt
-        slMGbh+Ye/Sbu9Ira14vum2Uo/JQZrw8dU/KQVlx+qp1lL1y5rRIlDIBgICxk0DDCSEAAAAASUVORK5C
-        YII=
-</value>
-  </data>
-  <data name="materialTextBoxFilter.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>  
-  <data name="poisonGridVault.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <metadata name="poisonContextMenuStripGrid.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>320, 20</value>
-  </metadata>
-  <data name="poisonContextMenuStripGrid.Size" type="System.Drawing.Size, System.Drawing">
-    <value>215, 26</value>
-  </data> 
-  <data name="poisonGridVault.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 11px</value>
-  </data>
-  <data name="poisonGridVault.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 70</value>
-  </data>
-  <data name="poisonGridVault.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 3, 4, 3</value>
-  </data>
-  <data name="poisonGridVault.Size" type="System.Drawing.Size, System.Drawing">
-    <value>860, 331</value>
-  </data>
-  <data name="poisonGridVault.TabIndex" type="System.Int32, mscorlib">
-    <value>67</value>
-  </data>
-  <data name="&gt;&gt;poisonGridVault.Name" xml:space="preserve">
-    <value>poisonGridVault</value>
-  </data>  
-  <data name="supprimerLélémentToolStripMenuItem1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAN
-        1QAADdUBPdZY8QAAABh0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMS42/U4J6AAAAftJREFUSEullb1L
-        HFEUR19CggEVSWMlSAQb02ij/gEipkhtY2FsNGBhbAJ2aZImTUCwSWNjYSeCkNImKWKjhQGxMELqGAux
-        icnv3DtvmXnu211mDxy8d+7H211nZ0MbpuSZ/JeR2qSszVHhSsZY74hH8rkcL/lbbibXylKjp3yNHeyq
-        MCh/yGYfQx3Zxc4GG/JazsjpLmUHu9jZYE3eylW52KXsYBc7G/TKA9ns7daRXeys0CcpvpKPa8osO9jV
-        lBu57qHBrchdEXlRGKFGT4RZdmT5KT94aPyS7zw09gsj1OiJMMuOLN/lZw+NU/nJQyM9gBo9EWbZkYV/
-        zp6Hxle57aGRHkCNngiz7MjCwDcPjfTA9IB0IbPlF3SPj/LcQ2NHHnpopAdQoyfCLDuyvJV/PDS25LGH
-        RnoANXoifIPZkWVJ3skey/yuuPDQSA+gFu+6J5JZdmR5KfmiDFnmr+bKQyM9gFp8xcwwy44sPKxomrAs
-        hGX5Vz60rHoA16jRA8wwy44sI5KmWctCmJfkTy2rHsA1avQAM+TsyNIvaVqwLIQ5Sf7MsuoBXKNGDzBD
-        nn0OwQPJo/aNZf4LxdCoZSHsFgLXqNEDzLR8DkUu5XsPjeHiLwwURso1ZphtyxfJT95rWf6BbyW9zDDb
-        ljF5Irmn+Qg6kV5mmC0Rwn81D7/QycujxgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="supprimerLélémentToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>214, 22</value>
-  </data>
-  <data name="supprimerLélémentToolStripMenuItem1.Text" xml:space="preserve">
-    <value>Supprimer le mot de passe</value>
-  </data>
-  <data name="materialCheckListBoxBrowserData.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="materialCheckListBoxBrowserData.AutoScroll" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="materialCheckListBoxBrowserData.Location" type="System.Drawing.Point, System.Drawing">
-    <value>22, 68</value>
-  </data>
-  <data name="materialCheckListBoxBrowserData.Size" type="System.Drawing.Size, System.Drawing">
-    <value>833, 318</value>
-  </data>
-  <data name="materialCheckListBoxBrowserData.TabIndex" type="System.Int32, mscorlib">
-    <value>72</value>
-  </data>  
-  <data name="materialButtonImportBrowserData.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="materialButtonImportBrowserData.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
-    <value>GrowAndShrink</value>
-  </data>
-  <data name="materialButtonImportBrowserData.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAABh0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMS42/U4J6AAAAMdJREFUSEvtkrEO
-        AUEURZ+PUEhEpfQtWkHpFzSi9Wn+gE7nIxQU3Dv7XozJbmZGZiSSPcmJWdk9FyGZzNRqnNVqXNRq9ANR
-        /mdgACfN8YOugbG+JrOCT7h1V2/aBngP7124q0RGkKFwJBywON/jM1nwa4cj/oAfz/6JjHDEBorEDX/k
-        oWbFd/DQHDvxR1LjbLItJ3jlIcIQ7lWeY7DJdvJALv1AlN8NHOENbuC6kGyxybbM4R3af7yUbLLtmMIl
-        bPs038gWmiIv7f1w+zsMT8gAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="materialButtonImportBrowserData.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="materialButtonImportBrowserData.Location" type="System.Drawing.Point, System.Drawing">
-    <value>243, 7</value>
-  </data>
-  <data name="materialButtonImportBrowserData.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 7, 5, 7</value>
-  </data>
-  <data name="materialButtonImportBrowserData.Size" type="System.Drawing.Size, System.Drawing">
-    <value>196, 36</value>
-  </data>
-  <data name="materialButtonImportBrowserData.TabIndex" type="System.Int32, mscorlib">
-    <value>71</value>
-  </data>
-  <data name="materialButtonImportBrowserData.Text" xml:space="preserve">
-    <value>Importer</value>
-  </data>  
-  <data name="materialButtonShowBrowserDatas.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="materialButtonShowBrowserDatas.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
-    <value>GrowAndShrink</value>
-  </data>
-  <data name="materialButtonShowBrowserDatas.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAABh0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMS42/U4J6AAAAXJJREFUSEvtlL0u
-        BkEUhreQ+EvQ0ChIqLkAFR21zhUQGkTlIrgSDYlQUSFxGwoqJGj8PM+XPTI72f3yESSS702eZPfMnLOz
-        75yZoqt/oUGYh1XYLfHZmGPf1gIcwAu8N+CYc5zbsabhFCxwC3uwCOPQU+KzsX1wjnPNMbetluER7mET
-        +iA0BzslPof6YQvMMdcatVqDV7iACQOlRuAYUmvEmGOhSbgCa1irohV4g0NwRakspNcbMFTiszHHUg3A
-        EVjLmi3NwjOcQa+BRFrhatdbb1X5EcdSu5S2noM1rV1cww2M+pJJvy3iqnMNg2POyTUG1rT25wcM5vqR
-        D4RF/lbaNSos0o5cTRZps3Y/wYwBFZvsBrXbZFctTZtsro1S2eRQtKmtZsuFOm1TW/sSats05CF5KNmG
-        9G+0Qr8ltcU5HkoPmnmNBy00BSfgKu/A62AJ6q4Kr5G4Kswxt2PFZWcDpNakOPblyy7Xr13XXf2FiuID
-        L5R10pWjk3cAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="materialButtonShowBrowserDatas.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="materialButtonShowBrowserDatas.Location" type="System.Drawing.Point, System.Drawing">
-    <value>22, 7</value>
-  </data>
-  <data name="materialButtonShowBrowserDatas.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 7, 5, 7</value>
-  </data>
-  <data name="materialButtonShowBrowserDatas.Size" type="System.Drawing.Size, System.Drawing">
-    <value>196, 36</value>
-  </data>
-  <data name="materialButtonShowBrowserDatas.TabIndex" type="System.Int32, mscorlib">
-    <value>70</value>
-  </data>
-  <data name="materialButtonShowBrowserDatas.Text" xml:space="preserve">
-    <value>Voir les données</value>
-  </data>  
-  <data name="materialTextBoxEditKeyword.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="materialTextBoxEditKeyword.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16px</value>
-  </data>
-  <data name="materialTextBoxEditKeyword.Hint" xml:space="preserve">
-    <value>Entrer des mots clefs</value>
-  </data>
-  <data name="materialTextBoxEditKeyword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>25, 226</value>
-  </data>
-  <data name="materialTextBoxEditKeyword.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 3, 4, 3</value>
-  </data>
-  <data name="materialTextBoxEditKeyword.PrefixSuffixText" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="materialTextBoxEditKeyword.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
-  </data>
-  <data name="materialTextBoxEditKeyword.Size" type="System.Drawing.Size, System.Drawing">
-    <value>474, 48</value>
-  </data>
-  <data name="materialTextBoxEditKeyword.TabIndex" type="System.Int32, mscorlib">
-    <value>76</value>
-  </data>
-  <data name="materialTextBoxEditKeyword.TrailingIcon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAKlJREFUSEvt
-        y7ENwkAUg+FrWAEWQayRAWAXsksyDQ0dC0ABK9BcfNEvBAUyps4nuXnPLou/1Fo75aL8qnU75p7Kt3mW
-        uTL3GMSYe/RjzD36MeYe/Rhzj36MuUc/xtyjH2Pu0Y8x9+jHmHv0Y8w9+jHmHv0Yc49+jLlH/91TGZWt
-        slMGbh+Ye/Sbu9Ira14vum2Uo/JQZrw8dU/KQVlx+qp1lL1y5rRIlDIBgICxk0DDCSEAAAAASUVORK5C
-        YII=
-</value>
-  </data> 
-  <data name="materialTextBoxEditPassword.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="materialTextBoxEditPassword.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16px</value>
-  </data>
-  <data name="materialTextBoxEditPassword.Hint" xml:space="preserve">
-    <value>Entrer un mot de passe</value>
-  </data>
-  <data name="materialTextBoxEditPassword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>25, 158</value>
-  </data>
-  <data name="materialTextBoxEditPassword.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 3, 4, 3</value>
-  </data>
-  <data name="materialTextBoxEditPassword.PrefixSuffixText" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="materialTextBoxEditPassword.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
-  </data>
-  <data name="materialTextBoxEditPassword.Size" type="System.Drawing.Size, System.Drawing">
-    <value>474, 48</value>
-  </data>
-  <data name="materialTextBoxEditPassword.TabIndex" type="System.Int32, mscorlib">
-    <value>75</value>
-  </data>
-  <data name="materialTextBoxEditPassword.TrailingIcon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAkdJREFUSEvd
-        1V9oTnEcx/EzRhgzhjGjZGiWyC4ohGIXrsiFCzVLsSV/mj/FlURk4oKEIsm0i5USidJsF/Nn7pT8HWtZ
-        /jUKN0rxfp/znHLznOc5udunXu33nGfP7/zO7/f9/U4w6LMaV/ESv/Enw/ZzXMQypM5UPMF3nMBizEAR
-        xmMl9uAy+vEQ/ibvTMAOFGMoVmAj9sKObS+H343ANkxBqkzCYXzAI7TCpzmZaXfjPQ5hIlKlFq/RhMle
-        yGQuqjEs/BQE5diHF3Da8orTcAdl4ado/q/jLRy1i/sLDuAMSuGN7sIBJWYLOuEIHflNnEYl/s0YNMAb
-        foXrMRwutn1kTQtc2KV4ivkwFdiOa+jAWUyD8bpPtBDjYBEkZiRewfk2u9CH/ViLzWjDFzSjEAfggo9C
-        zlgVVo/ZjXaUoABVmAnj3LsBj4SfguA24nZi3sGycw0cpeXqgsdl+RnP4M3cL/6PlbUA/jYxVsObqBlW
-        04WoGS5eI3wKp+Q87sMcQ/zE3ixxTzgKOzMeA1sxGj+9QFyDJbDKvObfDfBMMhaGT5M1s/E4aobl6XFh
-        Jz+8QNxULqyxnNfA48L1sKqsprHIGs+VT1EznKJTUTPoxRzMggs7BIvwEU7RJXyDBZIzD+AC1sCOnffj
-        OApzBefgdUdeh4NYj7xivW+KmuGcOg0exU7TPHhcu9nuwe8s4bjqUscb9cBO6uGGs9KcIo/sLvjO8LRd
-        h9Sxo1vwreaUrIJ7YCfiDfffcTPdQNzhdPg+GIALPagTBH8ByHp2LoRKHgEAAAAASUVORK5CYII=
-</value>
-  </data> 
-  <data name="materialTextBoxEditUrl.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="materialTextBoxEditUrl.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16px</value>
-  </data>
-  <data name="materialTextBoxEditUrl.Hint" xml:space="preserve">
-    <value>Entrer une url</value>
-  </data>
-  <data name="materialTextBoxEditUrl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>25, 92</value>
-  </data>
-  <data name="materialTextBoxEditUrl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 3, 4, 3</value>
-  </data>
-  <data name="materialTextBoxEditUrl.PrefixSuffixText" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="materialTextBoxEditUrl.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
-  </data>
-  <data name="materialTextBoxEditUrl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>474, 48</value>
-  </data>
-  <data name="materialTextBoxEditUrl.TabIndex" type="System.Int32, mscorlib">
-    <value>74</value>
-  </data>
-  <data name="materialTextBoxEditUrl.TrailingIcon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAJdJREFUSEvt
-        kU0KgzAQRnMNz1XU0xTc9VoewYWXkRbSefEbiWmh0IWreTD4/SSMaAqC4CJyzovNKD3iq9x52dw0aMfP
-        rrs9eJAXFEzSE0Z6sJnxxt2m06CBbtBZwHOf55O8QNOi6rSwhswoLwXy9YJN1dfy3wU1vz8RtN4hM9oF
-        hz9hBT+zl+7xpTBa75DRyX74IAguI6U3pSdA4GrMrSQAAAAASUVORK5CYII=
-</value>
-  </data> 
-  <data name="materialTextBoxEditLogin.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="materialTextBoxEditLogin.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16px</value>
-  </data>
-  <data name="materialTextBoxEditLogin.Hint" xml:space="preserve">
-    <value>Entrer un login</value>
-  </data>
-  <data name="materialTextBoxEditLogin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>25, 26</value>
-  </data>
-  <data name="materialTextBoxEditLogin.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 3, 4, 3</value>
-  </data>
-  <data name="materialTextBoxEditLogin.PrefixSuffixText" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="materialTextBoxEditLogin.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
-  </data>
-  <data name="materialTextBoxEditLogin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>474, 48</value>
-  </data>
-  <data name="materialTextBoxEditLogin.TabIndex" type="System.Int32, mscorlib">
-    <value>73</value>
-  </data>
-  <data name="materialTextBoxEditLogin.TrailingIcon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAN
-        0AAADdABEGw9BwAAABh0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMS42/U4J6AAAAYxJREFUSEut1L1O
-        FkEYxfGF0JBYUlCRQKWlWNPSKy33QEWjFTGUdtwD0cQrsLHiArwFjYSGQExEQJDzm+wkEmDfeT9O8k/m
-        4zxnZ2Znt2vQctgP38KfHm1j5qbSVjgP/8JtOOnRNnYWeCbS63AT/oYPYSVUaRszx8M7lpbCaVD8xsAT
-        MsfDq6ZZ74IjOCi9YfHwqmnWUVD0vPSG9SLwqmmWF/k7zJXesHgugppmHQfXcb70hsVzGdQ062uw7fXS
-        G9arwKumWTtB0WHpDYuHV02znoXvYVRhXQivmrG0EbxoAZ/7/mKPtjFzPPoTaTvU38JjmOMZW6vhY/CV
-        1jA35UePdh3n4VXTJCv6FRT/DHvhZVgIVdpumDkeXjUjd7MbmP3E3gfnPUo8vGocmYxH5el1JZsGxpSa
-        uvMHO3F+Jq1ikvAqtTJk3Xsnn4In2+q0kiFLZtFacBO8rJYzHyUZsmTK7t4GT3QjZiVZMmV3X/qOqzgr
-        yZIpu2zHh/P/PZ9Wsq6C7O46+DpnrWR213fPUn2P1Uk8fwAAAABJRU5ErkJggg==
-</value>
-  </data> 
-  <data name="materialButtonPasswordAdd.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="materialButtonPasswordAdd.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
-    <value>GrowAndShrink</value>
-  </data>
-  <data name="materialButtonPasswordAdd.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAEFJREFUSEtj
-        GAWjAB0cgWKagf9QTDMwagFBQDULQCkFZhixmKTURXMLcAGYYTQDoxYQBDS3AJRSqJJaRsGwAQwMAOzY
-        MfX5K8a8AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="materialButtonPasswordAdd.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="materialButtonPasswordAdd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>303, 294</value>
-  </data>
-  <data name="materialButtonPasswordAdd.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 7, 5, 7</value>
-  </data>
-  <data name="materialButtonPasswordAdd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>196, 36</value>
-  </data>
-  <data name="materialButtonPasswordAdd.TabIndex" type="System.Int32, mscorlib">
-    <value>72</value>
-  </data>
-  <data name="materialButtonPasswordAdd.Text" xml:space="preserve">
-    <value>Ajouter</value>
-  </data> 
-  <data name="webViewGitHubProfile.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="webViewGitHubProfile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="webViewGitHubProfile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>870, 401</value>
-  </data>
-  <data name="webViewGitHubProfile.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>  
   <data name="materialButtonSave.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
@@ -719,14 +866,26 @@
     <value>134, 36</value>
   </data>
   <data name="materialButtonSave.TabIndex" type="System.Int32, mscorlib">
-    <value>69</value>
+    <value>0</value>
   </data>
   <data name="materialButtonSave.Text" xml:space="preserve">
     <value>Sauver</value>
   </data>
   <data name="materialButtonSave.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
-  </data>  
+  </data>
+  <data name="&gt;&gt;materialButtonSave.Name" xml:space="preserve">
+    <value>materialButtonSave</value>
+  </data>
+  <data name="&gt;&gt;materialButtonSave.Type" xml:space="preserve">
+    <value>ReaLTaiizor.Controls.MaterialButton, ReaLTaiizor, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;materialButtonSave.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;materialButtonSave.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="pictureBoxLogo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
   </data>
@@ -2137,12 +2296,21 @@
   </data>
   <data name="pictureBoxLogo.TabIndex" type="System.Int32, mscorlib">
     <value>69</value>
-  </data>  
+  </data>
+  <data name="&gt;&gt;pictureBoxLogo.Name" xml:space="preserve">
+    <value>pictureBoxLogo</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxLogo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxLogo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxLogo.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <metadata name="myVaultBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
-    <value>en</value>
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -2425,5 +2593,29 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Pour ne plus oublier les mots de passe</value>
-  </data> 
+  </data>
+  <data name="&gt;&gt;supprimerLélémentToolStripMenuItem1.Name" xml:space="preserve">
+    <value>supprimerLélémentToolStripMenuItem1</value>
+  </data>
+  <data name="&gt;&gt;supprimerLélémentToolStripMenuItem1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;imageListTabCtrl.Name" xml:space="preserve">
+    <value>imageListTabCtrl</value>
+  </data>
+  <data name="&gt;&gt;imageListTabCtrl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;myVaultBindingSource.Name" xml:space="preserve">
+    <value>myVaultBindingSource</value>
+  </data>
+  <data name="&gt;&gt;myVaultBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MainForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>ReaLTaiizor.Forms.MaterialForm, ReaLTaiizor, Culture=neutral, PublicKeyToken=null</value>
+  </data>
 </root>
