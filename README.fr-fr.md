@@ -4,12 +4,12 @@
 ![](https://github.com/DevElkami/PasswordVault/actions/workflows/workflow.yml/badge.svg?branch=master)
 ![CodeQL](https://github.com/DevElkami/MesConges/actions/workflows/codeql.yml/badge.svg)
 
-# Password vault
+# Password vault :ice_cube:
 Coffre-fort de mots de passe avec import possible depuis votre navigateur (Firefox, Thunderbird, ...). Ce coffre-fort utilise un cryptage AES.
 
-* [Cryptage AES](https://fr.wikipedia.org/wiki/Advanced_Encryption_Standard)
-* Importer vos mots de passe depuis Firefox, Thunderbird, etc.
-* Support multilingue (Fr, En)
+* [Cryptage AES](https://fr.wikipedia.org/wiki/Advanced_Encryption_Standard) :key:
+* Importer vos mots de passe depuis vos navigateurs :earth_americas: ou Thunderbird :envelope:
+* Support multilingue (:clipperton_island:, :us:)
 
 # L'application en détails
 
@@ -29,7 +29,7 @@ Coffre-fort de mots de passe avec import possible depuis votre navigateur (Firef
 
 
 
-# Remerciements
+# Remerciements  :pray:
 
 > [NLog](https://github.com/NLog)
 
