@@ -1,4 +1,4 @@
-﻿namespace MauiPasswordVault
+﻿namespace MauiPasswordVault.View
 {
     public partial class MainPage : ContentPage
     {
