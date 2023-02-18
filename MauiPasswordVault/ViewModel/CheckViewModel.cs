@@ -4,11 +4,19 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VaultCore;
 
-namespace MauiPasswordVault.ViewModel
+namespace MauiPasswordVault.ViewModel;
+
+public class CheckViewModel : INotifyPropertyChanged
 {
-    public class CheckViewModel : INotifyPropertyChanged
+    private readonly MyVault vault;
+    public CheckViewModel(MyVault vault)
     {
-        public event PropertyChangedEventHandler PropertyChanged;
+        this.vault = vault;
     }
+
+    public bool IsInitialized() => vault.IsInitialized();        
+
+    public event PropertyChangedEventHandler PropertyChanged;
 }

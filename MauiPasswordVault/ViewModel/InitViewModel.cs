@@ -1,20 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
 using VaultCore;
 
-namespace MauiPasswordVault.ViewModel
+namespace MauiPasswordVault.ViewModel;
+
+public class InitViewModel : INotifyPropertyChanged
 {
-    public class InitViewModel : INotifyPropertyChanged
+    private readonly MyVault vault;
+    public InitViewModel(MyVault vault)
     {
-        private readonly MyVault vault;
-        public InitViewModel(MyVault vault)
-        {
-            this.vault = vault;
-        }
-        public event PropertyChangedEventHandler PropertyChanged;
+        this.vault = vault;
     }
+    public event PropertyChangedEventHandler PropertyChanged;
 }

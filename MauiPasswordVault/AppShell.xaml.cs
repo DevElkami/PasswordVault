@@ -1,10 +1,14 @@
-﻿namespace MauiPasswordVault
+﻿using MauiPasswordVault.View;
+
+namespace MauiPasswordVault;
+
+public partial class AppShell : Shell
 {
-    public partial class AppShell : Shell
+    public AppShell()
     {
-        public AppShell()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
+
+        Routing.RegisterRoute(nameof(InitPage), typeof(InitPage));
+        Routing.RegisterRoute(nameof(CheckPage), typeof(CheckPage));
     }
 }

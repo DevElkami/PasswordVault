@@ -7,8 +7,8 @@
     Shell.FlyoutBehavior="Disabled">
 
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate views:InitPage}"
+        Title="Password vault"
+        ContentTemplate="{DataTemplate views:CheckPage}"
         Route="InitPage" />
 
     <ShellContent
