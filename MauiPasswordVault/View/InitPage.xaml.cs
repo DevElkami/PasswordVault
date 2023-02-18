@@ -1,11 +1,16 @@
-﻿namespace MauiPasswordVault.View
+﻿using MauiPasswordVault.ViewModel;
+using VaultCore;
+
+namespace MauiPasswordVault.View
 {
-    public partial class MainPage : ContentPage
+    public partial class InitPage : ContentPage
     {
+        private readonly InitViewModel initViewModel;
         int count = 0;
 
-        public MainPage()
+        public InitPage(InitViewModel initViewModel)
         {
+            this.initViewModel = initViewModel;
             InitializeComponent();
         }
 
