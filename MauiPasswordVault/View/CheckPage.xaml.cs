@@ -12,7 +12,6 @@ public partial class CheckPage : ContentPage
 
     protected async override void OnAppearing()
     {
-        https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/shell/navigation?view=net-maui-7.0
         if (!((CheckViewModel)BindingContext).IsInitialized())
             await Shell.Current.GoToAsync(nameof(InitPage));
     }

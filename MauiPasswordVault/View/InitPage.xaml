@@ -12,15 +12,31 @@
 
             <Image
                 Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                SemanticProperties.Description="Password vault logo"
                 HeightRequest="200"
                 HorizontalOptions="Center" />
 
             <Label
-                Text="Hello, World!"
+                Text="Password vault initialize"
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="32"
                 HorizontalOptions="Center" />
+
+            <HorizontalStackLayout 
+                Spacing="25"
+                Padding="30,0"
+                HorizontalOptions="Center">
+
+                <Label
+                Text="Init page"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                VerticalOptions="Center" />
+
+                <Editor AutoSize="Disabled" MinimumWidthRequest="50"></Editor>
+
+            </HorizontalStackLayout>
 
             <Label
                 Text="Init page"

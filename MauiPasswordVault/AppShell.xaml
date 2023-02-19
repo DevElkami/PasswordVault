@@ -9,7 +9,7 @@
     <ShellContent
         Title="Password vault"
         ContentTemplate="{DataTemplate views:CheckPage}"
-        Route="InitPage" />
+        Route="CheckPage" />
 
     <ShellContent
         Title="About"
