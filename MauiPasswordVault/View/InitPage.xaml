@@ -16,6 +16,9 @@
                 HeightRequest="200"
                 HorizontalOptions="Center" />
 
+            <Label FontFamily="AwesomeRegular" Text="download" FontSize="25"/>
+            <Label FontFamily="AwesomeSolid" Text="download" FontSize="25"/>
+
             <Label
                 Text="Password vault initialize"
                 SemanticProperties.HeadingLevel="Level1"

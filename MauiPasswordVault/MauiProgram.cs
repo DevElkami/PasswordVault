@@ -16,6 +16,9 @@ public static class MauiProgram
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                 fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                fonts.AddFont("AwesomeBrandsRegular.otf", "AwesomeBrands");
+                fonts.AddFont("AwesomeRegular.otf", "AwesomeRegular");
+                fonts.AddFont("AwesomeSolid.otf", "AwesomeSolid");
             });
         
         builder.Services.AddSingleton<MyVault>();

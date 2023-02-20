@@ -9,11 +9,13 @@
     <ShellContent
         Title="Password vault"
         ContentTemplate="{DataTemplate views:CheckPage}"
+        Icon="{OnPlatform 'android512x512.png', Android='android192x192.png'}"
         Route="CheckPage" />
 
     <ShellContent
         Title="About"
         ContentTemplate="{DataTemplate views:AboutPage}"
+        Icon="{OnPlatform 'android512x512.png', Android='android192x192.png'}"
         Route="AboutPage" />
 
 </Shell>
