@@ -2,7 +2,11 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:models="clr-namespace:MauiPasswordVault.ViewModel"
+             IconImageSource="{StaticResource IconInit}"             
              x:Class="MauiPasswordVault.View.InitPage">
+    <ContentPage.IconImageSource>
+        <FontImageSource FontFamily="AwesomeSolid" Glyph="&#xf2bb;" Color="Red" Size="50"/>
+    </ContentPage.IconImageSource>
 
     <ScrollView>
         <VerticalStackLayout
@@ -11,9 +15,28 @@
             VerticalOptions="Center">
 
             <Image
-                Source="dotnet_bot.png"
+                Source="logo.png"
                 SemanticProperties.Description="Password vault logo"
                 HeightRequest="200"
+                HorizontalOptions="Center" />
+
+            <Image 
+                HeightRequest="40" 
+                WidthRequest="40">
+                <Image.Source>
+                    <FontImageSource Glyph="&#xf2bb;"
+                          FontFamily="AwesomeSolid"
+                          Size="96"
+                          Color="Black" />
+                </Image.Source>
+            </Image>
+
+
+            <Image
+                Source="{StaticResource IconInit}"
+                SemanticProperties.Description="Password vault logo"
+                HeightRequest="40" 
+                WidthRequest="40"
                 HorizontalOptions="Center" />
 
             <Label FontFamily="AwesomeRegular" Text="download" FontSize="25"/>

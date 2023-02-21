@@ -4,18 +4,35 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:views="clr-namespace:MauiPasswordVault.View"
-    Shell.FlyoutBehavior="Disabled">
+    Shell.FlyoutBehavior="Flyout">
 
-    <ShellContent
+    <TabBar>
+        <Tab Title="Home" Route="CheckPage">
+            <Tab.Icon>
+                <FontImageSource FontFamily="AwesomeSolid" Glyph="&#xf2bb;" Color="Red" Size="50"/>
+            </Tab.Icon>
+            <ShellContent
         Title="Password vault"
-        ContentTemplate="{DataTemplate views:CheckPage}"
-        Icon="{OnPlatform 'android512x512.png', Android='android192x192.png'}"
-        Route="CheckPage" />
-
-    <ShellContent
+        ContentTemplate="{DataTemplate views:CheckPage}"        
+        Route="CheckPage">
+                <ShellContent.Icon>
+                    <FontImageSource FontFamily="AwesomeSolid" Glyph="&#xf2bb;" Color="Red" Size="50"/>
+                </ShellContent.Icon>
+            </ShellContent>
+        </Tab>
+        <Tab Title="Employers" Route="AboutPage">
+            <Tab.Icon>
+                <FontImageSource FontFamily="AwesomeSolid" Glyph="&#xf2bb;" Color="Red" Size="50"/>
+            </Tab.Icon>
+            <ShellContent
         Title="About"
-        ContentTemplate="{DataTemplate views:AboutPage}"
-        Icon="{OnPlatform 'android512x512.png', Android='android192x192.png'}"
-        Route="AboutPage" />
+        ContentTemplate="{DataTemplate views:AboutPage}"        
+        Route="AboutPage">
+                <ShellContent.Icon>
+                    <FontImageSource FontFamily="AwesomeSolid" Glyph="&#xf2bb;" Color="Red" Size="50"/>
+                </ShellContent.Icon>
+            </ShellContent>
+        </Tab>
+    </TabBar>
 
 </Shell>
