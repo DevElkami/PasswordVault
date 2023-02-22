@@ -4,33 +4,21 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:views="clr-namespace:MauiPasswordVault.View"
-    Shell.FlyoutBehavior="Flyout">
+    Shell.FlyoutBehavior="Disabled">
 
     <TabBar>
-        <Tab Title="Home" Route="CheckPage">
-            <Tab.Icon>
-                <FontImageSource FontFamily="AwesomeSolid" Glyph="&#xf2bb;" Color="Red" Size="50"/>
-            </Tab.Icon>
+        <Tab Icon="Images/home.svg" Title="Home" Route="CheckPage">
             <ShellContent
-        Title="Password vault"
-        ContentTemplate="{DataTemplate views:CheckPage}"        
-        Route="CheckPage">
-                <ShellContent.Icon>
-                    <FontImageSource FontFamily="AwesomeSolid" Glyph="&#xf2bb;" Color="Red" Size="50"/>
-                </ShellContent.Icon>
+                Title="Password vault"
+                ContentTemplate="{DataTemplate views:CheckPage}"        
+                Route="CheckPage">
             </ShellContent>
         </Tab>
-        <Tab Title="Employers" Route="AboutPage">
-            <Tab.Icon>
-                <FontImageSource FontFamily="AwesomeSolid" Glyph="&#xf2bb;" Color="Red" Size="50"/>
-            </Tab.Icon>
+        <Tab Icon="Images/information.svg" Title="About" Route="AboutPage">
             <ShellContent
-        Title="About"
-        ContentTemplate="{DataTemplate views:AboutPage}"        
-        Route="AboutPage">
-                <ShellContent.Icon>
-                    <FontImageSource FontFamily="AwesomeSolid" Glyph="&#xf2bb;" Color="Red" Size="50"/>
-                </ShellContent.Icon>
+                Title="About"
+                ContentTemplate="{DataTemplate views:AboutPage}"        
+                Route="AboutPage">
             </ShellContent>
         </Tab>
     </TabBar>

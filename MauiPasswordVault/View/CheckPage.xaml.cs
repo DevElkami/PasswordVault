@@ -12,7 +12,7 @@ public partial class CheckPage : ContentPage
 
     protected async override void OnAppearing()
     {
-        /*if (!((CheckViewModel)BindingContext).IsInitialized())
-            await Shell.Current.GoToAsync(nameof(InitPage));*/
+        if (!((CheckViewModel)BindingContext).IsInitialized())            
+            await Shell.Current.GoToAsync(nameof(InitPage));
     }
 }
