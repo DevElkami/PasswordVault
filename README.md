@@ -5,10 +5,10 @@
 ![CodeQL](https://github.com/DevElkami/MesConges/actions/workflows/codeql.yml/badge.svg)
 
 # Password vault :ice_cube:
-Personal password vault with browser and thunderbird importer. This vault use Advanced Encryption Standard (AES) encryption.
+Personal password vault with firefox password importer. This vault use Advanced Encryption Standard (AES) encryption.
 
 * [AES encryption](https://fr.wikipedia.org/wiki/Advanced_Encryption_Standard) :key:
-* Import your passwords from Browser :earth_americas: or Thunderbird :envelope:
+* Import your passwords from Firefox :earth_americas:
 * Multilang support (:clipperton_island:, :us:)
 
 # The app in details
@@ -33,4 +33,4 @@ Personal password vault with browser and thunderbird importer. This vault use Ad
 
 > [ReaLTaiizor](https://github.com/Taiizor/ReaLTaiizor)
 
-> [FireFox-Thief](https://github.com/LimerBoy/FireFox-Thief)
+> [CsvHelper](https://github.com/JoshClose/CsvHelper)

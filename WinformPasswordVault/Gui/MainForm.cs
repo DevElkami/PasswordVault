@@ -238,14 +238,24 @@ namespace WinformPasswordVault
         {
             try
             {
-                foreach (MyPassword myPassword in myVault.GetMyPasswordsFromBrowsers())
+                OpenFileDialog openFileDialogCsvFiles = new()
                 {
-                    MaterialCheckBox materialCheckBox = new MaterialCheckBox();
-                    materialCheckBox.DataContext = myPassword;
-                    materialCheckBox.Text = myPassword.ToStr();
-                    materialCheckBox.UseAccentColor = true;
-                    materialCheckBox.Checked = true;
-                    materialCheckListBoxBrowserData.Items.Add(materialCheckBox);
+                    FileName = "Select a csv file",
+                    Filter = "Text files (*.csv)|*.csv",
+                    Title = "Open your firefox passwords exported file"
+                };
+
+                if (openFileDialogCsvFiles.ShowDialog() == DialogResult.OK)
+                {
+                    foreach (MyPassword myPassword in MyVault.GetMyPasswordsFromBrowsers(openFileDialogCsvFiles.FileName))
+                    {
+                        MaterialCheckBox materialCheckBox = new MaterialCheckBox();
+                        materialCheckBox.DataContext = myPassword;
+                        materialCheckBox.Text = myPassword.ToStr();
+                        materialCheckBox.UseAccentColor = true;
+                        materialCheckBox.Checked = true;
+                        materialCheckListBoxBrowserData.Items.Add(materialCheckBox);
+                    }
                 }
             }
             catch (Exception except)
