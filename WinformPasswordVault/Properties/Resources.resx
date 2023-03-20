@@ -148,6 +148,9 @@
   <data name="Data" xml:space="preserve">
     <value>Données</value>
   </data>
+  <data name="DlgOpenFileTitle" xml:space="preserve">
+    <value>Ouvrir un fichier de mot de passe exporté depuis firefox</value>
+  </data>
   <data name="ErrorMsgCountTry" xml:space="preserve">
     <value>Clef incorrecte, essai restant: </value>
   </data>
@@ -171,6 +174,9 @@
   </data>
   <data name="Password" xml:space="preserve">
     <value>Mot de passe</value>
+  </data>
+  <data name="SelectCSVFile" xml:space="preserve">
+    <value>Choisir un fichier CSV</value>
   </data>
   <data name="vault" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Rsx\vault.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

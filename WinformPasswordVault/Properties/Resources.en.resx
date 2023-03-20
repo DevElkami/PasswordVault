@@ -175,4 +175,10 @@
   <data name="MsgRowDeleted" xml:space="preserve">
     <value>Password deleted</value>
   </data>
+  <data name="DlgOpenFileTitle" xml:space="preserve">
+    <value>Open your firefox passwords exported file</value>
+  </data>
+  <data name="SelectCSVFile" xml:space="preserve">
+    <value>Select a csv file</value>
+  </data>
 </root>

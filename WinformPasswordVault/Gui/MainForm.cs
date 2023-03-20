@@ -240,9 +240,9 @@ namespace WinformPasswordVault
             {
                 OpenFileDialog openFileDialogCsvFiles = new()
                 {
-                    FileName = "Select a csv file",
-                    Filter = "Text files (*.csv)|*.csv",
-                    Title = "Open your firefox passwords exported file"
+                    FileName = Properties.Resources.ResourceManager.GetString("SelectCSVFile"),
+                    Filter = "Csv (*.csv)|*.csv",
+                    Title = Properties.Resources.ResourceManager.GetString("DlgOpenFileTitle"),
                 };
 
                 if (openFileDialogCsvFiles.ShowDialog() == DialogResult.OK)
