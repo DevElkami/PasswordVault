@@ -1,25 +1,40 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using MauiPasswordVault.View;
+using MauiPasswordVault.ViewModel;
+using Microsoft.Extensions.Logging;
+using VaultCore;
 
-namespace MauiPasswordVault
+namespace MauiPasswordVault;
+
+public static class MauiProgram
 {
-    public static class MauiProgram
+    public static MauiApp CreateMauiApp()
     {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-                .UseMauiApp<App>()
-                .ConfigureFonts(fonts =>
-                {
-                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                    fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-                });
+        var builder = MauiApp.CreateBuilder();
+        builder
+            .UseMauiApp<App>()                
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                fonts.AddFont("AwesomeBrandsRegular.otf", "AwesomeBrands");
+                fonts.AddFont("AwesomeRegular.otf", "AwesomeRegular");
+                fonts.AddFont("AwesomeSolid.otf", "AwesomeSolid");
+            });
+        
+        builder.Services.AddSingleton<MyVault>();
 
+        builder.Services.AddTransient<InitPage>();
+        builder.Services.AddTransient<InitViewModel>();
+
+        builder.Services.AddTransient<CheckPage>();
+        builder.Services.AddTransient<CheckViewModel>();
+
+        builder.Services.AddTransient<SearchPage>();
+        builder.Services.AddTransient<SearchViewModel>();
 #if DEBUG
-		builder.Logging.AddDebug();
+        builder.Logging.AddDebug();
 #endif
 
-            return builder.Build();
-        }
+        return builder.Build();
     }
 }

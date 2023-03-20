@@ -1,5 +1,5 @@
 #define MyAppName "Password vault"
-#define MyAppVersion "3.1.0.0"
+#define MyAppVersion "3.2.0.0"
 #define MyAppPublisher "DevElkami"
 #define MyAppURL "https://github.com/DevElkami/PasswordVault"
 #define MyAppDescription "Password vault"

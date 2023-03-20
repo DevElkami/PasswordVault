@@ -64,11 +64,13 @@ namespace VaultTestProject
             myVault.Erase();
         }
 
-        [TestMethod("Firefox import")]
-        public void TestMethodFirefoxImport()
+        [TestMethod("Browser import")]
+        public void TestMethodBrowserImport()
         {
             MyVault myVault = new();
-            myVault.GetMyPasswordsFromBrowsers();
+            Assert.IsTrue(MyVault.GetMyPasswordsFromBrowsers(String.Empty).Count <= 0);
+            Assert.IsTrue(MyVault.GetMyPasswordsFromBrowsers("").Count <= 0);
+            Assert.IsTrue(MyVault.GetMyPasswordsFromBrowsers("path/dont/exist").Count <= 0);
         }
     }
 }
