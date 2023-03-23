@@ -5,7 +5,6 @@ using ReaLTaiizor.Manager;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using VaultCore;
 using VaultCore.Models;
@@ -50,8 +49,6 @@ namespace WinformPasswordVault
             {
                 myVault.Load();
                 BindGrid();
-
-                RegisterHotKey(Handle, HOTKEY_ID_SAVE, HOTKEY_MODIFIER_CTRL, Keys.S.GetHashCode());
             }
             catch (Exception except)
             {
@@ -82,7 +79,6 @@ namespace WinformPasswordVault
                         this.Text = this.Text.TrimEnd('*');
                     }
                 }
-                UnregisterHotKey(Handle, HOTKEY_ID_SAVE);
                 poisonGridVault.DataSource = null;
                 myVault.ListChanged -= MyVault_ListChanged;
                 myVault.Clear();
@@ -95,35 +91,18 @@ namespace WinformPasswordVault
         }
         #endregion
 
-        #region Hotkey
-        [DllImport("user32.dll")]
-        public static extern bool RegisterHotKey(IntPtr hWnd, int id, int fsModifiers, int vlc);
-
-        [DllImport("user32.dll")]
-        public static extern bool UnregisterHotKey(IntPtr hWnd, int id);
-
-        const int HOTKEY_ID_SAVE = 1;
-
-        const int HOTKEY_MODIFIER_CTRL = 2;
-
-        protected override void WndProc(ref Message m)
+        #region Hotkey / shortcut
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
-            try
+            KeyEventArgs e = new KeyEventArgs(keyData);
+            if (e.Control && e.KeyCode == Keys.S)
             {
-                if (m.Msg == 0x0312)
-                {
-                    switch (m.WParam.ToInt32())
-                    {
-                        case HOTKEY_ID_SAVE: buttonSave_Click(materialButtonSave, null); break;
-                    }
-                }
+                buttonSave_Click(materialButtonSave, null);
+                return true;
+            }
 
-                base.WndProc(ref m);
-            }
-            catch (Exception except)
-            {
-                LogManager.GetLogger(nameof(WinformPasswordVault)).Fatal(except.ToString());
-            }
+            return base.ProcessCmdKey(ref msg, keyData);
+
         }
         #endregion
 
