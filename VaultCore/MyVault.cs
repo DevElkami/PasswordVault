@@ -17,6 +17,11 @@ public class MyVault : BindingList<MyPassword>
     /// Vault key (encrypted)
     /// </summary>
     private String vaultKey = "mykey";
+
+    /// <summary>
+    /// Data unlock
+    /// </summary>
+    private bool unlock = false;
     #endregion
 
     #region Path management
@@ -84,7 +89,8 @@ public class MyVault : BindingList<MyPassword>
 
         Thread.Sleep(500);
         vaultKey = Security.GetHash(key);
-        return Security.Encrypt(vaultKey, Security.GetHash(nameof(VaultCore) + nameof(Security))) == File.ReadAllText(GetVaultPathKey());
+        unlock = Security.Encrypt(vaultKey, Security.GetHash(nameof(VaultCore) + nameof(Security))) == File.ReadAllText(GetVaultPathKey());
+        return IsUnlock();
     }
 
     /// <summary>
@@ -94,6 +100,15 @@ public class MyVault : BindingList<MyPassword>
     public bool IsInitialized()
     {
         return File.Exists(GetVaultPathKey());
+    }
+
+    /// <summary>
+    /// Check if vault is unlock
+    /// </summary>
+    /// <returns></returns>
+    public bool IsUnlock()
+    {
+        return unlock;
     }
 
     /// <summary>

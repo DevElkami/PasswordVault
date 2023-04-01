@@ -1,4 +1,5 @@
-﻿using MauiPasswordVault.View;
+﻿using MauiPasswordVault.Service;
+using MauiPasswordVault.View;
 using MauiPasswordVault.ViewModel;
 using Microsoft.Extensions.Logging;
 using VaultCore;
@@ -22,6 +23,7 @@ public static class MauiProgram
             });
         
         builder.Services.AddSingleton<MyVault>();
+        builder.Services.AddSingleton<NavigationService, NavigationService>();
 
         builder.Services.AddTransient<InitPage>();
         builder.Services.AddTransient<InitViewModel>();
