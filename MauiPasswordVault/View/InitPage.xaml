@@ -34,7 +34,7 @@
                 FontSize="18"
                 VerticalOptions="Center" />
 
-                <Editor AutoSize="Disabled" MinimumWidthRequest="50"></Editor>
+                <Editor Text="{Binding NewVaultKey}" AutoSize="Disabled" MinimumWidthRequest="80"></Editor>
 
             </HorizontalStackLayout>
 

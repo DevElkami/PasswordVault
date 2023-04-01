@@ -1,14 +1,15 @@
 ﻿using MauiPasswordVault.Service;
-using System.ComponentModel;
 using System.Windows.Input;
 using VaultCore;
 
 namespace MauiPasswordVault.ViewModel;
 
-public class InitViewModel : INotifyPropertyChanged
+public class InitViewModel
 {
     private readonly NavigationService navigationService;
     private readonly MyVault vault;
+    private String newKey = null!;
+
     public InitViewModel(NavigationService navigationService, MyVault vault)
     {
         this.navigationService = navigationService;
@@ -17,17 +18,26 @@ public class InitViewModel : INotifyPropertyChanged
         InitCommand = new Command(
             execute: () =>
             {
-                /*PersonEdit = new PersonViewModel();
-                PersonEdit.PropertyChanged += OnPersonEditPropertyChanged;
-                IsEditing = true;
-                RefreshCanExecutes();*/
+                if(vault.Initialize(NewVaultKey))
+                    navigationService.NavigateBack(); 
+                /*else              TODO                      
+                    Toast.Make("Error: can't initialize app", ToastDuration.Short, 14).Show(new CancellationTokenSource().Token);  */              
             },
             canExecute: () =>
             {
-                return true;// !IsEditing;
+                return !String.IsNullOrEmpty(NewVaultKey) && (NewVaultKey.Length > 5);
             });
     }
-    public event PropertyChangedEventHandler PropertyChanged = null!;
 
-    public ICommand InitCommand { private set; get; }    
+    public String NewVaultKey
+    {
+        get { return newKey; }
+        set
+        {
+            newKey = value;
+            (InitCommand as Command)?.ChangeCanExecute();
+        }
+    }
+
+    public ICommand InitCommand { private set; get; }
 }
