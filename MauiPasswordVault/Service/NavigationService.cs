@@ -9,7 +9,7 @@ public class NavigationService
     public NavigationService(IServiceProvider services)
     {
         this.services = services;
-    }
+    }    
 
     public Task NavigateToPage<T>() where T : Page
     {

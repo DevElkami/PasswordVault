@@ -21,9 +21,10 @@ public static class MauiProgram
                 fonts.AddFont("AwesomeRegular.otf", "AwesomeRegular");
                 fonts.AddFont("AwesomeSolid.otf", "AwesomeSolid");
             });
-        
+
         builder.Services.AddSingleton<MyVault>();
-        builder.Services.AddSingleton<NavigationService, NavigationService>();
+        builder.Services.AddSingleton<NavigationService>();
+        builder.Services.AddSingleton<ErrorService>();
 
         builder.Services.AddTransient<InitPage>();
         builder.Services.AddTransient<InitViewModel>();
@@ -33,6 +34,9 @@ public static class MauiProgram
 
         builder.Services.AddTransient<SearchPage>();
         builder.Services.AddTransient<SearchViewModel>();
+
+        builder.Services.AddTransient<ErrorPage>();
+        builder.Services.AddTransient<ErrorViewModel>();
 #if DEBUG
         builder.Logging.AddDebug();
 #endif

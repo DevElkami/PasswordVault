@@ -45,8 +45,7 @@
                 FontSize="18"
                 HorizontalOptions="Center" />
 
-            <Button
-                x:Name="CounterBtn"
+            <Button                
                 Text="Click me"
                 SemanticProperties.Hint="Initialize Vault"
                 Command="{Binding InitCommand}"
