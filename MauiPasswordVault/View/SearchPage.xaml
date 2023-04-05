@@ -8,5 +8,7 @@
             Text="Search"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+
+        <ListView ItemsSource="{Binding Vault}" />
     </VerticalStackLayout>
 </ContentPage>
