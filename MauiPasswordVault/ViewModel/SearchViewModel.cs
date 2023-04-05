@@ -1,9 +1,8 @@
-﻿using System.ComponentModel;
-using VaultCore;
+﻿using VaultCore;
 
 namespace MauiPasswordVault.ViewModel;
 
-public class SearchViewModel : INotifyPropertyChanged
+public class SearchViewModel
 {
     private readonly MyVault vault;
     public SearchViewModel(MyVault vault)
@@ -13,6 +12,4 @@ public class SearchViewModel : INotifyPropertyChanged
 
     public bool IsInitialized() => vault.IsInitialized();
     public bool IsUnlock() => vault.IsUnlock();
-
-    public event PropertyChangedEventHandler PropertyChanged = null!;
 }

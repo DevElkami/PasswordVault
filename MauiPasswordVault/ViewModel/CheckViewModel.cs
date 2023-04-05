@@ -1,4 +1,5 @@
 ﻿using MauiPasswordVault.Service;
+using MauiPasswordVault.View;
 using System.Windows.Input;
 using VaultCore;
 
@@ -7,25 +8,53 @@ namespace MauiPasswordVault.ViewModel;
 public class CheckViewModel
 {
     private readonly NavigationService navigationService;
+    private readonly ErrorService errorService;
     private readonly MyVault vault;
     private String vaultKey = null!;
 
-    public CheckViewModel(NavigationService navigationService, MyVault vault)
+    public CheckViewModel(NavigationService navigationService, ErrorService errorService, MyVault vault)
     {
         this.navigationService = navigationService;
         this.vault = vault;
+        this.errorService = errorService;
 
         CheckCommand = new Command(
             execute: () =>
             {
-                if(vault.CheckVaultKey(VaultKey))
-                    navigationService.NavigateBack();
-                /*else TODO
-                    Toast.Make("Bad passord", ToastDuration.Short, 14).Show(new CancellationTokenSource().Token);*/
+                try
+                {
+                    if (vault.CheckVaultKey(VaultKey))
+                        this.navigationService.NavigateBack();
+                    else
+                    {
+                        this.errorService.LastErrorMessage = "Bad password vault";
+                        this.errorService.CriticalError = false;
+                        this.navigationService.NavigateToPage<ErrorPage>();
+                    }
+                }
+                catch (Exception exception)
+                {
+                    this.errorService.LastErrorMessage = exception.Message;
+                    this.errorService.LastErrorFull = exception.ToString();
+                    this.errorService.CriticalError = true;
+                    this.navigationService.NavigateToPage<ErrorPage>();
+                }
             },
             canExecute: () =>
             {
-                return !String.IsNullOrEmpty(VaultKey) && (VaultKey.Length > 5);
+                try
+                {
+                    return !String.IsNullOrEmpty(VaultKey) && (VaultKey.Length > 5);
+                }
+                catch (Exception exception)
+                {
+                    this.errorService.LastErrorMessage = exception.Message;
+                    this.errorService.LastErrorFull = exception.ToString();
+                    this.errorService.CriticalError = true;
+                    this.navigationService.NavigateToPage<ErrorPage>();
+                }
+
+                return false;
             });
     }
 

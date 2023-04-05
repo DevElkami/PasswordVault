@@ -8,8 +8,8 @@ namespace MauiPasswordVault.ViewModel;
 public class InitViewModel
 {
     private readonly NavigationService navigationService;
-    private readonly MyVault vault;
     private readonly ErrorService errorService;
+    private readonly MyVault vault;
     private String newKey = null!;
 
     public InitViewModel(NavigationService navigationService, ErrorService errorService, MyVault vault)
@@ -32,7 +32,7 @@ public class InitViewModel
                         this.navigationService.NavigateToPage<ErrorPage>();
                     }
                 }
-                catch(Exception exception)
+                catch (Exception exception)
                 {
                     this.errorService.LastErrorMessage = exception.Message;
                     this.errorService.LastErrorFull = exception.ToString();
@@ -42,7 +42,19 @@ public class InitViewModel
             },
             canExecute: () =>
             {
-                return !String.IsNullOrEmpty(NewVaultKey) && (NewVaultKey.Length > 5);
+                try
+                {
+                    return !String.IsNullOrEmpty(NewVaultKey) && (NewVaultKey.Length > 5);
+                }
+                catch (Exception exception)
+                {
+                    this.errorService.LastErrorMessage = exception.Message;
+                    this.errorService.LastErrorFull = exception.ToString();
+                    this.errorService.CriticalError = true;
+                    this.navigationService.NavigateToPage<ErrorPage>();
+                }
+
+                return false;
             });
     }
 
