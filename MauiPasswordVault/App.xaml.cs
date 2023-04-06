@@ -6,9 +6,12 @@ namespace MauiPasswordVault
     {
         public App(SearchPage searchPage)
         {
+            if (Application.Current != null)
+                Application.Current.UserAppTheme = AppTheme.Dark;
+
             InitializeComponent();
 
-            MainPage = new NavigationPage(searchPage);            
+            MainPage = new NavigationPage(searchPage);
         }
     }
 }

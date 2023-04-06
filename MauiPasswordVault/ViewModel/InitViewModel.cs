@@ -11,6 +11,7 @@ public class InitViewModel
     private readonly ErrorService errorService;
     private readonly MyVault vault;
     private String newKey = null!;
+    private String chkKey = null!;
 
     public InitViewModel(NavigationService navigationService, ErrorService errorService, MyVault vault)
     {
@@ -44,7 +45,7 @@ public class InitViewModel
             {
                 try
                 {
-                    return !String.IsNullOrEmpty(NewVaultKey) && (NewVaultKey.Length > 5);
+                    return (!String.IsNullOrEmpty(NewVaultKey) && (NewVaultKey.Length > 5) && (ChkVaultKey == NewVaultKey));
                 }
                 catch (Exception exception)
                 {
@@ -64,6 +65,16 @@ public class InitViewModel
         set
         {
             newKey = value;
+            (InitCommand as Command)?.ChangeCanExecute();
+        }
+    }
+
+    public String ChkVaultKey
+    {
+        get { return chkKey; }
+        set
+        {
+            chkKey = value;
             (InitCommand as Command)?.ChangeCanExecute();
         }
     }
