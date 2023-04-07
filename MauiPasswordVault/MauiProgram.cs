@@ -1,4 +1,5 @@
-﻿using MauiPasswordVault.View;
+﻿using MauiPasswordVault.Service;
+using MauiPasswordVault.View;
 using MauiPasswordVault.ViewModel;
 using Microsoft.Extensions.Logging;
 using VaultCore;
@@ -11,7 +12,7 @@ public static class MauiProgram
     {
         var builder = MauiApp.CreateBuilder();
         builder
-            .UseMauiApp<App>()                
+            .UseMauiApp<App>()
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -20,8 +21,10 @@ public static class MauiProgram
                 fonts.AddFont("AwesomeRegular.otf", "AwesomeRegular");
                 fonts.AddFont("AwesomeSolid.otf", "AwesomeSolid");
             });
-        
+
         builder.Services.AddSingleton<MyVault>();
+        builder.Services.AddSingleton<NavigationService>();
+        builder.Services.AddSingleton<ErrorService>();
 
         builder.Services.AddTransient<InitPage>();
         builder.Services.AddTransient<InitViewModel>();
@@ -31,6 +34,9 @@ public static class MauiProgram
 
         builder.Services.AddTransient<SearchPage>();
         builder.Services.AddTransient<SearchViewModel>();
+
+        builder.Services.AddTransient<ErrorPage>();
+        builder.Services.AddTransient<ErrorViewModel>();
 #if DEBUG
         builder.Logging.AddDebug();
 #endif

@@ -1,12 +1,17 @@
-﻿namespace MauiPasswordVault
+﻿using MauiPasswordVault.View;
+
+namespace MauiPasswordVault
 {
     public partial class App : Application
     {
-        public App()
+        public App(SearchPage searchPage)
         {
+            if (Application.Current != null)
+                Application.Current.UserAppTheme = AppTheme.Dark;
+
             InitializeComponent();
 
-            MainPage = new AppShell();
+            MainPage = new NavigationPage(searchPage);
         }
     }
 }

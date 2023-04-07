@@ -4,10 +4,54 @@
              x:Class="MauiPasswordVault.View.CheckPage"             
              Title="Your password">
 
-    <VerticalStackLayout>
-        <Label 
-            Text="Check page"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image
+                Source="logo.png"
+                SemanticProperties.Description="Password vault logo"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Password vault check"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <HorizontalStackLayout 
+                Spacing="25"
+                Padding="30,0"
+                HorizontalOptions="Center">
+
+                <Label
+                Text="Check page"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                VerticalOptions="Center" />
+
+                <Editor Text="{Binding VaultKey}" AutoSize="Disabled" MinimumWidthRequest="80"></Editor>
+
+            </HorizontalStackLayout>
+
+            <Label
+                Text="Check page"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Click me"
+                SemanticProperties.Hint="Initialize Vault"
+                Command="{Binding CheckCommand}"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

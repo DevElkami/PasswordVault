@@ -1,21 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using VaultCore;
+﻿using VaultCore;
 
-namespace MauiPasswordVault.ViewModel
+namespace MauiPasswordVault.ViewModel;
+
+public class SearchViewModel
 {
-    public class SearchViewModel : INotifyPropertyChanged
+    private readonly MyVault vault;
+    public SearchViewModel(MyVault vault)
     {
-        private readonly MyVault vault;
-        public SearchViewModel(MyVault vault)
-        {
-            this.vault = vault;
-        }
+        this.vault = vault;
+    }
 
-        public event PropertyChangedEventHandler PropertyChanged;
+    public MyVault Vault { get => vault; }
+
+    public bool IsInitialized() => vault.IsInitialized();
+    public bool IsUnlock() => vault.IsUnlock();
+    public void Load()
+    {
+        vault.Load();
+#if DEBUG
+        if(vault.Count == 0)
+            vault.Add(new VaultCore.Models.MyPassword());
+#endif
     }
 }

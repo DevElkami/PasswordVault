@@ -11,45 +11,22 @@
             VerticalOptions="Center">
 
             <Image
-                Source="logo.png"
-                SemanticProperties.Description="Password vault logo"
+                Source="logo.png"               
                 HeightRequest="200"
                 HorizontalOptions="Center" />
 
             <Label
-                Text="Password vault initialize"
-                SemanticProperties.HeadingLevel="Level1"
+                Text="Password vault initialize"                
                 FontSize="32"
                 HorizontalOptions="Center" />
 
-            <HorizontalStackLayout 
-                Spacing="25"
-                Padding="30,0"
-                HorizontalOptions="Center">
-
-                <Label
-                Text="Init page"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                VerticalOptions="Center" />
-
-                <Editor AutoSize="Disabled" MinimumWidthRequest="50"></Editor>
-
-            </HorizontalStackLayout>
-
-            <Label
-                Text="Init page"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
-
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
+            <Editor Placeholder="Your password"  Text="{Binding NewVaultKey}" AutoSize="Disabled" MaxLength="20" MinimumWidthRequest="80" MaximumWidthRequest="200"></Editor>
+            <Editor Placeholder="Confirm it" Text="{Binding ChkVaultKey}" AutoSize="Disabled" MaxLength="20" MinimumWidthRequest="80" MaximumWidthRequest="200"></Editor>
+           
+            <Button       
+                MinimumWidthRequest="120"                
+                Text="Initialize"               
+                Command="{Binding InitCommand}"
                 HorizontalOptions="Center" />
 
         </VerticalStackLayout>
