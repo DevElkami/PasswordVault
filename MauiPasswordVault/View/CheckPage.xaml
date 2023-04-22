@@ -8,47 +8,23 @@
         <VerticalStackLayout
             Spacing="25"
             Padding="30,0"
-            VerticalOptions="Center">
+            VerticalOptions="FillAndExpand">
 
             <Image
                 Source="logo.png"
-                SemanticProperties.Description="Password vault logo"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
+                HeightRequest="100"
+                HorizontalOptions="Start" />
 
             <Label
-                Text="Password vault check"
-                SemanticProperties.HeadingLevel="Level1"
+                Text="Check"
                 FontSize="32"
                 HorizontalOptions="Center" />
 
-            <HorizontalStackLayout 
-                Spacing="25"
-                Padding="30,0"
-                HorizontalOptions="Center">
+            <Entry Placeholder="Password" Text="{Binding VaultKey}" MaxLength="20" IsPassword="True" MinimumWidthRequest="80" MaximumWidthRequest="200"></Entry>
 
-                <Label
-                Text="Check page"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                VerticalOptions="Center" />
-
-                <Editor Text="{Binding VaultKey}" AutoSize="Disabled" MinimumWidthRequest="80"></Editor>
-
-            </HorizontalStackLayout>
-
-            <Label
-                Text="Check page"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
-
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Initialize Vault"
+            <Button       
+                MinimumWidthRequest="120"                
+                Text="Check"               
                 Command="{Binding CheckCommand}"
                 HorizontalOptions="Center" />
 

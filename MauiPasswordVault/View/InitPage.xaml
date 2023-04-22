@@ -4,25 +4,25 @@
              xmlns:models="clr-namespace:MauiPasswordVault.ViewModel"                     
              x:Class="MauiPasswordVault.View.InitPage">
 
-    <ScrollView>
+    <ScrollView HorizontalOptions="Fill" VerticalOptions="Fill">
         <VerticalStackLayout
             Spacing="25"
             Padding="30,0"
-            VerticalOptions="Center">
+            VerticalOptions="FillAndExpand">
 
             <Image
-                Source="logo.png"               
-                HeightRequest="200"
-                HorizontalOptions="Center" />
+                Source="logo.png"
+                HeightRequest="100"
+                HorizontalOptions="Start" />
 
             <Label
-                Text="Password vault initialize"                
+                Text="Initialize"
                 FontSize="32"
                 HorizontalOptions="Center" />
 
-            <Editor Placeholder="Your password"  Text="{Binding NewVaultKey}" AutoSize="Disabled" MaxLength="20" MinimumWidthRequest="80" MaximumWidthRequest="200"></Editor>
-            <Editor Placeholder="Confirm it" Text="{Binding ChkVaultKey}" AutoSize="Disabled" MaxLength="20" MinimumWidthRequest="80" MaximumWidthRequest="200"></Editor>
-           
+            <Entry Placeholder="Your password"  Text="{Binding NewVaultKey}" MaxLength="20" IsPassword="True"  MinimumWidthRequest="80" MaximumWidthRequest="200"></Entry>
+            <Entry Placeholder="Confirm it" Text="{Binding ChkVaultKey}" MaxLength="20" IsPassword="True" MinimumWidthRequest="80" MaximumWidthRequest="200"></Entry>
+
             <Button       
                 MinimumWidthRequest="120"                
                 Text="Initialize"               
