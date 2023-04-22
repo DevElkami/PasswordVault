@@ -3,22 +3,28 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiPasswordVault.View.ErrorPage"
              Title="ErrorPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Error page"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+    <ScrollView HorizontalOptions="Fill" VerticalOptions="Fill">
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,30"
+            VerticalOptions="FillAndExpand">
 
-        <Label
+            <Image
+                Source="logo.png"
+                HeightRequest="100"
+                HorizontalOptions="Start" />
+
+            <Label
                 Text="{Binding LastErrorMessage}"
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="32"
                 HorizontalOptions="Center" />
-        
-        <Button                
-                Text="Click me"
-                SemanticProperties.Hint="Error page"
+
+            <Button                
+                Text="Next"
+                MinimumWidthRequest="120"
                 Command="{Binding AcceptCommand}"
                 HorizontalOptions="Center" />
-    </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
