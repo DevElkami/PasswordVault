@@ -28,7 +28,20 @@
                 </VerticalStackLayout>
             </Border>
 
-            <ListView ItemsSource="{Binding Vault}" />
+            <ListView ItemsSource="{Binding Vault}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <HorizontalStackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                <Label Text="{Binding UserName}" FontAttributes="Bold" TextColor="White" />
+                                <Label Text="{Binding Data}" FontAttributes="Bold" TextColor="White" HorizontalOptions="FillAndExpand" />
+                                <Label Text="{Binding Password}" FontAttributes="Bold" TextColor="White" />
+                                <Label Text="{Binding Keyword}" FontAttributes="Bold" TextColor="White" />
+                            </HorizontalStackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
