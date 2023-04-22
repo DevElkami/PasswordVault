@@ -3,12 +3,32 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiPasswordVault.View.SearchPage"
              Title="Password vault">
-    <VerticalStackLayout>
-        <Label 
-            Text="Search"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
 
-        <ListView ItemsSource="{Binding Vault}" />
-    </VerticalStackLayout>
+    <ScrollView HorizontalOptions="Fill" VerticalOptions="Fill">
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,30"
+            VerticalOptions="FillAndExpand">
+
+            <Image
+                Source="logo.png"
+                HeightRequest="100"
+                HorizontalOptions="Start" />
+
+            <Border Stroke="#A265BE" StrokeThickness="4" HorizontalOptions="FillAndExpand">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10" />
+                </Border.StrokeShape>
+                <VerticalStackLayout Spacing="25" Padding="30,30" VerticalOptions="FillAndExpand">
+                    <Entry Placeholder="Url to update from web" Text="{Binding PasswordUrl}" MaxLength="20" MinimumWidthRequest="80"></Entry>
+
+                    <ProgressBar x:Name="DataDownload" IsVisible="false" Progress="0.5" />
+
+                    <Button MinimumWidthRequest="120" Text="Update" Command="{Binding UpdateCommand}" HorizontalOptions="Center" />
+                </VerticalStackLayout>
+            </Border>
+
+            <ListView ItemsSource="{Binding Vault}" />
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

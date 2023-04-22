@@ -7,7 +7,7 @@
     <ScrollView>
         <VerticalStackLayout
             Spacing="25"
-            Padding="30,0"
+            Padding="30,30"
             VerticalOptions="FillAndExpand">
 
             <Image

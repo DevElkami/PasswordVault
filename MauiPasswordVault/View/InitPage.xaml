@@ -7,7 +7,7 @@
     <ScrollView HorizontalOptions="Fill" VerticalOptions="Fill">
         <VerticalStackLayout
             Spacing="25"
-            Padding="30,0"
+            Padding="30,30"
             VerticalOptions="FillAndExpand">
 
             <Image
@@ -23,9 +23,9 @@
             <Entry Placeholder="Your password"  Text="{Binding NewVaultKey}" MaxLength="20" IsPassword="True"  MinimumWidthRequest="80" MaximumWidthRequest="200"></Entry>
             <Entry Placeholder="Confirm it" Text="{Binding ChkVaultKey}" MaxLength="20" IsPassword="True" MinimumWidthRequest="80" MaximumWidthRequest="200"></Entry>
 
-            <Button       
-                MinimumWidthRequest="120"                
-                Text="Initialize"               
+            <Button
+                MinimumWidthRequest="120"
+                Text="Initialize"
                 Command="{Binding InitCommand}"
                 HorizontalOptions="Center" />
 
