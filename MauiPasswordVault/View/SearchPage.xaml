@@ -20,9 +20,9 @@
                     <RoundRectangle CornerRadius="10" />
                 </Border.StrokeShape>
                 <VerticalStackLayout Spacing="25" Padding="30,30" VerticalOptions="FillAndExpand">
-                    <Entry Placeholder="Url to update from web" Text="{Binding PasswordUrl}" MaxLength="20" MinimumWidthRequest="80"></Entry>
+                    <Entry Placeholder="Url to update from web" Text="{Binding Url}" MinimumWidthRequest="80"></Entry>
 
-                    <ProgressBar x:Name="DataDownload" IsVisible="false" Progress="0.5" />
+                    <ProgressBar IsVisible="{Binding InProgress}" Progress="{Binding Progress}" />
 
                     <Button MinimumWidthRequest="120" Text="Update" Command="{Binding UpdateCommand}" HorizontalOptions="Center" />
                 </VerticalStackLayout>

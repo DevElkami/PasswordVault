@@ -183,6 +183,20 @@ public class MyVault : BindingList<MyPassword>
             }
         }
     }
+
+    /// <summary>
+    /// Download file from internet
+    /// </summary>
+    public void Download(String url)
+    {
+        using (var client = new HttpClient())
+        {
+            var response = client.GetByteArrayAsync(url).Result;
+            File.WriteAllBytes(GetVaultPathData(), response);
+        }
+
+        Load();
+    }
     #endregion
 }
 
