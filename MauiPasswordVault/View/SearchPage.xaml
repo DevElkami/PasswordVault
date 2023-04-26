@@ -28,16 +28,20 @@
                 </VerticalStackLayout>
             </Border>
 
-            <ListView ItemsSource="{Binding Vault}">
+            <ListView ItemsSource="{Binding Vault}" SeparatorVisibility="Default" SeparatorColor="#A265BE">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <HorizontalStackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                                <Label Text="{Binding UserName}" FontAttributes="Bold" TextColor="White" />
-                                <Label Text="{Binding Data}" FontAttributes="Bold" TextColor="White" HorizontalOptions="FillAndExpand" />
-                                <Label Text="{Binding Password}" FontAttributes="Bold" TextColor="White" />
-                                <Label Text="{Binding Keyword}" FontAttributes="Bold" TextColor="White" />
-                            </HorizontalStackLayout>
+                            <Border Margin="5" Stroke="#A265BE" StrokeThickness="1" HorizontalOptions="FillAndExpand">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="10" />
+                                </Border.StrokeShape>
+                                <Grid Margin="10" RowSpacing="6" ColumnSpacing="6" RowDefinitions="*" ColumnDefinitions="1*, 1*, 3*">
+                                    <Label Grid.Column="0" HorizontalOptions="Start" Text="{Binding UserName}" FontAttributes="Bold" TextColor="White" />
+                                    <Label Grid.Column="1" HorizontalOptions="Start" Text="{Binding Password}" FontAttributes="Bold" TextColor="White" />
+                                    <Label Grid.Column="2" HorizontalOptions="Start" Text="{Binding Data}" FontAttributes="Bold" TextColor="White"/>
+                                </Grid>
+                            </Border>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
