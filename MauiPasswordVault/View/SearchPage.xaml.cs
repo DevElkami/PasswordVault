@@ -26,9 +26,6 @@ public partial class SearchPage : ContentPage
 
             if (isInitialized && !((SearchViewModel)BindingContext).IsUnlock())
                 await navigationService.NavigateToPage<CheckPage>();
-
-            if (isInitialized && ((SearchViewModel)BindingContext).IsUnlock())
-                ((SearchViewModel)BindingContext).Load();
         }
         catch (Exception exception)
         {
