@@ -35,4 +35,11 @@ public partial class SearchPage : ContentPage
             await this.navigationService.NavigateToPage<ErrorPage>();
         }
     }
+
+    private void ContentPage_Loaded(object sender, EventArgs e)
+    {
+#pragma warning disable CS4014 // Dans la mesure où cet appel n'est pas attendu, l'exécution de la méthode actuelle continue avant la fin de l'appel
+        ((SearchViewModel)BindingContext).LoadAsync();
+#pragma warning restore CS4014 // Dans la mesure où cet appel n'est pas attendu, l'exécution de la méthode actuelle continue avant la fin de l'appel
+    }
 }

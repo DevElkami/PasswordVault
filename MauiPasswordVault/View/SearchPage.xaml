@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiPasswordVault.View.SearchPage"
-             Title="Password vault">
+             Title="Password vault"             
+             Loaded="ContentPage_Loaded">
 
     <ScrollView HorizontalOptions="Fill" VerticalOptions="Fill">
 
@@ -11,10 +12,10 @@
             Padding="30,30"
             VerticalOptions="FillAndExpand">
 
-            <Image
-                Source="logo.png"
-                HeightRequest="100"
-                HorizontalOptions="Start" />
+            <Image        
+            Source="logo.png"
+            HeightRequest="100"
+            HorizontalOptions="Start"/>
 
             <ActivityIndicator Color="#A265BE" IsRunning="{Binding InProgress}" MinimumHeightRequest="80" MinimumWidthRequest="80" />
 
@@ -29,28 +30,28 @@
                 </VerticalStackLayout>
             </Border>
 
-            <Entry IsVisible="{Binding InProgress, Mode=TwoWay}" Placeholder="Search" Text="{Binding SearchEntry}" ReturnType="Search" ReturnCommand="{Binding SearchCommand}"  MinimumWidthRequest="40" HorizontalOptions="Center"></Entry>
+            <Entry Placeholder="Search" Text="{Binding SearchEntry}" ReturnType="Search" ReturnCommand="{Binding SearchCommand}"  MinimumWidthRequest="40" HorizontalOptions="Center"></Entry>
+            <Button MinimumWidthRequest="120" Text="Load" Command="{Binding LoadCommand}" HorizontalOptions="Center" />
+            <ActivityIndicator Color="#A265BE" IsRunning="{Binding IsLoading}" MinimumHeightRequest="80" MinimumWidthRequest="80" />
 
-            <RefreshView RefreshColor="#A265BE" IsRefreshing="{Binding IsRefreshing}" Command="{Binding RefreshCommand}">
-                <ListView Header="Passwords" ItemsSource="{Binding Vault}" SeparatorVisibility="Default" SeparatorColor="#A265BE">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <Border Margin="5" Stroke="#A265BE" StrokeThickness="1" HorizontalOptions="FillAndExpand">
-                                    <Border.StrokeShape>
-                                        <RoundRectangle CornerRadius="10" />
-                                    </Border.StrokeShape>
-                                    <Grid Margin="10" RowSpacing="6" ColumnSpacing="6" RowDefinitions="*" ColumnDefinitions="1*, 1*, 3*">
-                                        <Label Grid.Column="0" HorizontalOptions="Start" Text="{Binding UserName}" FontAttributes="Bold" TextColor="White" />
-                                        <Label Grid.Column="1" HorizontalOptions="Start" Text="{Binding Password}" FontAttributes="Bold" TextColor="White" />
-                                        <Label Grid.Column="2" HorizontalOptions="Start" Text="{Binding Data}" FontAttributes="Bold" TextColor="White"/>
-                                    </Grid>
-                                </Border>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-            </RefreshView>
+            <ListView ItemsSource="{Binding Vault}" SeparatorVisibility="Default" SeparatorColor="#A265BE">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Border Margin="5" Stroke="#A265BE" StrokeThickness="1" HorizontalOptions="FillAndExpand">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="10" />
+                                </Border.StrokeShape>
+                                <Grid Margin="10" RowSpacing="6" ColumnSpacing="6" RowDefinitions="*" ColumnDefinitions="1*, 1*, 3*">
+                                    <Label Grid.Column="0" HorizontalOptions="Start" Text="{Binding UserName}" FontAttributes="Bold" TextColor="White" />
+                                    <Label Grid.Column="1" HorizontalOptions="Start" Text="{Binding Password}" FontAttributes="Bold" TextColor="White" />
+                                    <Label Grid.Column="2" HorizontalOptions="Start" Text="{Binding Data}" FontAttributes="Bold" TextColor="White"/>
+                                </Grid>
+                            </Border>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

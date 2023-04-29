@@ -9,18 +9,19 @@ namespace MauiPasswordVault.ViewModel;
 
 public partial class SearchViewModel : INotifyPropertyChanged
 {
-    public const String URL = "UPDATE_URL";
     #region Private data
+    private const String URL = "UPDATE_URL";
     private readonly NavigationService navigationService;
     private readonly ErrorService errorService;
     private readonly MyVault vault;
     private String url = Preferences.Default.Get(SearchViewModel.URL, "");
     private bool inProgress = false;
+    private bool isLoading = false;
     #endregion
 
     #region Command
     [RelayCommand(FlowExceptionsToTaskScheduler = true, CanExecute = nameof(CanUpdate))]
-    private async Task UpdateAsync(CancellationToken token)
+    public async Task UpdateAsync()
     {
         try
         {
@@ -57,6 +58,27 @@ public partial class SearchViewModel : INotifyPropertyChanged
 
         return false;
     }
+
+    [RelayCommand(FlowExceptionsToTaskScheduler = true)]
+    public async Task LoadAsync()
+    {
+        try
+        {
+            IsLoading = true;
+            await Task.Factory.StartNew(() => vault.Load());
+        }
+        catch (Exception exception)
+        {
+            this.errorService.LastErrorMessage = exception.Message;
+            this.errorService.LastErrorFull = exception.ToString();
+            this.errorService.CriticalError = true;
+            this.navigationService.NavigateToPage<ErrorPage>();
+        }
+        finally
+        {
+            IsLoading = false;
+        }
+    }
     #endregion
 
     #region Properties
@@ -66,7 +88,7 @@ public partial class SearchViewModel : INotifyPropertyChanged
         set
         {
             url = value;
-            (UpdateCommand as Command)?.ChangeCanExecute();
+            (SearchCommand as Command)?.ChangeCanExecute();
         }
     }
 
@@ -80,10 +102,18 @@ public partial class SearchViewModel : INotifyPropertyChanged
         }
     }
 
-    public bool IsRefreshing { get; set; } = false;
+    public bool IsLoading
+    {
+        get => isLoading;
+        set
+        {
+            isLoading = value;
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(IsLoading)));
+        }
+    }
+
     public String SearchEntry { get; set; } = null!;
 
-    public ICommand RefreshCommand { private set; get; }
     public ICommand SearchCommand { private set; get; }
 
     public MyVault Vault { get => vault; }
@@ -97,39 +127,13 @@ public partial class SearchViewModel : INotifyPropertyChanged
         this.errorService = errorService;
         this.vault = vault;
 
-        RefreshCommand = new Command(
-            execute: () =>
-            {
-                try
-                {
-                    IsRefreshing = true;
-                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(IsRefreshing)));
-                    vault.Load();
-                    IsRefreshing = false;
-                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(IsRefreshing)));
-                }
-                catch (Exception exception)
-                {
-                    this.errorService.LastErrorMessage = exception.Message;
-                    this.errorService.LastErrorFull = exception.ToString();
-                    this.errorService.CriticalError = true;
-                    this.navigationService.NavigateToPage<ErrorPage>();
-                }
-                finally
-                {
-                    IsRefreshing = false;
-                }
-            });
-
         SearchCommand = new Command(
             execute: () =>
             {
                 try
                 {
                     InProgress = true;
-                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(InProgress)));
-                    Thread.Sleep(2000);
-                    vault.Load();
+                    //...
                     InProgress = false;
                     PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(InProgress)));
                 }
