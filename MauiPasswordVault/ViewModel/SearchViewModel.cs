@@ -1,9 +1,10 @@
 ﻿using CommunityToolkit.Mvvm.Input;
 using MauiPasswordVault.Service;
 using MauiPasswordVault.View;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Windows.Input;
 using VaultCore;
+using VaultCore.Models;
 
 namespace MauiPasswordVault.ViewModel;
 
@@ -20,6 +21,7 @@ public partial class SearchViewModel : INotifyPropertyChanged
 
     #region Private data
     private const String URL = "UPDATE_URL";
+    private readonly object vaultLock = new object();
     private readonly NavigationService navigationService;
     private readonly ErrorService errorService;
     private readonly MyVault vault;
@@ -27,6 +29,7 @@ public partial class SearchViewModel : INotifyPropertyChanged
     private bool inProgress = false;
     private bool isLoading = false;
     private String searchEntry = "";
+    private ObservableCollection<MyPassword> passwords = new ObservableCollection<MyPassword>();
     #endregion
 
     #region Command
@@ -37,7 +40,13 @@ public partial class SearchViewModel : INotifyPropertyChanged
         {
             InProgress = true;
             Preferences.Default.Set(URL, url);
-            await Task.Factory.StartNew(() => vault.Download(url));
+            await Task.Factory.StartNew(() =>
+            {
+                lock (vaultLock)
+                {
+                    vault.Download(url);
+                }
+            });
         }
         catch (Exception exception)
         {
@@ -75,11 +84,13 @@ public partial class SearchViewModel : INotifyPropertyChanged
         try
         {
             IsLoading = true;
-            await Task.Factory.StartNew(() => vault.Load());
-#if DEBUG
-            // Quick help for debug
-            SearchEntry = vault.Count.ToString();
-#endif
+            await Task.Factory.StartNew(() =>
+            {
+                lock (vaultLock)
+                {
+                    vault.Load();
+                }
+            });
         }
         catch (Exception exception)
         {
@@ -100,7 +111,23 @@ public partial class SearchViewModel : INotifyPropertyChanged
         try
         {
             IsLoading = true;
-            await Task.Factory.StartNew(() => /*To do*/Thread.Sleep(2000));
+            await Task.Factory.StartNew(() =>
+            {
+                ObservableCollection<MyPassword> results = new ObservableCollection<MyPassword>();
+
+                lock (vaultLock)
+                {
+                    foreach (MyPassword myPassword in vault)
+                    {
+                        if (myPassword.ToStr().Contains(searchEntry))
+                            results.Add(myPassword);
+                    }
+                }
+
+                Passwords = results;
+
+                Thread.Sleep(2000);
+            });
         }
         catch (Exception exception)
         {
@@ -176,7 +203,15 @@ public partial class SearchViewModel : INotifyPropertyChanged
         }
     }
 
-    public MyVault Vault { get => vault; }
+    public ObservableCollection<MyPassword> Passwords
+    {
+        get => passwords;
+        set
+        {
+            passwords = value;
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Passwords)));
+        }
+    }
     #endregion
 
     public bool IsInitialized() => vault.IsInitialized();
