@@ -5,43 +5,36 @@
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              Title="Password vault"             
              Loaded="ContentPage_Loaded">
+    <Grid Margin="10" RowSpacing="6" ColumnSpacing="6" RowDefinitions="auto,auto,*" ColumnDefinitions="auto, *" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <Image Grid.Row="0" Grid.Column="0" Source="logo.png" Aspect="AspectFit" MaximumWidthRequest="100"/>
 
-    <VerticalStackLayout
-            Spacing="25"
-            Padding="30,30"
-            VerticalOptions="FillAndExpand">
-
-        <Image        
-            Source="logo.png"
-            HeightRequest="100"
-            HorizontalOptions="Start"/>
-
-        <toolkit:Expander>
+        <toolkit:Expander Grid.Row="0" Grid.Column="1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
             <toolkit:Expander.Header>
-                <HorizontalStackLayout Padding="10" Spacing="10">
+                <HorizontalStackLayout Padding="6" Spacing="6">
                     <Image Source="search.png" HeightRequest="24" HorizontalOptions="Start"/>
                     <Label Text="Update from internet" FontAttributes="Italic"  FontSize="Small" />
                 </HorizontalStackLayout>
             </toolkit:Expander.Header>
-            <VerticalStackLayout Padding="10">
-                <Border Stroke="#A265BE" BackgroundColor="Transparent" StrokeThickness="4" HorizontalOptions="FillAndExpand">
+            <VerticalStackLayout Padding="6">
+                <Border Margin="5" Stroke="#A265BE" BackgroundColor="Transparent" StrokeThickness="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                     <Border.StrokeShape>
                         <RoundRectangle CornerRadius="10" />
                     </Border.StrokeShape>
-                    <VerticalStackLayout Spacing="15" Padding="10" VerticalOptions="FillAndExpand">
-                        <Entry Placeholder="Url to update from web" Text="{Binding Url}" MinimumWidthRequest="80"></Entry>
-
-                        <Button MinimumWidthRequest="120" Text="Update" Command="{Binding UpdateCommand}" HorizontalOptions="Center" />
-                    </VerticalStackLayout>
+                    <HorizontalStackLayout Spacing="6" Padding="6" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                        <Button MinimumWidthRequest="120" Text="Update" Command="{Binding UpdateCommand}" HorizontalOptions="Start" VerticalOptions="Center" />
+                        <Entry Placeholder="Url to update from web" Text="{Binding Url}" MinimumWidthRequest="80" HorizontalOptions="Center" VerticalOptions="Center"></Entry>
+                        <ActivityIndicator Color="#A265BE" IsRunning="{Binding InProgress}" MinimumHeightRequest="40" MinimumWidthRequest="40" HorizontalOptions="End" VerticalOptions="Center" />
+                    </HorizontalStackLayout>
                 </Border>
-
-                <ActivityIndicator Color="#A265BE" IsRunning="{Binding InProgress}" MinimumHeightRequest="40" MinimumWidthRequest="40" />
             </VerticalStackLayout>
         </toolkit:Expander>
 
-        <Entry Placeholder="Search" Text="{Binding SearchEntry}" ReturnType="Search" ReturnCommand="{Binding SearchCommand}"  MinimumWidthRequest="40" HorizontalOptions="Center"></Entry>
-        <ActivityIndicator Color="#A265BE" IsRunning="{Binding IsLoading}" MinimumHeightRequest="80" MinimumWidthRequest="80" />
-        <ListView ItemsSource="{Binding Passwords}" SeparatorVisibility="Default" SeparatorColor="#A265BE">
+        <HorizontalStackLayout Grid.Row="1" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Entry Placeholder="Search" Text="{Binding SearchEntry}" ReturnType="Search" ReturnCommand="{Binding SearchCommand}"  MinimumWidthRequest="80" HorizontalOptions="Start"/>
+            <ActivityIndicator Color="#A265BE" IsRunning="{Binding IsLoading}" MinimumHeightRequest="80" MinimumWidthRequest="80" HorizontalOptions="Center" />
+        </HorizontalStackLayout>
+
+        <ListView Grid.Row="2" Grid.Column="1" ItemsSource="{Binding Passwords}" SeparatorVisibility="Default" SeparatorColor="#A265BE">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -49,15 +42,15 @@
                             <Border.StrokeShape>
                                 <RoundRectangle CornerRadius="10" />
                             </Border.StrokeShape>
-                            <Grid Margin="10" RowSpacing="6" ColumnSpacing="6" RowDefinitions="*" ColumnDefinitions="1*, 1*, 3*">
-                                <Label Grid.Column="0" HorizontalOptions="Start" Text="{Binding UserName}" FontAttributes="Bold" TextColor="White" />
-                                <Label Grid.Column="1" HorizontalOptions="Start" Text="{Binding Password}" FontAttributes="Bold" TextColor="White" />
-                                <Label Grid.Column="2" HorizontalOptions="Start" Text="{Binding Data}" FontAttributes="Bold" TextColor="White"/>
+                            <Grid Margin="10" RowSpacing="6" ColumnSpacing="6" RowDefinitions="auto, auto" ColumnDefinitions="1*, 1*">
+                                <Label Grid.Column="0" Grid.Row="0" HorizontalOptions="Start" Text="{Binding UserName}" FontAttributes="Bold" TextColor="White" />
+                                <Label Grid.Column="1" Grid.Row="0" HorizontalOptions="Start" Text="{Binding Password}" FontAttributes="Bold" TextColor="White" />
+                                <Label Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" HorizontalOptions="Start" Text="{Binding Data}" FontAttributes="Bold" TextColor="White"/>
                             </Grid>
                         </Border>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-    </VerticalStackLayout>
+    </Grid>
 </ContentPage>
