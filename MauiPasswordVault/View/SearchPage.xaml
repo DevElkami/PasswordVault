@@ -8,33 +8,13 @@
     <Grid Margin="10" RowSpacing="6" ColumnSpacing="6" RowDefinitions="auto,auto,*" ColumnDefinitions="auto, *" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
         <Image Grid.Row="0" Grid.Column="0" Source="logo.png" Aspect="AspectFit" MaximumWidthRequest="100"/>
 
-        <toolkit:Expander Grid.Row="0" Grid.Column="1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-            <toolkit:Expander.Header>
-                <HorizontalStackLayout Padding="6" Spacing="6">
-                    <Image Source="search.png" HeightRequest="24" HorizontalOptions="Start"/>
-                    <Label Text="Update from internet" FontAttributes="Italic"  FontSize="Small" />
-                </HorizontalStackLayout>
-            </toolkit:Expander.Header>
-            <VerticalStackLayout Padding="6">
-                <Border Margin="5" Stroke="#A265BE" BackgroundColor="Transparent" StrokeThickness="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                    <Border.StrokeShape>
-                        <RoundRectangle CornerRadius="10" />
-                    </Border.StrokeShape>
-                    <HorizontalStackLayout Spacing="6" Padding="6" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-                        <Button MinimumWidthRequest="120" Text="Update" Command="{Binding UpdateCommand}" HorizontalOptions="Start" VerticalOptions="Center" />
-                        <Entry Placeholder="Url to update from web" Text="{Binding Url}" MinimumWidthRequest="80" HorizontalOptions="Center" VerticalOptions="Center"></Entry>
-                        <ActivityIndicator Color="#A265BE" IsRunning="{Binding InProgress}" MinimumHeightRequest="40" MinimumWidthRequest="40" HorizontalOptions="End" VerticalOptions="Center" />
-                    </HorizontalStackLayout>
-                </Border>
-            </VerticalStackLayout>
-        </toolkit:Expander>
-
-        <HorizontalStackLayout Grid.Row="1" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <HorizontalStackLayout Grid.Row="0" Grid.Column="1" Padding="6" Spacing="6" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Image Source="search.png" HeightRequest="24" HorizontalOptions="Center"/>
             <Entry Placeholder="Search" Text="{Binding SearchEntry}" ReturnType="Search" ReturnCommand="{Binding SearchCommand}"  MinimumWidthRequest="80" HorizontalOptions="Start"/>
             <ActivityIndicator Color="#A265BE" IsRunning="{Binding IsLoading}" MinimumHeightRequest="80" MinimumWidthRequest="80" HorizontalOptions="Center" />
         </HorizontalStackLayout>
 
-        <ListView Grid.Row="2" Grid.Column="1" ItemsSource="{Binding Passwords}" SeparatorVisibility="Default" SeparatorColor="#A265BE">
+        <ListView Grid.Row="1" Grid.Column="1" ItemsSource="{Binding Passwords}" SeparatorVisibility="Default" SeparatorColor="#A265BE">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -52,5 +32,24 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+
+        <toolkit:Expander Grid.Row="2" Grid.Column="1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <toolkit:Expander.Header>
+                <HorizontalStackLayout Padding="6" Spacing="6" HorizontalOptions="FillAndExpand">
+                    <Image Source="import.png" HeightRequest="24" HorizontalOptions="Center"/>
+                    <Label Text="Get passwords from internet" FontSize="Small" HorizontalOptions="CenterAndExpand" />
+                </HorizontalStackLayout>
+            </toolkit:Expander.Header>
+            <Border Margin="5" Stroke="#A265BE" BackgroundColor="Transparent" StrokeThickness="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10" />
+                </Border.StrokeShape>
+                <HorizontalStackLayout Spacing="6" Padding="6" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                    <Button MinimumWidthRequest="120" Text="Update" Command="{Binding UpdateCommand}" HorizontalOptions="Start" VerticalOptions="Center" />
+                    <Entry Placeholder="Url to update from web" Text="{Binding Url}" MinimumWidthRequest="80" HorizontalOptions="Center" VerticalOptions="Center"></Entry>
+                    <ActivityIndicator Color="#A265BE" IsRunning="{Binding InProgress}" MinimumHeightRequest="40" MinimumWidthRequest="40" HorizontalOptions="End" VerticalOptions="Center" />
+                </HorizontalStackLayout>
+            </Border>
+        </toolkit:Expander>
     </Grid>
 </ContentPage>
