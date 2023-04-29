@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiPasswordVault.View.SearchPage"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              Title="Password vault"             
              Loaded="ContentPage_Loaded">
 
@@ -10,6 +11,36 @@
             Padding="30,30"
             VerticalOptions="FillAndExpand">
 
+        <Image        
+            Source="logo.png"
+            HeightRequest="100"
+            HorizontalOptions="Start"/>
+
+        <toolkit:Expander>
+            <toolkit:Expander.Header>
+                <HorizontalStackLayout Padding="10" Spacing="10">
+                    <Image Source="search.png" HeightRequest="24" HorizontalOptions="Start"/>
+                    <Label Text="Update from internet" FontAttributes="Italic"  FontSize="Small" />
+                </HorizontalStackLayout>
+            </toolkit:Expander.Header>
+            <VerticalStackLayout Padding="10">
+                <Border Stroke="#A265BE" BackgroundColor="Transparent" StrokeThickness="4" HorizontalOptions="FillAndExpand">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10" />
+                    </Border.StrokeShape>
+                    <VerticalStackLayout Spacing="15" Padding="10" VerticalOptions="FillAndExpand">
+                        <Entry Placeholder="Url to update from web" Text="{Binding Url}" MinimumWidthRequest="80"></Entry>
+
+                        <Button MinimumWidthRequest="120" Text="Update" Command="{Binding UpdateCommand}" HorizontalOptions="Center" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <ActivityIndicator Color="#A265BE" IsRunning="{Binding InProgress}" MinimumHeightRequest="40" MinimumWidthRequest="40" />
+            </VerticalStackLayout>
+        </toolkit:Expander>
+
+        <Entry Placeholder="Search" Text="{Binding SearchEntry}" ReturnType="Search" ReturnCommand="{Binding SearchCommand}"  MinimumWidthRequest="40" HorizontalOptions="Center"></Entry>
+        <ActivityIndicator Color="#A265BE" IsRunning="{Binding IsLoading}" MinimumHeightRequest="80" MinimumWidthRequest="80" />
         <ListView ItemsSource="{Binding Passwords}" SeparatorVisibility="Default" SeparatorColor="#A265BE">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -28,27 +59,5 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-
-        <Image        
-            Source="logo.png"
-            HeightRequest="100"
-            HorizontalOptions="Start"/>
-
-        <ActivityIndicator Color="#A265BE" IsRunning="{Binding InProgress}" MinimumHeightRequest="80" MinimumWidthRequest="80" />
-
-        <Border Stroke="#A265BE" BackgroundColor="Transparent" StrokeThickness="4" HorizontalOptions="FillAndExpand">
-            <Border.StrokeShape>
-                <RoundRectangle CornerRadius="10" />
-            </Border.StrokeShape>
-            <VerticalStackLayout Spacing="25" Padding="30,30" VerticalOptions="FillAndExpand">
-                <Entry Placeholder="Url to update from web" Text="{Binding Url}" MinimumWidthRequest="80"></Entry>
-
-                <Button MinimumWidthRequest="120" Text="Update" Command="{Binding UpdateCommand}" HorizontalOptions="Center" />
-            </VerticalStackLayout>
-        </Border>
-
-        <Entry Placeholder="Search" Text="{Binding SearchEntry}" ReturnType="Search" ReturnCommand="{Binding SearchCommand}"  MinimumWidthRequest="40" HorizontalOptions="Center"></Entry>
-        <Button MinimumWidthRequest="120" Text="Load" Command="{Binding LoadCommand}" HorizontalOptions="Center" />
-        <ActivityIndicator Color="#A265BE" IsRunning="{Binding IsLoading}" MinimumHeightRequest="80" MinimumWidthRequest="80" />
     </VerticalStackLayout>
 </ContentPage>

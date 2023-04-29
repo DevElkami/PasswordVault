@@ -53,7 +53,9 @@ public partial class SearchViewModel : INotifyPropertyChanged
             this.errorService.LastErrorMessage = exception.Message;
             this.errorService.LastErrorFull = exception.ToString();
             this.errorService.CriticalError = false;
+#pragma warning disable CS4014 // Dans la mesure où cet appel n'est pas attendu, l'exécution de la méthode actuelle continue avant la fin de l'appel
             this.navigationService.NavigateToPage<ErrorPage>();
+#pragma warning restore CS4014 // Dans la mesure où cet appel n'est pas attendu, l'exécution de la méthode actuelle continue avant la fin de l'appel
         }
         finally
         {
@@ -97,7 +99,9 @@ public partial class SearchViewModel : INotifyPropertyChanged
             this.errorService.LastErrorMessage = exception.Message;
             this.errorService.LastErrorFull = exception.ToString();
             this.errorService.CriticalError = true;
+#pragma warning disable CS4014 // Dans la mesure où cet appel n'est pas attendu, l'exécution de la méthode actuelle continue avant la fin de l'appel
             this.navigationService.NavigateToPage<ErrorPage>();
+#pragma warning restore CS4014 // Dans la mesure où cet appel n'est pas attendu, l'exécution de la méthode actuelle continue avant la fin de l'appel
         }
         finally
         {
@@ -125,8 +129,6 @@ public partial class SearchViewModel : INotifyPropertyChanged
                 }
 
                 Passwords = results;
-
-                Thread.Sleep(2000);
             });
         }
         catch (Exception exception)
@@ -134,7 +136,9 @@ public partial class SearchViewModel : INotifyPropertyChanged
             this.errorService.LastErrorMessage = exception.Message;
             this.errorService.LastErrorFull = exception.ToString();
             this.errorService.CriticalError = false;
+#pragma warning disable CS4014 // Dans la mesure où cet appel n'est pas attendu, l'exécution de la méthode actuelle continue avant la fin de l'appel
             this.navigationService.NavigateToPage<ErrorPage>();
+#pragma warning restore CS4014 // Dans la mesure où cet appel n'est pas attendu, l'exécution de la méthode actuelle continue avant la fin de l'appel
         }
         finally
         {
