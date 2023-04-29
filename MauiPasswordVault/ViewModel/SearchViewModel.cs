@@ -9,6 +9,15 @@ namespace MauiPasswordVault.ViewModel;
 
 public partial class SearchViewModel : INotifyPropertyChanged
 {
+    public SearchViewModel(NavigationService navigationService, ErrorService errorService, MyVault vault)
+    {
+        this.navigationService = navigationService;
+        this.errorService = errorService;
+        this.vault = vault;
+    }
+
+    public event PropertyChangedEventHandler? PropertyChanged;
+
     #region Private data
     private const String URL = "UPDATE_URL";
     private readonly NavigationService navigationService;
@@ -17,6 +26,7 @@ public partial class SearchViewModel : INotifyPropertyChanged
     private String url = Preferences.Default.Get(SearchViewModel.URL, "");
     private bool inProgress = false;
     private bool isLoading = false;
+    private String searchEntry = "";
     #endregion
 
     #region Command
@@ -66,6 +76,10 @@ public partial class SearchViewModel : INotifyPropertyChanged
         {
             IsLoading = true;
             await Task.Factory.StartNew(() => vault.Load());
+#if DEBUG
+            // Quick help for debug
+            SearchEntry = vault.Count.ToString();
+#endif
         }
         catch (Exception exception)
         {
@@ -79,6 +93,44 @@ public partial class SearchViewModel : INotifyPropertyChanged
             IsLoading = false;
         }
     }
+
+    [RelayCommand(FlowExceptionsToTaskScheduler = true, CanExecute = nameof(CanSearch))]
+    public async Task SearchAsync()
+    {
+        try
+        {
+            IsLoading = true;
+            await Task.Factory.StartNew(() => /*To do*/Thread.Sleep(2000));
+        }
+        catch (Exception exception)
+        {
+            this.errorService.LastErrorMessage = exception.Message;
+            this.errorService.LastErrorFull = exception.ToString();
+            this.errorService.CriticalError = false;
+            this.navigationService.NavigateToPage<ErrorPage>();
+        }
+        finally
+        {
+            IsLoading = false;
+        }
+    }
+
+    private bool CanSearch()
+    {
+        try
+        {
+            return (!String.IsNullOrEmpty(SearchEntry) && (SearchEntry.Length >= 3));
+        }
+        catch (Exception exception)
+        {
+            this.errorService.LastErrorMessage = exception.Message;
+            this.errorService.LastErrorFull = exception.ToString();
+            this.errorService.CriticalError = true;
+            this.navigationService.NavigateToPage<ErrorPage>();
+        }
+
+        return false;
+    }
     #endregion
 
     #region Properties
@@ -88,7 +140,8 @@ public partial class SearchViewModel : INotifyPropertyChanged
         set
         {
             url = value;
-            (SearchCommand as Command)?.ChangeCanExecute();
+            (UpdateCommand as Command)?.ChangeCanExecute();
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Url)));
         }
     }
 
@@ -112,60 +165,19 @@ public partial class SearchViewModel : INotifyPropertyChanged
         }
     }
 
-    public String SearchEntry { get; set; } = null!;
-
-    public ICommand SearchCommand { private set; get; }
+    public String SearchEntry
+    {
+        get => searchEntry;
+        set
+        {
+            searchEntry = value;
+            (SearchCommand as Command)?.ChangeCanExecute();
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(SearchEntry)));
+        }
+    }
 
     public MyVault Vault { get => vault; }
-
-    public event PropertyChangedEventHandler? PropertyChanged;
-    #endregion    
-
-    public SearchViewModel(NavigationService navigationService, ErrorService errorService, MyVault vault)
-    {
-        this.navigationService = navigationService;
-        this.errorService = errorService;
-        this.vault = vault;
-
-        SearchCommand = new Command(
-            execute: () =>
-            {
-                try
-                {
-                    InProgress = true;
-                    //...
-                    InProgress = false;
-                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(InProgress)));
-                }
-                catch (Exception exception)
-                {
-                    this.errorService.LastErrorMessage = exception.Message;
-                    this.errorService.LastErrorFull = exception.ToString();
-                    this.errorService.CriticalError = true;
-                    this.navigationService.NavigateToPage<ErrorPage>();
-                }
-                finally
-                {
-                    InProgress = false;
-                }
-            },
-            canExecute: () =>
-            {
-                try
-                {
-                    return (!String.IsNullOrEmpty(SearchEntry) && (SearchEntry.Length >= 3));
-                }
-                catch (Exception exception)
-                {
-                    this.errorService.LastErrorMessage = exception.Message;
-                    this.errorService.LastErrorFull = exception.ToString();
-                    this.errorService.CriticalError = true;
-                    this.navigationService.NavigateToPage<ErrorPage>();
-                }
-
-                return false;
-            });
-    }
+    #endregion
 
     public bool IsInitialized() => vault.IsInitialized();
     public bool IsUnlock() => vault.IsUnlock();
