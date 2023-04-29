@@ -5,6 +5,7 @@
              Title="Password vault">
 
     <ScrollView HorizontalOptions="Fill" VerticalOptions="Fill">
+
         <VerticalStackLayout
             Spacing="25"
             Padding="30,30"
@@ -15,9 +16,9 @@
                 HeightRequest="100"
                 HorizontalOptions="Start" />
 
-            <ActivityIndicator IsRunning="{Binding Progress}" />
+            <ActivityIndicator Color="#A265BE" IsRunning="{Binding InProgress}" MinimumHeightRequest="80" MinimumWidthRequest="80" />
 
-            <Border Stroke="#A265BE" StrokeThickness="4" HorizontalOptions="FillAndExpand">
+            <Border Stroke="#A265BE" BackgroundColor="Transparent" StrokeThickness="4" HorizontalOptions="FillAndExpand">
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="10" />
                 </Border.StrokeShape>
@@ -28,8 +29,10 @@
                 </VerticalStackLayout>
             </Border>
 
-            <RefreshView IsRefreshing="{Binding IsRefreshing}" Command="{Binding RefreshCommand}">
-                <ListView ItemsSource="{Binding Vault}" SeparatorVisibility="Default" SeparatorColor="#A265BE">
+            <Entry IsVisible="{Binding InProgress, Mode=TwoWay}" Placeholder="Search" Text="{Binding SearchEntry}" ReturnType="Search" ReturnCommand="{Binding SearchCommand}"  MinimumWidthRequest="40" HorizontalOptions="Center"></Entry>
+
+            <RefreshView RefreshColor="#A265BE" IsRefreshing="{Binding IsRefreshing}" Command="{Binding RefreshCommand}">
+                <ListView Header="Passwords" ItemsSource="{Binding Vault}" SeparatorVisibility="Default" SeparatorColor="#A265BE">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>

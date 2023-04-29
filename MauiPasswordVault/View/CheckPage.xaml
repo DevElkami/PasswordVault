@@ -20,7 +20,7 @@
                 FontSize="32"
                 HorizontalOptions="Center" />
 
-            <Entry Placeholder="Password" Text="{Binding VaultKey}" MaxLength="20" IsPassword="True" MinimumWidthRequest="80" MaximumWidthRequest="200"></Entry>
+            <Entry Placeholder="Password" Text="{Binding VaultKey}" ReturnType="Send" ReturnCommand="{Binding CheckCommand}" MaxLength="20" IsPassword="True" MinimumWidthRequest="80" MaximumWidthRequest="200"></Entry>
 
             <Button       
                 MinimumWidthRequest="120"                
