@@ -150,7 +150,10 @@ public partial class SearchViewModel : INotifyPropertyChanged
     {
         try
         {
-            return (!String.IsNullOrEmpty(SearchEntry) && (SearchEntry.Length >= 3));
+            bool canSearch = (!String.IsNullOrEmpty(SearchEntry) && (SearchEntry.Length >= 3));
+            if (!canSearch)
+                Passwords = null!;
+            return canSearch;
         }
         catch (Exception exception)
         {
