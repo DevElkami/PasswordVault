@@ -21,7 +21,7 @@
                 HorizontalOptions="Center" />
 
             <Button                
-                Text="Next"
+                Text="{StaticResource TSOk}"
                 MinimumWidthRequest="120"
                 Command="{Binding AcceptCommand}"
                 HorizontalOptions="Center" />

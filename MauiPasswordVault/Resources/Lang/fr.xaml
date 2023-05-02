@@ -7,5 +7,8 @@
     <system:String x:Key="TSUnLock">Déverrouiller</system:String>
     <system:String x:Key="TSPassword">Mot de passe</system:String>
     <system:String x:Key="TSOk">Ok</system:String>
+    <system:String x:Key="TSInitialize">Initialiser</system:String>
+    <system:String x:Key="TSAskPassword">Votre mot de passe</system:String>
+    <system:String x:Key="TSConfirmPassword">Confirmez le mot de passe</system:String>
 
 </ResourceDictionary>

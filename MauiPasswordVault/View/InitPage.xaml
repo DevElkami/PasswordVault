@@ -16,16 +16,16 @@
                 HorizontalOptions="Start" />
 
             <Label
-                Text="Initialize"
+                Text="{StaticResource TSInitialize}"
                 FontSize="32"
                 HorizontalOptions="Center" />
 
-            <Entry Placeholder="Your password"  Text="{Binding NewVaultKey}" MaxLength="20" IsPassword="True"  MinimumWidthRequest="80" MaximumWidthRequest="200"></Entry>
-            <Entry Placeholder="Confirm it" Text="{Binding ChkVaultKey}" MaxLength="20" IsPassword="True" MinimumWidthRequest="80" MaximumWidthRequest="200" ReturnType="Send"  ReturnCommand="{Binding InitCommand}"></Entry>
+            <Entry Placeholder="{StaticResource TSAskPassword}" Text="{Binding NewVaultKey}" MaxLength="20" IsPassword="True"  MinimumWidthRequest="80" MaximumWidthRequest="200"></Entry>
+            <Entry Placeholder="{StaticResource TSConfirmPassword}" Text="{Binding ChkVaultKey}" MaxLength="20" IsPassword="True" MinimumWidthRequest="80" MaximumWidthRequest="200" ReturnType="Send"  ReturnCommand="{Binding InitCommand}"></Entry>
 
             <Button
                 MinimumWidthRequest="120"
-                Text="Initialize"
+                Text="{StaticResource TSOk}"
                 Command="{Binding InitCommand}"
                 HorizontalOptions="Center" />
 

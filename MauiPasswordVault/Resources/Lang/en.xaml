@@ -7,5 +7,8 @@
     <system:String x:Key="TSUnLock">Unlock</system:String>
     <system:String x:Key="TSPassword">Password</system:String>
     <system:String x:Key="TSOk">Ok</system:String>
+    <system:String x:Key="TSInitialize">Initialize</system:String>
+    <system:String x:Key="TSAskPassword">Your password</system:String>
+    <system:String x:Key="TSConfirmPassword">Confirm it</system:String>
 
 </ResourceDictionary>
