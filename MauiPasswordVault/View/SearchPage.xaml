@@ -36,7 +36,7 @@
         <toolkit:Expander Grid.Row="2" Grid.Column="1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
             <toolkit:Expander.Header>
                 <HorizontalStackLayout Padding="6" Spacing="6" HorizontalOptions="FillAndExpand">
-                    <Image Source="import.png" HeightRequest="24" HorizontalOptions="Center"/>
+                    <Image Source="dimport.png" HeightRequest="24" HorizontalOptions="Center"/>
                     <Label Text="Get passwords from internet" FontSize="Small" HorizontalOptions="CenterAndExpand" />
                 </HorizontalStackLayout>
             </toolkit:Expander.Header>

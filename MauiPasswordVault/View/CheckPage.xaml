@@ -16,15 +16,23 @@
                 HorizontalOptions="Start" />
 
             <Label
-                Text="Check"
+                Text="{StaticResource TSUnLock}"
                 FontSize="32"
                 HorizontalOptions="Center" />
 
-            <Entry Placeholder="Password" Text="{Binding VaultKey}" ReturnType="Send" ReturnCommand="{Binding CheckCommand}" MaxLength="20" IsPassword="True" MinimumWidthRequest="80" MaximumWidthRequest="200"></Entry>
+            <Entry 
+                Placeholder="{StaticResource TSPassword}" 
+                Text="{Binding VaultKey}" 
+                ReturnType="Send" 
+                ReturnCommand="{Binding CheckCommand}" 
+                MaxLength="20" 
+                IsPassword="True" 
+                MinimumWidthRequest="80" 
+                MaximumWidthRequest="200"></Entry>
 
             <Button       
                 MinimumWidthRequest="120"                
-                Text="Check"               
+                Text="{StaticResource TSOk}"               
                 Command="{Binding CheckCommand}"
                 HorizontalOptions="Center" />
 
