@@ -10,7 +10,7 @@
 
         <HorizontalStackLayout Grid.Row="0" Grid.Column="1" Padding="6" Spacing="6" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <Image Source="search.png" HeightRequest="24" HorizontalOptions="Center"/>
-            <Entry Placeholder="{StaticResource TSSearch}" Text="{Binding SearchEntry}" ReturnType="Search" ReturnCommand="{Binding SearchCommand}"  MinimumWidthRequest="80" HorizontalOptions="Start"/>
+            <Entry Placeholder="{DynamicResource TSSearch}" Text="{Binding SearchEntry}" ReturnType="Search" ReturnCommand="{Binding SearchCommand}"  MinimumWidthRequest="80" HorizontalOptions="Start"/>
             <ActivityIndicator Color="#A265BE" IsRunning="{Binding IsLoading}" MinimumHeightRequest="80" MinimumWidthRequest="80" HorizontalOptions="Center" />
         </HorizontalStackLayout>
 
@@ -37,7 +37,7 @@
             <toolkit:Expander.Header>
                 <HorizontalStackLayout Padding="6" Spacing="6" HorizontalOptions="FillAndExpand">
                     <Image Source="dimport.png" HeightRequest="24" HorizontalOptions="Center"/>
-                    <Label Text="{StaticResource TSUpdateFromNet}" FontSize="Small" HorizontalOptions="CenterAndExpand" />
+                    <Label Text="{DynamicResource TSUpdateFromNet}" FontSize="Small" HorizontalOptions="CenterAndExpand" />
                 </HorizontalStackLayout>
             </toolkit:Expander.Header>
             <Border Margin="5" Stroke="#A265BE" BackgroundColor="Transparent" StrokeThickness="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
