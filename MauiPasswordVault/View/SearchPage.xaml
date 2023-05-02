@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiPasswordVault.View.SearchPage"
-             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"             
              Title="Password vault"             
              Loaded="ContentPage_Loaded">
     <Grid Margin="10" RowSpacing="6" ColumnSpacing="6" RowDefinitions="auto,auto,*" ColumnDefinitions="auto, *" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
@@ -10,7 +10,7 @@
 
         <HorizontalStackLayout Grid.Row="0" Grid.Column="1" Padding="6" Spacing="6" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <Image Source="search.png" HeightRequest="24" HorizontalOptions="Center"/>
-            <Entry Placeholder="Search" Text="{Binding SearchEntry}" ReturnType="Search" ReturnCommand="{Binding SearchCommand}"  MinimumWidthRequest="80" HorizontalOptions="Start"/>
+            <Entry Placeholder="{StaticResource TSSearch}" Text="{Binding SearchEntry}" ReturnType="Search" ReturnCommand="{Binding SearchCommand}"  MinimumWidthRequest="80" HorizontalOptions="Start"/>
             <ActivityIndicator Color="#A265BE" IsRunning="{Binding IsLoading}" MinimumHeightRequest="80" MinimumWidthRequest="80" HorizontalOptions="Center" />
         </HorizontalStackLayout>
 
@@ -37,7 +37,7 @@
             <toolkit:Expander.Header>
                 <HorizontalStackLayout Padding="6" Spacing="6" HorizontalOptions="FillAndExpand">
                     <Image Source="dimport.png" HeightRequest="24" HorizontalOptions="Center"/>
-                    <Label Text="Get passwords from internet" FontSize="Small" HorizontalOptions="CenterAndExpand" />
+                    <Label Text="{StaticResource TSUpdateFromNet}" FontSize="Small" HorizontalOptions="CenterAndExpand" />
                 </HorizontalStackLayout>
             </toolkit:Expander.Header>
             <Border Margin="5" Stroke="#A265BE" BackgroundColor="Transparent" StrokeThickness="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">

@@ -10,5 +10,7 @@
     <system:String x:Key="TSInitialize">Initialiser</system:String>
     <system:String x:Key="TSAskPassword">Votre mot de passe</system:String>
     <system:String x:Key="TSConfirmPassword">Confirmez le mot de passe</system:String>
+    <system:String x:Key="TSSearch">Rechercher</system:String>
+    <system:String x:Key="TSUpdateFromNet">Mise à jour depuis le net</system:String>
 
 </ResourceDictionary>
