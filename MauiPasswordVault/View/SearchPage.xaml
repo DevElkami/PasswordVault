@@ -40,16 +40,11 @@
                     <Label Text="{DynamicResource TSUpdateFromNet}" FontSize="Small" HorizontalOptions="CenterAndExpand" />
                 </HorizontalStackLayout>
             </toolkit:Expander.Header>
-            <Border Margin="5" Stroke="#A265BE" BackgroundColor="Transparent" StrokeThickness="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="10" />
-                </Border.StrokeShape>
-                <HorizontalStackLayout Spacing="6" Padding="6" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-                    <Button MinimumWidthRequest="120" Text="Update" Command="{Binding UpdateCommand}" HorizontalOptions="Start" VerticalOptions="Center" />
-                    <Entry Placeholder="Url to update from web" Text="{Binding Url}" MinimumWidthRequest="80" HorizontalOptions="Center" VerticalOptions="Center"></Entry>
-                    <ActivityIndicator Color="#A265BE" IsRunning="{Binding InProgress}" MinimumHeightRequest="40" MinimumWidthRequest="40" HorizontalOptions="End" VerticalOptions="Center" />
-                </HorizontalStackLayout>
-            </Border>
+
+            <VerticalStackLayout Spacing="6" Padding="6" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <Entry ReturnType="Send"  ReturnCommand="{Binding UpdateCommand}" Placeholder="{DynamicResource TSUpdateFromURL}" Text="{Binding Url}" MinimumWidthRequest="80" HorizontalOptions="Start" VerticalOptions="Start"></Entry>
+                <ActivityIndicator Color="#A265BE" IsRunning="{Binding InProgress}" MinimumHeightRequest="40" MinimumWidthRequest="40" HorizontalOptions="Center" VerticalOptions="Start" />
+            </VerticalStackLayout>
         </toolkit:Expander>
     </Grid>
 </ContentPage>

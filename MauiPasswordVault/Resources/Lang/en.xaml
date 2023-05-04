@@ -12,5 +12,6 @@
     <system:String x:Key="TSConfirmPassword">Confirm it</system:String>
     <system:String x:Key="TSSearch">Search</system:String>
     <system:String x:Key="TSUpdateFromNet">Get passwords from internet</system:String>
+    <system:String x:Key="TSUpdateFromURL">URL</system:String>
 
 </ResourceDictionary>
