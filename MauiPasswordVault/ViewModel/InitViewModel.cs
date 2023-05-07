@@ -28,7 +28,7 @@ public class InitViewModel
                 try
                 {
                     if (this.vault.Initialize(NewVaultKey))
-                        this.navigationService.NavigateBack();
+                        this.navigationService.NavigateToPage<CheckPage>();
                     else
                     {
                         this.errorService.LastErrorMessage = "Can't initialize vault";

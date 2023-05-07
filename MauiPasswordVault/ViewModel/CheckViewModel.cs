@@ -27,7 +27,7 @@ public class CheckViewModel
                 try
                 {
                     if (vault.CheckVaultKey(VaultKey))
-                        this.navigationService.NavigateBack();
+                        this.navigationService.NavigateToPage<SearchPage>();
                     else
                     {
                         this.errorService.LastErrorMessage = "Bad password vault";

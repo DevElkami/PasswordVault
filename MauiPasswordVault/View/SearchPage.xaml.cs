@@ -20,12 +20,16 @@ public partial class SearchPage : ContentPage
     {
         try
         {
-            bool isInitialized = ((SearchViewModel)BindingContext).IsInitialized();
-            if (!isInitialized)
+            if (!((SearchViewModel)BindingContext).IsInitialized())
+            {
                 await navigationService.NavigateToPage<InitPage>();
-
-            if (isInitialized && !((SearchViewModel)BindingContext).IsUnlock())
-                await navigationService.NavigateToPage<CheckPage>();
+                return;
+            }
+            else
+            {
+                if (!((SearchViewModel)BindingContext).IsUnlock())
+                    await navigationService.NavigateToPage<CheckPage>();
+            }
         }
         catch (Exception exception)
         {

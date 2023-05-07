@@ -14,11 +14,11 @@
             <ActivityIndicator Color="#A265BE" IsRunning="{Binding IsLoading}" MinimumHeightRequest="80" MinimumWidthRequest="80" HorizontalOptions="Center" />
         </HorizontalStackLayout>
 
-        <ListView Grid.Row="1" Grid.Column="1" ItemsSource="{Binding Passwords}" SeparatorVisibility="Default" SeparatorColor="#A265BE">
+        <ListView Grid.Row="1" Grid.Column="1" ItemsSource="{Binding Passwords}" SeparatorVisibility="None"  SeparatorColor="#A265BE">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Border Margin="5" Stroke="#A265BE" StrokeThickness="1" HorizontalOptions="FillAndExpand">
+                        <Border Margin="5" BackgroundColor="Black" Stroke="#A265BE" StrokeThickness="1" HorizontalOptions="FillAndExpand">
                             <Border.StrokeShape>
                                 <RoundRectangle CornerRadius="10" />
                             </Border.StrokeShape>
