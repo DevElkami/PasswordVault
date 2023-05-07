@@ -1,5 +1,5 @@
 #define MyAppName "Password vault"
-#define MyAppVersion "3.2.1.0"
+#define MyAppVersion "3.3.0.0"
 #define MyAppPublisher "DevElkami"
 #define MyAppURL "https://github.com/DevElkami/PasswordVault"
 #define MyAppDescription "Password vault"
@@ -17,7 +17,7 @@ AppUpdatesURL={#MyAppURL}
 DefaultDirName={autopf}\{#MyAppName}
 DefaultGroupName={#MyAppName}
 DisableProgramGroupPage=yes
-LicenseFile=..\..\LICENSE
+;LicenseFile=..\..\LICENSE
 OutputBaseFilename=Password-Vault-{#MyAppVersion}
 Compression=none
 SolidCompression=yes
@@ -42,7 +42,7 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 [Files]
 Source: ..\bin\Release\net7.0-windows7.0\publish\WinformPasswordVault.exe; DestDir: {app}; Flags: ignoreversion overwritereadonly uninsremovereadonly;
 Source: ..\bin\Release\net7.0-windows7.0\publish\*.dll; DestDir: {app}; Flags: ignoreversion overwritereadonly uninsremovereadonly;
-Source: ..\..\LICENSE; DestDir: {app}; Flags: overwritereadonly uninsremovereadonly; DestName: LICENSE.TXT
+;Source: ..\..\LICENSE; DestDir: {app}; Flags: overwritereadonly uninsremovereadonly; DestName: LICENSE.TXT
 
 [Icons]
 Name: {group}\Password Vault; Filename: {app}\WinformPasswordVault.exe; Flags: excludefromshowinnewinstall

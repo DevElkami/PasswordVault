@@ -1,31 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:models="clr-namespace:MauiPasswordVault.ViewModel"                     
              x:Class="MauiPasswordVault.View.InitPage">
 
-    <ScrollView>
+    <ScrollView HorizontalOptions="Fill" VerticalOptions="Fill">
         <VerticalStackLayout
             Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
+            Padding="30,30"
+            VerticalOptions="FillAndExpand">
 
             <Image
-                Source="logo.png"               
-                HeightRequest="200"
-                HorizontalOptions="Center" />
+                Source="logo.png"
+                HeightRequest="100"
+                HorizontalOptions="Start" />
 
             <Label
-                Text="Password vault initialize"                
+                Text="{StaticResource TSInitialize}"
                 FontSize="32"
                 HorizontalOptions="Center" />
 
-            <Editor Placeholder="Your password"  Text="{Binding NewVaultKey}" AutoSize="Disabled" MaxLength="20" MinimumWidthRequest="80" MaximumWidthRequest="200"></Editor>
-            <Editor Placeholder="Confirm it" Text="{Binding ChkVaultKey}" AutoSize="Disabled" MaxLength="20" MinimumWidthRequest="80" MaximumWidthRequest="200"></Editor>
-           
-            <Button       
-                MinimumWidthRequest="120"                
-                Text="Initialize"               
+            <Entry Placeholder="{StaticResource TSAskPassword}" Text="{Binding NewVaultKey}" MaxLength="20" IsPassword="True"  MinimumWidthRequest="80" MaximumWidthRequest="200"></Entry>
+            <Entry Placeholder="{StaticResource TSConfirmPassword}" Text="{Binding ChkVaultKey}" MaxLength="20" IsPassword="True" MinimumWidthRequest="80" MaximumWidthRequest="200" ReturnType="Send"  ReturnCommand="{Binding InitCommand}"></Entry>
+
+            <Button
+                MinimumWidthRequest="120"
+                Text="{StaticResource TSOk}"
                 Command="{Binding InitCommand}"
                 HorizontalOptions="Center" />
 

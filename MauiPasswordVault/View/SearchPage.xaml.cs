@@ -20,15 +20,16 @@ public partial class SearchPage : ContentPage
     {
         try
         {
-            bool isInitialized = ((SearchViewModel)BindingContext).IsInitialized();
-            if (!isInitialized)
+            if (!((SearchViewModel)BindingContext).IsInitialized())
+            {
                 await navigationService.NavigateToPage<InitPage>();
-
-            if (isInitialized && !((SearchViewModel)BindingContext).IsUnlock())
-                await navigationService.NavigateToPage<CheckPage>();
-
-            if (isInitialized && ((SearchViewModel)BindingContext).IsUnlock())
-                ((SearchViewModel)BindingContext).Load();
+                return;
+            }
+            else
+            {
+                if (!((SearchViewModel)BindingContext).IsUnlock())
+                    await navigationService.NavigateToPage<CheckPage>();
+            }
         }
         catch (Exception exception)
         {
@@ -37,5 +38,12 @@ public partial class SearchPage : ContentPage
             this.errorService.CriticalError = true;
             await this.navigationService.NavigateToPage<ErrorPage>();
         }
+    }
+
+    private void ContentPage_Loaded(object sender, EventArgs e)
+    {
+#pragma warning disable CS4014 // Dans la mesure où cet appel n'est pas attendu, l'exécution de la méthode actuelle continue avant la fin de l'appel
+        ((SearchViewModel)BindingContext).LoadAsync();
+#pragma warning restore CS4014 // Dans la mesure où cet appel n'est pas attendu, l'exécution de la méthode actuelle continue avant la fin de l'appel
     }
 }

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
+             x:Class="MauiPasswordVault.Resources.Lang.en">
+
+    <system:String x:Key="TSUnLock">Unlock</system:String>
+    <system:String x:Key="TSPassword">Password</system:String>
+    <system:String x:Key="TSOk">Ok</system:String>
+    <system:String x:Key="TSInitialize">Initialize</system:String>
+    <system:String x:Key="TSAskPassword">Your password</system:String>
+    <system:String x:Key="TSConfirmPassword">Confirm it</system:String>
+    <system:String x:Key="TSSearch">Search</system:String>
+    <system:String x:Key="TSUpdateFromNet">Get passwords from internet</system:String>
+    <system:String x:Key="TSUpdateFromURL">URL</system:String>
+
+</ResourceDictionary>

@@ -115,13 +115,13 @@ public class MyVault : BindingList<MyPassword>
     /// Initialize vault file
     /// </summary>
     /// <param name="key">New vault key</param>
-    /// <returns>True if FILE_NAME already exist: we have a old file version</returns>
+    /// <returns>True if success</returns>
     public bool Initialize(String key)
     {
         vaultKey = Security.GetHash(key);
         File.WriteAllText(GetVaultPathKey(), Security.Encrypt(vaultKey, Security.GetHash(nameof(VaultCore) + nameof(Security))));
 
-        return File.Exists(GetVaultPathData());
+        return File.Exists(GetVaultPathKey());
     }
 
     /// <summary>
@@ -182,6 +182,21 @@ public class MyVault : BindingList<MyPassword>
                     Add(myPassword);
             }
         }
+    }
+
+    /// <summary>
+    /// Download file from internet
+    /// </summary>
+    public void Download(String url)
+    {
+        using (var client = new HttpClient())
+        {
+            var response = client.GetByteArrayAsync(url).Result;
+            File.WriteAllBytes(GetVaultPathData(), response);
+            client.CancelPendingRequests();
+        }
+
+        Load();
     }
     #endregion
 }

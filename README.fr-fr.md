@@ -10,6 +10,7 @@ Coffre-fort de mots de passe avec import de mot de passe Firefox. Ce coffre-fort
 * [Cryptage AES](https://fr.wikipedia.org/wiki/Advanced_Encryption_Standard) :key:
 * Importer vos mots de passe depuis Firefox :earth_americas:
 * Support multilingue (:clipperton_island:, :us:)
+* Compatible Android et Windows
 
 # L'application en détails
 
@@ -21,15 +22,20 @@ Coffre-fort de mots de passe avec import de mot de passe Firefox. Ce coffre-fort
 
 ![](https://github.com/DevElkami/PasswordVault/blob/master/vault-pwd.png)
 
-3. Aperçu de l'application
+3. Aperçu de l'application (WinForm)
 
 ![](https://github.com/DevElkami/PasswordVault/blob/master/vault-add.png)
 ![](https://github.com/DevElkami/PasswordVault/blob/master/vault-import.png)
 ![](https://github.com/DevElkami/PasswordVault/blob/master/vault-main.png)
 
+3. Aperçu de l'application (MAUI)
+
+![](https://github.com/DevElkami/PasswordVault/blob/master/android-1.en.jpg)
+![](https://github.com/DevElkami/PasswordVault/blob/master/android-2.en.jpg)
+![](https://github.com/DevElkami/PasswordVault/blob/master/android-3.en.jpg)
+
 
 # Remerciements  :pray:
-
 > [NLog](https://github.com/NLog)
 
 > [ReaLTaiizor](https://github.com/Taiizor/ReaLTaiizor)

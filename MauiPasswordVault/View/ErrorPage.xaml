@@ -1,24 +1,29 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiPasswordVault.View.ErrorPage"
-             Title="ErrorPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Error page"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+             x:Class="MauiPasswordVault.View.ErrorPage">
+    <ScrollView HorizontalOptions="Fill" VerticalOptions="Fill">
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,30"
+            VerticalOptions="FillAndExpand">
 
-        <Label
+            <Image
+                Source="logo.png"
+                HeightRequest="100"
+                HorizontalOptions="Start" />
+
+            <Label
                 Text="{Binding LastErrorMessage}"
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="32"
                 HorizontalOptions="Center" />
-        
-        <Button                
-                Text="Click me"
-                SemanticProperties.Hint="Error page"
+
+            <Button                
+                Text="{StaticResource TSOk}"
+                MinimumWidthRequest="120"
                 Command="{Binding AcceptCommand}"
                 HorizontalOptions="Center" />
-    </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

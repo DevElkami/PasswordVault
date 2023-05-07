@@ -1,54 +1,37 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiPasswordVault.View.CheckPage"             
-             Title="Your password">
+             x:Class="MauiPasswordVault.View.CheckPage">
 
     <ScrollView>
         <VerticalStackLayout
             Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
+            Padding="30,30"
+            VerticalOptions="FillAndExpand">
 
             <Image
                 Source="logo.png"
-                SemanticProperties.Description="Password vault logo"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
+                HeightRequest="100"
+                HorizontalOptions="Start" />
 
             <Label
-                Text="Password vault check"
-                SemanticProperties.HeadingLevel="Level1"
+                Text="{StaticResource TSUnLock}"
                 FontSize="32"
                 HorizontalOptions="Center" />
 
-            <HorizontalStackLayout 
-                Spacing="25"
-                Padding="30,0"
-                HorizontalOptions="Center">
+            <Entry 
+                Placeholder="{StaticResource TSPassword}" 
+                Text="{Binding VaultKey}" 
+                ReturnType="Send" 
+                ReturnCommand="{Binding CheckCommand}" 
+                MaxLength="20" 
+                IsPassword="True" 
+                MinimumWidthRequest="80" 
+                MaximumWidthRequest="200"></Entry>
 
-                <Label
-                Text="Check page"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                VerticalOptions="Center" />
-
-                <Editor Text="{Binding VaultKey}" AutoSize="Disabled" MinimumWidthRequest="80"></Editor>
-
-            </HorizontalStackLayout>
-
-            <Label
-                Text="Check page"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
-
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Initialize Vault"
+            <Button       
+                MinimumWidthRequest="120"                
+                Text="{StaticResource TSOk}"               
                 Command="{Binding CheckCommand}"
                 HorizontalOptions="Center" />
 

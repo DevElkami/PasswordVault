@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+    <style name="MyAppTheme" parent="Maui.SplashTheme">
+         <item name="android:colorPressedHighlight">@color/ListViewSelected</item>  
+         <item name="android:colorFocusedHighlight">@color/ListViewSelected</item>  
+         <item name="android:colorActivatedHighlight">@color/ListViewSelected</item>  
+         <item name="android:activatedBackgroundIndicator">@color/ListViewSelected</item>  
+    </style>
+</resources>

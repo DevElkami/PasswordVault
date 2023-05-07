@@ -10,6 +10,7 @@ Personal password vault with firefox password importer. This vault use Advanced 
 * [AES encryption](https://fr.wikipedia.org/wiki/Advanced_Encryption_Standard) :key:
 * Import your passwords from Firefox :earth_americas:
 * Multilang support (:clipperton_island:, :us:)
+* Compatible Android et Windows
 
 # The app in details
 
@@ -21,11 +22,17 @@ Personal password vault with firefox password importer. This vault use Advanced 
 
 ![](https://github.com/DevElkami/PasswordVault/blob/master/vault-pwd.png)
 
-3. App preview
+3. App preview (WinForm)
 
 ![](https://github.com/DevElkami/PasswordVault/blob/master/vault-add.png)
 ![](https://github.com/DevElkami/PasswordVault/blob/master/vault-import.png)
 ![](https://github.com/DevElkami/PasswordVault/blob/master/vault-main.png)
+
+3. App preview (MAUI)
+
+![](https://github.com/DevElkami/PasswordVault/blob/master/android-1.en.jpg)
+![](https://github.com/DevElkami/PasswordVault/blob/master/android-2.en.jpg)
+![](https://github.com/DevElkami/PasswordVault/blob/master/android-3.en.jpg)
 
 
 # Thanks :pray:
