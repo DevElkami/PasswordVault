@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.Input;
 using MauiPasswordVault.Service;
 using MauiPasswordVault.View;
+using Microsoft.Extensions.Logging;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using VaultCore;
@@ -10,11 +11,12 @@ namespace MauiPasswordVault.ViewModel;
 
 public partial class SearchViewModel : INotifyPropertyChanged
 {
-    public SearchViewModel(NavigationService navigationService, ErrorService errorService, MyVault vault)
+    public SearchViewModel(NavigationService navigationService, ErrorService errorService, MyVault vault, ILogger<SearchViewModel> logger)
     {
         this.navigationService = navigationService;
         this.errorService = errorService;
         this.vault = vault;
+        this.logger = logger;
     }
 
     public event PropertyChangedEventHandler? PropertyChanged;
@@ -25,6 +27,7 @@ public partial class SearchViewModel : INotifyPropertyChanged
     private readonly NavigationService navigationService;
     private readonly ErrorService errorService;
     private readonly MyVault vault;
+    private readonly ILogger<SearchViewModel> logger;
     private String url = Preferences.Default.Get(SearchViewModel.URL, "");
     private bool inProgress = false;
     private bool isLoading = false;
@@ -50,6 +53,7 @@ public partial class SearchViewModel : INotifyPropertyChanged
         }
         catch (Exception exception)
         {
+            logger.LogError(exception, nameof(UpdateAsync) + " failed");
             this.errorService.LastErrorMessage = exception.Message;
             this.errorService.LastErrorFull = exception.ToString();
             this.errorService.CriticalError = false;
@@ -71,6 +75,7 @@ public partial class SearchViewModel : INotifyPropertyChanged
         }
         catch (Exception exception)
         {
+            logger.LogError(exception, nameof(CanUpdate) + " failed");
             this.errorService.LastErrorMessage = exception.Message;
             this.errorService.LastErrorFull = exception.ToString();
             this.errorService.CriticalError = true;
@@ -96,6 +101,7 @@ public partial class SearchViewModel : INotifyPropertyChanged
         }
         catch (Exception exception)
         {
+            logger.LogError(exception, nameof(LoadAsync) + " failed");
             this.errorService.LastErrorMessage = exception.Message;
             this.errorService.LastErrorFull = exception.ToString();
             this.errorService.CriticalError = true;
@@ -133,6 +139,7 @@ public partial class SearchViewModel : INotifyPropertyChanged
         }
         catch (Exception exception)
         {
+            logger.LogError(exception, nameof(SearchAsync) + " failed");
             this.errorService.LastErrorMessage = exception.Message;
             this.errorService.LastErrorFull = exception.ToString();
             this.errorService.CriticalError = false;
@@ -157,6 +164,7 @@ public partial class SearchViewModel : INotifyPropertyChanged
         }
         catch (Exception exception)
         {
+            logger.LogError(exception, nameof(CanSearch) + " failed");
             this.errorService.LastErrorMessage = exception.Message;
             this.errorService.LastErrorFull = exception.ToString();
             this.errorService.CriticalError = true;

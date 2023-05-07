@@ -1,5 +1,6 @@
 ﻿using MauiPasswordVault.Service;
 using MauiPasswordVault.View;
+using Microsoft.Extensions.Logging;
 using System.Windows.Input;
 using VaultCore;
 
@@ -10,13 +11,15 @@ public class CheckViewModel
     private readonly NavigationService navigationService;
     private readonly ErrorService errorService;
     private readonly MyVault vault;
+    private readonly ILogger<CheckViewModel> logger;
     private String vaultKey = null!;
 
-    public CheckViewModel(NavigationService navigationService, ErrorService errorService, MyVault vault)
+    public CheckViewModel(NavigationService navigationService, ErrorService errorService, MyVault vault, ILogger<CheckViewModel> logger)
     {
         this.navigationService = navigationService;
         this.vault = vault;
         this.errorService = errorService;
+        this.logger = logger;
 
         CheckCommand = new Command(
             execute: () =>
@@ -34,6 +37,7 @@ public class CheckViewModel
                 }
                 catch (Exception exception)
                 {
+                    logger.LogError(exception, nameof(CheckCommand) + " failed");
                     this.errorService.LastErrorMessage = exception.Message;
                     this.errorService.LastErrorFull = exception.ToString();
                     this.errorService.CriticalError = true;
@@ -48,6 +52,7 @@ public class CheckViewModel
                 }
                 catch (Exception exception)
                 {
+                    logger.LogError(exception, nameof(CheckCommand) + " failed");
                     this.errorService.LastErrorMessage = exception.Message;
                     this.errorService.LastErrorFull = exception.ToString();
                     this.errorService.CriticalError = true;

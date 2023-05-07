@@ -3,7 +3,11 @@ using MauiPasswordVault.Service;
 using MauiPasswordVault.View;
 using MauiPasswordVault.ViewModel;
 using Microsoft.Extensions.Logging;
+using NLog.Extensions.Logging;
+using NLog;
 using VaultCore;
+using NLog.Config;
+using NLog.Targets;
 
 namespace MauiPasswordVault;
 
@@ -24,6 +28,26 @@ public static class MauiProgram
                 fonts.AddFont("AwesomeSolid.otf", "AwesomeSolid");
             });
 
+        #region Logger
+        LoggingConfiguration logConfig = new();
+
+        FileTarget fileTarget = new()
+        {
+            FileName = typeof(MauiProgram).FullName + ".log",
+            Layout = @"${longdate} [${uppercase:${level}}] ${logger} - ${message} ${exception:format=tostring}"
+        };
+
+        LoggingRule fileRule = new("*", NLog.LogLevel.Info, fileTarget);
+        logConfig.LoggingRules.Add(fileRule);
+        logConfig.AddTarget("logfile", fileTarget);
+
+        builder.Logging.ClearProviders();
+        builder.Logging.AddNLog(logConfig);
+#if DEBUG
+        builder.Logging.AddDebug();
+#endif                
+        #endregion
+
         builder.Services.AddSingleton<MyVault>();
         builder.Services.AddSingleton<NavigationService>();
         builder.Services.AddSingleton<ErrorService>();
@@ -39,9 +63,6 @@ public static class MauiProgram
 
         builder.Services.AddTransient<ErrorPage>();
         builder.Services.AddTransient<ErrorViewModel>();
-#if DEBUG
-        builder.Logging.AddDebug();
-#endif
 
         return builder.Build();
     }
