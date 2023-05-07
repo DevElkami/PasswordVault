@@ -5,16 +5,16 @@
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"             
              Title="Password vault"             
              Loaded="ContentPage_Loaded">
-    <Grid Margin="10" RowSpacing="6" ColumnSpacing="6" RowDefinitions="auto,auto,*" ColumnDefinitions="auto, *" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-        <Image Grid.Row="0" Grid.Column="0" Source="logo.png" Aspect="AspectFit" MaximumWidthRequest="100"/>
+    <Grid Margin="10" RowSpacing="6" ColumnSpacing="6" RowDefinitions="auto,auto,*" ColumnDefinitions="*" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <Image HorizontalOptions="End" Grid.Row="0" Grid.Column="0" Source="logo.png" Aspect="AspectFit" MaximumWidthRequest="50"/>
 
-        <HorizontalStackLayout Grid.Row="0" Grid.Column="1" Padding="6" Spacing="6" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <HorizontalStackLayout Grid.Row="0" Grid.Column="0" Padding="6" Spacing="6" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <Image Source="search.png" HeightRequest="24" HorizontalOptions="Center"/>
             <Entry Placeholder="{DynamicResource TSSearch}" Text="{Binding SearchEntry}" ReturnType="Search" ReturnCommand="{Binding SearchCommand}"  MinimumWidthRequest="80" HorizontalOptions="Start"/>
             <ActivityIndicator Color="#A265BE" IsRunning="{Binding IsLoading}" MinimumHeightRequest="80" MinimumWidthRequest="80" HorizontalOptions="Center" />
         </HorizontalStackLayout>
 
-        <ListView Grid.Row="1" Grid.Column="1" ItemsSource="{Binding Passwords}" SeparatorVisibility="None"  SeparatorColor="#A265BE">
+        <ListView Grid.Row="1" Grid.Column="0" ItemsSource="{Binding Passwords}" HasUnevenRows="True" SeparatorVisibility="None"  SeparatorColor="#A265BE">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -22,7 +22,7 @@
                             <Border.StrokeShape>
                                 <RoundRectangle CornerRadius="10" />
                             </Border.StrokeShape>
-                            <Grid Margin="10" RowSpacing="6" ColumnSpacing="6" RowDefinitions="auto, auto" ColumnDefinitions="1*, 1*">
+                            <Grid Margin="10" RowSpacing="6" ColumnSpacing="6" RowDefinitions="auto, *" ColumnDefinitions="1*, 1*">
                                 <Label Grid.Column="0" Grid.Row="0" HorizontalOptions="Start" Text="{Binding UserName}" FontAttributes="Bold" TextColor="White" />
                                 <Label Grid.Column="1" Grid.Row="0" HorizontalOptions="Start" Text="{Binding Password}" FontAttributes="Bold" TextColor="White" />
                                 <Label Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" HorizontalOptions="Start" Text="{Binding Data}" FontAttributes="Bold" TextColor="White"/>
@@ -33,7 +33,7 @@
             </ListView.ItemTemplate>
         </ListView>
 
-        <toolkit:Expander Grid.Row="2" Grid.Column="1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <toolkit:Expander Grid.Row="2" Grid.Column="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
             <toolkit:Expander.Header>
                 <HorizontalStackLayout Padding="6" Spacing="6" HorizontalOptions="FillAndExpand">
                     <Image Source="dimport.png" HeightRequest="24" HorizontalOptions="Center"/>
