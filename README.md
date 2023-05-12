@@ -10,7 +10,7 @@ Personal password vault with firefox password importer. This vault use Advanced 
 * [AES encryption](https://fr.wikipedia.org/wiki/Advanced_Encryption_Standard) :key:
 * Import your passwords from Firefox :earth_americas:
 * Multilang support (:clipperton_island:, :us:)
-* Compatible Android et Windows
+* Compatible Android and Windows
 
 # The app in details
 
