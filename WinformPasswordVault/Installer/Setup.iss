@@ -17,7 +17,7 @@ AppUpdatesURL={#MyAppURL}
 DefaultDirName={autopf}\{#MyAppName}
 DefaultGroupName={#MyAppName}
 DisableProgramGroupPage=yes
-;LicenseFile=..\..\LICENSE
+LicenseFile=..\..\LICENSE.md
 OutputBaseFilename=Password-Vault-{#MyAppVersion}
 Compression=none
 SolidCompression=yes
@@ -42,7 +42,7 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 [Files]
 Source: ..\bin\Release\net7.0-windows7.0\publish\WinformPasswordVault.exe; DestDir: {app}; Flags: ignoreversion overwritereadonly uninsremovereadonly;
 Source: ..\bin\Release\net7.0-windows7.0\publish\*.dll; DestDir: {app}; Flags: ignoreversion overwritereadonly uninsremovereadonly;
-;Source: ..\..\LICENSE; DestDir: {app}; Flags: overwritereadonly uninsremovereadonly; DestName: LICENSE.TXT
+Source: ..\..\LICENSE.md; DestDir: {app}; Flags: overwritereadonly uninsremovereadonly; DestName: LICENSE.TXT
 
 [Icons]
 Name: {group}\Password Vault; Filename: {app}\WinformPasswordVault.exe; Flags: excludefromshowinnewinstall

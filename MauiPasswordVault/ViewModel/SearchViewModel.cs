@@ -23,6 +23,7 @@ public partial class SearchViewModel : INotifyPropertyChanged
 
     #region Private data
     private const String URL = "UPDATE_URL";
+    private const String WILDCARD_CHAR = "*";
     private readonly object vaultLock = new object();
     private readonly NavigationService navigationService;
     private readonly ErrorService errorService;
@@ -129,7 +130,7 @@ public partial class SearchViewModel : INotifyPropertyChanged
                 {
                     foreach (MyPassword myPassword in vault)
                     {
-                        if (myPassword.ToStr().Contains(searchEntry))
+                        if (myPassword.ToStr().Contains(searchEntry) || (searchEntry == WILDCARD_CHAR))
                             results.Add(myPassword);
                     }
                 }
@@ -157,7 +158,8 @@ public partial class SearchViewModel : INotifyPropertyChanged
     {
         try
         {
-            bool canSearch = (!String.IsNullOrEmpty(SearchEntry) && (SearchEntry.Length >= 3));
+            bool canSearch = ((!String.IsNullOrEmpty(SearchEntry) && (SearchEntry.Length >= 3)) 
+                            || (!String.IsNullOrEmpty(SearchEntry) && (SearchEntry == WILDCARD_CHAR)));
             if (!canSearch)
                 Passwords = null!;
             return canSearch;
