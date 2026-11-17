@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    
+    <Color x:Key="Primary">#8E4FB0</Color>
+    <Color x:Key="Secondary">#DFD8F7</Color>
+    <Color x:Key="Tertiary">#5E2A7E</Color>
+    <Color x:Key="Danger">#D64545</Color>
+    <!-- Dark theme ("violet night"): purple-tinted darks instead of neutral greys. -->
+    <Color x:Key="NightBackground">#17111F</Color>
+    <Color x:Key="NightSurface">#231A30</Color>
+    <Color x:Key="NightStroke">#3D2E52</Color>
+    <Color x:Key="NightBar">#2B1D3C</Color>
+    <Color x:Key="NightText">#EFE9F7</Color>
+    <Color x:Key="NightMuted">#A99BBD</Color>
+    <Color x:Key="NightAccent">#CDA6E8</Color>
+    <Color x:Key="White">White</Color>
+    <Color x:Key="Black">Black</Color>
+    <Color x:Key="Gray100">#E1E1E1</Color>
+    <Color x:Key="Gray200">#C8C8C8</Color>
+    <Color x:Key="Gray300">#ACACAC</Color>
+    <Color x:Key="Gray400">#919191</Color>
+    <Color x:Key="Gray500">#6E6E6E</Color>
+    <Color x:Key="Gray600">#404040</Color>
+    <Color x:Key="Gray900">#212121</Color>
+    <Color x:Key="Gray950">#141414</Color>
+
+
+</ResourceDictionary>

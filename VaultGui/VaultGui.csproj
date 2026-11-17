@@ -1,0 +1,92 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<UseMaui>true</UseMaui>
+		<TargetFrameworks>net10.0-android</TargetFrameworks>
+		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net10.0-windows10.0.19041.0</TargetFrameworks>
+
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">26.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
+		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
+
+		<OutputType>Exe</OutputType>
+		<RootNamespace>VaultGui</RootNamespace>
+		<SingleProject>true</SingleProject>
+
+		<!-- Windows: plain .exe (no MSIX), shipped with an Inno Setup installer (see installer/). -->
+		<WindowsPackageType>None</WindowsPackageType>
+
+		<!-- Compile XAML bindings ahead of time (required for trimming). -->
+		<MauiEnableXamlCBindingWithSourceCompilation>true</MauiEnableXamlCBindingWithSourceCompilation>
+
+		<!-- The app is in English and French: do not ship the other languages of library resources. -->
+		<SatelliteResourceLanguages>en;fr</SatelliteResourceLanguages>
+
+		<!-- Display name -->
+		<ApplicationTitle>Vault</ApplicationTitle>
+
+		<!-- App Identifier -->
+		<ApplicationId>com.github.vault</ApplicationId>
+
+		<Title>Vault</Title>
+		<!-- Name shown by Windows for the .exe (Task Manager, "Open with"). -->
+		<AssemblyTitle>Vault</AssemblyTitle>
+
+		<!--
+			Versions: everything follows $(Version) (Directory.Build.props, or -p:Version=x.y.z from the release workflow).
+			ApplicationVersion (Android versionCode, must always increase) = major*10000 + minor*100 + patch.
+		-->
+		<ApplicationDisplayVersion>$(Version)</ApplicationDisplayVersion>
+		<ApplicationVersion>$([MSBuild]::Add($([MSBuild]::Add($([MSBuild]::Multiply($([System.Version]::Parse($(Version)).Major), 10000)), $([MSBuild]::Multiply($([System.Version]::Parse($(Version)).Minor), 100)))), $([System.Version]::Parse($(Version)).Build)))</ApplicationVersion>
+	</PropertyGroup>
+
+	<!--
+		Android release signing. Nothing secret in the repository: the keystore path and alias come from
+		environment variables (or -p:), the passwords are read by the build from environment variables.
+		Without ANDROID_KEYSTORE, release builds are signed with the debug key (fine for testing only).
+		Create a keystore with scripts/new-android-keystore.ps1.
+	-->
+	<PropertyGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android' and '$(Configuration)' == 'Release' and '$(ANDROID_KEYSTORE)' != ''">
+		<AndroidKeyStore>true</AndroidKeyStore>
+		<AndroidSigningKeyStore>$(ANDROID_KEYSTORE)</AndroidSigningKeyStore>
+		<AndroidSigningKeyAlias Condition="'$(ANDROID_KEY_ALIAS)' != ''">$(ANDROID_KEY_ALIAS)</AndroidSigningKeyAlias>
+		<AndroidSigningKeyAlias Condition="'$(ANDROID_KEY_ALIAS)' == ''">passwordvault</AndroidSigningKeyAlias>
+		<AndroidSigningStorePass>env:ANDROID_KEYSTORE_PASSWORD</AndroidSigningStorePass>
+		<AndroidSigningKeyPass>env:ANDROID_KEY_PASSWORD</AndroidSigningKeyPass>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!-- App Icon -->
+		<!-- The cube of the unlock screen. Android (adaptive icon): the cube on a plain background, small enough not to be cropped by the launcher mask. -->
+		<MauiIcon Include="Resources\AppIcon\appicon.png" Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) != 'android'" />
+		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appicon.png" ForegroundScale="0.6" Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'" />
+
+		<!-- App Splash -->
+		<!-- The cube on white (on the night background when the system is dark: Platforms/Android/Resources/values-night). -->
+		<MauiSplashScreen Include="Resources\Splash\splash.png" Color="#FFFFFF" BaseSize="288,288" />
+
+		<!-- Images -->
+		<MauiImage Include="Resources\Images\*" />
+		<MauiImage Update="Resources\Images\logo.png" BaseSize="512,512" />
+
+		<!-- Custom Fonts -->
+		<MauiFont Include="Resources\Fonts\*" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Maui.Controls" />
+		<PackageReference Include="CommunityToolkit.Mvvm" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" />
+		<PackageReference Include="NLog" />
+		<PackageReference Include="NLog.Extensions.Logging" />
+	</ItemGroup>
+
+	<!-- Sending the vault to a server (SFTP / FTP over TLS) is done from the PC only. -->
+	<ItemGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">
+		<PackageReference Include="FluentFTP" />
+		<PackageReference Include="SSH.NET" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\VaultCore\VaultCore.csproj" />
+	</ItemGroup>
+</Project>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark system theme: start screen and bars on the night background instead of white / bright purple. -->
+    <color name="maui_splash_color">#17111F</color>
+    <color name="colorPrimary">#2B1D3C</color>
+    <color name="colorPrimaryDark">#2B1D3C</color>
+</resources>

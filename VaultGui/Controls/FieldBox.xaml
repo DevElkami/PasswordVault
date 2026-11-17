@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:VaultGui.Controls"
+             x:Class="VaultGui.Controls.FieldBox"
+             x:Name="Root"
+             x:DataType="controls:FieldBox">
+    <!-- Same frame as the cards of the list; the stroke takes the app colour while typing. -->
+    <Border Style="{StaticResource Card}" Padding="12,3,5,3">
+        <Border.Triggers>
+            <DataTrigger TargetType="Border" Binding="{Binding IsFocused, Source={x:Reference Input}, x:DataType=Entry}" Value="True">
+                <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource NightAccent}}" />
+            </DataTrigger>
+        </Border.Triggers>
+        <!-- No column spacing: the optional parts carry their own margin, so a field without them loses no room. -->
+        <Grid ColumnDefinitions="Auto,*,Auto">
+            <!-- Optional leading icon (search). -->
+            <Image x:Name="LeadingIcon" IsVisible="False" WidthRequest="20" HeightRequest="20" Aspect="AspectFit"
+                   VerticalOptions="Center" />
+            <!-- Its own frame is removed in the code-behind: the card is the frame. -->
+            <Entry x:Name="Input" Grid.Column="1"
+                   Text="{Binding Text, Source={x:Reference Root}, Mode=TwoWay}"
+                   Placeholder="{Binding Placeholder, Source={x:Reference Root}}"
+                   Keyboard="{Binding Keyboard, Source={x:Reference Root}}"
+                   ReturnType="{Binding ReturnType, Source={x:Reference Root}}"
+                   ReturnCommand="{Binding ReturnCommand, Source={x:Reference Root}}"
+                   IsSpellCheckEnabled="{Binding IsSpellCheckEnabled, Source={x:Reference Root}}"
+                   IsTextPredictionEnabled="{Binding IsTextPredictionEnabled, Source={x:Reference Root}}"
+                   ClearButtonVisibility="{Binding ClearButtonVisibility, Source={x:Reference Root}}"
+                   VerticalOptions="Center" />
+            <!-- Password only. Eye: open = click to show, crossed = click to hide. -->
+            <ImageButton x:Name="Eye" Grid.Column="2" Clicked="OnEyeClicked" IsVisible="False" Margin="8,0,0,0"
+                         WidthRequest="40" HeightRequest="40" MinimumWidthRequest="40" MinimumHeightRequest="40"
+                         Padding="9" Aspect="AspectFit" VerticalOptions="Center"
+                         CornerRadius="8" BorderWidth="1" BackgroundColor="Transparent"
+                         BorderColor="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource NightStroke}}" />
+        </Grid>
+    </Border>
+</ContentView>
