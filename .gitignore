@@ -361,4 +361,8 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
-/WinformPasswordVault/Installer/Output
+
+# Release builds (scripts/publish-*.ps1) and signing keys: never commit
+/out/
+*.keystore
+*.jks

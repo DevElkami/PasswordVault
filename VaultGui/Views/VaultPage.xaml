@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:VaultGui.ViewModels"
+             xmlns:controls="clr-namespace:VaultGui.Controls"
+             xmlns:models="clr-namespace:VaultCore.Models;assembly=VaultCore"
+             x:Class="VaultGui.Views.VaultPage"
+             x:DataType="vm:VaultViewModel"
+             Title="{StaticResource AppTitle}">
+    <!-- Android. On Windows these actions are icons in the title bar instead (see the code-behind). -->
+    <ContentPage.ToolbarItems>
+        <!-- Same icons as the Windows title bar; the text stays as the accessibility label. -->
+        <ToolbarItem x:Name="UploadItem" Text="{StaticResource UploadShort}" IconImageSource="tb_upload.png" Command="{Binding UploadCommand}" />
+        <ToolbarItem x:Name="UpdateItem" Text="{StaticResource Update}" IconImageSource="tb_update.png" Command="{Binding UpdateCommand}" />
+        <ToolbarItem x:Name="DuplicatesItem" Text="{Binding DuplicatesText}" IconImageSource="tb_duplicates.png" Command="{Binding ToggleDuplicatesCommand}" />
+        <ToolbarItem Text="{StaticResource Lock}" IconImageSource="tb_lock.png" Command="{Binding LockCommand}" />
+        <ToolbarItem Text="{StaticResource Settings}" IconImageSource="tb_settings.png" Command="{Binding SettingsCommand}" />
+    </ContentPage.ToolbarItems>
+
+    <Grid RowDefinitions="Auto,*,Auto,Auto" Padding="12,8" RowSpacing="8">
+        <Grid ColumnDefinitions="*,Auto" ColumnSpacing="8">
+            <controls:FieldBox Placeholder="{StaticResource Search}" Text="{Binding SearchText}" Icon="{AppThemeBinding Light=magnifier.png, Dark=magnifier_dark.png}"
+                               ClearButtonVisibility="WhileEditing" ReturnType="Search"
+                               IsSpellCheckEnabled="False" IsTextPredictionEnabled="False" />
+            <Button Grid.Column="1" Text="{StaticResource Add}" Command="{Binding AddCommand}" VerticalOptions="Fill" />
+        </Grid>
+
+        <CollectionView Grid.Row="1" ItemsSource="{Binding Entries}" SelectionMode="None">
+            <CollectionView.EmptyView>
+                <Label Text="{Binding EmptyMessage}" Style="{StaticResource Caption}" HorizontalTextAlignment="Center" Margin="0,32" />
+            </CollectionView.EmptyView>
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:MyPassword">
+                    <Border Style="{StaticResource Card}" Margin="0,4">
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding EditCommand, Source={RelativeSource AncestorType={x:Type vm:VaultViewModel}}, x:DataType=vm:VaultViewModel}"
+                                                  CommandParameter="{Binding .}" />
+                        </Border.GestureRecognizers>
+                        <Grid ColumnDefinitions="*,Auto,Auto,Auto" RowDefinitions="Auto,Auto,Auto" ColumnSpacing="4">
+                            <!-- Site first (the keyword when there is no site), then login, then keywords. Empty lines take no room. -->
+                            <Label Text="{Binding Title}" FontAttributes="Bold" LineBreakMode="TailTruncation" />
+                            <Label Grid.Row="1" Text="{Binding UserName}" LineBreakMode="TailTruncation">
+                                <Label.Triggers>
+                                    <DataTrigger TargetType="Label" Binding="{Binding UserName.Length}" Value="0">
+                                        <Setter Property="IsVisible" Value="False" />
+                                    </DataTrigger>
+                                </Label.Triggers>
+                            </Label>
+                            <Label Grid.Row="2" Text="{Binding KeywordLine}" Style="{StaticResource Caption}" LineBreakMode="TailTruncation">
+                                <Label.Triggers>
+                                    <DataTrigger TargetType="Label" Binding="{Binding KeywordLine.Length}" Value="0">
+                                        <Setter Property="IsVisible" Value="False" />
+                                    </DataTrigger>
+                                </Label.Triggers>
+                            </Label>
+                            <ImageButton Grid.Column="1" Grid.RowSpan="3" Source="{AppThemeBinding Light=user.png, Dark=user_dark.png}" Style="{StaticResource IconImageButton}"
+                                    ToolTipProperties.Text="{StaticResource CopyUser}"
+                                    SemanticProperties.Description="{StaticResource CopyUser}"
+                                    Command="{Binding CopyUserCommand, Source={RelativeSource AncestorType={x:Type vm:VaultViewModel}}, x:DataType=vm:VaultViewModel}"
+                                    CommandParameter="{Binding .}" />
+                            <ImageButton Grid.Column="2" Grid.RowSpan="3" Source="{AppThemeBinding Light=key.png, Dark=key_dark.png}" Style="{StaticResource IconImageButton}"
+                                    ToolTipProperties.Text="{StaticResource CopyPassword}"
+                                    SemanticProperties.Description="{StaticResource CopyPassword}"
+                                    Command="{Binding CopyPasswordCommand, Source={RelativeSource AncestorType={x:Type vm:VaultViewModel}}, x:DataType=vm:VaultViewModel}"
+                                    CommandParameter="{Binding .}" />
+                            <ImageButton Grid.Column="3" Grid.RowSpan="3" Source="{AppThemeBinding Light=trash.png, Dark=trash_dark.png}" Style="{StaticResource IconImageButton}"
+                                    ToolTipProperties.Text="{StaticResource Delete}"
+                                    SemanticProperties.Description="{StaticResource Delete}"
+                                    Command="{Binding DeleteCommand, Source={RelativeSource AncestorType={x:Type vm:VaultViewModel}}, x:DataType=vm:VaultViewModel}"
+                                    CommandParameter="{Binding .}" />
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Label Grid.Row="2" Text="{Binding StatusMessage}" IsVisible="{Binding HasStatus}" HorizontalTextAlignment="Center" Style="{StaticResource Caption}" />
+        <Label Grid.Row="3" Text="{Binding UploadPending}" IsVisible="{Binding HasUploadPending}" HorizontalTextAlignment="Center" Style="{StaticResource Caption}">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding UploadCommand}" />
+            </Label.GestureRecognizers>
+        </Label>
+    </Grid>
+</ContentPage>

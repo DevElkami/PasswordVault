@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:VaultGui.ViewModels"
+             xmlns:controls="clr-namespace:VaultGui.Controls"
+             x:Class="VaultGui.Views.EntryPage"
+             x:DataType="vm:EntryViewModel"
+             Title="{Binding Title}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="{StaticResource Save}" Command="{Binding SaveCommand}" />
+    </ContentPage.ToolbarItems>
+
+    <ScrollView>
+        <VerticalStackLayout Style="{StaticResource Form}">
+            <!-- Windows has no header band: the page says what it is. -->
+            <Label Text="{Binding Title}" Style="{StaticResource SectionTitle}" Margin="0" IsVisible="{OnPlatform WinUI=True, Default=False}" />
+
+            <Label Text="{StaticResource Keyword}" Style="{StaticResource Caption}" />
+            <controls:FieldBox Text="{Binding Keyword}" />
+
+            <Label Text="{StaticResource Site}" Style="{StaticResource Caption}" />
+            <controls:FieldBox Text="{Binding Site}" Keyboard="Url" />
+
+            <Label Text="{StaticResource UserName}" Style="{StaticResource Caption}" />
+            <controls:FieldBox Text="{Binding UserName}" Keyboard="Email" IsSpellCheckEnabled="False" IsTextPredictionEnabled="False" />
+
+            <Label Text="{StaticResource Password}" Style="{StaticResource Caption}" />
+            <controls:PasswordBox Text="{Binding Password}" />
+
+            <Button Text="{StaticResource Save}" Command="{Binding SaveCommand}" Margin="0,16,0,0" />
+            <Button Text="{StaticResource Cancel}" Command="{Binding CancelCommand}" Style="{StaticResource SecondaryButton}" />
+            <Button Text="{StaticResource Delete}" Command="{Binding DeleteCommand}" IsVisible="{Binding IsExisting}" Style="{StaticResource DangerButton}" />
+            <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#8E4FB0</color>
+    <color name="colorPrimaryDark">#8E4FB0</color>
+    <color name="colorAccent">#A265BE</color>	
+	<color name="ListViewSelected">#000000</color>
+</resources>
