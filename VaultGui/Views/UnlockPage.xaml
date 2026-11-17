@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:VaultGui.ViewModels"
+             xmlns:controls="clr-namespace:VaultGui.Controls"
+             x:Class="VaultGui.Views.UnlockPage"
+             x:DataType="vm:UnlockViewModel"
+             Shell.NavBarIsVisible="False"
+             Title="{StaticResource UnlockTitle}">
+    <!--
+        Biometrics first: name at the top, the big round button (or the cube where there is no quick unlock)
+        in the middle, the master password at the bottom as the other way in.
+        Height capped so that a tall desktop window shows one centred block.
+    -->
+    <Grid RowDefinitions="Auto,*,Auto" Padding="24" RowSpacing="12"
+          MaximumWidthRequest="520" MaximumHeightRequest="640" VerticalOptions="Fill">
+        <VerticalStackLayout Spacing="2" Margin="0,16,0,0">
+            <Label Text="{StaticResource AppTitle}" Style="{StaticResource Headline}" SemanticProperties.HeadingLevel="Level1" />
+            <Label Text="{StaticResource VaultLocked}" Style="{StaticResource Caption}" HorizontalOptions="Center" />
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Grid.Row="1" Spacing="12" VerticalOptions="Center">
+            <!-- Quick unlock set up: the fingerprint is the main action. -->
+            <ImageButton IsVisible="{Binding CanQuickUnlock}" Command="{Binding QuickUnlockCommand}"
+                         Source="{AppThemeBinding Light=fingerprint.png, Dark=fingerprint_dark.png}"
+                         WidthRequest="120" HeightRequest="120" CornerRadius="60" Padding="30" Aspect="AspectFit"
+                         BorderWidth="2" HorizontalOptions="Center"
+                         BorderColor="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource NightAccent}}"
+                         BackgroundColor="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource NightSurface}}"
+                         SemanticProperties.Description="{Binding QuickUnlockText}"
+                         ToolTipProperties.Text="{Binding QuickUnlockText}" />
+            <Label Text="{StaticResource TapToUnlock}" IsVisible="{Binding CanQuickUnlock}" Style="{StaticResource Caption}"
+                   HorizontalOptions="Center" />
+
+            <!-- Quick unlock not turned on (or not available): the cube. -->
+            <Image Source="logo.png" HeightRequest="96" IsVisible="{Binding ShowLogo}"
+                   SemanticProperties.Description="{StaticResource AppTitle}" />
+
+            <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" />
+            <Label Text="{StaticResource MigrationNotice}" IsVisible="{Binding NeedsMigration}" Style="{StaticResource Caption}"
+                   HorizontalTextAlignment="Center" />
+            <Label Text="{StaticResource QuickUnlockTurnedOff}" IsVisible="{Binding QuickUnlockTurnedOff}" Style="{StaticResource Caption}"
+                   HorizontalTextAlignment="Center" />
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Grid.Row="2" Spacing="12">
+            <controls:PasswordBox x:Name="PasswordEntry" Placeholder="{StaticResource MasterPassword}" Text="{Binding Password}"
+                                  ReturnType="Go" ReturnCommand="{Binding UnlockCommand}" />
+            <Label Text="{Binding ErrorMessage}" IsVisible="{Binding HasError}" Style="{StaticResource ErrorText}" />
+            <Button Text="{StaticResource Unlock}" Command="{Binding UnlockCommand}" />
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

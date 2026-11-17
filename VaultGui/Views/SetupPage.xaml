@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:VaultGui.ViewModels"
+             xmlns:controls="clr-namespace:VaultGui.Controls"
+             x:Class="VaultGui.Views.SetupPage"
+             x:DataType="vm:SetupViewModel"
+             Shell.NavBarIsVisible="False"
+             Title="{StaticResource SetupTitle}">
+    <ScrollView>
+        <VerticalStackLayout Style="{StaticResource Form}">
+            <Image Source="logo.png" HeightRequest="96" SemanticProperties.Description="{StaticResource AppTitle}" />
+            <Label Text="{StaticResource SetupTitle}" Style="{StaticResource Headline}" SemanticProperties.HeadingLevel="Level1" />
+            <Label Text="{StaticResource SetupIntro}" Style="{StaticResource Caption}" />
+
+            <Label Text="{StaticResource PasswordHint}" Style="{StaticResource Caption}" />
+
+            <controls:PasswordBox Placeholder="{StaticResource MasterPassword}" Text="{Binding Password}" />
+            <VerticalStackLayout IsVisible="{Binding Strength.IsVisible}" Spacing="4">
+                <ProgressBar Progress="{Binding Strength.Score}" ProgressColor="{Binding Strength.Color}" />
+                <Label Text="{Binding Strength.Text}" Style="{StaticResource Caption}" />
+            </VerticalStackLayout>
+            <controls:PasswordBox Placeholder="{StaticResource ConfirmPassword}" Text="{Binding Confirm}"
+                                  ReturnType="Done" ReturnCommand="{Binding CreateCommand}" />
+            <Label Text="{Binding ErrorMessage}" IsVisible="{Binding HasError}" Style="{StaticResource ErrorText}" />
+
+            <Button Text="{StaticResource Create}" Command="{Binding CreateCommand}" />
+            <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" />
+
+            <BoxView HeightRequest="1" Margin="0,16" Color="{StaticResource Gray400}" />
+            <Label Text="{StaticResource SetupExisting}" Style="{StaticResource SectionTitle}" />
+            <Label Text="{StaticResource SetupDownload}" Style="{StaticResource Caption}" />
+            <controls:FieldBox Placeholder="{StaticResource DownloadUrl}" Text="{Binding DownloadUrl}" Keyboard="Url"
+                               ReturnType="Go" ReturnCommand="{Binding DownloadCommand}" />
+            <Button Text="{StaticResource DownloadVault}" Command="{Binding DownloadCommand}" Style="{StaticResource SecondaryButton}" />
+            <VerticalStackLayout IsVisible="{Binding NeedsLegacyPassword}" Spacing="8">
+                <Label Text="{StaticResource LegacyFileFound}" Style="{StaticResource Caption}" />
+                <controls:PasswordBox Placeholder="{StaticResource MasterPassword}" Text="{Binding LegacyPassword}"
+                                      ReturnType="Go" ReturnCommand="{Binding OpenLegacyCommand}" />
+                <Button Text="{StaticResource LegacyOpen}" Command="{Binding OpenLegacyCommand}" />
+            </VerticalStackLayout>
+            <Label Text="{Binding DownloadError}" IsVisible="{Binding HasDownloadError}" Style="{StaticResource ErrorText}" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

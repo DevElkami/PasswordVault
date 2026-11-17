@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:VaultGui.ViewModels"
+             xmlns:controls="clr-namespace:VaultGui.Controls"
+             x:Class="VaultGui.Views.SettingsPage"
+             x:DataType="vm:SettingsViewModel"
+             Title="{StaticResource Settings}">
+    <ScrollView>
+        <VerticalStackLayout Style="{StaticResource Form}">
+            <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" />
+
+            <!-- Appearance -->
+            <Label Text="{StaticResource AppearanceSection}" Style="{StaticResource SectionTitle}" Margin="0" />
+            <Label Text="{StaticResource Theme}" Style="{StaticResource Caption}" />
+            <Picker ItemsSource="{Binding ThemeChoices}" SelectedItem="{Binding SelectedTheme}" />
+
+            <!-- Import -->
+            <Label Text="{StaticResource ImportSection}" Style="{StaticResource SectionTitle}" />
+            <Button Text="{StaticResource ImportCsv}" Command="{Binding ImportCsvCommand}" Style="{StaticResource SecondaryButton}" />
+            <Label Text="{StaticResource ImportCsvHelp}" Style="{StaticResource Caption}" />
+            <!-- Old vault (version 3.x): its own master password, then the data file. -->
+            <controls:PasswordBox Placeholder="{StaticResource ImportLegacyPassword}" Text="{Binding LegacyPassword}" Margin="0,8,0,0" />
+            <Button Text="{StaticResource ImportLegacy}" Command="{Binding ImportLegacyCommand}" Style="{StaticResource SecondaryButton}" />
+            <Label Text="{StaticResource ImportLegacyHelp}" Style="{StaticResource Caption}" />
+
+            <!-- Send to the user's server (Windows) -->
+            <VerticalStackLayout IsVisible="{Binding IsUploadSupported}" Spacing="8">
+                <Label Text="{StaticResource UploadSection}" Style="{StaticResource SectionTitle}" />
+                <Label Text="{StaticResource UploadHelp}" Style="{StaticResource Caption}" />
+                <controls:FieldBox Placeholder="{StaticResource UploadAddress}" Text="{Binding UploadAddress}" Keyboard="Url" />
+                <controls:FieldBox Placeholder="{StaticResource UploadUser}" Text="{Binding UploadUser}" />
+                <controls:PasswordBox Placeholder="{Binding UploadPasswordPlaceholder}" Text="{Binding UploadPassword}" />
+                <Button Text="{StaticResource UploadSend}" Command="{Binding UploadCommand}" />
+                <Label Text="{Binding UploadStatus}" Style="{StaticResource Caption}" />
+                <Button Text="{StaticResource UploadDelete}" Command="{Binding UploadDeleteCommand}" IsVisible="{Binding IsUploadConfigured}"
+                        Style="{StaticResource SecondaryButton}" />
+                <Button Text="{StaticResource UploadForget}" Command="{Binding UploadForgetCommand}" IsVisible="{Binding IsUploadConfigured}"
+                        Style="{StaticResource SecondaryButton}" />
+            </VerticalStackLayout>
+
+            <!-- Vault file -->
+            <Label Text="{StaticResource VaultFileSection}" Style="{StaticResource SectionTitle}" />
+            <Label Text="{Binding VaultLocation}" Style="{StaticResource Caption}" LineBreakMode="CharacterWrap" />
+            <controls:FieldBox Placeholder="{StaticResource DownloadUrl}" Text="{Binding DownloadUrl}" Keyboard="Url" />
+            <Button Text="{StaticResource Download}" Command="{Binding DownloadCommand}" Style="{StaticResource SecondaryButton}" />
+
+            <!-- Security -->
+            <Label Text="{StaticResource SecuritySection}" Style="{StaticResource SectionTitle}" />
+            <Label Text="{StaticResource AutoLock}" Style="{StaticResource Caption}" />
+            <Picker ItemsSource="{Binding AutoLockChoices}" SelectedItem="{Binding SelectedAutoLock}" />
+            <Grid ColumnDefinitions="*,Auto" IsVisible="{Binding IsQuickUnlockAvailable}">
+                <Label Text="{Binding QuickUnlockText}" VerticalOptions="Center" />
+                <Switch Grid.Column="1" IsToggled="{Binding QuickUnlockEnabled}" VerticalOptions="Center"
+                        SemanticProperties.Description="{Binding QuickUnlockText}" />
+            </Grid>
+            <Label Text="{OnPlatform Default={StaticResource QuickUnlockHelp}, WinUI={StaticResource QuickUnlockHelpWindows}}" IsVisible="{Binding IsQuickUnlockAvailable}" Style="{StaticResource Caption}" />
+            <controls:PasswordBox Placeholder="{StaticResource NewPassword}" Text="{Binding NewPassword}" />
+            <VerticalStackLayout IsVisible="{Binding Strength.IsVisible}" Spacing="4">
+                <ProgressBar Progress="{Binding Strength.Score}" ProgressColor="{Binding Strength.Color}" />
+                <Label Text="{Binding Strength.Text}" Style="{StaticResource Caption}" />
+                <Label Text="{StaticResource PasswordHint}" Style="{StaticResource Caption}" />
+            </VerticalStackLayout>
+            <controls:PasswordBox Placeholder="{StaticResource ConfirmPassword}" Text="{Binding ConfirmNewPassword}" />
+            <Button Text="{StaticResource ChangePassword}" Command="{Binding ChangePasswordCommand}" Style="{StaticResource SecondaryButton}" />
+
+            <!-- About -->
+            <Label Text="{StaticResource AboutSection}" Style="{StaticResource SectionTitle}" />
+            <Label Text="{Binding Version}" Style="{StaticResource Caption}" />
+            <Label Text="https://github.com/DevElkami/PasswordVault" Style="{StaticResource Caption}" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

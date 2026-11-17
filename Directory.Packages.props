@@ -1,0 +1,29 @@
+<Project>
+  <!-- Central package management: every NuGet version lives here. -->
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <MauiVersion>10.0.110</MauiVersion>
+  </PropertyGroup>
+
+  <ItemGroup Label="Core">
+    <PackageVersion Include="CsvHelper" Version="33.1.0" />
+  </ItemGroup>
+
+  <ItemGroup Label="MAUI">
+    <PackageVersion Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
+    <PackageVersion Include="CommunityToolkit.Mvvm" Version="8.4.2" />
+    <PackageVersion Include="Microsoft.Extensions.Logging.Debug" Version="10.0.14" />
+    <PackageVersion Include="NLog" Version="6.2.2" />
+    <PackageVersion Include="NLog.Extensions.Logging" Version="6.2.2" />
+    <!-- Windows app only: publishing the vault file on the user's server. -->
+    <PackageVersion Include="FluentFTP" Version="55.1.0" />
+    <PackageVersion Include="SSH.NET" Version="2026.0.0" />
+  </ItemGroup>
+
+  <ItemGroup Label="Tests">
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.11.0" />
+    <PackageVersion Include="MSTest.TestAdapter" Version="4.5.2" />
+    <PackageVersion Include="MSTest.TestFramework" Version="4.5.2" />
+    <PackageVersion Include="coverlet.collector" Version="10.1.0" />
+  </ItemGroup>
+</Project>
